@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Test (4 Bo'lim)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="section-selection-screen" class="screen">
+        <h1>SQL Test Bo'limlari</h1>
+        <p>O'zingiz sinamoqchi bo'lgan bo'limni tanlang:</p>
+        <div id="section-buttons-container">
+          <button class="btn section-btn" data-section="0">
+            Bo'lim 1 (1-50 savollar)
+          </button>
+          <button class="btn section-btn" data-section="1">
+            Bo'lim 2 (51-100 savollar)
+          </button>
+          <button class="btn section-btn" data-section="2">
+            Bo'lim 3 (101-150 savollar)
+          </button>
+          <button class="btn section-btn" data-section="3">
+            Bo'lim 4 (151-200 savollar)
+          </button>
+        </div>
+      </div>
+
+      <div id="quiz-screen" class="screen hidden">
+        <div class="quiz-header">
+          <span id="question-number">Savol 1/X</span>
+          <span id="score">Ball: 0</span>
+        </div>
+        <div id="question-container">
+          <p id="question-text">Savol...</p>
+        </div>
+        <div id="options-container">
+          <!-- Variantlar -->
+        </div>
+        <div id="feedback-text" class="feedback"></div>
+        <button id="back-to-sections-btn" class="btn btn-secondary">
+          Bo'limlarga qaytish
+        </button>
+      </div>
+
+      <div id="result-screen" class="screen hidden">
+        <h2>Test Natijalari</h2>
+        <p id="final-score">Natija: 0/0</p>
+        <p id="result-message">Xabar.</p>
+        <button id="restart-btn" class="btn">Boshqa Bo'limni Tanlash</button>
+      </div>
+    </div>
+
+    <!-- Barcha savollar fayllarini script.js dan OLDIN ulaymiz -->
+    <script src="questions.js"></script>
+    <script src="questions2.js"></script>
+    <script src="questions3.js"></script>
+    <script src="questions4.js"></script>
+    <!-- Asosiy skript fayli -->
+    <script src="script.js"></script>
+  </body>
+</html>
