@@ -1,6 +1,6 @@
 const questionsSet1 = [
     {
-        question: "1. SQL ichida ma'lumotlar qanday tarzda saqlanadi?",
+        question: "SQL ichida ma'lumotlar qanday tarzda saqlanadi?",
         options: [
             "Faqat matnli fayllarda",
             "Jadvallar ko'rinishida",
@@ -10,7 +10,7 @@ const questionsSet1 = [
         answer: "Jadvallar ko'rinishida"
     },
     {
-        question: "2. MySQL uchun standart foydalanuvchi nomi nima?",
+        question: " MySQL uchun standart foydalanuvchi nomi nima?",
         options: [
             "admin",
             "user",
@@ -20,7 +20,7 @@ const questionsSet1 = [
         answer: "root"
     },
     {
-        question: "3. MySQL da jadvalni o'chirish sintaksisi qanday?",
+        question: " MySQL da jadvalni o'chirish sintaksisi qanday?",
         options: [
             "DELETE TABLE jadval_nomi;",
             "REMOVE TABLE jadval_nomi;",
@@ -30,7 +30,7 @@ const questionsSet1 = [
         answer: "DROP TABLE jadval_nomi;"
     },
     {
-        question: "4. SQL da jadvallarni yaratish sintaksisi qanday?",
+        question: " SQL da jadvallarni yaratish sintaksisi qanday?",
         options: [
             "MAKE TABLE jadval_nomi (...);",
             "CREATE TABLE jadval_nomi (...);",
@@ -40,7 +40,7 @@ const questionsSet1 = [
         answer: "CREATE TABLE jadval_nomi (...);"
     },
     {
-        question: "5. SQL nimani anglatadi?",
+        question: " SQL nimani anglatadi?",
         options: [
             "Simple Query Language",
             "Structured Question Language",
@@ -50,7 +50,7 @@ const questionsSet1 = [
         answer: "Structured Query Language"
     },
     {
-        question: "6. MySQL da yangi ma'lumotlar bazasini yaratish sintaksisi qanday?",
+        question: " MySQL da yangi ma'lumotlar bazasini yaratish sintaksisi qanday?",
         options: [
             "NEW DATABASE baza_nomi;",
             "CREATE DATABASE baza_nomi;",
@@ -60,7 +60,7 @@ const questionsSet1 = [
         answer: "CREATE DATABASE baza_nomi;"
     },
     {
-        question: "7. MySQL da ma'lumotlar bazasini o'chirish sintaksisi qanday?",
+        question: " MySQL da ma'lumotlar bazasini o'chirish sintaksisi qanday?",
         options: [
             "DELETE DATABASE baza_nomi;",
             "REMOVE DATABASE baza_nomi;",
@@ -70,7 +70,7 @@ const questionsSet1 = [
         answer: "DROP DATABASE baza_nomi;"
     },
     {
-        question: "8. Ham vaqt ham sanani saqlash uchun qanday ma'lumot turi ishlatiladi?",
+        question: " Ham vaqt ham sanani saqlash uchun qanday ma'lumot turi ishlatiladi?",
         options: [
             "DATE",
             "TIME",
@@ -80,7 +80,7 @@ const questionsSet1 = [
         answer: "DATETIME"
     },
     {
-        question: "9. Agar siz 1 dan 10 gacha bo'lgan sonlarni saqlamoqchi bo'lsangiz, qanday ma'lumot turini tanlasangiz eng optimal bo'ladi?",
+        question: "Agar siz 1 dan 10 gacha bo'lgan sonlarni saqlamoqchi bo'lsangiz, qanday ma'lumot turini tanlasangiz eng optimal bo'ladi?",
         options: [
             "INT",
             "BIGINT",
@@ -90,7 +90,7 @@ const questionsSet1 = [
         answer: "TINYINT"
     },
     {
-        question: "10. Hisob kitob muhim bo'lganda (masalan pul birliklari) qanday ma'lumot turi aniqlik uchun ishlatilishi maslahat beriladi?",
+        question: "Hisob kitob muhim bo'lganda (masalan pul birliklari) qanday ma'lumot turi aniqlik uchun ishlatilishi maslahat beriladi?",
         options: [
             "FLOAT",
             "DOUBLE",
@@ -100,7 +100,7 @@ const questionsSet1 = [
         answer: "DECIMAL"
     },
     {
-        question: "11. Jadvalga yangi qator qo'shish uchun MySQL da qanday kalit so'z ishlatiladi?",
+        question: " Jadvalga yangi qator qo'shish uchun MySQL da qanday kalit so'z ishlatiladi?",
         options: [
             "ADD ROW",
             "INSERT INTO",
@@ -110,7 +110,7 @@ const questionsSet1 = [
         answer: "INSERT INTO"
     },
     {
-        question: "12. Jadvaldagi mavjud ma'lumotlarni o'zgartirish uchun MySQL tilida qanday kalit so'z ishlatiladi?",
+        question: " Jadvaldagi mavjud ma'lumotlarni o'zgartirish uchun MySQL tilida qanday kalit so'z ishlatiladi?",
         options: [
             "MODIFY",
             "CHANGE",
@@ -120,7 +120,7 @@ const questionsSet1 = [
         answer: "UPDATE"
     },
     {
-        question: "13. Ma'lumotlar bazasi o'zi nima?",
+        question: " Ma'lumotlar bazasi o'zi nima?",
         options: [
             "Jadvallarni saqlaydigan dasturiy ta'minot",
             "Ma'lumotlarni tezkor qidirish tizimi",
@@ -130,7 +130,7 @@ const questionsSet1 = [
         answer: "Tuzilmaga keltirilgan ma'lumotlarning uyushgan to'plami"
     },
     {
-question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
+question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         options: [
             "Faqat yirik veb-saytlarda",
             "Faqat bank tizimlarida",
@@ -140,7 +140,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "Deyarli barcha ma'lumot saqlashni talab qiladigan dasturiy ta'minotlarda"
     },
     {
-        question: "15. Database tarkibi odatda nimalardan iborat bo'lishi mumkin?",
+        question: " Database tarkibi odatda nimalardan iborat bo'lishi mumkin?",
         options: [
             "Faqat jadvallardan va ustunlardan",
             "Jadvallar, ko'rinishlar (views), saqlanuvchi protseduralar, funksiyalar va triggerlardan",
@@ -150,7 +150,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "Jadvallar, ko'rinishlar (views), saqlanuvchi protseduralar, funksiyalar va triggerlardan"
     },
     {
-        question: "16. Baza va Jadval yaratganda ularga nom berishda qaysi belgidan foydalanish odatda tavsiya etilmaydi (qo'shimcha belgilar bilan o'ralmasa)?",
+        question: " Baza va Jadval yaratganda ularga nom berishda qaysi belgidan foydalanish odatda tavsiya etilmaydi (qo'shimcha belgilar bilan o'ralmasa)?",
         options: [
             "Lotin harflari (a-z, A-Z)",
             "Probel (bo'sh joy) va defis (-)",
@@ -160,7 +160,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "Probel (bo'sh joy) va defis (-)"
     },
     {
-        question: "17. Faqat matnli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
+        question: " Faqat matnli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
         options: [
             "INT, TEXT, DATE",
             "VARCHAR, CHAR, TEXT, LONGTEXT",
@@ -170,7 +170,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "VARCHAR, CHAR, TEXT, LONGTEXT"
     },
     {
-        question: "18. Faqat butun sonli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
+        question: " Faqat butun sonli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
         options: [
             "TINYINT, SMALLINT, DECIMAL",
             "INT, BIGINT, FLOAT",
@@ -180,7 +180,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT"
     },
     {
-        question: "19. Faqat haqiqiy (kasr) sonli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
+        question: " Faqat haqiqiy (kasr) sonli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
         options: [
             "FLOAT, DOUBLE, INT",
             "DECIMAL, NUMERIC, REAL, DOUBLE PRECISION",
@@ -190,7 +190,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "DECIMAL, NUMERIC, REAL, DOUBLE PRECISION"
     },
     {
-        question: "20. Faqat sana va/yoki vaqt ma'lumot turlari ko'rsatilgan qatorni tanlang.",
+        question: " Faqat sana va/yoki vaqt ma'lumot turlari ko'rsatilgan qatorni tanlang.",
         options: [
             "DATE, TIME, VARCHAR",
             "DATETIME, TIMESTAMP, YEAR, STRING",
@@ -200,7 +200,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "DATE, DATETIME, TIMESTAMP, TIME, YEAR"
     },
     {
-        question: "21. Katta hajmdagi matn (masalan, blog posti yoki maqola)ni saqlash uchun qaysi ma'lumot turi eng mos keladi?",
+        question: " Katta hajmdagi matn (masalan, blog posti yoki maqola)ni saqlash uchun qaysi ma'lumot turi eng mos keladi?",
         options: [
             "VARCHAR(255)",
             "CHAR(1000)",
@@ -210,7 +210,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "TEXT yoki LONGTEXT"
     },
     {
-        question: "22. Poyezdning kelish va ketish vaqtlarini (faqat soat va minut) saqlash uchun qanday ma'lumot turi maqsadga muvofiq?",
+        question: " Poyezdning kelish va ketish vaqtlarini (faqat soat va minut) saqlash uchun qanday ma'lumot turi maqsadga muvofiq?",
         options: [
             "TIME",
             "VARCHAR(5)",
@@ -220,7 +220,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "TIME"
     },
     {
-        question: "23. Mahsulotlarning narxini (masalan, 12500.50 so'm) aniq saqlash uchun qaysi ma'lumot turi tavsiya etiladi?",
+        question: " Mahsulotlarning narxini (masalan, 12500.50 so'm) aniq saqlash uchun qaysi ma'lumot turi tavsiya etiladi?",
         options: [
             "INT",
             "VARCHAR(20)",
@@ -230,7 +230,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "DECIMAL(10,2)"
     },
     {
-        question: "24. Foydalanuvchining 'rozilik berdi' (ha/yo'q) holatini saqlash uchun qaysi ma'lumot turi qulay?",
+        question: " Foydalanuvchining 'rozilik berdi' (ha/yo'q) holatini saqlash uchun qaysi ma'lumot turi qulay?",
         options: [
             "VARCHAR(3)",
             "BOOLEAN (yoki TINYINT(1))",
@@ -240,7 +240,7 @@ question: "14. Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         answer: "BOOLEAN (yoki TINYINT(1))"
     },
     {
-question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qaysi ma'lumot turi mos keladi?",
+question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qaysi ma'lumot turi mos keladi?",
         options: [
             "NUMERIC",
             "BIGINT",
@@ -250,7 +250,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "VARCHAR yoki CHAR"
     },
     {
-        question: "26. Mijozlar bilan rejalashtirilgan uchrashuvning aniq sana va vaqtini saqlash uchun qaysi ma'lumot turi ishlatiladi?",
+        question: " Mijozlar bilan rejalashtirilgan uchrashuvning aniq sana va vaqtini saqlash uchun qaysi ma'lumot turi ishlatiladi?",
         options: [
             "DATE",
             "INTERVAL",
@@ -260,7 +260,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "DATETIME yoki TIMESTAMP"
     },
     {
-        question: "27. Jadvalga yangi ma'lumot kiritish uchun to'g'ri SQL so'rovini toping:",
+        question: " Jadvalga yangi ma'lumot kiritish uchun to'g'ri SQL so'rovini toping:",
         options: [
             "ADD INTO users (name, age) VALUES ('Ali', 25);",
             "INSERT users (name, age) VALUES ('Ali', 25);",
@@ -270,7 +270,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "INSERT INTO users (name, age) VALUES ('Ali', 25);"
     },
     {
-        question: "28. xodimlar jadvalidagi familiya ustuniga yangi qatorda 'Aminov' qiymatini kiritish so'rovini ko'rsating.",
+        question: "xodimlar jadvalidagi familiya ustuniga yangi qatorda 'Aminov' qiymatini kiritish so'rovini ko'rsating.",
         options: [
             "INSERT INTO xodimlar (familiya) VALUES ('Aminov');",
             "INSERT xodimlar SET familiya = 'Aminov';",
@@ -280,7 +280,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "INSERT INTO xodimlar (familiya) VALUES ('Aminov');"
     },
     {
-        question: "29. Jadval ustuniga NOT NULL cheklovi qo'yilsa, bu nimani anglatadi?",
+        question: " Jadval ustuniga NOT NULL cheklovi qo'yilsa, bu nimani anglatadi?",
         options: [
             "Ustun faqat NULL qiymat qabul qilishi mumkin.",
             "Ustunga qiymat kiritish ixtiyoriy.",
@@ -290,7 +290,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Ustunga qiymat kiritish majburiy, u bo'sh (NULL) bo'lishi mumkin emas."
     },
     {
-        question: "30. Jadval ustuniga DEFAULT qiymat berish nimani anglatadi?",
+        question: " Jadval ustuniga DEFAULT qiymat berish nimani anglatadi?",
         options: [
             "Ustun uchun standart qiymatni bekor qiladi.",
             "Agar yangi qator qo'shilayotganda ushbu ustunga qiymat berilmasa, u avtomatik tarzda `DEFAULT`da ko'rsatilgan qiymatni oladi.",
@@ -300,7 +300,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Agar yangi qator qo'shilayotganda ushbu ustunga qiymat berilmasa, u avtomatik tarzda `DEFAULT`da ko'rsatilgan qiymatni oladi."
     },
     {
-        question: "31. CRUD qisqartmasi ma'lumotlar bazasi operatsiyalarida nimani anglatadi?",
+        question: " CRUD qisqartmasi ma'lumotlar bazasi operatsiyalarida nimani anglatadi?",
         options: [
             "Copy, Run, Update, Debug",
             "Create, Read, Update, Delete",
@@ -310,7 +310,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Create, Read, Update, Delete"
     },
     {
-        question: "32. SQLda `CREATE` amali qanday vazifani bajaradi?",
+        question: " SQLda `CREATE` amali qanday vazifani bajaradi?",
         options: [
             "Mavjud ma'lumotlarni o'qiydi.",
             "Yangi ma'lumotlar bazasi obyektlarini (masalan, jadval, baza, indeks) yaratadi.",
@@ -320,7 +320,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Yangi ma'lumotlar bazasi obyektlarini (masalan, jadval, baza, indeks) yaratadi."
     },
     {
-        question: "33. CRUDdagi 'Read' (o'qish) amali SQLda asosan qaysi operator yordamida bajariladi?",
+        question: " CRUDdagi 'Read' (o'qish) amali SQLda asosan qaysi operator yordamida bajariladi?",
         options: [
             "INSERT",
             "UPDATE",
@@ -330,7 +330,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "SELECT"
     },
     {
-        question: "34. SQLda UPDATE amali qanday vazifani bajaradi?",
+        question: " SQLda UPDATE amali qanday vazifani bajaradi?",
         options: [
             "Jadvalga yangi qatorlar qo'shadi.",
             "Jadvaldagi mavjud qatorlardagi ma'lumotlarni o'zgartiradi.",
@@ -340,7 +340,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Jadvaldagi mavjud qatorlardagi ma'lumotlarni o'zgartiradi."
     },
     {
-        question: "35. SQLda DELETE amali qanday vazifani bajaradi?",
+        question: " SQLda DELETE amali qanday vazifani bajaradi?",
         options: [
             "Jadvalni (uning sxemasi bilan birga) butunlay o'chiradi.",
             "Jadvaldagi bir yoki bir nechta qatorlarni (ma'lumotlarni) o'chiradi.",
@@ -350,7 +350,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Jadvaldagi bir yoki bir nechta qatorlarni (ma'lumotlarni) o'chiradi."
     },
     {
-        question: "36. SELECT operatorining asosiy vazifasi nima?",
+        question: " SELECT operatorining asosiy vazifasi nima?",
         options: [
             "Jadvalga yangi ma'lumotlar kiritish.",
             "Ma'lumotlar bazasidan ma'lumotlarni (qatorlar va ustunlarni) tanlab olish va ko'rsatish.",
@@ -360,7 +360,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Ma'lumotlar bazasidan ma'lumotlarni (qatorlar va ustunlarni) tanlab olish va ko'rsatish."
     },
     {
-        question: "37. UPDATE operatorining asosiy vazifasi nima?",
+        question: " UPDATE operatorining asosiy vazifasi nima?",
         options: [
             "Jadvaldan ma'lumotlarni o'qish.",
             "Jadvalga yangi yozuvlar (qatorlar) qo'shish.",
@@ -370,7 +370,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Jadvaldagi mavjud yozuvlar (qatorlar)dagi bir yoki bir nechta ustun qiymatlarini o'zgartirish."
     },
     {
-        question: "38. INSERT INTO operatorining asosiy vazifasi nima?",
+        question: " INSERT INTO operatorining asosiy vazifasi nima?",
         options: [
             "Jadvalga bir yoki bir nechta yangi qator (yozuv) qo'shish.",
             "Jadvaldagi mavjud qatorlarni yangilash.",
@@ -380,7 +380,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Jadvalga bir yoki bir nechta yangi qator (yozuv) qo'shish."
     },
     {
-        question: "39. DELETE FROM operatorining asosiy vazifasi nima?",
+        question: " DELETE FROM operatorining asosiy vazifasi nima?",
         options: [
             "Jadvalning sxemasini (tuzilishini) o'chirish.",
             "Jadvaldan shartga mos keladigan bir yoki bir nechta qatorni (yozuvni) o'chirish.",
@@ -390,7 +390,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Jadvaldan shartga mos keladigan bir yoki bir nechta qatorni (yozuvni) o'chirish."
     },
     {
-        question: "40. SELECT * FROM mahsulotlar; so'rovi qanday natija beradi?",
+        question: " SELECT * FROM mahsulotlar; so'rovi qanday natija beradi?",
         options: [
             "mahsulotlar jadvalidagi faqat birinchi ustunni ko'rsatadi.",
             "mahsulotlar jadvalidagi barcha ustunlar bo'yicha barcha qatorlarni ko'rsatadi.",
@@ -400,7 +400,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "mahsulotlar jadvalidagi barcha ustunlar bo'yicha barcha qatorlarni ko'rsatadi."
     },
     {
-        question: "41. SELECT uchish_vaqti, joy_nomi FROM samolyotlar; so'rovi qanday natija beradi?",
+        question: " SELECT uchish_vaqti, joy_nomi FROM samolyotlar; so'rovi qanday natija beradi?",
         options: [
             "samolyotlar jadvalidagi barcha ma'lumotlarni ko'rsatadi.",
             "samolyotlar jadvalidan faqat uchish_vaqti va joy_nomi ustunlaridagi ma'lumotlarni barcha qatorlar uchun ko'rsatadi.",
@@ -410,7 +410,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "samolyotlar jadvalidan faqat uchish_vaqti va joy_nomi ustunlaridagi ma'lumotlarni barcha qatorlar uchun ko'rsatadi."
     },
     {
-        question: "42. WHERE bandining (clause) SQL so'rovlaridagi asosiy vazifasi nima?",
+        question: " WHERE bandining (clause) SQL so'rovlaridagi asosiy vazifasi nima?",
         options: [
             "Natijalarni ma'lum bir ustun bo'yicha tartiblash (saralash).",
             "Natijalarni bir xil qiymatlarga ega guruhlarga ajratish.",
@@ -420,7 +420,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "So'rov natijalarini ma'lum bir shart(lar)ga mos keladigan qatorlar bilan cheklash (filtrlash)."
     },
     {
-        question: "43. SQLda qiymatlarning teng emasligini tekshirish uchun qaysi operator(lar) ishlatiladi?",
+        question: " SQLda qiymatlarning teng emasligini tekshirish uchun qaysi operator(lar) ishlatiladi?",
         options: [
             "Tenglik uchun =",
             "Faqat !=",
@@ -430,7 +430,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Ham !=, ham <>"
     },
     {
-        question: "44. SELECT * FROM testlar WHERE t_javob = 'togri'; so'rovi qanday vazifani bajaradi?",
+        question: " SELECT * FROM testlar WHERE t_javob = 'togri'; so'rovi qanday vazifani bajaradi?",
         options: [
             "testlar jadvalidagi barcha qatorlarni ko'rsatadi.",
             "testlar jadvalidagi t_javob ustunining qiymati 'togri' satriga teng bo'lgan barcha qatorlarni ko'rsatadi.",
@@ -440,7 +440,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "testlar jadvalidagi t_javob ustunining qiymati 'togri' satriga teng bo'lgan barcha qatorlarni ko'rsatadi."
     },
     {
-        question: "45. Quyidagi so'rovda xatolik bormi (agar javoblar ham ustun nomi bo'lsa)? SELECT javoblar FROM testlar WHERE t_javob = javoblar;",
+        question: " Quyidagi so'rovda xatolik bormi (agar javoblar ham ustun nomi bo'lsa)? SELECT javoblar FROM testlar WHERE t_javob = javoblar;",
         options: [
             "Ha, WHERE bandida bir xil nomdagi o'zgaruvchi ishlatilgan.",
             "Yo'q, bu so'rov t_javob ustuni javoblar ustuniga teng bo'lgan qatorlardan javoblar ustunini chiqaradi.",
@@ -450,7 +450,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Yo'q, bu so'rov t_javob ustuni javoblar ustuniga teng bo'lgan qatorlardan javoblar ustunini chiqaradi."
     },
     {
-        question: "46. AND mantiqiy operatori WHERE bandida qanday ishlaydi?",
+        question: " AND mantiqiy operatori WHERE bandida qanday ishlaydi?",
         options: [
             "Berilgan shartlardan kamida bittasi rost (TRUE) bo'lsa, umumiy shartni rost deb hisoblaydi.",
             "Berilgan barcha shartlar bir vaqtning o'zida rost (TRUE) bo'lsa, umumiy shartni rost deb hisoblaydi.",
@@ -460,7 +460,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Berilgan barcha shartlar bir vaqtning o'zida rost (TRUE) bo'lsa, umumiy shartni rost deb hisoblaydi."
     },
     {
-        question: "47. OR mantiqiy operatori WHERE bandida qanday ishlaydi?",
+        question: " OR mantiqiy operatori WHERE bandida qanday ishlaydi?",
         options: [
             "Berilgan barcha shartlar bir vaqtning o'zida rost (TRUE) bo'lishi kerak.",
             "Berilgan shartlardan kamida bittasi rost (TRUE) bo'lsa, umumiy shartni rost deb hisoblaydi.",
@@ -470,7 +470,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "Berilgan shartlardan kamida bittasi rost (TRUE) bo'lsa, umumiy shartni rost deb hisoblaydi."
     },
     {
-        question: "48. NOT mantiqiy operatori qanday vazifani bajaradi?",
+        question: " NOT mantiqiy operatori qanday vazifani bajaradi?",
         options: [
             "Ikki yoki undan ortiq shartlarni AND yordamida birlashtiradi.",
             "Bir nechta shartlardan birini tanlash imkonini beradi (OR kabi).",
@@ -480,7 +480,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "O'zidan keyin kelgan shartning mantiqiy qiymatini teskarisiga o'zgartiradi (TRUE ni FALSE ga, FALSE ni TRUE ga)."
     },
     {
-        question: "49. FALSE AND TRUE mantiqiy amali qanday natija qaytaradi?",
+        question: " FALSE AND TRUE mantiqiy amali qanday natija qaytaradi?",
         options: [
             "TRUE",
             "FALSE",
@@ -490,7 +490,7 @@ question: "25. Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchu
         answer: "FALSE"
     },
     {
-        question: "50. TRUE OR FALSE mantiqiy amali qanday natija qaytaradi?",
+        question: " TRUE OR FALSE mantiqiy amali qanday natija qaytaradi?",
         options: [
             "TRUE",
             "FALSE",
