@@ -152,7 +152,7 @@ body {
 
 .accordion-content-inner {
     /* Dastlabki holatda padding-top/bottom ni kichikroq qilib, ochilganda kattalashtirish mumkin (animatsiya uchun) */
-    padding: 0px 25px; /* Gorizontal chekinishlar (dastlab vertikal padding 0) */
+    padding: 400px 25px; /* Gorizontal chekinishlar (dastlab vertikal padding 0) */
     color: var(--matn-rangi-och);
     font-size: 1rem; /* Javob matnini biroz kattalashtiramiz */
     transition: padding 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Padding uchun silliq o'tish */
