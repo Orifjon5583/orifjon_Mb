@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Orqa fon uchun yengil rang */
+    display: flex; /* Markazga joylash uchun (ixtiyoriy) */
+    justify-content: center; /* Markazga joylash uchun (ixtiyoriy) */
+    align-items: flex-start; /* Elementlarni yuqoridan boshlash uchun (ixtiyoriy) */
+    min-height: 100vh; /* Sahifani to'liq balandlikda qilish uchun (ixtiyoriy) */
+}
+
+.where {
+
+    background-color: #fff;
+     padding: 20px;
+     border-radius: 8px; 
+     box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+     width:100%
+}
+
+.blok {
+    display: flex; /* Asosiy o'zgarish */
+    flex-direction: column; /* Elementlarni vertikal joylashtirish */
+    align-items: flex-start; /* Tugmalarni chap tomonga tekislash (yoki center, flex-end) */
+    gap: 10px; /* Tugmalar orasidagi masofa */
+}
+
+/* Bootstrap stillarini bekor qilish yoki qo'shimcha sozlash uchun (agar kerak bo'lsa) */
+.btn-group {
+    width: 100%; /* .blok kengligiga moslashish uchun */
+}
+
+.btn-group .btn {
+    width: 100%; /* Tugmaning o'zi ham to'liq kenglikda bo'lishi uchun */
+    text-align: left; /* Agar matnni chapga tekislamoqchi bo'lsangiz */
+}
+
+.dropdown-menu {
+    width: 100%; /* Ochiladigan menyuning kengligi tugmanikiga mos bo'lishi uchun */
+}
+
+/* Qo'shimcha stil (ixtiyoriy) */
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef;
+}
