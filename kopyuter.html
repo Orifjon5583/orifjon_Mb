@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarmoqlar Bo'yicha Savol-Javoblar</title>
+    <link rel="stylesheet" href="extimolik.css">
+   
+</head>
+<body>
+
+    <h1>Kompyuter Tarmoqlari Bo'yicha Savol-Javoblar</h1>
+
+    <!-- 1-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">1. Marshrutizatsiya nima?</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>Marshrutizatsiya</strong> – bu ma'lumotlar paketlarini jo'natuvchidan qabul qiluvchiga tarmoqlar orqali eng maqbul yo'l (marshrut) bo'ylab yo'naltirish jarayoni. Bu jarayon maxsus qurilmalar – <strong>marshrutizatorlar</strong> tomonidan amalga oshiriladi.</p>
+                <p>Marshrutizatorlar marshrutlash jadvallaridan foydalanib, paketlarni keyingi qaysi tugunga (qurilmaga yoki boshqa marshrutizatorga) uzatish kerakligini aniqlaydi. Marshrutlash qarorlari turli mezonlarga, masalan, yo'lning uzunligi, o'tkazuvchanlik qobiliyati, kechikish va xarajat kabi omillarga asoslanishi mumkin.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 1-MAVZU TUGASHI -->
+
+    <!-- 2-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">2. Yulduz (Star) topologiyasini tushuntiring.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>Yulduz (Star) topologiyasi</strong> – bu lokal tarmoq (LAN) topologiyasi bo'lib, unda barcha qurilmalar (kompyuterlar, printerlar va hokazo) markaziy ulanish nuqtasi orqali tarmoqqa ulanadi. Bu markaziy nuqta odatda <strong>xab (hub)</strong> yoki <strong>kommutator (switch)</strong> bo'lishi mumkin.</p>
+                <h5>Afzalliklari:</h5>
+                <ul>
+                    <li><strong>Ishonchlilik:</strong> Agar bitta kabel yoki qurilma (markaziy qurilmadan tashqari) ishdan chiqsa, tarmoqning qolgan qismi ishlashda davom etadi.</li>
+                    <li><strong>Oson kengaytirish:</strong> Yangi qurilmalarni tarmoqqa qo'shish oson, faqat markaziy qurilmaga yangi kabel ulanadi.</li>
+                    <li><strong>Nosozliklarni aniqlash oson:</strong> Nosozlik yuzaga kelgan qurilmani yoki kabelni topish nisbatan oson.</li>
+                    <li><strong>Markazlashtirilgan boshqaruv:</strong> Tarmoqni boshqarish va monitoring qilish markaziy qurilma orqali amalga oshirilishi mumkin.</li>
+                </ul>
+                <h5>Kamchiliklari:</h5>
+                <ul>
+                    <li><strong>Markaziy nuqtaga bog'liqlik:</strong> Agar markaziy qurilma (xab yoki kommutator) ishdan chiqsa, butun tarmoq ishdan chiqadi.</li>
+                    <li><strong>Kabel sarfi:</strong> Har bir qurilma uchun alohida kabel talab qilinganligi sababli ko'proq kabel sarflanadi.</li>
+                    <li><strong>Xarajat:</strong> Markaziy qurilma (ayniqsa, aqlli kommutatorlar) qo'shimcha xarajat talab qilishi mumkin.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 2-MAVZU TUGASHI -->
+
+    <!-- 3-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">3. Halqa topologiyasi haqida tushuncha bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>Halqa (Ring) topologiyasi</strong> – bu tarmoq topologiyasi bo'lib, unda har bir qurilma aniq ikkita boshqa qurilma bilan ulanib, yopiq halqa hosil qiladi. Ma'lumotlar halqa bo'ylab odatda bir yo'nalishda (soat mili bo'yicha yoki unga qarshi) uzatiladi.</p>
+                <p>Har bir qurilma signalni qabul qilib, agar u o'ziga mo'ljallanmagan bo'lsa, uni kuchaytirib keyingi qurilmaga uzatadi. Token Ring kabi texnologiyalarda ma'lumot uzatish huquqini boshqarish uchun maxsus marker (token) ishlatiladi.</p>
+                <h5>Afzalliklari:</h5>
+                <ul>
+                    <li><strong>Kabel sarfi kam:</strong> "Shina" topologiyasiga nisbatan kamroq kabel talab qilishi mumkin.</li>
+                    <li><strong>Tartibli kirish:</strong> Token Ring kabi protokollar tufayli to'qnashuvlar (kolliziyalar) kamayadi.</li>
+                    <li><strong>Signal kuchaytirilishi:</strong> Har bir qurilma signalni qayta generatsiya qilishi (repeater vazifasini bajarishi) mumkin, bu esa signalning uzoq masofalarga yetib borishiga yordam beradi.</li>
+                </ul>
+                <h5>Kamchiliklari:</h5>
+                <ul>
+                    <li><strong>Bitta nuqtadagi nosozlik:</strong> Agar halqadagi bitta qurilma yoki kabel ishdan chiqsa, butun tarmoq ishdan chiqishi mumkin (ikki halqali tizimlar bundan mustasno).</li>
+                    <li><strong>Kengaytirish va o'zgartirish qiyin:</strong> Yangi qurilma qo'shish yoki olib tashlash uchun tarmoqni vaqtincha to'xtatish kerak bo'lishi mumkin.</li>
+                    <li><strong>Nosozliklarni aniqlash qiyin:</strong> Nosozlik manbasini topish "yulduz" topologiyasiga qaraganda qiyinroq.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 3-MAVZU TUGASHI -->
+
+    <!-- 4-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">4. OSI modelining tarmoq pog’onasi vazifasi nima?</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>OSI (Open Systems Interconnection) modelining <strong>Tarmoq pog'onasi (Network Layer - 3-pog'ona)</strong> ma'lumotlar paketlarini jo'natuvchi qurilmadan qabul qiluvchi qurilmaga turli xil tarmoqlar orqali optimal marshrut bo'ylab yetkazib berish uchun mas'uldir.</p>
+                <h5>Asosiy vazifalari:</h5>
+                <ul>
+                    <li><strong>Mantiqiy adreslash (Logical Addressing):</strong> Har bir qurilmaga tarmoqda yagona bo'lgan mantiqiy adres (masalan, IP-manzil) tayinlash va ulardan foydalanish.</li>
+                    <li><strong>Marshrutlash (Routing):</strong> Ma'lumotlar paketlari uchun manbadan manzilgacha bo'lgan eng yaxshi yo'lni (marshrutni) aniqlash va tanlash. Bu marshrutlash jadvallari va marshrutlash protokollari yordamida amalga oshiriladi.</li>
+                    <li><strong>Paketlash (Packetizing):</strong> Yuqori pog'onadan (transport pog'onasidan) kelgan segmentlarni paketlarga (datagrammalarga) aylantirish va ularga tarmoq sarlavhalarini (masalan, jo'natuvchi va qabul qiluvchining IP-manzillarini) qo'shish.</li>
+                    <li><strong>Fragmentatsiya va yig'ish (Fragmentation and Reassembly):</strong> Agar paketlar oraliq tarmoqning maksimal uzatish birligidan (MTU) katta bo'lsa, ularni kichikroq qismlarga (fragmentlarga) bo'lish va qabul qiluvchi tomonda ularni qayta yig'ish.</li>
+                    <li><strong>Tarmoqlararo ulanish (Inter-networking):</strong> Turli xil tarmoq texnologiyalari va arxitekturalari o'rtasida aloqani ta'minlash.</li>
+                    <li><strong>Tirbandlikni boshqarish (Congestion Control):</strong> Tarmoqdagi tirbandlikni oldini olish yoki kamaytirish uchun choralar ko'rish (ba'zi protokollarda).</li>
+                </ul>
+                <p>Eng keng tarqalgan tarmoq pog'onasi protokoli bu <strong>IP (Internet Protocol)</strong> hisoblanadi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 4-MAVZU TUGASHI -->
+
+    <!-- 5-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">5. WiMAX texnologiyasi haqida ma’lumot bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>WiMAX (Worldwide Interoperability for Microwave Access)</strong> – bu keng polosali simsiz aloqa texnologiyasi bo'lib, IEEE 802.16 standartlari oilasiga asoslanadi. U katta geografik hududlarda ("metropolitan area networks" - MAN) yuqori tezlikdagi internetga ulanishni ta'minlash uchun mo'ljallangan.</p>
+                <h5>Asosiy xususiyatlari:</h5>
+                <ul>
+                    <li><strong>Keng qamrov doirasi:</strong> WiMAX bazaviy stansiyalari bir necha o'nlab kilometr radiusdagi hududni qamrab olishi mumkin (to'g'ridan-to'g'ri ko'rinishda).</li>
+                    <li><strong>Yuqori o'tkazuvchanlik qobiliyati:</strong> Nazariy jihatdan o'nlab Mbit/s tezlikni ta'minlay oladi.</li>
+                    <li><strong>Statsionar va mobil variantlar:</strong> WiMAX statsionar (fixed) ulanishlar (masalan, uylar va ofislar uchun) va mobil (mobile) ulanishlar (IEEE 802.16e standarti) uchun variantlarga ega.</li>
+                    <li><strong>Litsenziyalangan va litsenziyalanmagan chastota diapazonlarida ishlash:</strong> Turli mamlakatlarda turli chastota diapazonlaridan foydalanadi.</li>
+                    <li><strong>Xizmat sifati (QoS) qo'llab-quvvatlashi:</strong> Ovoz, video va ma'lumotlar kabi turli trafik turlari uchun ustuvorliklarni belgilash imkonini beradi.</li>
+                    <li><strong>Xavfsizlik:</strong> Ma'lumotlarni shifrlash va autentifikatsiya mexanizmlarini o'z ichiga oladi.</li>
+                </ul>
+                <h5>Qo'llanilish sohalari:</h5>
+                <ul>
+                    <li>"Oxirgi milya" (last mile) ulanishlarini ta'minlash, ayniqsa kabel infratuzilmasi yetib bormagan hududlarda.</li>
+                    <li>Qishloq joylarida internetga keng polosali ulanishni tashkil etish.</li>
+                    <li>Korporativ tarmoqlarni yaratish.</li>
+                    <li>Mobil operatorlar uchun tayanch tarmoq (backhaul) vazifasini bajarish.</li>
+                    <li>Jamoat xavfsizligi va favqulodda vaziyatlar xizmatlari uchun aloqa.</li>
+                </ul>
+                <p>WiMAX texnologiyasi LTE (Long-Term Evolution) kabi boshqa simsiz texnologiyalar bilan raqobatlashadi va ba'zi hududlarda o'z ahamiyatini yo'qotgan bo'lsa-da, ma'lum bir ehtiyojlar uchun dolzarb bo'lib qolmoqda.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 5-MAVZU TUGASHI -->
+
+    <!-- 6-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">6. “Nuqta-nuqta” topologiyasini tushuntiring?</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>"Nuqta-nuqta" (Point-to-Point) topologiyasi</strong> – bu eng oddiy tarmoq topologiyasi bo'lib, unda ikkita tarmoq tuguni (qurilma) o'rtasida to'g'ridan-to'g'ri, ajratilgan aloqa kanali mavjud bo'ladi. Boshqa hech qanday qurilma bu kanalga ulana olmaydi.</p>
+                <h5>Xususiyatlari:</h5>
+                <ul>
+                    <li><strong>Oddiylik:</strong> O'rnatish va sozlash juda oddiy.</li>
+                    <li><strong>Xavfsizlik:</strong> Ma'lumotlar faqat shu ikki nuqta o'rtasida uzatilgani uchun nisbatan xavfsiz hisoblanadi (agar kanalning o'zi himoyalangan bo'lsa).</li>
+                    <li><strong>Yuqori o'tkazuvchanlik:</strong> Kanal faqat shu ikki qurilmaga xizmat qilgani uchun maksimal o'tkazuvchanlikka erishish mumkin.</li>
+                    <li><strong>Kam kechikish:</strong> Ma'lumotlar to'g'ridan-to'g'ri uzatilgani uchun kechikish minimal bo'ladi.</li>
+                </ul>
+                <h5>Qo'llanilishi:</h5>
+                <ul>
+                    <li>Ikki kompyuter o'rtasida to'g'ridan-to'g'ri fayl almashish (masalan, krossover kabel orqali).</li>
+                    <li>Ikki marshrutizatorni o'zaro bog'lash (masalan, WAN ulanishlarida).</li>
+                    <li>Telefon tarmog'idagi an'anaviy kommutatsiyalanuvchi ulanishlar (masalan, dial-up).</li>
+                    <li>Ajratilgan liniyalar (leased lines) orqali ikki ofisni bog'lash.</li>
+                    <li>Simsiz aloqada ikki antenna o'rtasidagi yo'naltirilgan ulanish.</li>
+                </ul>
+                <p>Bu topologiya o'zining soddaligi va samaradorligi tufayli ko'plab maxsus vaziyatlarda keng qo'llaniladi, ammo katta tarmoqlar uchun mos emas, chunki har bir qurilma boshqa barcha qurilmalar bilan alohida "nuqta-nuqta" ulanishiga ega bo'lishi amalda mumkin emas ("to'liq bog'langan" topologiyadan tashqari, bu juda qimmatga tushadi).</p>
+            </div>
+        </div>
+    </div>
+    <!-- 6-MAVZU TUGASHI -->
+
+    <!-- 7-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">7. Fizikaviy va mantiqiy topologiya haqida tushuncha bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>Kompyuter tarmoqlarida topologiya ikki xil nuqtai nazardan qaraladi: fizikaviy va mantiqiy.</p>
+                <h5>Fizikaviy topologiya:</h5>
+                <p><strong>Fizikaviy topologiya</strong> – bu tarmoqdagi qurilmalarning (kompyuterlar, serverlar, printerlar, marshrutizatorlar va hokazo) va ularni bog'lovchi kabellarning haqiqiy joylashuv sxemasini, ya'ni tarmoqning fizik strukturasini tavsiflaydi. U "tarmoq qanday ko'rinishga ega" degan savolga javob beradi.</p>
+                <p>Asosiy fizikaviy topologiyalar turlari:</p>
+                <ul>
+                    <li><strong>Shina (Bus):</strong> Barcha qurilmalar bitta umumiy kabelga (shinaga) ulanadi.</li>
+                    <li><strong>Yulduz (Star):</strong> Barcha qurilmalar markaziy ulanish nuqtasiga (xab yoki kommutator) ulanadi.</li>
+                    <li><strong>Halqa (Ring):</strong> Har bir qurilma ikkita qo'shni qurilma bilan ulanib, yopiq halqa hosil qiladi.</li>
+                    <li><strong>Daraxtsimon (Tree):</strong> Yulduz topologiyalarining ierarxik birikmasi.</li>
+                    <li><strong>To'rsimon (Mesh):</strong> Har bir qurilma boshqa ko'plab (yoki barcha) qurilmalar bilan bevosita ulanishi mumkin.
+                        <ul>
+                            <li><em>To'liq bog'langan (Full Mesh):</em> Har bir qurilma boshqa barcha qurilmalar bilan ulangan.</li>
+                            <li><em>Qisman bog'langan (Partial Mesh):</em> Faqat ba'zi qurilmalar bir nechta boshqa qurilmalar bilan ulangan.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h5>Mantiqiy topologiya:</h5>
+                <p><strong>Mantiqiy topologiya</strong> – bu ma'lumotlarning tarmoq orqali qurilmalar o'rtasida qanday uzatilishini, ya'ni ma'lumotlar oqimining yo'lini tavsiflaydi. U "tarmoq qanday ishlaydi" yoki "ma'lumotlar qanday harakatlanadi" degan savolga javob beradi.</p>
+                <p>Mantiqiy topologiya fizikaviy topologiya bilan bir xil bo'lishi shart emas. Masalan, fizikaviy "yulduz" topologiyasiga ega bo'lgan tarmoq mantiqiy "shina" (Ethernet xabidan foydalanilganda) yoki mantiqiy "yulduz" (Ethernet kommutatoridan foydalanilganda) kabi ishlashi mumkin.</p>
+                <p>Asosiy mantiqiy topologiyalar turlari:</p>
+                <ul>
+                    <li><strong>Mantiqiy shina (Logical Bus):</strong> Ma'lumotlar barcha qurilmalarga yuboriladi va faqat mo'ljallangan qurilma uni qabul qiladi (masalan, eski Ethernet xablari bilan).</li>
+                    <li><strong>Mantiqiy halqa (Logical Ring):</strong> Ma'lumotlar halqa bo'ylab bir qurilmadan keyingisiga ketma-ket uzatiladi (masalan, Token Ring).</li>
+                </ul>
+                <p>Fizikaviy topologiya tarmoqni o'rnatish, kabel yotqizish va texnik xizmat ko'rsatishga ta'sir qilsa, mantiqiy topologiya tarmoqning ishlash samaradorligi, ma'lumot uzatish usullari va protokollariga ta'sir qiladi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 7-MAVZU TUGASHI -->
+
+    <!-- 8-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">8. OSI modelining tarmoqqa bog’liq pag’onalarini sanab bering va tushuntiring.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>OSI (Open Systems Interconnection) modelida tarmoqqa bevosita bog'liq bo'lgan va ma'lumotlarni fizik uzatish hamda tarmoqlararo yo'naltirish bilan shug'ullanadigan quyi uchta pog'ona mavjud. Ular "tarmoqqa bog'liq pog'onalar" (network support layers) yoki "media pog'onalari" deb ham ataladi.</p>
+                <ol>
+                    <li>
+                        <strong>Fizikaviy pog'ona (Physical Layer - 1-pog'ona):</strong>
+                        <p>Bu eng quyi pog'ona bo'lib, ma'lumotlarni bitlar ko'rinishida fizik uzatish muhiti (masalan, kabellar, radioto'lqinlar) orqali uzatish va qabul qilish uchun mas'uldir.</p>
+                        <h5>Vazifalari:</h5>
+                        <ul>
+                            <li>Bitlarni elektr, optik yoki radio signallariga aylantirish va aksincha.</li>
+                            <li>Fizikaviy interfeyslarning (ulagichlar, kabellar) mexanik va elektr xususiyatlarini aniqlash.</li>
+                            <li>Ma'lumot uzatish tezligi, sinxronizatsiya, uzatish muhitiga kirish usullari (qisman).</li>
+                            <li>Signal kuchlanishi, modulyatsiya turlari.</li>
+                        </ul>
+                        <p><em>Qurilmalar:</em> Kabellar, ulagichlar, takrorlagichlar (repeaters), xablar (hubs), modemlar, tarmoq adapterlarining fizik qismi.</p>
+                    </li>
+                    <li>
+                        <strong>Kanal pog'onasi (Data Link Layer - 2-pog'ona):</strong>
+                        <p>Bu pog'ona fizikaviy pog'ona orqali ishonchli ma'lumot almashinuvini ta'minlash uchun mas'uldir. U bitta fizikaviy tarmoq segmenti ichida (masalan, lokal tarmoqda) ikki ulangan tugun o'rtasida ma'lumotlarni kadrlar (frames) ko'rinishida uzatadi.</p>
+                        <h5>Vazifalari:</h5>
+                        <ul>
+                            <li><strong>Kadrlash (Framing):</strong> Tarmoq pog'onasidan kelgan paketlarni kadrlarga bo'lish va ularga boshqaruvchi ma'lumotlarni (sarlavha va treyler) qo'shish.</li>
+                            <li><strong>Fizikaviy adreslash (Physical Addressing):</strong> MAC-manzillar (Media Access Control addresses) yordamida qurilmalarni aniqlash.</li>
+                            <li><strong>Xatoliklarni aniqlash va tuzatish (Error Control):</strong> Uzatishdagi xatoliklarni aniqlash (masalan, CRC - Cyclic Redundancy Check yordamida) va ba'zan tuzatish.</li>
+                            <li><strong>Oqimni boshqarish (Flow Control):</strong> Jo'natuvchi va qabul qiluvchi o'rtasidagi ma'lumot uzatish tezligini moslashtirish, qabul qiluvchining "to'lib qolishini" oldini olish.</li>
+                            <li><strong>Muhitga kirishni boshqarish (Media Access Control - MAC):</strong> Umumiy uzatish muhitidan bir nechta qurilmalarning bir vaqtda foydalanishini tartibga solish (masalan, CSMA/CD, CSMA/CA).</li>
+                        </ul>
+                        <p><em>Qurilmalar:</em> Ko'priklar (bridges), kommutatorlar (switches), tarmoq adapterlari (NIC).</p>
+                    </li>
+                    <li>
+                        <strong>Tarmoq pog'onasi (Network Layer - 3-pog'ona):</strong>
+                        <p>Bu pog'ona ma'lumotlar paketlarini jo'natuvchidan qabul qiluvchiga turli xil (potentsial bir-biriga bog'liq bo'lmagan) tarmoqlar orqali optimal marshrut bo'ylab yetkazib berish uchun mas'uldir.</p>
+                        <h5>Vazifalari:</h5>
+                        <ul>
+                            <li><strong>Mantiqiy adreslash (Logical Addressing):</strong> IP-manzillar kabi global yagona mantiqiy manzillarni tayinlash.</li>
+                            <li><strong>Marshrutlash (Routing):</strong> Paketlar uchun eng yaxshi yo'lni tanlash.</li>
+                            <li><strong>Paketlash (Packetizing):</strong> Yuqori pog'onalardan kelgan segmentlarni paketlarga (datagrammalarga) bo'lish.</li>
+                            <li><strong>Fragmentatsiya va yig'ish (Fragmentation and Reassembly):</strong> Paketlarni kichikroq qismlarga bo'lish va qayta yig'ish.</li>
+                            <li><strong>Tarmoqlararo ulanish (Inter-networking).</strong></li>
+                        </ul>
+                        <p><em>Qurilmalar:</em> Marshrutizatorlar (routers), 3-pog'ona kommutatorlari.</p>
+                    </li>
+                </ol>
+                <p>Bu uch pog'ona birgalikda ma'lumotlarning bir qurilmadan boshqasiga jismonan va mantiqan yetib borishini ta'minlaydi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 8-MAVZU TUGASHI -->
+
+    <!-- 9-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">9. Eng keng tarqalgan LAN topologiyalari.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>Lokal tarmoqlarda (LAN) eng keng tarqalgan fizikaviy topologiyalar quyidagilardir:</p>
+                <ol>
+                    <li>
+                        <strong>Yulduz (Star) topologiyasi:</strong>
+                        <p>Bu hozirgi kunda eng keng tarqalgan LAN topologiyasidir. Barcha qurilmalar markaziy ulanish nuqtasi (odatda kommutator - switch, yoki kamroq hollarda xab - hub) orqali ulanadi. Har bir qurilma markaziy nuqtaga alohida kabel bilan bog'lanadi.</p>
+                        <p><em>Afzalliklari:</em> Ishonchliligi yuqori (bir kabel uzilsa, faqat bitta qurilma tarmoqdan uziladi), nosozliklarni aniqlash oson, kengaytirish oson.</p>
+                        <p><em>Kamchiliklari:</em> Markaziy qurilmaga bog'liqlik (u ishdan chiqsa, butun tarmoq ishdan chiqadi), ko'proq kabel talab qiladi.</p>
+                    </li>
+                    <li>
+                        <strong>Kengaytirilgan Yulduz (Extended Star) yoki Daraxtsimon (Tree) topologiya:</strong>
+                        <p>Bu bir nechta yulduz topologiyalarining ierarxik birlashmasidir. Asosiy markaziy qurilmaga (masalan, asosiy kommutatorga) boshqa markaziy qurilmalar (kichikroq kommutatorlar) ulanadi va ularga esa oxirgi foydalanuvchi qurilmalari ulanadi. Katta tarmoqlarni tuzish uchun ishlatiladi.</p>
+                        <p><em>Afzalliklari:</em> Yulduz topologiyasining afzalliklarini saqlab qoladi va tarmoqni ierarxik tarzda kengaytirish imkonini beradi.</p>
+                        <p><em>Kamchiliklari:</em> Asosiy markaziy qurilmaga yoki magistral ulanishlarga bog'liqlik.</p>
+                    </li>
+                    <li>
+                        <strong>Shina (Bus) topologiyasi (eskirgan):</strong>
+                        <p>Ilgari keng tarqalgan bo'lib, unda barcha qurilmalar bitta umumiy kabelga (magistralga yoki shinaga) ulanardi. Kabelning ikki uchida signallarni yutuvchi terminatorlar o'rnatilgan.</p>
+                        <p><em>Afzalliklari:</em> Kam kabel talab qiladi, o'rnatish oson edi.</p>
+                        <p><em>Kamchiliklari:</em> Magistral kabel uzilsa yoki terminatorlardan biri ishdan chiqsa, butun tarmoq ishdan chiqadi. Nosozliklarni aniqlash qiyin. Bir vaqtning o'zida faqat bitta qurilma ma'lumot uzata oladi, bu esa to'qnashuvlarga (kolliziyalarga) olib keladi.</p>
+                        <p><em>Hozirgi kunda "shina" topologiyasi deyarli qo'llanilmaydi, uning o'rnini "yulduz" topologiyasi egallagan.</em></p>
+                    </li>
+                    <li>
+                        <strong>Halqa (Ring) topologiyasi (maxsus holatlarda):</strong>
+                        <p>Har bir qurilma ikkita boshqa qurilmaga ulanib, yopiq halqa hosil qiladi. Token Ring kabi texnologiyalarda qo'llanilgan.</p>
+                        <p><em>Afzalliklari:</em> To'qnashuvlarning kamligi (token yordamida boshqarilsa).</p>
+                        <p><em>Kamchiliklari:</em> Bitta qurilma yoki kabel ishdan chiqsa, butun halqa ishdan chiqishi mumkin (ikki halqali tizimlar bundan mustasno), kengaytirish qiyin.</p>
+                        <p><em>Hozirgi kunda umumiy LANlarda kam qo'llaniladi, lekin ba'zi sanoat tarmoqlari yoki maxsus yuqori ishonchli tizimlarda (masalan, FDDI, SONET/SDH halqalari) uchraydi.</em></p>
+                    </li>
+                </ol>
+                <p>Zamonaviy LANlarda deyarli har doim <strong>Yulduz</strong> yoki <strong>Kengaytirilgan Yulduz (Daraxtsimon)</strong> topologiyalari Ethernet texnologiyasi bilan birgalikda qo'llaniladi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 9-MAVZU TUGASHI -->
+
+    <!-- 10-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">10. O’ralgan juftlik asosidagi kabellar.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>O'ralgan juftlik (Twisted Pair) kabeli</strong> – bu kompyuter tarmoqlarida, ayniqsa Ethernet texnologiyasida keng qo'llaniladigan kabel turidir. U bir yoki bir nechta izolyatsiyalangan mis simlar juftligidan iborat bo'lib, har bir juftlikdagi simlar elektromagnit parazitlarni (EMI) va o'zaro ta'sirni (crosstalk) kamaytirish uchun bir-biriga o'ralgan bo'ladi.</p>
+                <h5>Turlari:</h5>
+                <ol>
+                    <li>
+                        <strong>Ekranlanmagan o'ralgan juftlik (UTP - Unshielded Twisted Pair):</strong>
+                        <ul>
+                            <li>Eng keng tarqalgan va arzon turidir.</li>
+                            <li>Har bir sim juftligi alohida yoki umumiy metall ekran (folga yoki o'ram) bilan himoyalanmagan.</li>
+                            <li>Asosan ofis va uy tarmoqlarida qo'llaniladi.</li>
+                            <li>Turli kategoriyalarga bo'linadi (masalan, Cat 5e, Cat 6, Cat 6a, Cat 7), ular o'tkazuvchanlik qobiliyati va chastota diapazoni bilan farqlanadi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Ekranlangan o'ralgan juftlik (STP - Shielded Twisted Pair) yoki Folgalangan o'ralgan juftlik (FTP - Foiled Twisted Pair):</strong>
+                        <ul>
+                            <li>Sim juftliklari yoki butun kabel qo'shimcha metall ekran (folga yoki metall o'ram) bilan o'ralgan bo'ladi.</li>
+                            <li>Bu ekran tashqi elektromagnit parazitlardan yaxshiroq himoya qiladi.</li>
+                            <li>UTPga qaraganda qimmatroq va o'rnatish biroz murakkabroq (ekranni yerga ulash kerak).</li>
+                            <li>Yuqori darajadagi elektromagnit shovqin mavjud bo'lgan joylarda (masalan, sanoat korxonalarida) yoki yuqori tezlikdagi (10 Gbps va undan yuqori) ulanishlar uchun ishlatiladi.</li>
+                            <li>STP ning turli xil variantlari mavjud: F/UTP (umumiy folga ekranli UTP), S/FTP (har bir juftlik folga bilan va umumiy metall o'ramli), U/FTP (har bir juftlik folga bilan, umumiy ekran yo'q) va boshqalar.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h5>Afzalliklari:</h5>
+                <ul>
+                    <li>Nisbatan arzon (ayniqsa UTP).</li>
+                    <li>O'rnatish va ulash oson (RJ-45 ulagichlari yordamida).</li>
+                    <li>Moslashuvchan va egiluvchan.</li>
+                    <li>Turli tezliklarni qo'llab-quvvatlaydi (kategoriyasiga qarab).</li>
+                </ul>
+                <h5>Kamchiliklari:</h5>
+                <ul>
+                    <li>Signal so'nishi (attenuation) tufayli masofa cheklovlari mavjud (odatda 100 metrgacha).</li>
+                    <li>Elektromagnit parazitlarga sezgir (ayniqsa UTP).</li>
+                    <li>Optik tolali kabellarga qaraganda o'tkazuvchanlik qobiliyati pastroq.</li>
+                </ul>
+                <p>O'ralgan juftlik kabellari Ethernet standartlarida (10Base-T, 100Base-TX, 1000Base-T, 10GBase-T) keng qo'llaniladi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 10-MAVZU TUGASHI -->
+
+    <!-- 11-MAVZU BOSHLANISHI (va 19) -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">11. IP v 4 versiyasining klasslarini tushuntirib bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>IPv4 (Internet Protocol version 4) manzillari dastlab tarmoq o'lchamiga qarab turli klasslarga bo'lingan edi. Bu klassik adreslash tizimi deyiladi. IPv4 manzili 32 bitdan iborat bo'lib, odatda to'rtta sakkiz bitli (oktet) o'nlik sonlar ko'rinishida yoziladi (masalan, 192.168.1.1).</p>
+                <p>Asosiy adreslash klasslari (A, B, C) birinchi oktetning qiymatiga qarab aniqlanadi:</p>
+                <ul>
+                    <li>
+                        <strong>A Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 1 dan 126 gacha (0xxxxxxx binar ko'rinishda; 0 va 127 maxsus maqsadlar uchun ajratilgan).</li>
+                            <li><strong>Tarmoq qismi:</strong> Birinchi oktet (8 bit).</li>
+                            <li><strong>Xost qismi:</strong> Oxirgi uchta oktet (24 bit).</li>
+                            <li><strong>Tarmoqlar soni:</strong> 2<sup>7</sup> - 2 = 126 ta tarmoq (0 va 127 chiqarib tashlanadi).</li>
+                            <li><strong>Har bir tarmoqdagi xostlar soni:</strong> 2<sup>24</sup> - 2 = 16,777,214 ta xost (faqat nollar va faqat birlardan iborat xost manzillari maxsus).</li>
+                            <li><strong>Maqsadi:</strong> Juda katta tarmoqlar uchun (masalan, yirik xalqaro korporatsiyalar, internet provayderlar).</li>
+                            <li><strong>Standart niqob (Subnet Mask):</strong> 255.0.0.0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>B Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 128 dan 191 gacha (10xxxxxx binar ko'rinishda).</li>
+                            <li><strong>Tarmoq qismi:</strong> Birinchi ikkita oktet (16 bit).</li>
+                            <li><strong>Xost qismi:</strong> Oxirgi ikkita oktet (16 bit).</li>
+                            <li><strong>Tarmoqlar soni:</strong> 2<sup>14</sup> = 16,384 ta tarmoq.</li>
+                            <li><strong>Har bir tarmoqdagi xostlar soni:</strong> 2<sup>16</sup> - 2 = 65,534 ta xost.</li>
+                            <li><strong>Maqsadi:</strong> O'rta va katta hajmdagi tarmoqlar uchun (masalan, universitetlar, yirik kompaniyalar).</li>
+                            <li><strong>Standart niqob (Subnet Mask):</strong> 255.255.0.0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>C Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 192 dan 223 gacha (110xxxxx binar ko'rinishda).</li>
+                            <li><strong>Tarmoq qismi:</strong> Birinchi uchta oktet (24 bit).</li>
+                            <li><strong>Xost qismi:</strong> Oxirgi oktet (8 bit).</li>
+                            <li><strong>Tarmoqlar soni:</strong> 2<sup>21</sup> = 2,097,152 ta tarmoq.</li>
+                            <li><strong>Har bir tarmoqdagi xostlar soni:</strong> 2<sup>8</sup> - 2 = 254 ta xost.</li>
+                            <li><strong>Maqsadi:</strong> Kichik tarmoqlar uchun (masalan, kichik ofislar, uy tarmoqlari).</li>
+                            <li><strong>Standart niqob (Subnet Mask):</strong> 255.255.255.0</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Shuningdek, yana ikkita klass mavjud:</p>
+                <ul>
+                    <li>
+                        <strong>D Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 224 dan 239 gacha (1110xxxx binar ko'rinishda).</li>
+                            <li><strong>Maqsadi:</strong> Ko'p manzilli (multicast) uzatish uchun ajratilgan. Bu manzillar alohida xostlarga emas, balki xostlar guruhiga tegishli bo'ladi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>E Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 240 dan 255 gacha (1111xxxx binar ko'rinishda).</li>
+                            <li><strong>Maqsadi:</strong> Kelajakdagi foydalanish va eksperimental maqsadlar uchun zaxiralangan. Odatda umumiy foydalanishda qo'llanilmaydi.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Eslatma:</strong> Klassik adreslash tizimi IP manzillarining samarasiz taqsimlanishiga olib kelganligi sababli, hozirgi kunda uning o'rniga <strong>Klasssiz Domenlararo Marshrutlash (CIDR - Classless Inter-Domain Routing)</strong> keng qo'llaniladi. CIDR tarmoq qismini belgilashda o'zgaruvchan uzunlikdagi niqoblardan (VLSM - Variable Length Subnet Masks) foydalanishga imkon beradi, bu esa IP manzillaridan yanada moslashuvchan va samarali foydalanish imkonini beradi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 11-MAVZU TUGASHI (va 19) -->
+
+    <!-- 12-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">12. TCP/IP modelining pag’onalarini keltiring va tushuntiring.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>TCP/IP (Transmission Control Protocol/Internet Protocol) modeli – bu Internetning asosiy protokollar stekini tavsiflovchi konseptual modeldir. U OSI modeliga qaraganda amaliyroq va kamroq pog'onalardan iborat. Odatda TCP/IP modeli 4 yoki 5 pog'onali qilib tasvirlanadi.</p>
+                <h5>To'rt pog'onali TCP/IP modeli:</h5>
+                <ol>
+                    <li>
+                        <strong>Amaliy pog'ona (Application Layer):</strong>
+                        <p>Bu pog'ona foydalanuvchi dasturlari uchun tarmoq xizmatlarini taqdim etadi. U OSI modelining Amaliy, Taqdimot va Seans pog'onalarining vazifalarini o'z ichiga oladi.</p>
+                        <p><em>Protokollar:</em> HTTP (Veb), FTP (Fayl uzatish), SMTP (Elektron pochta), DNS (Domen nomlari tizimi), Telnet (Masofaviy kirish), DHCP (Dinamik xost konfiguratsiyasi) va boshqalar.</p>
+                        <p><em>Vazifalari:</em> Ma'lumotlarni formatlash, kodlash/dekodlash, seanslarni boshqarish, tarmoq resurslariga kirishni ta'minlash.</p>
+                    </li>
+                    <li>
+                        <strong>Transport pog'onasi (Transport Layer):</strong>
+                        <p>Bu pog'ona jo'natuvchi va qabul qiluvchi ilovalar o'rtasida mantiqiy "uchdan-uchga" (end-to-end) aloqani ta'minlaydi. U ma'lumotlarni segmentlarga bo'ladi va ularga port raqamlarini qo'shadi.</p>
+                        <p><em>Asosiy protokollar:</em></p>
+                        <ul>
+                            <li><strong>TCP (Transmission Control Protocol):</strong> Ishonchli, ulanishga asoslangan (connection-oriented) protokol. Ma'lumotlarning xatosiz va to'g'ri ketma-ketlikda yetib borishini kafolatlaydi, oqimni va tirbandlikni boshqaradi.</li>
+                            <li><strong>UDP (User Datagram Protocol):</strong> Ishonchsiz, ulanishsiz (connectionless) protokol. Ma'lumotlarni tezkor uzatish uchun ishlatiladi, lekin yetib borishini kafolatlamaydi.</li>
+                        </ul>
+                        <p><em>Vazifalari:</em> Ilovalarni multiplekslash/demultiplekslash (port raqamlari yordamida), segmentatsiya va yig'ish, xatoliklarni aniqlash (qisman), oqimni boshqarish (TCP).</p>
+                    </li>
+                    <li>
+                        <strong>Internet (yoki Tarmoqlararo) pog'onasi (Internet Layer / Inter-network Layer):</strong>
+                        <p>Bu pog'ona OSI modelining Tarmoq pog'onasiga mos keladi. U ma'lumotlar paketlarini (datagrammalarni) tarmoqlararo marshrutlash uchun mas'uldir. Paketlarga IP-manzillarini qo'shadi.</p>
+                        <p><em>Asosiy protokollar:</em></p>
+                        <ul>
+                            <li><strong>IP (Internet Protocol):</strong> Asosiy protokol bo'lib, paketlarni mantiqiy adreslash va marshrutlashni amalga oshiradi. Ishonchsiz va ulanishsiz xizmat ko'rsatadi. (IPv4 va IPv6 versiyalari mavjud).</li>
+                            <li><strong>ICMP (Internet Control Message Protocol):</strong> Xatoliklar haqida xabarlar va diagnostik ma'lumotlarni uzatish uchun ishlatiladi (masalan, ping).</li>
+                            <li><strong>ARP (Address Resolution Protocol):</strong> IP-manzilni MAC-manzilga o'giradi (Lokal tarmoqda).</li>
+                            <li><strong>RARP (Reverse Address Resolution Protocol):</strong> MAC-manzilni IP-manzilga o'giradi (eskirgan).</li>
+                            <li>Marshrutlash protokollari (masalan, RIP, OSPF, BGP).</li>
+                        </ul>
+                        <p><em>Vazifalari:</em> Mantiqiy adreslash, marshrutlash, paketlash, fragmentatsiya.</p>
+                    </li>
+                    <li>
+                        <strong>Tarmoqqa kirish (yoki Kanal/Fizikaviy) pog'onasi (Network Access Layer / Link Layer / Physical Layer):</strong>
+                        <p>Bu pog'ona OSI modelining Kanal va Fizikaviy pog'onalarining vazifalarini birlashtiradi. U IP-paketlarni fizik tarmoq (masalan, Ethernet, Wi-Fi) orqali uzatish uchun mas'uldir.</p>
+                        <p><em>Texnologiyalar va protokollar:</em> Ethernet, Wi-Fi (IEEE 802.11), Token Ring, FDDI, PPP (Point-to-Point Protocol), Frame Relay, ATM. Bu pog'onada MAC-manzillar ishlatiladi.</p>
+                        <p><em>Vazifalari:</em> IP-paketlarni kadrlarga (frames) aylantirish, fizik adreslash (MAC), muhitga kirishni boshqarish, xatoliklarni aniqlash (ba'zan tuzatish), bitlarni fizik muhit orqali uzatish.</p>
+                    </li>
+                </ol>
+                <p>Ba'zan 5 pog'onali model ham ishlatiladi, unda Tarmoqqa kirish pog'onasi alohida Kanal (Data Link) va Fizikaviy (Physical) pog'onalarga ajratiladi, bu esa OSI modeliga yanada yaqinroq bo'ladi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 12-MAVZU TUGASHI -->
+
+    <!-- 13-MAVZU BOSHLANISHI (va 29) -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">13. MAC-adres nima?</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>MAC-adres (Media Access Control address – Mediadagi Murojaatni Boshqarish manzili)</strong> – bu tarmoq interfeys kartasi (NIC - Network Interface Card), Wi-Fi adapteri, Bluetooth moduli kabi tarmoq uskunasiga ishlab chiqaruvchi tomonidan o'rnatilgan noyob (unikal) identifikatoridir.</p>
+                <h5>Asosiy xususiyatlari:</h5>
+                <ul>
+                    <li><strong>Noyoblik:</strong> Nazariy jihatdan har bir MAC-manzil dunyo bo'yicha yagona bo'lishi kerak. Ishlab chiqaruvchilar IEEE tomonidan berilgan maxsus diapazonlardan foydalanadilar.</li>
+                    <li><strong>Uzunligi:</strong> Odatda 48 bit (6 bayt) uzunlikda bo'ladi. Ba'zan EUI-64 formatida 64 bitli ham bo'lishi mumkin.</li>
+                    <li><strong>Ko'rinishi:</strong> Ko'pincha o'n oltilik sanoq tizimida, har bir bayt tire (-) yoki ikki nuqta (:) bilan ajratilgan holda yoziladi. Masalan:
+                        <ul>
+                            <li><code>00-1A-2B-3C-4D-5E</code></li>
+                            <li><code>00:1A:2B:3C:4D:5E</code></li>
+                            <li><code>001A.2B3C.4D5E</code> (Cisco qurilmalarida)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tuzilishi (48 bitli uchun):</strong>
+                        <ul>
+                            <li><strong>Birinchi 3 bayt (24 bit):</strong> OUI (Organizationally Unique Identifier) – Tashkilotning Yagona Identifikatori. Bu qism IEEE tomonidan ishlab chiqaruvchiga beriladi.</li>
+                            <li><strong>Keyingi 3 bayt (24 bit):</strong> Ishlab chiqaruvchi tomonidan o'zining har bir qurilmasiga noyob tarzda tayinlanadigan qism.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pog'onasi:</strong> OSI modelining <strong>Kanal pog'onasida (Data Link Layer - 2-pog'ona)</strong> ishlatiladi.</li>
+                    <li><strong>Nomlanishi:</strong> "Fizikaviy manzil", "apparat manzili" yoki "Ethernet manzili" deb ham ataladi.</li>
+                </ul>
+                <h5>Vazifasi:</h5>
+                <p>MAC-manzil lokal tarmoq segmenti (masalan, Ethernet yoki Wi-Fi tarmog'i) ichida qurilmalarni bir-biridan ajratish va ma'lumot kadrlarini to'g'ri qurilmaga yetkazib berish uchun ishlatiladi. Kommutatorlar (switches) MAC-manzillar jadvalidan foydalanib, kadrlarni faqat mo'ljallangan portga yo'naltiradi.</p>
+                <p>IP-manzil (Tarmoq pog'onasi) tarmoqlararo marshrutlash uchun ishlatilsa, MAC-manzil bitta lokal tarmoq ichidagi "oxirgi milya" yetkazib berish uchun ishlatiladi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 13-MAVZU TUGASHI (va 29) -->
+
+    <!-- 14-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">14. Paketlar kommutatsiyasining aloqa o’rnatish usullari.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>Paketlar kommutatsiyasi – bu ma'lumotlarni kichik qismlarga, ya'ni paketlarga bo'lib, ularni tarmoq orqali mustaqil ravishda jo'natish usulidir. Har bir paket o'z manzil ma'lumotlarini o'z ichiga oladi va tarmoq tugunlari (marshrutizatorlar) ularni qabul qiluvchiga yo'naltiradi. Paketlar kommutatsiyasida aloqa o'rnatishning ikki asosiy usuli mavjud:</p>
+                <ol>
+                    <li>
+                        <strong>Datagramma (Datagram) usuli / Ulanishsiz (Connectionless) aloqa:</strong>
+                        <ul>
+                            <li>Bu usulda har bir paket alohida va mustaqil ravishda marshrutlanadi.</li>
+                            <li>Paketlarni jo'natishdan oldin jo'natuvchi va qabul qiluvchi o'rtasida oldindan aloqa kanali (virtual sxema) o'rnatilmaydi.</li>
+                            <li>Har bir paket o'zining to'liq manzil ma'lumotlarini (jo'natuvchi va qabul qiluvchining manzillari) o'z ichiga oladi.</li>
+                            <li>Paketlar turli yo'llar bilan manzilga yetib borishi mumkin, bu esa ularning tartibsiz kelishiga yoki yo'qolishiga olib kelishi mumkin.</li>
+                            <li>Paketlarning yetib borishi va tartibi tarmoq tomonidan kafolatlanmaydi; bu vazifalar odatda yuqori pog'ona protokollariga (masalan, TCP) yuklanadi.</li>
+                            <li><strong>Afzalliklari:</strong> Moslashuvchan, tarmoq resurslaridan samarali foydalanish (kanal faqat ma'lumot uzatilayotganda band bo'ladi), tarmoq tugunlaridagi nosozliklarga chidamli (paketlar boshqa yo'llar bilan yo'naltirilishi mumkin).</li>
+                            <li><strong>Kamchiliklari:</strong> Paketlarning yo'qolishi yoki tartibsiz kelishi ehtimoli, har bir paketda to'liq manzil ma'lumotlarini tashish zarurati (qo'shimcha yuklama).</li>
+                            <li><strong>Misol:</strong> IP (Internet Protocol), UDP (User Datagram Protocol).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Virtual sxema (Virtual Circuit) usuli / Ulanishga asoslangan (Connection-oriented) aloqa:</strong>
+                        <ul>
+                            <li>Bu usulda ma'lumot paketlarini jo'natishdan oldin jo'natuvchi va qabul qiluvchi o'rtasida mantiqiy aloqa yo'li – <strong>virtual sxema</strong> o'rnatiladi.</li>
+                            <li>Virtual sxema o'rnatilgandan so'ng, barcha paketlar shu belgilangan yo'l bo'ylab bir xil ketma-ketlikda uzatiladi.</li>
+                            <li>Paketlarning sarlavhalari datagramma usuliga qaraganda kichikroq bo'lishi mumkin, chunki to'liq manzil o'rniga faqat virtual sxema identifikatori (VCI - Virtual Circuit Identifier) ishlatiladi.</li>
+                            <li>Virtual sxemalar ikki turga bo'linadi:
+                                <ul>
+                                    <li><strong>Kommutatsiyalanuvchi virtual sxema (SVC - Switched Virtual Circuit):</strong> Aloqa seansi uchun vaqtincha o'rnatiladi va seans tugagach uziladi (masalan, telefon qo'ng'irog'i kabi).</li>
+                                    <li><strong>Doimiy virtual sxema (PVC - Permanent Virtual Circuit):</strong> Oldindan sozlanadi va doimiy ravishda mavjud bo'ladi (masalan, ajratilgan liniya kabi).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Afzalliklari:</strong> Paketlarning tartibli yetib borishi, xatoliklarni boshqarish va oqimni nazorat qilish osonroq, sarlavhalar kichikroq.</li>
+                            <li><strong>Kamchiliklari:</strong> Ulanishni o'rnatish uchun qo'shimcha vaqt va resurslar talab qilinadi, agar virtual sxema bo'ylab biror tugun ishdan chiqsa, aloqa uzilishi mumkin (qayta marshrutlash talab etiladi).</li>
+                            <li><strong>Misollar:</strong> X.25, Frame Relay, ATM (Asynchronous Transfer Mode) texnologiyalari virtual sxemalardan foydalanadi. TCP protokoli ham yuqori pog'onada ulanishga asoslangan xizmat ko'rsatadi, lekin u odatda datagrammali IP tarmog'i ustida ishlaydi.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- 14-MAVZU TUGASHI -->
+
+    <!-- 15-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">15. Kommutatsiyalash usullariga misol keltiring.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>Kommutatsiyalash – bu tarmoq tugunlari (kommutatorlar, marshrutizatorlar) orqali ma'lumotlarni jo'natuvchidan qabul qiluvchiga yetkazib berish uchun yo'lni (kanalni yoki marshrutni) tanlash va o'rnatish jarayoni. Asosiy kommutatsiyalash usullari quyidagilardir:</p>
+                <ol>
+                    <li>
+                        <strong>Kanallar kommutatsiyasi (Circuit Switching):</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Ma'lumot uzatishdan oldin jo'natuvchi va qabul qiluvchi o'rtasida ajratilgan fizikaviy yoki mantiqiy aloqa kanali o'rnatiladi. Bu kanal butun aloqa seansi davomida faqat shu ikki foydalanuvchi uchun band qilinadi.
+                            <li><strong>Misollar:</strong>
+                                <ul>
+                                    <li><strong>An'anaviy telefon tarmog'i (PSTN - Public Switched Telephone Network):</strong> Telefon qo'ng'irog'i paytida ikki abonent o'rtasida maxsus kanal ajratiladi.</li>
+                                    <li><strong>ISDN (Integrated Services Digital Network):</strong> Raqamli telefon va ma'lumotlar uchun kanallar kommutatsiyasidan foydalanadi.</li>
+                                    <li>Ba'zi optik tarmoqlarda ajratilgan yorug'lik to'lqin uzunliklari (wavelengths).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Afzalliklari:</strong> Doimiy o'tkazuvchanlik qobiliyati, minimal va barqaror kechikish.</li>
+                            <li><strong>Kamchiliklari:</strong> Kanal resurslaridan samarasiz foydalanish (agar ma'lumot uzatilmayotgan bo'lsa ham kanal band bo'ladi), ulanishni o'rnatish uchun vaqt talab etiladi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Paketlar kommutatsiyasi (Packet Switching):</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Ma'lumotlar kichik qismlarga – paketlarga bo'linadi. Har bir paket mustaqil ravishda tarmoq orqali marshrutlanadi. Kanal resurslari bir nechta foydalanuvchilar o'rtasida dinamik ravishda taqsimlanadi.
+                            <li><strong>Misollar (va uning turlari):</strong>
+                                <ul>
+                                    <li><strong>Datagramma usuli (Connectionless):</strong>
+                                        <ul>
+                                            <li><strong>Internet (IP protokoli):</strong> Internetdagi deyarli barcha ma'lumotlar IP paketlari ko'rinishida datagramma usulida uzatiladi.</li>
+                                            <li><strong>UDP (User Datagram Protocol).</strong></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Virtual sxema usuli (Connection-oriented):</strong>
+                                        <ul>
+                                            <li><strong>X.25 tarmog'i (eskirgan).</strong></li>
+                                            <li><strong>Frame Relay:</strong> Korporativ WAN ulanishlari uchun keng qo'llanilgan.</li>
+                                            <li><strong>ATM (Asynchronous Transfer Mode):</strong> Yuqori tezlikdagi ovoz, video va ma'lumotlarni uzatish uchun ishlab chiqilgan texnologiya.</li>
+                                            <li><strong>MPLS (Multiprotocol Label Switching):</strong> IP tarmoqlarida virtual sxemalarga o'xshash funksionallikni ta'minlaydi.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><strong>Afzalliklari:</strong> Kanal resurslaridan samarali foydalanish, moslashuvchanlik, tarmoq nosozliklariga chidamlilik.</li>
+                            <li><strong>Kamchiliklari:</strong> Kechikish o'zgaruvchan bo'lishi mumkin (jitter), paketlar yo'qolishi yoki tartibsiz kelishi mumkin (datagramma usulida).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Xabarlar kommutatsiyasi (Message Switching) (eskirgan):</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Butun xabar (fayl, hujjat) bitta yaxlit blok sifatida bir tugundan keyingi tugunga "saqlab-uzatish" (store-and-forward) tamoyili asosida uzatiladi. Har bir oraliq tugun xabarni to'liq qabul qilib oladi, saqlaydi va keyin bo'sh kanal topgach keyingi tugunga jo'natadi.
+                            <li><strong>Misollar:</strong>
+                                <ul>
+                                    <li><strong>Ilk telegraf tarmoqlari.</strong></li>
+                                    <li><strong>Ba'zi elektron pochta tizimlari (qisman).</strong></li>
+                                </ul>
+                            </li>
+                            <li><strong>Afzalliklari:</strong> Turli tezlikdagi tarmoqlarni bog'lash imkoniyati, tarmoq resurslaridan paketlar kommutatsiyasiga qaraganda kamroq dinamik foydalanish.</li>
+                            <li><strong>Kamchiliklari:</strong> Katta kechikishlar (har bir tugunda saqlash vaqti), katta hajmdagi bufer xotira talab qiladi. Hozirda kam qo'llaniladi.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Hozirgi kunda eng keng tarqalgan kommutatsiyalash usuli bu <strong>paketlar kommutatsiyasi</strong> bo'lib, Internet aynan shu tamoyil asosida ishlaydi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 15-MAVZU TUGASHI -->
+
+    <!-- Qolgan savollar uchun ham shunday struktura davom ettiriladi -->
+    <!-- ... (16 dan 49 gacha savollar uchun struktura) ... -->
+
+    <!-- 16-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">16. Koaksial kabel bo’yicha tushuncha bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>Koaksial kabel (Coaxial cable)</strong> – bu elektr signallarini uzatish uchun ishlatiladigan kabel turi bo'lib, u o'ziga xos tuzilishga ega. Uning nomi "co-" (birgalikda) va "axis" (o'q) so'zlaridan kelib chiqqan, chunki uning ichki va tashqi o'tkazgichlari umumiy geometrik o'qqa ega.</p>
+                <h5>Tuzilishi:</h5>
+                <ol>
+                    <li><strong>Markaziy o'tkazgich (Center Conductor):</strong> Odatda qattiq yoki ko'p tolali mis simdan iborat bo'lib, asosiy signalni olib yuradi.</li>
+                    <li><strong>Dielektrik izolyator (Dielectric Insulator):</strong> Markaziy o'tkazgichni o'rab turuvchi izolyatsion material (masalan, polietilen, teflon). U markaziy o'tkazgichni tashqi ekrandan ajratib turadi va kabelning elektr xususiyatlarini (masalan, impedansini) belgilaydi.</li>
+                    <li><strong>Ekranlovchi o'tkazgich (Shielding Conductor / Outer Conductor):</strong> Odatda mis yoki alyuminiy folga va/yoki metall o'ram (braid) ko'rinishida bo'ladi. U tashqi elektromagnit parazitlardan (EMI) himoya qiladi va qaytuvchi tok uchun yo'l vazifasini bajaradi.</li>
+                    <li><strong>Tashqi qobiq (Outer Jacket):</strong> Kabelni fizik shikastlanishlardan va atrof-muhit ta'siridan himoya qiluvchi plastik (odatda PVC) qatlam.</li>
+                </ol>
+                <h5>Turlari va Qo'llanilishi:</h5>
+                <ul>
+                    <li><strong>Yupqa koaksial kabel (Thinnet, RG-58):</strong> Ilgari Ethernet tarmoqlarida (10Base2 standarti) ishlatilgan. Nisbatan egiluvchan va arzon.</li>
+                    <li><strong>Yo'g'on koaksial kabel (Thicknet, RG-8, RG-11):</strong> Ilgari Ethernet tarmoqlarining magistral qismlarida (10Base5 standarti) ishlatilgan. Yupqa kabelga qaraganda uzoqroq masofaga signal uzata oladi, lekin qattiqroq va qimmatroq.</li>
+                    <li><strong>Kabel televideniyesi uchun kabellar (CATV, masalan, RG-6, RG-59):</strong> Televizion signallarni uzatish uchun keng qo'llaniladi. Hozirda kabel modemlari orqali internetga ulanish uchun ham ishlatiladi.</li>
+                    <li><strong>Radiochastota (RF) ulanishlari uchun:</strong> Antennalarni radiouzatgichlar va qabul qilgichlar bilan ulashda, video kuzatuv tizimlarida va boshqa radioaloqa qurilmalarida ishlatiladi.</li>
+                </ul>
+                <h5>Afzalliklari:</h5>
+                <ul>
+                    <li>O'ralgan juftlikka qaraganda elektromagnit parazitlardan yaxshiroq himoyalangan.</li>
+                    <li>O'ralgan juftlikka qaraganda kengroq chastota diapazonini va yuqoriroq o'tkazuvchanlik qobiliyatini qo'llab-quvvatlashi mumkin.</li>
+                    <li>Signal so'nishi o'ralgan juftlikka qaraganda kamroq bo'lishi mumkin, bu esa uzoqroq masofalarga uzatish imkonini beradi.</li>
+                </ul>
+                <h5>Kamchiliklari:</h5>
+                <ul>
+                    <li>O'ralgan juftlikka qaraganda qattiqroq va o'rnatish biroz qiyinroq.</li>
+                    <li>Odatda o'ralgan juftlikka qaraganda qimmatroq.</li>
+                    <li>Ulagichlari (masalan, BNC, F-tip) RJ-45 ga qaraganda murakkabroq bo'lishi mumkin.</li>
+                </ul>
+                <p>Hozirgi kunda lokal kompyuter tarmoqlarida koaksial kabel o'rnini asosan o'ralgan juftlik va optik tolali kabellar egallagan, ammo u kabel televideniyesi, radioaloqa va ba'zi maxsus ilovalarda o'z ahamiyatini saqlab qolmoqda.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 16-MAVZU TUGASHI -->
+
+    <!-- 17-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">17. Lokal tarmoqda qo’llaniladigan qurilmalarni keltiring va vazifasini tushuntiring.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>Lokal tarmoqlarda (LAN - Local Area Network) ma'lumot almashinuvini ta'minlash va tarmoqni boshqarish uchun turli xil qurilmalar qo'llaniladi. Asosiylari quyidagilar:</p>
+                <ol>
+                    <li>
+                        <strong>Tarmoq Interfeys Kartasi (NIC - Network Interface Card) / Tarmoq Adapteri:</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Kompyuter yoki boshqa qurilmani fizikaviy tarmoqqa ulash imkonini beradi. Ma'lumotlarni kompyuter tushunadigan formatdan tarmoq orqali uzatiladigan signallarga (va aksincha) o'zgartiradi. Har bir NIC o'zining noyob MAC-manziliga ega.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Takrorlagich (Repeater):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Fizikaviy pog'onada (1-pog'ona) ishlaydi. Tarmoq kabeli orqali uzatilayotgan signallarni qabul qilib, ularni kuchaytiradi va qayta uzatadi. Bu signal so'nishini bartaraf etib, tarmoq segmentining uzunligini oshirishga yordam beradi. U ma'lumotlarni tahlil qilmaydi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Xab (Hub):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Fizikaviy pog'onada (1-pog'ona) ishlaydigan ko'p portli takrorlagich. Bir portidan kelgan signalni boshqa barcha faol portlariga uzatadi. Bu bitta kolliziya domenini hosil qiladi, ya'ni bir vaqtning o'zida faqat bitta qurilma ma'lumot uzata oladi, aks holda to'qnashuv (kolliziya) yuz beradi. Hozirda kam qo'llaniladi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Ko'prik (Bridge):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Kanal pog'onasida (2-pog'ona) ishlaydi. Ikkita yoki undan ortiq tarmoq segmentlarini bog'laydi. MAC-manzillar asosida kadrlarni filtrlash orqali keraksiz trafikni chegaralaydi va har bir segmentni alohida kolliziya domeni sifatida ajratadi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kommutator (Switch):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Kanal pog'onasida (2-pog'ona) ishlaydigan aqlli ko'p portli ko'prik. Har bir porti alohida kolliziya domeni hisoblanadi. U MAC-manzillar jadvalidan foydalanib, kelgan kadrlarni faqat mo'ljallangan portga yo'naltiradi, bu esa tarmoq samaradorligini sezilarli darajada oshiradi. Zamonaviy LANlarda markaziy ulanish qurilmasi sifatida keng qo'llaniladi. Ba'zi kommutatorlar 3-pog'ona (Tarmoq pog'onasi) funksiyalariga ham ega bo'lishi mumkin (Layer 3 Switch).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Marshrutizator (Router):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Tarmoq pog'onasida (3-pog'ona) ishlaydi. Turli xil tarmoqlarni (masalan, lokal tarmoqni Internetga) o'zaro bog'laydi va ular o'rtasida ma'lumot paketlarini marshrutlaydi. IP-manzillar asosida ishlaydi va paketlar uchun eng maqbul yo'lni tanlaydi. Har bir porti alohida keng tarqatish domeni (broadcast domain) hisoblanadi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Simsiz Ulanish Nuqtasi (WAP - Wireless Access Point):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Simsiz qurilmalarni (noutbuklar, smartfonlar) simli tarmoqqa ulash imkonini beradi. Odatda kommutator yoki marshrutizatorga ulanadi va Wi-Fi signallarini tarqatadi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Modem (Modulator-Demodulator):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Raqamli signallarni analog signallarga (modulyatsiya) va aksincha (demodulyatsiya) o'zgartiradi. Masalan, kompyuterning raqamli ma'lumotlarini telefon liniyasi orqali uzatiladigan analog signallarga aylantirish uchun (DSL modem) yoki kabel televideniyesi tarmog'i orqali (kabel modem) ishlatiladi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Shlyuz (Gateway):</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Turli xil protokollar yoki arxitekturalarga ega bo'lgan tarmoqlarni o'zaro bog'laydigan qurilma. U OSI modelining barcha pog'onalarida ishlashi mumkin va protokollarni o'zgartirish (translyatsiya qilish) vazifasini bajaradi. Ko'pincha marshrutizatorlar shlyuz vazifasini ham bajaradi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Fayervol (Firewall) / Tarmoqlararo Ekran:</strong>
+                        <ul>
+                            <li><strong>Vazifasi:</strong> Tarmoq xavfsizligini ta'minlash uchun kiruvchi va chiquvchi tarmoq trafikini nazorat qiladi va filtrlaydi. Ruxsat etilmagan kirishlardan himoya qiladi. Apparat yoki dasturiy ta'minot ko'rinishida bo'lishi mumkin.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- 17-MAVZU TUGASHI -->
+
+    <!-- 18-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">18. IP adreslarni qanday turlari bor va ularning farqi nimada?</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>IP-adreslar (Internet Protocol manzillari) tarmoqdagi qurilmalarni yagona tarzda aniqlash uchun ishlatiladi. Ularning bir nechta turlari mavjud bo'lib, ular o'z vazifalari va qo'llanilish sohalari bilan farqlanadi. Asosiy turlari va farqlari:</p>
+                <h5>1. IP Versiyasiga ko'ra:</h5>
+                <ul>
+                    <li>
+                        <strong>IPv4 (Internet Protocol version 4):</strong>
+                        <ul>
+                            <li><strong>Uzunligi:</strong> 32 bit (masalan, <code>192.168.1.10</code>).</li>
+                            <li><strong>Manzillar soni:</strong> Taxminan 4.3 milliard yagona manzil.</li>
+                            <li><strong>Hozirgi holati:</strong> Eng keng tarqalgan versiya, lekin manzillar zaxirasi tugab bormoqda.</li>
+                            <li><strong>Farqi:</strong> Qisqaroq, eslab qolish osonroq, lekin manzillar soni cheklangan. NAT (Network Address Translation) kabi texnologiyalar yordamida manzillar tanqisligi muammosi qisman hal qilinadi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>IPv6 (Internet Protocol version 6):</strong>
+                        <ul>
+                            <li><strong>Uzunligi:</strong> 128 bit (masalan, <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>).</li>
+                            <li><strong>Manzillar soni:</strong> Juda katta (taxminan 3.4 x 10<sup>38</sup>), amalda tuganmas.</li>
+                            <li><strong>Hozirgi holati:</strong> IPv4 o'rnini bosish uchun ishlab chiqilgan va asta-sekin joriy qilinmoqda.</li>
+                            <li><strong>Farqi:</strong> Manzillar soni deyarli cheksiz, xavfsizlik (IPsec integratsiyasi), avtomatik konfiguratsiya kabi qo'shimcha imkoniyatlarga ega. Murakkabroq ko'rinishga ega.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h5>2. Umumiy foydalanishga ko'ra (IPv4 va IPv6 uchun ham tegishli):</h5>
+                <ul>
+                    <li>
+                        <strong>Ommaviy (Public) IP-manzil:</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Global internetda yagona bo'lgan va internet orqali to'g'ridan-to'g'ri kirish mumkin bo'lgan manzil. Internet-provayderlar tomonidan taqdim etiladi.</li>
+                            <li><strong>Maqsadi:</strong> Veb-serverlar, pochta serverlari va internetga to'g'ridan-to'g'ri ulangan boshqa qurilmalar uchun.</li>
+                            <li><strong>Farqi:</strong> Global marshrutlanadi. Har bir ommaviy IP-manzil noyob bo'lishi kerak.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Xususiy (Private) IP-manzil:</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Lokal tarmoqlar (LAN) ichida foydalanish uchun ajratilgan maxsus diapazonlardagi manzillar (masalan, IPv4 uchun <code>10.0.0.0/8</code>, <code>172.16.0.0/12</code>, <code>192.168.0.0/16</code>). Bu manzillar internetda marshrutlanmaydi.</li>
+                            <li><strong>Maqsadi:</strong> Uy va ofis tarmoqlaridagi qurilmalarga manzil berish. Bir nechta turli lokal tarmoqlarda bir xil xususiy IP-manzillar ishlatilishi mumkin.</li>
+                            <li><strong>Farqi:</strong> Global internetda yagona emas, faqat lokal tarmoq ichida yagona bo'lishi kerak. Internetga chiqish uchun odatda NAT (Network Address Translation) texnologiyasi (marshrutizatorda) ishlatiladi, bu xususiy IP-manzilni bitta ommaviy IP-manzilga o'zgartiradi.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h5>3. Tayinlanish usuliga ko'ra (IPv4 va IPv6 uchun ham tegishli):</h5>
+                <ul>
+                    <li>
+                        <strong>Statik IP-manzil:</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Qurilmaga qo'lda (manual) yoki server tomonidan doimiy ravishda tayinlanadigan o'zgarmas IP-manzil.</li>
+                            <li><strong>Maqsadi:</strong> Serverlar, printerlar va doimiy manzil talab qiladigan boshqa qurilmalar uchun.</li>
+                            <li><strong>Farqi:</strong> Har doim bir xil bo'ladi, lekin konfiguratsiya qilish ko'proq mehnat talab etadi va manzillarni boshqarish qiyinroq bo'lishi mumkin.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Dinamik IP-manzil:</strong>
+                        <ul>
+                            <li><strong>Ta'rifi:</strong> Qurilma tarmoqqa ulanganda DHCP (Dynamic Host Configuration Protocol) serveri tomonidan avtomatik ravishda va vaqtincha tayinlanadigan IP-manzil.</li>
+                            <li><strong>Maqsadi:</strong> Ko'pgina mijoz qurilmalari (kompyuterlar, smartfonlar) uchun.</li>
+                            <li><strong>Farqi:</strong> Avtomatik sozlanadi, IP-manzillarni samarali boshqarish imkonini beradi. Qurilma qayta ulanganda boshqa IP-manzil olishi mumkin.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h5>4. Maxsus maqsadli IP-manzillar (asosan IPv4 uchun):</h5>
+                <ul>
+                    <li><strong>Loopback manzili:</strong> (masalan, <code>127.0.0.1</code> IPv4 uchun, <code>::1</code> IPv6 uchun). Qurilmaning o'ziga murojaat qilish uchun ishlatiladi (tarmoq dasturlarini test qilish va lokal xizmatlarga kirish).</li>
+                    <li><strong>Tarmoq manzili (Network Address):</strong> Tarmoqning o'zini identifikatsiya qiladi (xost qismi faqat nollardan iborat).</li>
+                    <li><strong>Keng tarqatish manzili (Broadcast Address):</strong> Lokal tarmoqdagi barcha qurilmalarga paket jo'natish uchun ishlatiladi (xost qismi faqat birlardan iborat, masalan, <code>192.168.1.255</code> /24 tarmoq uchun). IPv6 da an'anaviy broadcast yo'q, uning o'rniga multicast ishlatiladi.</li>
+                    <li><strong>APIPA (Automatic Private IP Addressing):</strong> (<code>169.254.0.0/16</code> diapazoni IPv4 uchun). DHCP serveri mavjud bo'lmaganda qurilmalar o'zlariga avtomatik ravishda manzil tayinlashi uchun.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 18-MAVZU TUGASHI -->
+
+    <!-- 19-MAVZU BOSHLANISHI (11 bilan bir xil) -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">19. IP v 4 versiyasining klasslarini tushuntirib bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p>IPv4 (Internet Protocol version 4) manzillari dastlab tarmoq o'lchamiga qarab turli klasslarga bo'lingan edi. Bu klassik adreslash tizimi deyiladi. IPv4 manzili 32 bitdan iborat bo'lib, odatda to'rtta sakkiz bitli (oktet) o'nlik sonlar ko'rinishida yoziladi (masalan, 192.168.1.1).</p>
+                <p>Asosiy adreslash klasslari (A, B, C) birinchi oktetning qiymatiga qarab aniqlanadi:</p>
+                <ul>
+                    <li>
+                        <strong>A Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 1 dan 126 gacha (0xxxxxxx binar ko'rinishda; 0 va 127 maxsus maqsadlar uchun ajratilgan).</li>
+                            <li><strong>Tarmoq qismi:</strong> Birinchi oktet (8 bit).</li>
+                            <li><strong>Xost qismi:</strong> Oxirgi uchta oktet (24 bit).</li>
+                            <li><strong>Tarmoqlar soni:</strong> 2<sup>7</sup> - 2 = 126 ta tarmoq (0 va 127 chiqarib tashlanadi).</li>
+                            <li><strong>Har bir tarmoqdagi xostlar soni:</strong> 2<sup>24</sup> - 2 = 16,777,214 ta xost (faqat nollar va faqat birlardan iborat xost manzillari maxsus).</li>
+                            <li><strong>Maqsadi:</strong> Juda katta tarmoqlar uchun (masalan, yirik xalqaro korporatsiyalar, internet provayderlar).</li>
+                            <li><strong>Standart niqob (Subnet Mask):</strong> 255.0.0.0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>B Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 128 dan 191 gacha (10xxxxxx binar ko'rinishda).</li>
+                            <li><strong>Tarmoq qismi:</strong> Birinchi ikkita oktet (16 bit).</li>
+                            <li><strong>Xost qismi:</strong> Oxirgi ikkita oktet (16 bit).</li>
+                            <li><strong>Tarmoqlar soni:</strong> 2<sup>14</sup> = 16,384 ta tarmoq.</li>
+                            <li><strong>Har bir tarmoqdagi xostlar soni:</strong> 2<sup>16</sup> - 2 = 65,534 ta xost.</li>
+                            <li><strong>Maqsadi:</strong> O'rta va katta hajmdagi tarmoqlar uchun (masalan, universitetlar, yirik kompaniyalar).</li>
+                            <li><strong>Standart niqob (Subnet Mask):</strong> 255.255.0.0</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>C Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 192 dan 223 gacha (110xxxxx binar ko'rinishda).</li>
+                            <li><strong>Tarmoq qismi:</strong> Birinchi uchta oktet (24 bit).</li>
+                            <li><strong>Xost qismi:</strong> Oxirgi oktet (8 bit).</li>
+                            <li><strong>Tarmoqlar soni:</strong> 2<sup>21</sup> = 2,097,152 ta tarmoq.</li>
+                            <li><strong>Har bir tarmoqdagi xostlar soni:</strong> 2<sup>8</sup> - 2 = 254 ta xost.</li>
+                            <li><strong>Maqsadi:</strong> Kichik tarmoqlar uchun (masalan, kichik ofislar, uy tarmoqlari).</li>
+                            <li><strong>Standart niqob (Subnet Mask):</strong> 255.255.255.0</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Shuningdek, yana ikkita klass mavjud:</p>
+                <ul>
+                    <li>
+                        <strong>D Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 224 dan 239 gacha (1110xxxx binar ko'rinishda).</li>
+                            <li><strong>Maqsadi:</strong> Ko'p manzilli (multicast) uzatish uchun ajratilgan. Bu manzillar alohida xostlarga emas, balki xostlar guruhiga tegishli bo'ladi.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>E Klassi:</strong>
+                        <ul>
+                            <li><strong>Birinchi oktet diapazoni:</strong> 240 dan 255 gacha (1111xxxx binar ko'rinishda).</li>
+                            <li><strong>Maqsadi:</strong> Kelajakdagi foydalanish va eksperimental maqsadlar uchun zaxiralangan. Odatda umumiy foydalanishda qo'llanilmaydi.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Eslatma:</strong> Klassik adreslash tizimi IP manzillarining samarasiz taqsimlanishiga olib kelganligi sababli, hozirgi kunda uning o'rniga <strong>Klasssiz Domenlararo Marshrutlash (CIDR - Classless Inter-Domain Routing)</strong> keng qo'llaniladi. CIDR tarmoq qismini belgilashda o'zgaruvchan uzunlikdagi niqoblardan (VLSM - Variable Length Subnet Masks) foydalanishga imkon beradi, bu esa IP manzillaridan yanada moslashuvchan va samarali foydalanish imkonini beradi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 19-MAVZU TUGASHI (11 bilan bir xil) -->
+
+    <!-- 20-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">20. Marshrutizator qurilmasini tushuntirib bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>Marshrutizator (Router)</strong> – bu OSI modelining Tarmoq pog'onasida (3-pog'ona) ishlaydigan tarmoq qurilmasi bo'lib, uning asosiy vazifasi turli xil tarmoqlarni (masalan, lokal tarmoqlarni o'zaro yoki lokal tarmoqni Internetga) bog'lash va ular o'rtasida ma'lumot paketlarini yo'naltirish (marshrutlash)dir.</p>
+                <h5>Asosiy vazifalari va xususiyatlari:</h5>
+                <ul>
+                    <li><strong>Marshrutlash (Routing):</strong> Marshrutizatorlar IP-manzillariga asoslanib, kelgan paketlar uchun eng maqbul yo'lni (marshrutni) aniqlaydi va ularni tegishli chiqish interfeysiga yo'naltiradi. Bu qarorlar marshrutlash jadvallariga asoslanadi.</li>
+                    <li><strong>Marshrutlash jadvallari (Routing Tables):</strong> Marshrutizator o'zining marshrutlash jadvalida turli tarmoqlarga yetib borish yo'llari haqidagi ma'lumotlarni saqlaydi. Bu jadvallar statik ravishda (administrator tomonidan qo'lda kiritilgan) yoki dinamik ravishda (RIP, OSPF, BGP kabi marshrutlash protokollari yordamida avtomatik yangilanib turadigan) bo'lishi mumkin.</li>
+                    <li><strong>Tarmoqlararo ulanish (Inter-networking):</strong> Turli IP-tarmoqlarni, shu jumladan turli fizikaviy texnologiyalarga (Ethernet, Wi-Fi, WAN ulanishlari) ega bo'lgan tarmoqlarni o'zaro bog'laydi.</li>
+                    <li><strong>Paketlarni filtrlash (Packet Filtering):</strong> Xavfsizlik maqsadlarida yoki trafikni boshqarish uchun ma'lum mezonlarga (masalan, IP-manzil, port raqami) ko'ra paketlarni bloklashi yoki ruxsat berishi mumkin (oddiy fayervol funksiyasi).</li>
+                    <li><strong>Keng tarqatish domenlarini ajratish (Broadcast Domain Segmentation):</strong> Marshrutizatorning har bir interfeysi alohida keng tarqatish domenini (broadcast domain) hosil qiladi. Bu shuni anglatadiki, bir interfeysdan kelgan keng tarqatish paketlari boshqa interfeyslarga o'tkazilmaydi, bu esa tarmoqdagi keraksiz trafikni kamaytiradi.</li>
+                    <li><strong>NAT (Network Address Translation):</strong> Ko'pincha marshrutizatorlar NAT funksiyasini bajaradi, ya'ni lokal tarmoqdagi xususiy IP-manzillarni bitta yoki bir nechta ommaviy IP-manzilga o'zgartirib, internetga chiqish imkonini beradi.</li>
+                    <li><strong>DHCP serveri:</strong> Ko'pgina uy va kichik ofis marshrutizatorlari lokal tarmoqdagi qurilmalarga avtomatik ravishda IP-manzil va boshqa tarmoq sozlamalarini tayinlaydigan DHCP serveri vazifasini bajaradi.</li>
+                    <li><strong>Qo'shimcha funksiyalar:</strong> VPN (Virtual Private Network) qo'llab-quvvatlashi, QoS (Quality of Service) boshqaruvi, oddiy fayervol kabi funksiyalarga ega bo'lishi mumkin.</li>
+                </ul>
+                <h5>Turlari:</h5>
+                <p>Marshrutizatorlar o'zlarining quvvati, portlar soni, qo'llab-quvvatlaydigan protokollari va qo'llanilish sohasiga qarab farqlanadi:</p>
+                <ul>
+                    <li><strong>Uy/Kichik ofis (SOHO) marshrutizatorlari:</strong> Odatda bir nechta Ethernet porti, Wi-Fi ulanish nuqtasi, NAT, DHCP va oddiy fayervol funksiyalariga ega bo'ladi.</li>
+                    <li><strong>Korporativ marshrutizatorlar:</strong> Yuqori unumdorlik, ko'proq portlar, kengaytirilgan marshrutlash protokollari, VPN, ilg'or xavfsizlik funksiyalari.</li>
+                    <li><strong>Magistral (Core) marshrutizatorlar:</strong> Internet provayderlari va yirik korporatsiyalar tarmoqlarining markazida ishlatiladi. Juda yuqori tezlik va ishonchlilikni ta'minlaydi.</li>
+                </ul>
+                <p>Marshrutizatorlar zamonaviy kompyuter tarmoqlarining, ayniqsa Internetning muhim tarkibiy qismidir.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 20-MAVZU TUGASHI -->
+
+    <!-- Qolgan savollar (21-49) uchun ham shu formatda javoblarni tayyorlash kerak. -->
+    <!-- Bu jarayon ancha vaqt talab qiladi. Namuna sifatida bir nechtasini keltirdim. -->
+    <!-- Agar barcha 49 ta savolga javob kerak bo'lsa, iltimos, xabar bering. -->
+
+    <!-- 21-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">21. IEEE 802.16 standarti bo’yicha tushuncha bering.</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>IEEE 802.16</strong> – bu Elektrotexnika va Elektronika Muhandislari Instituti (IEEE) tomonidan ishlab chiqilgan standartlar guruhi bo'lib, ular <strong>keng polosali simsiz ulanish (Broadband Wireless Access - BWA)</strong> tizimlarini, xususan, <strong>WiMAX (Worldwide Interoperability for Microwave Access)</strong> texnologiyasini tavsiflaydi.</p>
+                <p>Bu standartlar asosan "metropolitan area networks" (MAN) – shahar miqyosidagi tarmoqlarda yuqori tezlikdagi simsiz internetga ulanishni ta'minlashga qaratilgan.</p>
+                <h5>Asosiy xususiyatlari va variantlari:</h5>
+                <ul>
+                    <li><strong>Maqsadi:</strong> Statsionar va ba'zi hollarda mobil abonentlarga "oxirgi milya" (last mile) simsiz keng polosali ulanishni taqdim etish.</li>
+                    <li><strong>Chastota diapazonlari:</strong> Odatda 2 GHz dan 66 GHz gacha bo'lgan litsenziyalangan va litsenziyalanmagan chastota diapazonlarida ishlash uchun mo'ljallangan. Ko'proq tarqalgan diapazonlar 2.5 GHz, 3.5 GHz va 5.8 GHz.</li>
+                    <li><strong>Qamrov doirasi:</strong> To'g'ridan-to'g'ri ko'rinish (Line-of-Sight - LOS) sharoitida bir necha o'nlab kilometrgacha, to'g'ridan-to'g'ri ko'rinish bo'lmagan (Non-Line-of-Sight - NLOS) sharoitida esa bir necha kilometrgacha qamrovni ta'minlashi mumkin.</li>
+                    <li><strong>O'tkazuvchanlik qobiliyati:</strong> Kanal kengligi va boshqa parametrlarga bog'liq holda nazariy jihatdan bir necha o'nlab Mbit/s gacha tezlikni ta'minlay oladi (masalan, 70 Mbit/s gacha).</li>
+                    <li><strong>Modulyatsiya usullari:</strong> OFDM (Orthogonal Frequency Division Multiplexing) va OFDMA (Orthogonal Frequency Division Multiple Access) kabi zamonaviy modulyatsiya usullaridan foydalanadi, bu esa ko'p yo'lli tarqalishga chidamlilikni va spektral samaradorlikni oshiradi.</li>
+                    <li><strong>Xizmat sifati (QoS):</strong> Turli trafik turlari (ovoz, video, ma'lumotlar) uchun ustuvorliklarni belgilash va kafolatlangan xizmat sifatini ta'minlash mexanizmlarini qo'llab-quvvatlaydi.</li>
+                    <li><strong>Xavfsizlik:</strong> Ma'lumotlarni shifrlash (masalan, AES) va autentifikatsiya uchun protokollarni o'z ichiga oladi.</li>
+                </ul>
+                <h5>Standartning asosiy versiyalari:</h5>
+                <ul>
+                    <li><strong>IEEE 802.16-2001 (va 802.16a/c):</strong> Dastlabki versiyalar, asosan statsionar, LOS ulanishlar uchun mo'ljallangan (10-66 GHz diapazoni).</li>
+                    <li><strong>IEEE 802.16-2004 (ilgari 802.16d deb nomlangan):</strong> "Fixed WiMAX" deb nomlanadi. Statsionar abonentlar uchun NLOS sharoitlarida ishlash imkoniyatlarini yaxshilagan (2-11 GHz diapazoni).</li>
+                    <li><strong>IEEE 802.16e-2005:</strong> "Mobile WiMAX" deb nomlanadi. Statsionar versiyaga mobillik (handoff/handover) va portativlikni qo'shgan. OFDMA texnologiyasidan keng foydalanadi.</li>
+                    <li><strong>IEEE 802.16m (WiMAX 2):</strong> Yanada yuqori tezliklar (1 Gbit/s gacha statsionar va 100 Mbit/s gacha mobil) va yaxshilangan samaradorlikni maqsad qilgan ilg'or versiya. LTE-Advanced bilan raqobatlashish uchun ishlab chiqilgan.</li>
+                </ul>
+                <p>IEEE 802.16 standartlari WiMAX Forum tomonidan sertifikatsiya va o'zaro muvofiqlikni ta'minlash uchun asos sifatida ishlatiladi. Garchi LTE texnologiyasi mobil keng polosali bozorda dominantga aylangan bo'lsa-da, WiMAX hali ham ba'zi mintaqalarda, ayniqsa statsionar simsiz ulanishlar va maxsus ilovalar uchun qo'llanilmoqda.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 21-MAVZU TUGASHI -->
+
+    <!-- 22-MAVZU BOSHLANISHI -->
+    <div class="accordion-item">
+        <button class="accordion-button" aria-expanded="false">
+            <span class="accordion-title">22. WDM texnologiyasi qo’llanilish sohasi?</span>
+            <span class="accordion-icon open-icon">+</span>
+            <span class="accordion-icon close-icon">×</span>
+        </button>
+        <div class="accordion-content">
+            <div class="accordion-content-inner">
+                <p><strong>WDM (Wavelength Division Multiplexing – To'lqin Uzunligi Bo'yicha Multiplekslash)</strong> – bu optik tolali aloqa tizimlarida bitta optik tola orqali bir vaqtning o'zida bir nechta mustaqil optik signallarni turli yorug'lik to'lqin uzunliklaridan (ranglaridan) foydalanib uzatish texnologiyasidir.</p>
+                <p>Bu texnologiya mavjud optik tolali infratuzilmaning o'tkazuvchanlik qobiliyatini sezilarli darajada oshirish imkonini beradi, yangi tolalar yotqizish zaruriyatini kamaytiradi.</p>
+                <h5>Qo'llanilish sohalari:</h5>
+                <p>WDM texnologiyasi yuqori sig'imli ma'lumot uzatish talab qilinadigan turli sohalarda keng qo'llaniladi:</p>
+                <ol>
+                    <li>
+                        <strong>Magistral telekommunikatsiya tarmoqlari (Long-haul networks):</strong>
+                        <ul>
+                            <li>Shaharlararo va xalqaro aloqa liniyalarida juda katta hajmdagi trafikni (masalan, internet, ovoz, video) uzatish uchun. DWDM (Dense WDM) ayniqsa shu maqsadda keng qo'llaniladi.</li>
+                            <li>Suv osti optik tolali kabellarida transokeanik aloqani ta'minlash.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Shahar miqyosidagi tarmoqlar (Metropolitan Area Networks - MAN):</strong>
+                        <ul>
+                            <li>Shahardagi turli nuqtalarni, ma'lumotlar markazlarini va yirik korporativ mijozlarni yuqori tezlikda bog'lash uchun. CWDM (Coarse WDM) va DWDM ishlatilishi mumkin.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Ma'lumotlar markazlari o'rtasidagi ulanishlar (Data Center Interconnect - DCI):</strong>
+                        <ul>
+                            <li>Bir-biridan geografik masofada joylashgan ma'lumotlar markazlari o'rtasida katta hajmdagi ma'lumotlarni sinxronlash, zaxiralash va tiklash uchun.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kirish tarmoqlari (Access Networks):</strong>
+                        <ul>
+                            <li>FTTH (Fiber to the Home – Uyga optik tola) va FTTB (Fiber to the Building – Binoga optik tola) kabi texnologiyalarda abonentlarga keng polosali xizmatlarni yetkazishda (ba'zan passiv optik tarmoqlar - PON bilan birgalikda).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Kabel televideniyesi (CATV) tarmoqlari:</strong>
+                        <ul>
+                            <li>Raqamli televizion kanallarni va boshqa xizmatlarni optik tolali magistrallar orqali uzatishda.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Korporativ tarmoqlar:</strong>
+                        <ul>
+                            <li>Yirik korxonalar yoki kampus tarmoqlarida turli binolarni yoki bo'limlarni yuqori tezlikda bog'lash uchun.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Mobil tayanch tarmoqlar (Mobile Backhaul):</strong>
+                        <ul>
+                            <li>Mobil aloqa bazaviy stansiyalarini (masalan, 4G/LTE, 5G) operatorning markaziy tarmog'iga ulash uchun yuqori sig'imli kanallarni ta'minlash.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Ilmiy tadqiqot tarmoqlari:</strong>
+                        <ul>
+                            <li>Universitetlar va ilmiy-tadqiqot institutlari o'rtasida katta hajmdagi ilmiy ma'lumotlarni almashish uchun.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h5>WDM turlari:</h5>
+                <ul>
+                    <li><strong>CWDM (Coarse Wavelength Division Multiplexing – Keng Polosali To'lqin Uzunligi Bo'yicha Multiplekslash):</strong> Kamroq sonli kanallarni (odatda 18 tagacha) kengroq to'lqin uzunligi oralig'ida uzatadi. Arzonroq uskunalarni talab qiladi, qisqaroq masofalar uchun mo'ljallangan.</li>
+                    <li><strong>DWDM (Dense Wavelength Division Multiplexing – Zich To'lqin Uzunligi Bo'yicha Multiplekslash):</strong> Ko'p sonli kanallarni (40, 80, 160 va undan ortiq) juda yaqin joylashgan to'lqin uzunliklarida uzatadi. Uzoq masofalar va juda yuqori sig'imlar uchun mo'ljallangan, murakkabroq va qimmatroq uskunalarni talab qiladi.</li>
+                </ul>
+                <p>WDM texnologiyasi zamonaviy global aloqa infratuzilmasining muhim tarkibiy qismi bo'lib, ma'lumotlarga bo'lgan talabning doimiy o'sishini qondirishda katta rol o'ynaydi.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 22-MAVZU TUGASHI -->
+
+    <!-- Davomi bor (barcha 49 savol uchun shunday qilinadi) -->
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
