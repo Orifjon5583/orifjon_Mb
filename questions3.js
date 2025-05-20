@@ -1,8 +1,3 @@
-// Buni mavjud questions.js faylingizdagi questions massiviga qo'shishingiz mumkin.
-// Yoki alohida `const newSetOfQuestions3 = [...]` qilib,
-// keyin script.js da birlashtirishingiz mumkin.
-// Agar mavjud `questions` massiviga qo'shsangiz, avvalgi oxirgi elementdan keyin vergul (,) qo'yishni unutmang.
-
 const questionsSet3 = [
   {
     question: "Duplikatlar nima?",
@@ -79,7 +74,7 @@ const questionsSet3 = [
       "Faqat o'qish uchun mo'ljallangan ustun",
     ],
     answer:
-      "Jadvaldagi har bir yozuvni noyob tarzda aniqlaydigan va NULL qiymat qabul qilmaydigan bir yoki bir nechta ustunlar to'plami",
+      "Jadvaldagi har bir yozuvni noyob tarzda aniqlaydigan va NULL qiymat qabul qilmaydigan bir yoki bir nechta ustunlar to'plami (avtomatik ravishda UNIQUE va NOT NULL bo'ladi)",
   },
   {
     question: "FOREIGN KEY (Tashqi kalit) nima?",
@@ -101,7 +96,7 @@ const questionsSet3 = [
       "Ichki, Tashqi, To'liq",
       "Asosiy, Yordamchi, Vaqtinchalik",
     ],
-    answer: "Birga bir, Birga ko'p, Ko'pga ko'p",
+    answer: "Birga bir (One-to-One), Birga ko'p (One-to-Many), Ko'pga ko'p (Many-to-Many)",
   },
   {
     question: "Birga bir bog'lanish nima?",
@@ -123,7 +118,7 @@ const questionsSet3 = [
       "Bu turdagi bog'lanish mavjud emas",
     ],
     answer:
-      "Birinchi jadvaldagi bitta yozuv ikkinchi jadvaldagi bir nechta yozuvga mos kelishi mumkin, lekin ikkinchi jadvaldagi har bir yozuv birinchi jadvaldagi faqat bitta yozuvga mos keladi",
+      "Birinchi jadvaldagi bitta yozuv ikkinchi jadvaldagi bir nechta yozuvga mos kelishi mumkin, lekin ikkinchi jadvaldagi har bir yozuv birinchi jadvaldagi faqat bitta yozuvga mos keladi (masalan, bir muallif ko'p kitoblarga ega bo'lishi mumkin, lekin har bir kitob faqat bir muallifga tegishli)",
   },
   {
     question: "Ko'pga ko'p bog'lanish nima?",
@@ -134,7 +129,7 @@ const questionsSet3 = [
       "Bog'lanish faqat bitta yo'nalishda ishlaydi",
     ],
     answer:
-      "Birinchi jadvaldagi bir nechta yozuv ikkinchi jadvaldagi bir nechta yozuvga mos kelishi mumkin, odatda uchinchi (oraliq) jadval orqali amalga oshiriladi",
+      "Birinchi jadvaldagi bir nechta yozuv ikkinchi jadvaldagi bir nechta yozuvga mos kelishi mumkin, odatda uchinchi (oraliq) jadval orqali amalga oshiriladi (masalan, talabalar va kurslar)",
   },
   {
     question: "Ko'pga ko'p bog'lanish qanday hosil bo'ladi?",
@@ -156,7 +151,7 @@ const questionsSet3 = [
       "Maxsus `MANY TO MANY JOIN` operatori bilan",
     ],
     answer:
-      "Oraliq (junction/linking) jadval orqali, har bir asosiy jadvalga BIRGA KO'P bog'lanish bilan",
+      "Oraliq (junction/linking) jadval orqali, har bir asosiy jadvalga BIRGA KO'P bog'lanish bilan (ya'ni, oraliq jadval ikkita 1:N bog'lanishni hosil qiladi)",
   },
   {
     question: "`REFERENCES` kalit so'zi (FOREIGN KEY e'lon qilishda) nima?",
@@ -167,7 +162,7 @@ const questionsSet3 = [
       "Foydalanuvchi uchun qo'llanmani ko'rsatadi",
     ],
     answer:
-      "Tashqi kalit murojaat qilayotgan (bog'lanayotgan) boshqa jadval va uning ustunini ko'rsatadi",
+      "Tashqi kalit murojaat qilayotgan (bog'lanayotgan) boshqa jadval va uning ustunini ko'rsatadi (masalan, `FOREIGN KEY (muallif_id) REFERENCES Mualliflar(id)`)",
   },
   {
     question: "Jadvallarni bog'lashdan maqsad nima?",
@@ -178,7 +173,7 @@ const questionsSet3 = [
       "Ma'lumotlar hajmini oshirish",
     ],
     answer:
-      "Ma'lumotlar takrorlanishini kamaytirish, ma'lumotlar yaxlitligini ta'minlash, ma'lumotlar o'rtasidagi mantiqiy aloqalarni aks ettirish",
+      "Ma'lumotlar takrorlanishini kamaytirish (normallashtirish), ma'lumotlar yaxlitligini ta'minlash, ma'lumotlar o'rtasidagi mantiqiy aloqalarni aks ettirish",
   },
   {
     question: "PK (Primary Key) va UK (Unique Key) qo'yishdan maqsad nima?",
@@ -189,7 +184,7 @@ const questionsSet3 = [
       "Ma'lumotlarni shifrlash",
     ],
     answer:
-      "PK - yozuvni noyob aniqlash va NULL bo'lmasligini ta'minlash; UK - ustundagi qiymatlar noyobligini ta'minlash (NULLga ruxsat berishi mumkin)",
+      "PK (Primary Key) - yozuvni noyob aniqlash va NULL bo'lmasligini ta'minlash; UK (Unique Key) - ustundagi qiymatlar noyobligini ta'minlash (NULLga ruxsat berishi mumkin, lekin bu DBMS ga bog'liq)",
   },
   {
     question: "`ALTER TABLE` ning `ADD` vazifasi nima?",
@@ -199,7 +194,7 @@ const questionsSet3 = [
       "Jadvaldagi mavjud ustunni o'zgartirish",
       "Jadval nomini o'zgartirish",
     ],
-    answer: "Jadvalga yangi ustun yoki cheklov (constraint) qo'shish",
+    answer: "Jadvalga yangi ustun yoki cheklov (constraint, masalan, PRIMARY KEY, FOREIGN KEY, UNIQUE) qo'shish",
   },
   {
     question: "`ALTER TABLE` ning `DROP COLUMN` vazifasi nima?",
@@ -220,7 +215,7 @@ const questionsSet3 = [
       "Ustundagi barcha ma'lumotlarni o'chirish",
     ],
     answer:
-      "Mavjud ustunning ma'lumot turini yoki cheklovlarini o'zgartirish (nomini o'zgartirmaydi)",
+      "Mavjud ustunning ma'lumot turini yoki cheklovlarini (masalan, NOT NULL) o'zgartirish (MySQL'da ustun nomini o'zgartirmaydi)",
   },
   {
     question: "`ALTER TABLE` ning `CHANGE COLUMN` vazifasi nima (MySQL'da)?",
@@ -231,7 +226,7 @@ const questionsSet3 = [
       "Jadvalga cheklov qo'shish",
     ],
     answer:
-      "Mavjud ustunning nomini, ma'lumot turini va cheklovlarini o'zgartirish imkonini beradi",
+      "Mavjud ustunning nomini, ma'lumot turini va uning ta'rifini (masalan, cheklovlar) o'zgartirish imkonini beradi (MySQL'da)",
   },
   {
     question:
@@ -266,7 +261,7 @@ const questionsSet3 = [
       "`poyezdlar` ustunini `VARCHAR` jadvaliga qo'shadi",
     ],
     answer:
-      "`Reyslar` jadvalidagi `poyezdlar` ustunining ma'lumot turini VARCHAR(100) ga o'zgartiradi",
+      "`Reyslar` jadvalidagi `poyezdlar` ustunining ma'lumot turini VARCHAR(100) ga o'zgartiradi (MySQL)",
   },
   {
     question:
@@ -278,7 +273,7 @@ const questionsSet3 = [
       "`poyezdlar` ustunini o'chirib, `trains` ustunini qo'shadi",
     ],
     answer:
-      "`Reyslar` jadvalidagi `poyezdlar` ustunining nomini `trains` ga o'zgartiradi va turini VARCHAR(100) qiladi",
+      "`Reyslar` jadvalidagi `poyezdlar` ustunining nomini `trains` ga o'zgartiradi va turini VARCHAR(100) qiladi (MySQL)",
   },
   {
     question: "`AUTO_INCREMENT` nima vazifa bajaradi?",
@@ -289,7 +284,7 @@ const questionsSet3 = [
       "Sanani avtomatik ravishda yangilaydi",
     ],
     answer:
-      "Yangi qator qo'shilganda ustun uchun avtomatik ravishda noyob sonli qiymat generatsiya qiladi (odatda 1 ga oshirib)",
+      "Yangi qator qo'shilganda ustun uchun avtomatik ravishda noyob sonli qiymat generatsiya qiladi (odatda oldingi qiymatdan 1 ga oshirib, PRIMARY KEY uchun ko'p ishlatiladi)",
   },
   {
     question:
@@ -301,7 +296,7 @@ const questionsSet3 = [
       "`nomer` ustuniga AUTO_INCREMENT cheklovini qo'shadi",
     ],
     answer:
-      "`Kitobxonlar` jadvalidagi `nomer` ustunining nomini `id` ga o'zgartiradi, turini INT qiladi va uni Birlamchi Kalit hamda AUTO_INCREMENT xususiyatli qiladi",
+      "`Kitobxonlar` jadvalidagi `nomer` ustunining nomini `id` ga o'zgartiradi, turini INT qiladi va uni Birlamchi Kalit hamda AUTO_INCREMENT xususiyatli qiladi (MySQL)",
   },
   {
     question:
@@ -325,19 +320,19 @@ const questionsSet3 = [
       "Foydalanuvchiga xabar chiqaradi",
     ],
     answer:
-      "Yaratilayotgan Tashqi Kalit chekloviga nom beradi (bu nom orqali keyinchalik cheklovni boshqarish oson bo'ladi)",
+      "Yaratilayotgan Tashqi Kalit chekloviga nom beradi (bu nom orqali keyinchalik cheklovni o'chirish yoki o'zgartirish oson bo'ladi)",
   },
   {
     question:
       "Bog'lanishlarni (masalan, Tashqi Kalit cheklovini) o'chirish uchun qanday amal bajariladi?",
     options: [
       "`DELETE CONSTRAINT constraint_nomi;`",
-      "`ALTER TABLE jadval_nomi DROP FOREIGN KEY constraint_nomi;` (MySQL) yoki `DROP CONSTRAINT constraint_nomi;` (boshqa DB'larda)",
+      "`ALTER TABLE jadval_nomi DROP FOREIGN KEY constraint_nomi;` (MySQL) yoki `ALTER TABLE jadval_nomi DROP CONSTRAINT constraint_nomi;` (boshqa DB'larda)",
       "`ERASE FOREIGN KEY constraint_nomi FROM jadval_nomi;`",
       "`REMOVE CONSTRAINT constraint_nomi ON jadval_nomi;`",
     ],
     answer:
-      "`ALTER TABLE jadval_nomi DROP FOREIGN KEY constraint_nomi;` (MySQL) yoki `DROP CONSTRAINT constraint_nomi;` (boshqa DB'larda)",
+      "`ALTER TABLE jadval_nomi DROP FOREIGN KEY constraint_nomi;` (MySQL) yoki `ALTER TABLE jadval_nomi DROP CONSTRAINT constraint_nomi;` (boshqa ko'plab DBMS'larda)",
   },
   {
     question: "`INNER JOIN` nima?",
@@ -359,18 +354,18 @@ const questionsSet3 = [
       "Jadvallarning Dekart ko'paytmasini qaytaradi",
     ],
     answer:
-      "Chap (birinchi) jadvaldagi BARCHA yozuvlarni va o'ng (ikkinchi) jadvaldagi mos keluvchi yozuvlarni (moslik bo'lmasa NULL) qaytaradi",
+      "Chap (birinchi) jadvaldagi BARCHA yozuvlarni va o'ng (ikkinchi) jadvaldagi mos keluvchi yozuvlarni (moslik bo'lmasa NULL qiymatlar bilan) qaytaradi",
   },
   {
     question: "`RIGHT JOIN` (yoki `RIGHT OUTER JOIN`) nima?",
     options: [
       "Chap jadvaldagi barcha yozuvlarni qaytaradi",
       "Faqat ikkala jadvalda mos keladigan yozuvlarni qaytaradi",
-      "O'ng (ikkinchi) jadvaldagi BARCHA yozuvlarni va chap (birinchi) jadvaldagi mos keluvchi yozuvlarni (moslik bo'lmasa NULL) qaytaradi",
+      "O'ng (ikkinchi) jadvaldagi BARCHA yozuvlarni va chap (birinchi) jadvaldagi mos keluvchi yozuvlarni (moslik bo'lmasa NULL qiymatlar bilan) qaytaradi",
       "Hech qanday yozuv qaytarmaydi",
     ],
     answer:
-      "O'ng (ikkinchi) jadvaldagi BARCHA yozuvlarni va chap (birinchi) jadvaldagi mos keluvchi yozuvlarni (moslik bo'lmasa NULL) qaytaradi",
+      "O'ng (ikkinchi) jadvaldagi BARCHA yozuvlarni va chap (birinchi) jadvaldagi mos keluvchi yozuvlarni (moslik bo'lmasa NULL qiymatlar bilan) qaytaradi",
   },
   {
     question: "`FULL OUTER JOIN` nima?",
@@ -392,7 +387,7 @@ const questionsSet3 = [
       "MySQL da `FULL OUTER JOIN` ni amalga oshirib bo'lmaydi",
     ],
     answer:
-      "`LEFT JOIN` natijasini `RIGHT JOIN` natijasi bilan `UNION` (yoki `UNION ALL`) qilish orqali (takrorlanishni hisobga olgan holda)",
+      "`LEFT JOIN` natijasini `RIGHT JOIN` natijasi bilan `UNION` qilish orqali (MySQL da to'g'ridan-to'g'ri `FULL OUTER JOIN` yo'q)",
   },
   {
     question:
@@ -439,7 +434,7 @@ const questionsSet3 = [
       "Faqat `GROUP BY` bandi bilan",
     ],
     answer:
-      "Bir nechta `SELECT` operatorlari, `JOIN`lar, ichki so'rovlar (subqueries), `UNION` va boshqa murakkab mantiqlarni o'z ichiga olishi mumkin",
+      "Bir nechta `SELECT` operatorlari, `JOIN`lar, ichki so'rovlar (subqueries), `UNION`, agregat funksiyalar va boshqa murakkab mantiqlarni o'z ichiga olishi mumkin",
   },
   {
     question: "Ichki so'rov (subquery) qayerda ishlatiladi?",
@@ -483,7 +478,7 @@ const questionsSet3 = [
       "Xato, chunki `IN` operatori ichki so'rov bilan ishlamaydi",
     ],
     answer:
-      "`Kitobxonlar` jadvalidan, `kitob_id` si `Kitoblar` jadvalida mavjud bo'lgan `id` larga mos keladigan barcha kitobxonlar ro'yxati",
+      "`Kitobxonlar` jadvalidan, `kitob_id` si `Kitoblar` jadvalida mavjud bo'lgan `id` larga mos keladigan barcha kitobxonlar ro'yxati (ya'ni, kamida bitta kitob olgan kitobxonlar)",
   },
   {
     question:
@@ -539,6 +534,6 @@ const questionsSet3 = [
       "Ma'lumotlar bazasining obyekti emas",
     ],
     answer:
-      "Ma'lum bir amalni bajaruvchi va qiymat qaytaruvchi nomlangan kod bloki (masalan, `SUM()`, `AVG()`, `COUNT()` yoki foydalanuvchi tomonidan yaratilgan funksiyalar)",
+      "Ma'lum bir amalni bajaruvchi va qiymat qaytaruvchi nomlangan kod bloki (masalan, `SUM()`, `AVG()`, `COUNT()` kabi o'rnatilgan funksiyalar yoki foydalanuvchi tomonidan `CREATE FUNCTION` yordamida yaratilgan funksiyalar)",
   },
 ];

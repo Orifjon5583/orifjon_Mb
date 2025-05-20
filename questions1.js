@@ -17,7 +17,7 @@ const questionsSet1 = [
             "root",
             "mysql_user"
         ],
-        answer: "root"
+        answer: "root (odatda lokal o'rnatishlarda standart foydalanuvchi)"
     },
     {
         question: " MySQL da jadvalni o'chirish sintaksisi qanday?",
@@ -75,9 +75,9 @@ const questionsSet1 = [
             "DATE",
             "TIME",
             "DATETIME",
-            "YEARONLY" // Chalg'ituvchi variantni o'zgartirdim
+            "YEARONLY"
         ],
-        answer: "DATETIME"
+        answer: "DATETIME (TIMESTAMP ham shu maqsadda ishlatilishi mumkin, lekin u vaqt mintaqasi bilan bog'liq xususiyatlarga ega)"
     },
     {
         question: "Agar siz 1 dan 10 gacha bo'lgan sonlarni saqlamoqchi bo'lsangiz, qanday ma'lumot turini tanlasangiz eng optimal bo'ladi?",
@@ -87,7 +87,7 @@ const questionsSet1 = [
             "TINYINT",
             "VARCHAR(2)"
         ],
-        answer: "TINYINT"
+        answer: "TINYINT (eng kam joy egallaydi, -128 dan 127 gacha yoki belgizis bo'lsa 0 dan 255 gacha qiymatlarni saqlaydi)"
     },
     {
         question: "Hisob kitob muhim bo'lganda (masalan pul birliklari) qanday ma'lumot turi aniqlik uchun ishlatilishi maslahat beriladi?",
@@ -95,9 +95,9 @@ const questionsSet1 = [
             "FLOAT",
             "DOUBLE",
             "DECIMAL",
-            "REAL" // REAL ham bor, lekin DECIMAL ko'proq tavsiya etiladi
+            "REAL"
         ],
-        answer: "DECIMAL"
+        answer: "DECIMAL (kasr qismida aniqlikni saqlash uchun, FLOAT va DOUBLE yaxlitlashda xatoliklarga olib kelishi mumkin)"
     },
     {
         question: " Jadvalga yangi qator qo'shish uchun MySQL da qanday kalit so'z ishlatiladi?",
@@ -130,7 +130,7 @@ const questionsSet1 = [
         answer: "Tuzilmaga keltirilgan ma'lumotlarning uyushgan to'plami"
     },
     {
-question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
+        question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
         options: [
             "Faqat yirik veb-saytlarda",
             "Faqat bank tizimlarida",
@@ -157,7 +157,7 @@ question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
             "Pastki chiziq (_) va raqamlar (0-9)",
             "MySQL kalit so'zlari (masalan, SELECT, TABLE)"
         ],
-        answer: "Probel (bo'sh joy) va defis (-)"
+        answer: "Probel (bo'sh joy) va defis (-) (agar bunday belgilar ishlatilsa, nomni `` ` `` (backtick) belgisi bilan o'rash kerak bo'ladi)"
     },
     {
         question: " Faqat matnli ma'lumot turlari ko'rsatilgan qatorni tanlang.",
@@ -207,7 +207,7 @@ question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
             "TEXT yoki LONGTEXT",
             "BLOB"
         ],
-        answer: "TEXT yoki LONGTEXT"
+        answer: "TEXT yoki LONGTEXT (VARCHAR(255) qisqa matnlar uchun, BLOB binar fayllar uchun)"
     },
     {
         question: " Poyezdning kelish va ketish vaqtlarini (faqat soat va minut) saqlash uchun qanday ma'lumot turi maqsadga muvofiq?",
@@ -227,7 +227,7 @@ question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
             "DECIMAL(10,2)",
             "FLOAT"
         ],
-        answer: "DECIMAL(10,2)"
+        answer: "DECIMAL(10,2) (bu yerda 10 - umumiy raqamlar soni, 2 - kasr qismidagi raqamlar soni)"
     },
     {
         question: " Foydalanuvchining 'rozilik berdi' (ha/yo'q) holatini saqlash uchun qaysi ma'lumot turi qulay?",
@@ -237,17 +237,17 @@ question: " Database (ma'lumotlar bazasi) qayerlarda ishlatiladi?",
             "INT",
             "CHAR(1)"
         ],
-        answer: "BOOLEAN (yoki TINYINT(1))"
+        answer: "BOOLEAN (yoki TINYINT(1)) (MySQL da BOOLEAN aslida TINYINT(1) uchun sinonimdir)"
     },
     {
-question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qaysi ma'lumot turi mos keladi?",
+        question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qaysi ma'lumot turi mos keladi?",
         options: [
             "NUMERIC",
             "BIGINT",
             "VARCHAR yoki CHAR",
             "TEXT"
         ],
-        answer: "VARCHAR yoki CHAR"
+        answer: "VARCHAR yoki CHAR (VARCHAR o'zgaruvchan uzunlik uchun, CHAR qat'iy uzunlik uchun)"
     },
     {
         question: " Mijozlar bilan rejalashtirilgan uchrashuvning aniq sana va vaqtini saqlash uchun qaysi ma'lumot turi ishlatiladi?",
@@ -257,7 +257,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "DATETIME yoki TIMESTAMP",
             "VARCHAR(50)"
         ],
-        answer: "DATETIME yoki TIMESTAMP"
+        answer: "DATETIME yoki TIMESTAMP (TIMESTAMP vaqt mintaqasi bilan ishlash va avtomatik yangilanishlar uchun qo'shimcha imkoniyatlar beradi)"
     },
     {
         question: " Jadvalga yangi ma'lumot kiritish uchun to'g'ri SQL so'rovini toping:",
@@ -274,7 +274,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
         options: [
             "INSERT INTO xodimlar (familiya) VALUES ('Aminov');",
             "INSERT xodimlar SET familiya = 'Aminov';",
-            "UPDATE xodimlar SET familiya = 'Aminov' WHERE id IS NULL;", // Bu yangi qator qo'shmaydi
+            "UPDATE xodimlar SET familiya = 'Aminov' WHERE id IS NULL;",
             "ADD TO xodimlar.familiya VALUES ('Aminov');"
         ],
         answer: "INSERT INTO xodimlar (familiya) VALUES ('Aminov');"
@@ -335,7 +335,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "Jadvalga yangi qatorlar qo'shadi.",
             "Jadvaldagi mavjud qatorlardagi ma'lumotlarni o'zgartiradi.",
             "Jadvalning tuzilishini (ustunlarini) o'zgartiradi.",
-"Jadvaldan ma'lumotlarni tanlab oladi."
+            "Jadvaldan ma'lumotlarni tanlab oladi."
         ],
         answer: "Jadvaldagi mavjud qatorlardagi ma'lumotlarni o'zgartiradi."
     },
@@ -347,7 +347,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "Butun ma'lumotlar bazasini o'chiradi.",
             "Foydalanuvchining bazaga kirish huquqini o'chiradi."
         ],
-        answer: "Jadvaldagi bir yoki bir nechta qatorlarni (ma'lumotlarni) o'chiradi."
+        answer: "Jadvaldagi bir yoki bir nechta qatorlarni (ma'lumotlarni) o'chiradi. (Jadvalni o'zini o'chirish uchun DROP TABLE ishlatiladi)"
     },
     {
         question: " SELECT operatorining asosiy vazifasi nima?",
@@ -387,7 +387,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "Ma'lumotlar bazasidagi barcha jadvallarni o'chirish.",
             "Foydalanuvchi huquqlarini va sozlamalarini o'chirish."
         ],
-        answer: "Jadvaldan shartga mos keladigan bir yoki bir nechta qatorni (yozuvni) o'chirish."
+        answer: "Jadvaldan shartga mos keladigan bir yoki bir nechta qatorni (yozuvni) o'chirish. (Agar WHERE sharti bo'lmasa, jadvaldagi BARCHA qatorlar o'chiriladi)"
     },
     {
         question: " SELECT * FROM mahsulotlar; so'rovi qanday natija beradi?",
@@ -414,7 +414,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
         options: [
             "Natijalarni ma'lum bir ustun bo'yicha tartiblash (saralash).",
             "Natijalarni bir xil qiymatlarga ega guruhlarga ajratish.",
-"So'rov natijalarini ma'lum bir shart(lar)ga mos keladigan qatorlar bilan cheklash (filtrlash).",
+            "So'rov natijalarini ma'lum bir shart(lar)ga mos keladigan qatorlar bilan cheklash (filtrlash).",
             "Bir nechta jadvallarni bir-biriga bog'lash (join qilish)."
         ],
         answer: "So'rov natijalarini ma'lum bir shart(lar)ga mos keladigan qatorlar bilan cheklash (filtrlash)."
@@ -427,7 +427,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "Faqat <>",
             "Ham !=, ham <>"
         ],
-        answer: "Ham !=, ham <>"
+        answer: "Ham !=, ham <> (ikkalasi ham SQL standartida 'teng emas' ma'nosini bildiradi)"
     },
     {
         question: " SELECT * FROM testlar WHERE t_javob = 'togri'; so'rovi qanday vazifani bajaradi?",
@@ -447,7 +447,7 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "Ha, SELECT qismida faqat bitta ustun ko'rsatilishi kerak.",
             "Yo'q, lekin bu t_javob ustunidagi barcha qiymatlarni javoblar ustuniga ko'chiradi."
         ],
-        answer: "Yo'q, bu so'rov t_javob ustuni javoblar ustuniga teng bo'lgan qatorlardan javoblar ustunini chiqaradi."
+        answer: "Yo'q, bu so'rov t_javob ustuni javoblar ustuniga teng bo'lgan qatorlardan javoblar ustunini chiqaradi. (Bu yerda `javoblar` WHERE bandida ustun nomi sifatida, SELECT qismida esa chiqariladigan ustun nomi sifatida qatnashyapti)."
     },
     {
         question: " AND mantiqiy operatori WHERE bandida qanday ishlaydi?",
@@ -496,7 +496,11 @@ question: "Passport seriyasi va raqamini (masalan, 'AB1234567') saqlash uchun qa
             "FALSE",
             "NULL",
             "ERROR"
-],
+        ],
         answer: "TRUE"
     }
 ];
+
+// Misol uchun, birinchi savolni va uning javobini konsolga chiqarish:
+// console.log("Savol:", questionsSet1[0].question);
+// console.log("Javob:", questionsSet1[0].answer);

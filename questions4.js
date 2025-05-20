@@ -1,7 +1,3 @@
-// Buni mavjud questions.js faylingizdagi questions massiviga qo'shishingiz mumkin.
-// Yoki alohida `const newQuestionsSet4_no_numbering = [...]` qilib,
-// keyin script.js da birlashtirishingiz mumkin.
-
 const questionsSet4 = [
   {
     question: "`DELIMITER //` nima?",
@@ -12,7 +8,7 @@ const questionsSet4 = [
       "Ma'lumot turini belgilaydi",
     ],
     answer:
-      "SQL so'rovlarini ajratuvchi standart belgini (odatda ';') vaqtincha o'zgartirish uchun ishlatiladi, ko'pincha funksiya yoki protsedura tanasida ';' ishlatilganda kerak bo'ladi",
+      "SQL so'rovlarini ajratuvchi standart belgini (odatda ';') vaqtincha o'zgartirish uchun ishlatiladi, ko'pincha funksiya yoki protsedura tanasida bir nechta ';' ishlatilganda kerak bo'ladi (masalan, `DELIMITER $$` ham ishlatilishi mumkin)",
   },
   {
     question: "Funksiya qanday yaratiladi (MySQL misolida)?",
@@ -23,7 +19,7 @@ const questionsSet4 = [
       "DEFINE FUNCTION nom (parametrlar) AS tur RETURN qiymat;",
     ],
     answer:
-      "CREATE FUNCTION nom (parametrlar) RETURNS qaytariladigan_tur [XUSUSIYATLAR] BEGIN ... RETURN qiymat; END;",
+      "CREATE FUNCTION nom (parametrlar) RETURNS qaytariladigan_tur [XUSUSIYATLAR] BEGIN ... RETURN qiymat; END; (XUSUSIYATLAR: DETERMINISTIC, READS SQL DATA, va hokazo)",
   },
   {
     question:
@@ -45,19 +41,19 @@ const questionsSet4 = [
       "Funksiyaga bir nechta qiymat qaytarishga ruxsat beradi",
       "Funksiya hech qanday qiymat qaytarmasligini bildiradi",
     ],
-    answer: "Funksiya qanday turdagi qiymat qaytarishini e'lon qiladi",
+    answer: "Funksiya qanday turdagi qiymat qaytarishini e'lon qiladi (masalan, `RETURNS INT`, `RETURNS VARCHAR(255)`)",
   },
   {
     question:
       "`DECLARE` nima (saqlanuvchi dasturlarda, masalan, funksiya yoki protsedurada)?",
     options: [
       "Jadval nomini e'lon qiladi",
-      "Lokal o'zgaruvchilar, kursorlar yoki shartlarni e'lon qilish uchun ishlatiladi",
+      "Lokal o'zgaruvchilar, kursorlar yoki shartlarni (conditions/handlers) e'lon qilish uchun ishlatiladi",
       "Funksiyani chaqiradi",
       "Tashqi faylni import qiladi",
     ],
     answer:
-      "Lokal o'zgaruvchilar, kursorlar yoki shartlarni e'lon qilish uchun ishlatiladi",
+      "Lokal o'zgaruvchilar, kursorlar yoki shartlarni (conditions/handlers) e'lon qilish uchun ishlatiladi",
   },
   {
     question:
@@ -89,7 +85,7 @@ const questionsSet4 = [
       "WHEN shart DO ... OTHERWISE ... END WHEN;",
       "IFF shart => ... ELSE => ... ;",
     ],
-    answer: "IF shart THEN ... ELSEIF shart THEN ... ELSE ... END IF;",
+    answer: "IF shart THEN ... ELSEIF shart2 THEN ... ELSE ... END IF;",
   },
   {
     question: "`BEGIN` nima (saqlanuvchi dastur kontekstida)?",
@@ -100,7 +96,7 @@ const questionsSet4 = [
       "Dastur bajarilishini yakunlaydi",
     ],
     answer:
-      "Bir nechta SQL bayonotlarini o'z ichiga olgan kod blokining boshlanishini belgilaydi",
+      "Bir nechta SQL bayonotlarini o'z ichiga olgan kod blokining (masalan, funksiya, protsedura, trigger, IF bloki) boshlanishini belgilaydi",
   },
   {
     question: "`END` nima (saqlanuvchi dastur kontekstida)?",
@@ -111,7 +107,7 @@ const questionsSet4 = [
       "Jadval yaratishni tugatadi",
     ],
     answer:
-      "`BEGIN` bilan boshlangan kod blokining (masalan, funksiya, protsedura, IF bloki) tugashini belgilaydi",
+      "`BEGIN` bilan boshlangan kod blokining (masalan, funksiya, protsedura, IF bloki, LOOP) tugashini belgilaydi",
   },
   {
     question: "Funksiya qanday o'chiriladi?",
@@ -133,7 +129,7 @@ const questionsSet4 = [
       "Matnni teskari tartibda qaytaradi",
     ],
     answer:
-      "Matnning oxirgi belgisidan tashqari qismini (ya'ni oxirgi belgini olib tashlab) qaytaradi",
+      "Matnning oxirgi belgisidan tashqari qismini (ya'ni oxirgi belgini olib tashlab) qaytaradi. Agar matn bo'sh bo'lsa yoki bitta belgidan iborat bo'lsa, natija DBMS ga qarab farq qilishi mumkin.",
   },
   {
     question:
@@ -145,7 +141,7 @@ const questionsSet4 = [
       "Matnning birinchi va oxirgi belgilarini almashtiradi",
     ],
     answer:
-      '"Qisqartma: " so\'zidan keyin matnning birinchi va oxirgi belgilarini birlashtirib qaytaradi',
+      '"Qisqartma: " so\'zidan keyin matnning birinchi va oxirgi belgilarini birlashtirib qaytaradi (agar matn bitta belgidan iborat bo\'lsa, o\'sha belgi ikki marta olinadi)',
   },
   {
     question: "`VIEW` qachon ishlatiladi?",
@@ -156,7 +152,7 @@ const questionsSet4 = [
       "Faqat ma'lumotlarni o'chirish uchun",
     ],
     answer:
-      "Murakkab so'rovlarni soddalashtirish, ma'lumotlarga kirishni cheklash (xavfsizlik), ma'lumotlarni ma'lum bir ko'rinishda taqdim etish uchun virtual jadval sifatida",
+      "Murakkab so'rovlarni soddalashtirish, ma'lumotlarga kirishni cheklash (xavfsizlik), ma'lumotlarni ma'lum bir ko'rinishda (formatda) taqdim etish uchun virtual jadval sifatida",
   },
   {
     question: "`VIEW` qanday yaratiladi?",
@@ -199,7 +195,7 @@ const questionsSet4 = [
       "VIEW view_nomi RUN;",
     ],
     answer:
-      "Oddiy jadval kabi `SELECT` so'rovlarida (masalan, `SELECT * FROM view_nomi;`)",
+      "Oddiy jadval kabi `SELECT` so'rovlarida (masalan, `SELECT * FROM view_nomi;`) (ba'zi VIEW'lar yangilanishi ham mumkin, lekin cheklovlar bilan)",
   },
   {
     question: "Yaratilgan funksiyalardan qanday foydalaniladi?",
@@ -221,7 +217,7 @@ const questionsSet4 = [
       "Ma'lumot turini aniqlash uchun",
     ],
     answer:
-      "Bir nechta SQL amallarini birlashtirish, murakkab logikani bajarish, ma'lumotlarni o'zgartirish (qiymat qaytarishi shart emas) uchun",
+      "Bir nechta SQL amallarini birlashtirish, murakkab logikani bajarish, ma'lumotlarni o'zgartirish (qiymat qaytarishi shart emas, lekin OUT parametrlar orqali qaytarishi mumkin) uchun",
   },
   {
     question: "Parametrlarga Funksiya ega bo'ladimi yoki Protsedurami?",
@@ -232,17 +228,17 @@ const questionsSet4 = [
       "Hech qaysi biri parametr olmaydi",
     ],
     answer:
-      "Ham Funksiya, ham Protsedura parametrlarga ega bo'lishi mumkin (IN, OUT, INOUT)",
+      "Ham Funksiya (odatda faqat IN parametrlar), ham Protsedura (IN, OUT, INOUT parametrlar) parametrlarga ega bo'lishi mumkin",
   },
   {
     question: "Saqlangan protseduradan qanday foydalaniladi?",
     options: [
       "SELECT protsedura_nomi(argumentlar);",
       "CALL protsedura_nomi(argumentlar);",
-      "EXEC protsedura_nomi(argumentlar);",
+      "EXEC protsedura_nomi(argumentlar);", // Ba'zi DB'larda (masalan, SQL Server)
       "RUN protsedura_nomi(argumentlar);",
     ],
-    answer: "CALL protsedura_nomi(argumentlar);",
+    answer: "CALL protsedura_nomi(argumentlar); (MySQL'da. SQL Server'da EXEC yoki EXECUTE ham ishlatiladi)",
   },
   {
     question: "Protsedura qanday yaratiladi (MySQL misolida)?",
@@ -253,7 +249,7 @@ const questionsSet4 = [
       "DEFINE PROCEDURE nom BEGIN ... END;",
     ],
     answer:
-      "CREATE PROCEDURE nom ([parametr_rejimi] parametr_nomi TUR, ...) BEGIN ... END;",
+      "CREATE PROCEDURE nom ([parametr_rejimi] parametr_nomi TUR, ...) BEGIN ... END; (parametr_rejimi: IN, OUT, INOUT)",
   },
   {
     question: "Protsedura qanday o'chiriladi?",
@@ -316,10 +312,10 @@ const questionsSet4 = [
     options: [
       "DELETE TRIGGER trigger_nomi ON jadval_nomi;",
       "REMOVE TRIGGER trigger_nomi;",
-      "DROP TRIGGER [IF EXISTS] trigger_nomi;", // Ba'zi DB'larda ON jadval_nomi ham kerak bo'lishi mumkin
+      "DROP TRIGGER [IF EXISTS] trigger_nomi;", // Ba'zi DB'larda schema_name.trigger_name yoki ON jadval_nomi ham kerak bo'lishi mumkin
       "ERASE TRIGGER trigger_nomi;",
     ],
-    answer: "DROP TRIGGER [IF EXISTS] trigger_nomi;",
+    answer: "DROP TRIGGER [IF EXISTS] trigger_nomi; (MySQL'da. Ba'zi DBMS'lar `ON jadval_nomi` ni talab qilishi mumkin)",
   },
   {
     question: "Triggerning `AFTER` operatori vazifasi nima?",
@@ -341,7 +337,7 @@ const questionsSet4 = [
       "Trigger faqat ma'lum bir vaqtda ishga tushishini bildiradi",
     ],
     answer:
-      "Trigger asosiy amal (INSERT, UPDATE, DELETE) bajarilishidan oldin ishga tushishini bildiradi (bu yerda ma'lumotlarni tekshirish yoki o'zgartirish mumkin)",
+      "Trigger asosiy amal (INSERT, UPDATE, DELETE) bajarilishidan oldin ishga tushishini bildiradi (bu yerda ma'lumotlarni tekshirish yoki o'zgartirish mumkin, masalan `NEW.qiymat` orqali)",
   },
   {
     question: "Triggerning `FOR EACH ROW` operatori vazifasi nima?",
@@ -352,7 +348,7 @@ const questionsSet4 = [
       "Trigger barcha qatorlar uchun bir vaqtda ishga tushishini bildiradi",
     ],
     answer:
-      "Trigger amal ta'sir qilgan har bir qator uchun alohida ishga tushishini bildiradi",
+      "Trigger amal ta'sir qilgan har bir qator uchun alohida ishga tushishini bildiradi (aks holda, bayonot darajasidagi trigger butun amal uchun bir marta ishlaydi, lekin bu MySQL da `FOR EACH ROW` standart)",
   },
   {
     question:
@@ -386,7 +382,7 @@ const questionsSet4 = [
       "psycopg2 (PostgreSQL uchun)",
       "pymongo (MongoDB uchun)",
     ],
-    answer: "mysql.connector, PyMySQL, mysqlclient",
+    answer: "mysql.connector, PyMySQL, mysqlclient (va boshqalar)",
   },
   {
     question:
@@ -398,7 +394,7 @@ const questionsSet4 = [
       "open_connection(host='127.0.0.1', dbname='railway', username='root')",
     ],
     answer:
-      "conn = mysql.connector.connect(host='localhost', database='railway', user='root', password='password')",
+      "conn = mysql.connector.connect(host='localhost', database='railway', user='root', password='password') (password o'rniga haqiqiy parol yoziladi)",
   },
   {
     question:
@@ -410,7 +406,7 @@ const questionsSet4 = [
       "Ma'lumotlar bazasiga ulanishni uzadi",
     ],
     answer:
-      "Berilgan SQL so'rovini ma'lumotlar bazasida bajarish uchun yuboradi",
+      "Berilgan SQL so'rovini ma'lumotlar bazasida bajarish uchun yuboradi (natijani olish uchun `fetchall()`, `fetchone()` kabi metodlar chaqiriladi)",
   },
   {
     question: "Administratorlash nima?",
@@ -421,7 +417,7 @@ const questionsSet4 = [
       "Web-sayt dizaynini yaratish",
     ],
     answer:
-      "Ma'lumotlar bazasi tizimini boshqarish, sozlash, xavfsizligini ta'minlash, zaxira nusxalarini olish, ishlashini optimallashtirish va foydalanuvchilarni boshqarish",
+      "Ma'lumotlar bazasi tizimini (DBMS) boshqarish, sozlash, xavfsizligini ta'minlash, zaxira nusxalarini olish (backup) va tiklash (restore), ishlashini optimallashtirish (performance tuning) va foydalanuvchilarni boshqarish (user management)",
   },
   {
     question: "`CREATE USER` vazifasi nima?",
@@ -452,7 +448,7 @@ const questionsSet4 = [
       "Ma'lumotlar bazasini zaxiralash",
     ],
     answer:
-      "Foydalanuvchiga ma'lumotlar bazasi obyektlarida (jadval, view, protsedura) ma'lum amallarni bajarish uchun huquqlar (imtiyozlar) berish",
+      "Foydalanuvchiga ma'lumotlar bazasi obyektlarida (jadval, view, protsedura va hokazo) ma'lum amallarni (SELECT, INSERT, UPDATE, DELETE va hokazo) bajarish uchun huquqlar (imtiyozlar) berish",
   },
   {
     question: "`GRANT ALL PRIVILEGES` operatori vazifasi nima?",
@@ -463,7 +459,7 @@ const questionsSet4 = [
       "Foydalanuvchiga faqat jadval yaratish huquqini beradi",
     ],
     answer:
-      "Foydalanuvchiga ma'lum bir obyekt yoki butun baza uchun barcha mavjud huquqlarni beradi",
+      "Foydalanuvchiga ma'lum bir obyekt (masalan, jadval) yoki butun baza (yoki global darajada) uchun barcha mavjud huquqlarni beradi",
   },
   {
     question: "`REVOKE` operatori vazifasi nima?",
@@ -480,12 +476,12 @@ const questionsSet4 = [
     question: "`REVOKE ALL PRIVILEGES` operatori vazifasi nima?",
     options: [
       "Foydalanuvchiga barcha huquqlarni beradi",
-      "Foydalanuvchidan ma'lum bir obyekt yoki butun baza uchun barcha avval berilgan huquqlarni olib qo'yadi",
+      "Foydalanuvchidan ma'lum bir obyekt yoki butun baza uchun barcha avval berilgan huquqlarni olib qo'yadi (lekin GRANT OPTION ni alohida olib tashlash kerak bo'lishi mumkin)",
       "Barcha foydalanuvchilarga barcha huquqlarni beradi",
       "Foydalanuvchidan faqat `UPDATE` huquqini olib qo'yadi",
     ],
     answer:
-      "Foydalanuvchidan ma'lum bir obyekt yoki butun baza uchun barcha avval berilgan huquqlarni olib qo'yadi",
+      "Foydalanuvchidan ma'lum bir obyekt yoki butun baza uchun barcha avval berilgan huquqlarni olib qo'yadi (GRANT OPTION bundan mustasno bo'lishi mumkin)",
   },
   {
     question: "`ALTER USER` qanday amal bajarishda foydalaniladi?",
@@ -496,7 +492,7 @@ const questionsSet4 = [
       "Foydalanuvchiga huquq berishda",
     ],
     answer:
-      "Mavjud foydalanuvchining xususiyatlarini (masalan, parol, bloklash holati, resurs limitlari) o'zgartirishda",
+      "Mavjud foydalanuvchining xususiyatlarini (masalan, parol, autentifikatsiya plagini, bloklash holati, resurs limitlari) o'zgartirishda",
   },
   {
     question: "`RENAME USER` operatori vazifasi nima (MySQL'da)?",
@@ -506,7 +502,7 @@ const questionsSet4 = [
       "Foydalanuvchiga yangi nom bilan nusxa yaratadi",
       "Foydalanuvchini vaqtincha boshqa nom bilan chaqiradi",
     ],
-    answer: "Mavjud foydalanuvchining nomini o'zgartiradi",
+    answer: "Mavjud foydalanuvchining nomini o'zgartiradi (masalan, `RENAME USER 'eski_nom'@'host' TO 'yangi_nom'@'host';`)",
   },
   {
     question:
@@ -530,7 +526,7 @@ const questionsSet4 = [
       "`Temur` foydalanuvchisidan `Reyslar` jadvalini ko'rish huquqini olib qo'yadi",
     ],
     answer:
-      "`Temur` foydalanuvchisiga `Railways` bazasidagi `Reyslar` jadvalidan ma'lumotlarni o'qish (SELECT) huquqini beradi",
+      "`Temur` foydalanuvchisiga (`'Temur'@'localhost'`) `Railways` bazasidagi `Reyslar` jadvalidan ma'lumotlarni o'qish (SELECT) huquqini beradi",
   },
   {
     question:
@@ -542,7 +538,7 @@ const questionsSet4 = [
       "`Temur` foydalanuvchisiga barcha bazalarda barcha huquqlarni beradi",
     ],
     answer:
-      "`Temur` foydalanuvchisiga `Railways` bazasidagi barcha obyektlar (jadvallar, viewlar va hokazo) ustida barcha amallarni bajarish huquqini beradi",
+      "`Temur` foydalanuvchisiga (`'Temur'@'localhost'`) `Railways` bazasidagi barcha obyektlar (jadvallar, viewlar va hokazo) ustida barcha amallarni bajarish huquqini beradi",
   },
   {
     question:
@@ -554,6 +550,6 @@ const questionsSet4 = [
       "`Madina` foydalanuvchisini butunlay o'chiradi",
     ],
     answer:
-      "`Madina` foydalanuvchisidan `Kutubxona.Kitobxonlar` jadvalida CREATE, INSERT, DELETE, UPDATE huquqlarini olib qo'yadi",
+      "`Madina` foydalanuvchisidan (`'Madina'@'localhost'`) `Kutubxona.Kitobxonlar` jadvalida CREATE, INSERT, DELETE, UPDATE huquqlarini olib qo'yadi",
   },
 ];
