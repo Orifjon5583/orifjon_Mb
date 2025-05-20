@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Test (4 Bo'lim)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section id="section-selection-screen" class="screen" aria-labelledby="section-title">
+        <h1 id="section-title">SQL Test Bo'limlari</h1>
+        <p>O'zingiz sinamoqchi bo'lgan bo'limni tanlang:</p>
+        <div id="section-buttons-container">
+          <button class="btn section-btn" data-section="0" type="button">
+            Bo'lim 1 (1-50 savollar)
+          </button>
+          <button class="btn section-btn" data-section="1" type="button">
+            Bo'lim 2 (51-100 savollar)
+          </button>
+          <button class="btn section-btn" data-section="2" type="button">
+            Bo'lim 3 (101-150 savollar)
+          </button>
+          <button class="btn section-btn" data-section="3" type="button">
+            Bo'lim 4 (151-200 savollar)
+          </button>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen hidden" aria-labelledby="quiz-header">
+        <header class="quiz-header">
+          <span id="question-number" aria-live="polite">Savol 1/X</span>
+          <span id="score" aria-live="polite">Ball: 0</span>
+        </header>
+        <div id="question-container">
+          <p id="question-text">Savol...</p>
+        </div>
+        <div id="options-container" role="radiogroup" aria-labelledby="question-text">
+          <!-- Variantlar JavaScript orqali qo'shiladi -->
+        </div>
+        <div id="feedback-text" class="feedback" aria-live="assertive"></div>
+     <button id="next-btn" class="next-btn" disabled>Keyingi savol</button>
+        <button id="back-to-sections-btn" class="btn btn-secondary" type="button"> Bo'limlarga qaytish       </button>
+      </section>
+
+      <section id="result-screen" class="screen hidden" aria-labelledby="result-title">
+        <h2 id="result-title">Test Natijalari</h2>
+        <p id="final-score" aria-live="polite">Natija: 0/0</p>
+        <p id="result-message">Xabar.</p>
+        <button id="restart-btn" class="btn" type="button">Boshqa Bo'limni Tanlash</button>
+      </section>
+    </div>
+
+    <!-- Barcha savollar fayllarini script.js dan OLDIN ulaymiz -->
+    <script src="questions1.js"></script>
+    <script src="questions2.js"></script>
+    <script src="questions3.js"></script>
+    <script src="questions4.js"></script>
+    <!-- Asosiy skript fayli -->
+    <script src="script.js"></script>
+  </body>
+</html>
