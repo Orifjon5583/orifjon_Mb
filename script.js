@@ -242,3 +242,59 @@ allQuestionSets.forEach((set, index) => {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+
+    accordionButtons.forEach(button => {
+        // Находим иконки для текущей кнопки
+        const openIcon = button.querySelector('.open-icon');
+        const closeIcon = button.querySelector('.close-icon');
+        // Находим контент для текущей кнопки
+        const content = button.nextElementSibling;
+
+        // Начальное состояние иконок (X скрыт)
+        if (closeIcon) closeIcon.style.display = 'none';
+        if (openIcon) openIcon.style.display = 'inline'; // Убедимся, что "+" виден
+
+        button.addEventListener('click', function () {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            // Сначала закрываем все ДРУГИЕ открытые аккордеоны
+            accordionButtons.forEach(otherButton => {
+                if (otherButton !== this) { // Если это не текущая кнопка
+                    const otherContent = otherButton.nextElementSibling;
+                    const otherOpenIcon = otherButton.querySelector('.open-icon');
+                    const otherCloseIcon = otherButton.querySelector('.close-icon');
+
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    otherContent.classList.remove('open');
+                    otherContent.style.maxHeight = null; // Сбрасываем max-height для анимации закрытия
+                    
+                    // Возвращаем иконки других кнопок в состояние "закрыто"
+                    if (otherOpenIcon) otherOpenIcon.style.display = 'inline';
+                    if (otherCloseIcon) otherCloseIcon.style.display = 'none';
+                }
+            });
+
+            // Теперь переключаем текущий аккордеон
+            if (isExpanded) {
+                // Закрываем текущий
+                this.setAttribute('aria-expanded', 'false');
+                content.classList.remove('open');
+                content.style.maxHeight = null;
+                if (openIcon) openIcon.style.display = 'inline';
+                if (closeIcon) closeIcon.style.display = 'none';
+            } else {
+                // Открываем текущий
+                this.setAttribute('aria-expanded', 'true');
+                content.classList.add('open');
+                // Устанавливаем max-height для анимации открытия.
+                // scrollHeight дает реальную высоту контента.
+                content.style.maxHeight = content.scrollHeight + "px";
+                if (openIcon) openIcon.style.display = 'none';
+                if (closeIcon) closeIcon.style.display = 'inline';
+            }
+        });
+    });
+});
