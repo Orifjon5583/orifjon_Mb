@@ -2265,7 +2265,571 @@ console.log(navigator.language);</code></pre>
             </div>
         </div>
         <!-- 43-MAVZU TUGASHI (va 48) -->
+        <!-- 44-MAVZU BOSHLANISHI (va 49) -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-44">
+                <span class="accordion-title">44. Hujjatning ob’ektli modeli haqida tushuncha (DOM).</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-44">
+                <div class="accordion-content-inner">
+                    <p><strong>DOM (Document Object Model – Hujjatning Ob'ektli Modeli)</strong> – bu HTML yoki XML hujjatlarining tuzilishini dasturlar (odatda JavaScript) tomonidan o'qish, o'zgartirish va ular bilan ishlash uchun standartlashtirilgan interfeys (API) dir. DOM hujjatni mantiqiy daraxt shaklida ifodalaydi, bu daraxtdagi har bir tugun (node) hujjatning bir qismini (element, atribut, matn) ifodalaydi.</p>
+                    <p>Oddiy qilib aytganda, DOM veb-sahifani JavaScript tushunadigan ob'ektlar to'plamiga aylantiradi, shunda JavaScript sahifa mazmunini va tuzilishini dinamik ravishda o'zgartirishi mumkin.</p>
+                    <h5>DOM ning asosiy xususiyatlari:</h5>
+                    <ul>
+                        <li><strong>Daraxtsimon Tuzilish (Tree Structure):</strong> HTML hujjati ierarxik daraxt sifatida tasvirlanadi:
+                            <ul>
+                                <li>Eng yuqori tugun – <strong>hujjat tuguni (document node)</strong>.</li>
+                                <li>Uning bolasi – <strong>ildiz elementi (root element)</strong> (HTML uchun bu <code><html></code> tegi).</li>
+                                <li>Ildiz elementining bolalari – <code><head></code> va <code><body></code>.</li>
+                                <li>Va hokazo, har bir HTML tegi, atributi va matn bo'lagi daraxtda o'zining tuguniga ega bo'ladi.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ob'ektlarga Asoslangan:</strong> Daraxtdagi har bir tugun JavaScript ob'ekti hisoblanadi va o'zining xususiyatlari (properties) va metodlariga (methods) ega.</li>
+                        <li><strong>Platformadan va Tildan Mustaqillik:</strong> DOM standart bo'lib, u JavaScriptdan tashqari boshqa dasturlash tillari (masalan, Python, Java) bilan ham ishlatilishi mumkin (garchi veb-brauzerlarda asosan JavaScript ishlatilsa ham).</li>
+                        <li><strong>Dinamik O'zgartirish Imkoniyati:</strong> JavaScript DOM orqali quyidagilarni amalga oshirishi mumkin:
+                            <ul>
+                                <li>HTML elementlarini topish va tanlash.</li>
+                                <li>Elementlarning atributlarini o'qish va o'zgartirish.</li>
+                                <li>Elementlarning CSS uslublarini o'zgartirish.</li>
+                                <li>Elementlarning matnli mazmunini o'zgartirish.</li>
+                                <li>Yangi HTML elementlari va atributlarini yaratish va qo'shish.</li>
+                                <li>Mavjud HTML elementlarini o'chirish.</li>
+                                <li>HTML hodisalariga (events) javob berish.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h5>DOM tugunlarining turlari:</h5>
+                    <ul>
+                        <li><strong>Element tuguni (Element Node):</strong> Har bir HTML tegi (masalan, <code><p></code>, <code><div></code>, <code><img></code>).</li>
+                        <li><strong>Matn tuguni (Text Node):</strong> Element ichidagi matn.</li>
+                        <li><strong>Atribut tuguni (Attribute Node):</strong> Elementning atributi (masalan, <code>href</code>, <code>src</code>).</li>
+                        <li><strong>Izoh tuguni (Comment Node):</strong> HTML izohlari.</li>
+                        <li><strong>Hujjat tuguni (Document Node):</strong> Butun HTML hujjatining o'zi.</li>
+                    </ul>
+                    <h5>DOM bilan ishlashda asosiy ob'ekt: <code>document</code></h5>
+                    <p>JavaScriptda DOM bilan ishlash uchun asosiy kirish nuqtasi bu global <code>document</code> ob'ektidir. U veb-sahifaning butun mazmunini ifodalaydi va elementlarni topish, yaratish va o'zgartirish uchun ko'plab metodlarni taqdim etadi.</p>
+                    <p>DOM veb-sahifalarni interaktiv va dinamik qilish uchun fundamental texnologiya hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 44-MAVZU TUGASHI (va 49) -->
 
+        <!-- 45-MAVZU BOSHLANISHI (va 50) -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-45">
+                <span class="accordion-title">45. Hujjatning ob’ektli modelida HTML ob’ektlari va CSS xususiyatlari bilan ishlash.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-45">
+                <div class="accordion-content-inner">
+                    <p>JavaScript DOM (Document Object Model) yordamida HTML elementlarini (ob'ektlarini) tanlashi, ularning atributlarini, mazmunini o'zgartirishi va ularga qo'llanilgan CSS uslublarini dinamik ravishda boshqarishi mumkin.</p>
+
+                    <h5>HTML Ob'ektlari (Elementlari) Bilan Ishlash:</h5>
+                    <h6>1. Elementlarni tanlash (Selecting Elements):</h6>
+                    <ul>
+                        <li><strong><code>document.getElementById('idNomi')</code>:</strong> Berilgan <code>id</code> ga ega bo'lgan elementni qaytaradi.
+                            <pre><code>let sarlavha = document.getElementById('asosiy-sarlavha');</code></pre>
+                        </li>
+                        <li><strong><code>document.getElementsByTagName('tegNomi')</code>:</strong> Berilgan teg nomiga ega bo'lgan barcha elementlar to'plamini (HTMLCollection) qaytaradi.
+                            <pre><code>let paragraflar = document.getElementsByTagName('p');</code></pre>
+                        </li>
+                        <li><strong><code>document.getElementsByClassName('klassNomi')</code>:</strong> Berilgan klass nomiga ega bo'lgan barcha elementlar to'plamini (HTMLCollection) qaytaradi.
+                            <pre><code>let muhimElementlar = document.getElementsByClassName('muhim');</code></pre>
+                        </li>
+                        <li><strong><code>document.querySelector('cssSelektori')</code>:</strong> Berilgan CSS selektoriga mos keladigan birinchi elementni qaytaradi.
+                            <pre><code>let birinchiParagraf = document.querySelector('p.muhim');</code></pre>
+                        </li>
+                        <li><strong><code>document.querySelectorAll('cssSelektori')</code>:</strong> Berilgan CSS selektoriga mos keladigan barcha elementlar ro'yxatini (NodeList) qaytaradi.
+                            <pre><code>let barchaMuhimParagraflar = document.querySelectorAll('p.muhim');</code></pre>
+                        </li>
+                    </ul>
+                    <h6>2. Element Mazmunini O'zgartirish:</h6>
+                    <ul>
+                        <li><strong><code>element.innerHTML</code>:</strong> Element ichidagi HTML mazmunini o'qish yoki o'zgartirish.
+                            <pre><code>sarlavha.innerHTML = "Yangi Sarlavha <em>matni</em>";</code></pre>
+                        </li>
+                        <li><strong><code>element.textContent</code>:</strong> Element ichidagi faqat matnli mazmunni (HTML teglarsiz) o'qish yoki o'zgartirish.
+                            <pre><code>paragraflar[0].textContent = "Bu yangi matn.";</code></pre>
+                        </li>
+                    </ul>
+                    <h6>3. Element Atributlarini O'zgartirish:</h6>
+                    <ul>
+                        <li><strong><code>element.attributeName</code>:</strong> Ko'pgina standart atributlarga to'g'ridan-to'g'ri murojaat qilish (masalan, <code>imgElement.src</code>, <code>linkElement.href</code>).</li>
+                        <li><strong><code>element.getAttribute('atributNomi')</code>:</strong> Atribut qiymatini o'qish.</li>
+                        <li><strong><code>element.setAttribute('atributNomi', 'yangiQiymat')</code>:</strong> Atribut qiymatini o'rnatish yoki o'zgartirish.</li>
+                        <li><strong><code>element.removeAttribute('atributNomi')</code>:</strong> Atributni olib tashlash.</li>
+                        <pre><code>let rasm = document.getElementById('meningRasmim');
+rasm.src = "yangi_rasm.jpg";
+rasm.setAttribute('alt', "Bu yangi rasm uchun alt matn");</code></pre>
+                    </ul>
+                    <h6>4. Yangi Elementlar Yaratish va Qo'shish:</h6>
+                    <ul>
+                        <li><strong><code>document.createElement('tegNomi')</code>:</strong> Yangi HTML elementi yaratadi.</li>
+                        <li><strong><code>otaElement.appendChild(bolaElement)</code>:</strong> <code>bolaElement</code>ni <code>otaElement</code>ning oxirgi bolasi sifatida qo'shadi.</li>
+                        <li><strong><code>otaElement.insertBefore(yangiElement, mavjudElement)</code>:</strong> <code>yangiElement</code>ni <code>mavjudElement</code>dan oldin qo'shadi.</li>
+                        <li><strong><code>element.remove()</code> yoki <code>otaElement.removeChild(bolaElement)</code>:</strong> Elementni o'chiradi.</li>
+                        <pre><code>let yangiDiv = document.createElement('div');
+yangiDiv.textContent = "Bu yangi yaratilgan div.";
+document.body.appendChild(yangiDiv); // body oxiriga qo'shish</code></pre>
+                    </ul>
+
+                    <h5>CSS Xususiyatlari Bilan Ishlash:</h5>
+                    <p>JavaScript yordamida elementlarning CSS uslublarini dinamik ravishda o'zgartirish mumkin. Bu asosan elementning <strong><code>style</code></strong> xususiyati orqali amalga oshiriladi.</p>
+                    <ul>
+                        <li><strong><code>element.style.cssXususiyati = "qiymat";</code></strong>
+                            <ul>
+                                <li>CSS xususiyat nomlari JavaScriptda camelCase formatida yoziladi (masalan, <code>background-color</code> -> <code>backgroundColor</code>, <code>font-size</code> -> <code>fontSize</code>).</li>
+                                <pre><code>let blok = document.getElementById('meningBlokim');
+blok.style.backgroundColor = "lightblue";
+blok.style.color = "white";
+blok.style.fontSize = "20px";
+blok.style.padding = "10px";
+blok.style.border = "1px solid black";</code></pre>
+                            </ul>
+                        </li>
+                        <li><strong>Klasslarni O'zgartirish (<code>element.classList</code>):</strong>
+                            <ul>
+                                <li>CSS uslublarini o'zgartirishning yanada yaxshi va boshqariladigan usuli bu elementning klasslarini o'zgartirishdir. CSS faylida kerakli klasslar uchun uslublar belgilanadi, JavaScript esa bu klasslarni elementga qo'shadi yoki olib tashlaydi.</li>
+                                <li><code>element.classList.add('klassNomi')</code>: Klass qo'shadi.</li>
+                                <li><code>element.classList.remove('klassNomi')</code>: Klassni olib tashlaydi.</li>
+                                <li><code>element.classList.toggle('klassNomi')</code>: Agar klass mavjud bo'lsa olib tashlaydi, aks holda qo'shadi.</li>
+                                <li><code>element.classList.contains('klassNomi')</code>: Klass mavjudligini tekshiradi.</li>
+                                <pre><code>/* CSS da:
+.aktiv {
+    background-color: green;
+    font-weight: bold;
+}
+*/
+let element = document.getElementById('testElement');
+element.classList.add('aktiv'); // "aktiv" klassini qo'shish
+// element.classList.remove('aktiv'); // "aktiv" klassini olib tashlash</code></pre>
+                            </ul>
+                        </li>
+                        <li><strong>Hisoblangan Uslublarni Olish (<code>window.getComputedStyle()</code>):</strong>
+                            <ul>
+                                <li>Elementga qo'llanilgan barcha CSS uslublarining (shu jumladan tashqi CSS fayllaridan kelgan) yakuniy, hisoblangan qiymatini olish uchun ishlatiladi. <code>element.style</code> faqat inline uslublarni yoki JavaScript orqali o'rnatilgan uslublarni qaytaradi.</li>
+                                <pre><code>let element = document.getElementById('testElement');
+let uslublar = window.getComputedStyle(element);
+console.log(uslublar.getPropertyValue('color'));
+console.log(uslublar.fontSize);</code></pre>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>DOM orqali HTML elementlari va ularning CSS uslublari bilan ishlash veb-sahifalarni dinamik, interaktiv va foydalanuvchi ehtiyojlariga moslashtirilgan qilish imkonini beradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 45-MAVZU TUGASHI (va 50) -->
+
+        <!-- 46-MAVZU BOSHLANISHI (va 51) -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-46">
+                <span class="accordion-title">46. JavaScript brauzer ob’ekti modeli (BOM).</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-46">
+                <div class="accordion-content-inner">
+                    <p><strong>BOM (Browser Object Model – Brauzer Ob'ektlari Modeli)</strong> – bu JavaScriptga veb-brauzer oynasi bilan to'g'ridan-to'g'ri (hujjat mazmunidan tashqari) o'zaro ta'sir qilish imkonini beruvchi ob'ektlar to'plamidir. DOM dan farqli o'laroq, BOM ning rasmiy standarti yo'q, lekin ko'pgina zamonaviy brauzerlar bir xil asosiy ob'ektlar va funksiyalarni qo'llab-quvvatlaydi.</p>
+                    <p>BOM ierarxiyasining eng yuqori ob'ekti <strong><code>window</code></strong> hisoblanadi.</p>
+                    <h5>Asosiy BOM ob'ektlari va ularning vazifalari:</h5>
+                    <ol>
+                        <li>
+                            <strong><code>window</code> Ob'ekti:</strong>
+                            <ul>
+                                <li>Brauzer oynasini yoki freymini ifodalaydi. Bu JavaScriptdagi global ob'ekt, ya'ni barcha global o'zgaruvchilar, funksiyalar va ob'ektlar <code>window</code> ob'ektining xususiyatlari va metodlari hisoblanadi.</li>
+                                <li><strong>Oyna bilan ishlash metodlari:</strong>
+                                    <ul>
+                                        <li><code>window.open(URL, nom, xususiyatlar)</code>: Yangi brauzer oynasi yoki tab ochadi.</li>
+                                        <li><code>window.close()</code>: Joriy oynani yopadi (odatda faqat <code>window.open()</code> bilan ochilgan oynalarni yopish mumkin).</li>
+                                        <li><code>window.moveTo(x, y)</code>: Oynani ekranda yangi joyga siljitadi.</li>
+                                        <li><code>window.resizeTo(kenglik, balandlik)</code>: Oyna o'lchamlarini o'zgartiradi.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Taymerlar:</strong>
+                                    <ul>
+                                        <li><code>window.setTimeout(funksiya, kechikish_ms)</code>: Berilgan funksiyani ma'lum bir vaqt (millisekundlarda) o'tgandan keyin bir marta bajaradi. Taymer ID sini qaytaradi.</li>
+                                        <li><code>window.clearTimeout(timerID)</code>: <code>setTimeout</code> bilan o'rnatilgan taymerni bekor qiladi.</li>
+                                        <li><code>window.setInterval(funksiya, interval_ms)</code>: Berilgan funksiyani har ma'lum bir vaqt (millisekundlarda) oralig'ida takroran bajaradi. Interval ID sini qaytaradi.</li>
+                                        <li><code>window.clearInterval(intervalID)</code>: <code>setInterval</code> bilan o'rnatilgan intervalni bekor qiladi.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Ogohlantirish dialoglari:</strong>
+                                    <ul>
+                                        <li><code>window.alert("Xabar")</code>: Oddiy ogohlantirish oynasini ko'rsatadi.</li>
+                                        <li><code>window.confirm("Savol?")</code>: Tasdiqlash oynasini (OK/Cancel) ko'rsatadi va foydalanuvchi tanloviga qarab <code>true</code> yoki <code>false</code> qaytaradi.</li>
+                                        <li><code>window.prompt("Savol", "Sukut_qiymat")</code>: Foydalanuvchidan ma'lumot kiritish uchun oyna ko'rsatadi va kiritilgan qiymatni (yoki <code>null</code>) qaytaradi.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Oyna o'lchamlari xususiyatlari:</strong>
+                                    <ul>
+                                        <li><code>window.innerHeight</code> / <code>window.innerWidth</code>: Oynaning kontent maydonining balandligi/kengligi (scrollbarsiz).</li>
+                                        <li><code>window.outerHeight</code> / <code>window.outerWidth</code>: Butun brauzer oynasining balandligi/kengligi.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>window.navigator</code> Ob'ekti:</strong>
+                            <ul>
+                                <li>Brauzer haqida ma'lumotlarni (nomi, versiyasi, platformasi, foydalanuvchi agenti satri, cookie yoqilganligi, onlayn holati) o'z ichiga oladi.</li>
+                                <pre><code>console.log(navigator.appName); // Brauzer nomi (eskirgan, userAgent yaxshiroq)
+console.log(navigator.userAgent); // Foydalanuvchi agenti satri
+console.log(navigator.language); // Brauzer tili
+console.log(navigator.onLine); // Onlayn holati (true/false)</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>window.screen</code> Ob'ekti:</strong>
+                            <ul>
+                                <li>Foydalanuvchi ekrani haqida ma'lumotlarni (umumiy kengligi/balandligi, mavjud kengligi/balandligi, rang chuqurligi, piksel chuqurligi) o'z ichiga oladi.</li>
+                                <pre><code>console.log(screen.width + "x" + screen.height); // Ekran o'lchamlari
+console.log(screen.availWidth + "x" + screen.availHeight); // Mavjud ish maydoni</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>window.location</code> Ob'ekti:</strong>
+                            <ul>
+                                <li>Joriy URL manzili bilan ishlash uchun ishlatiladi. U URLni qismlarga ajratib beradi va sahifani yangi manzilga yo'naltirish imkonini beradi.</li>
+                                <li><strong>Xususiyatlari:</strong> <code>href</code> (to'liq URL), <code>protocol</code>, <code>hostname</code>, <code>port</code>, <code>pathname</code>, <code>search</code> (so'rov parametrlari), <code>hash</code>.</li>
+                                <li><strong>Metodlari:</strong> <code>assign(url)</code> (yangi sahifaga o'tish), <code>replace(url)</code> (joriy sahifani yangisi bilan almashtirish, orqaga qaytish imkonisiz), <code>reload(forceGet)</code> (sahifani qayta yuklash).</li>
+                                <pre><code>console.log(location.href);
+// location.href = "https://www.yangi-sayt.com"; // Boshqa saytga o'tish</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>window.history</code> Ob'ekti:</strong>
+                            <ul>
+                                <li>Brauzerning tashriflar tarixi bilan ishlash imkonini beradi.</li>
+                                <li><strong>Metodlari:</strong> <code>back()</code> (oldingi sahifaga), <code>forward()</code> (keyingi sahifaga), <code>go(n)</code> (tarixda n qadam oldinga/orqaga).</li>
+                                <pre><code>history.back(); // Orqaga qaytish</code></pre>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>BOM JavaScriptga brauzer muhiti bilan chuqurroq integratsiya qilish va foydalanuvchi tajribasini boyitish imkoniyatini beradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 46-MAVZU TUGASHI (va 51) -->
+
+        <!-- 47-MAVZU BOSHLANISHI (va 52) -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-47">
+                <span class="accordion-title">47. Date ob’ekti usullari va xususiyalari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-47">
+                <div class="accordion-content-inner">
+                    <p>JavaScriptdagi <strong><code>Date</code> ob'ekti</strong> sana va vaqt bilan ishlash uchun ishlatiladi. U 1970 yil 1 yanvar UTC (Coordinated Universal Time) dan boshlab millisekundlarda o'lchanadigan vaqtni ifodalaydi.</p>
+                    <h5><code>Date</code> ob'ektini yaratish:</h5>
+                    <pre><code>// 1. Joriy sana va vaqt bilan
+let hozir = new Date();
+console.log(hozir);
+
+// 2. Millisekundlar bilan (1970 yil 1 yanvardan boshlab)
+let msSana = new Date(0); // 1970-01-01T00:00:00.000Z
+let boshqaMsSana = new Date(1700000000000); // Masalan
+
+// 3. Sana satri bilan
+let satrSana1 = new Date("2023-11-25");
+let satrSana2 = new Date("November 25, 2023 10:30:00");
+
+// 4. Yil, oy (0-11), kun, soat, daqiqa, soniya, millisekund bilan
+let komponentSana = new Date(2024, 0, 15, 14, 30, 0); // 2024 yil 15 yanvar, 14:30:00
+// E'tibor bering: oylar 0 (Yanvar) dan 11 (Dekabr) gacha raqamlanadi.</code></pre>
+
+                    <h5>Sana va vaqt qismlarini olish (Getter metodlari):</h5>
+                    <ul>
+                        <li><code>getFullYear()</code>: Yilni (4 raqamli) qaytaradi.</li>
+                        <li><code>getMonth()</code>: Oyni (0-11) qaytaradi.</li>
+                        <li><code>getDate()</code>: Kunni (1-31) qaytaradi.</li>
+                        <li><code>getDay()</code>: Hafta kunini (0 - Yakshanba, 1 - Dushanba, ..., 6 - Shanba) qaytaradi.</li>
+                        <li><code>getHours()</code>: Soatni (0-23) qaytaradi.</li>
+                        <li><code>getMinutes()</code>: Daqiqani (0-59) qaytaradi.</li>
+                        <li><code>getSeconds()</code>: Soniyani (0-59) qaytaradi.</li>
+                        <li><code>getMilliseconds()</code>: Millisekundni (0-999) qaytaradi.</li>
+                        <li><code>getTime()</code>: 1970 yil 1 yanvar UTC dan boshlab o'tgan millisekundlar sonini qaytaradi.</li>
+                        <li>UTC vaqtini olish uchun mos keladigan metodlar ham mavjud (masalan, <code>getUTCFullYear()</code>, <code>getUTCMonth()</code>).</li>
+                    </ul>
+                    <pre><code>let sana = new Date(2023, 10, 25, 15, 45, 30); // 2023 yil 25 Noyabr, 15:45:30
+console.log(sana.getFullYear()); // 2023
+console.log(sana.getMonth());    // 10 (Noyabr)
+console.log(sana.getDate());     // 25
+console.log(sana.getHours());    // 15</code></pre>
+
+                    <h5>Sana va vaqt qismlarini o'rnatish (Setter metodlari):</h5>
+                    <ul>
+                        <li><code>setFullYear(yil, [oy], [kun])</code></li>
+                        <li><code>setMonth(oy, [kun])</code></li>
+                        <li><code>setDate(kun)</code></li>
+                        <li><code>setHours(soat, [daqiqa], [soniya], [ms])</code></li>
+                        <li><code>setMinutes(daqiqa, [soniya], [ms])</code></li>
+                        <li><code>setSeconds(soniya, [ms])</code></li>
+                        <li><code>setMilliseconds(ms)</code></li>
+                        <li><code>setTime(millisekundlar)</code></li>
+                        <li>UTC vaqtini o'rnatish uchun mos keladigan metodlar ham mavjud (masalan, <code>setUTCFullYear()</code>).</li>
+                    </ul>
+                    <pre><code>let sana = new Date();
+sana.setFullYear(2025);
+sana.setMonth(0); // Yanvar
+sana.setDate(1);
+console.log(sana);</code></pre>
+
+                    <h5>Sana va vaqtni formatlash (String ko'rinishiga o'tkazish):</h5>
+                    <ul>
+                        <li><code>toString()</code>: Sanani standart, o'qilishi mumkin bo'lgan satr formatida qaytaradi (brauzerga bog'liq).</li>
+                        <li><code>toDateString()</code>: Faqat sana qismini satr formatida qaytaradi.</li>
+                        <li><code>toTimeString()</code>: Faqat vaqt qismini satr formatida qaytaradi.</li>
+                        <li><code>toLocaleDateString()</code>: Sanani lokal formatda (foydalanuvchi sozlamalariga ko'ra) qaytaradi.</li>
+                        <li><code>toLocaleTimeString()</code>: Vaqtni lokal formatda qaytaradi.</li>
+                        <li><code>toLocaleString()</code>: Sana va vaqtni lokal formatda qaytaradi.</li>
+                        <li><code>toISOString()</code>: Sanani ISO 8601 formatida (<code>YYYY-MM-DDTHH:mm:ss.sssZ</code>) qaytaradi.</li>
+                        <li><code>toUTCString()</code>: Sanani UTC vaqt zonasida satr formatida qaytaradi.</li>
+                        <li><code>toJSON()</code>: <code>toISOString()</code> ga o'xshash, JSON uchun mos format.</li>
+                    </ul>
+                    <pre><code>let sana = new Date();
+console.log(sana.toString());
+console.log(sana.toLocaleDateString('uz-UZ')); // Masalan: 25.11.2023</code></pre>
+
+                    <h5>Statik metodlar:</h5>
+                    <ul>
+                        <li><code>Date.now()</code>: Hozirgi vaqtdagi millisekundlar sonini (1970 yil 1 yanvardan) qaytaradi. <code>new Date().getTime()</code> ga teng.</li>
+                        <li><code>Date.parse(dateString)</code>: Sana satrini tahlil qilib, 1970 yil 1 yanvardan o'tgan millisekundlarni qaytaradi.</li>
+                        <li><code>Date.UTC(yil, oy, [kun], [soat], ...)</code>: Berilgan komponentlar uchun UTC vaqt zonasidagi millisekundlarni qaytaradi.</li>
+                    </ul>
+                    <p><code>Date</code> ob'ekti bilan ishlashda oylar 0 dan boshlanishini (0 - Yanvar, 11 - Dekabr) va hafta kunlari ham 0 dan boshlanishini (0 - Yakshanba) yodda tutish muhimdir.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 47-MAVZU TUGASHI (va 52) -->
+
+        <!-- 48-MAVZU (43 bilan bir xil, yuqorida javob berilgan) -->
+        <!-- 49-MAVZU (44 bilan bir xil, yuqorida javob berilgan) -->
+        <!-- 50-MAVZU (45 bilan bir xil, yuqorida javob berilgan) -->
+        <!-- 51-MAVZU (46 bilan bir xil, yuqorida javob berilgan) -->
+        <!-- 52-MAVZU (47 bilan bir xil, yuqorida javob berilgan) -->
+        <!-- 53-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-53">
+                <span class="accordion-title">53. JQUERY ga kirish.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-53">
+                <div class="accordion-content-inner">
+                    <p><strong>jQuery</strong> – bu tezkor, kichik hajmli va ko'p funksiyali JavaScript kutubxonasidir. Uning asosiy maqsadi HTML hujjatlari bilan ishlashni (DOM manipulyatsiyasi), hodisalarni qayta ishlashni, animatsiyalar yaratishni va AJAX so'rovlarini yuborishni soddalashtirishdir.</p>
+                    <p>jQuery "kamroq yoz, ko'proq bajar" (write less, do more) shiori ostida ishlab chiqilgan. U brauzerlararo muvofiqlik muammolarini hal qilishga yordam beradi va JavaScript kodini yozishni ancha osonlashtiradi, ayniqsa DOM bilan ishlashda.</p>
+                    <h5>jQuery ning asosiy afzalliklari:</h5>
+                    <ul>
+                        <li><strong>DOM Manipulyatsiyasining Oddiyligi:</strong> HTML elementlarini tanlash, ularning atributlarini va mazmunini o'zgartirish, yangi elementlar qo'shish yoki o'chirish juda oson.</li>
+                        <li><strong>Hodisalarni Qayta Ishlashning Qulayligi:</strong> Hodisalarga ishlov beruvchilarni qo'shish va boshqarish soddalashtirilgan.</li>
+                        <li><strong>Animatsiya Effektlari:</strong> Oddiy va murakkab animatsiyalarni osonlik bilan yaratish imkoniyati.</li>
+                        <li><strong>AJAX So'rovlarining Oddiyligi:</strong> Server bilan asinxron ma'lumot almashishni (sahifani qayta yuklamasdan) osonlashtiradi.</li>
+                        <li><strong>Brauzerlararo Muvofiqlik:</strong> jQuery turli brauzerlardagi JavaScript implementatsiyalari o'rtasidagi farqlarni yashiradi, bu esa dasturchining ishini yengillashtiradi.</li>
+                        <li><strong>Kengaytirilishi Mumkinligi:</strong> Ko'plab plaginlar (plugins) mavjud bo'lib, ular jQuery funksionalligini yanada kengaytiradi.</li>
+                        <li><strong>Katta Hamjamiyat va Hujjatlar:</strong> Keng qo'llanilgani uchun ko'plab hujjatlar, darsliklar va yordamchi resurslar mavjud.</li>
+                    </ul>
+                    <h5>jQuery dan foydalanishni boshlash:</h5>
+                    <p>jQuery dan foydalanish uchun uni HTML hujjatingizga ulashingiz kerak. Buni ikki yo'l bilan qilish mumkin:</p>
+                    <ol>
+                        <li><strong>Mahalliy nusxadan yuklash:</strong> jQuery kutubxonasini <a href="https://jquery.com/download/" target="_blank" rel="noopener noreferrer">jquery.com</a> saytidan yuklab olib, loyihangiz papkasiga joylashtirasiz va HTML da unga havola berasiz.
+                            <pre><code><script src="js/jquery-3.x.x.min.js"></script></code></pre>
+                        </li>
+                        <li><strong>CDN (Content Delivery Network) orqali yuklash:</strong> Google, Microsoft kabi CDN provayderlari tomonidan taqdim etiladigan jQuery kutubxonasiga havola berasiz. Bu odatda tezroq yuklanishni ta'minlaydi, chunki foydalanuvchi brauzeri bu faylni allaqachon keshlagan bo'lishi mumkin.
+                            <pre><code><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></code></pre>
+                        </li>
+                    </ol>
+                    <p>jQuery kutubxonasi odatda <code><body></code> tegining yopilishidan oldin ulanadi.</p>
+                    <p>Garchi zamonaviy JavaScript (ES6+ va undan keyingi versiyalari) jQuery taklif qilgan ko'plab funksiyalarni tabiiy ravishda qo'llab-quvvatlasa-da (masalan, <code>document.querySelector</code>, <code>fetch API</code>), jQuery hali ham ko'plab mavjud loyihalarda qo'llaniladi va ba'zi hollarda tezkor prototiplash yoki sodda DOM manipulyatsiyalari uchun qulay bo'lishi mumkin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 53-MAVZU TUGASHI -->
+
+        <!-- 54-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-54">
+                <span class="accordion-title">54. Asosiy tushunchalar (jQuery).</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-54">
+                <div class="accordion-content-inner">
+                    <p>jQuery bilan ishlashda bir nechta asosiy tushunchalarni bilish muhimdir:</p>
+                    <ol>
+                        <li>
+                            <strong><code>$</code> Belgisi (jQuery Funksiyasi):</strong>
+                            <ul>
+                                <li>jQuery kutubxonasining asosiy kirish nuqtasi. Bu <code>jQuery</code> funksiyasining qisqartmasi (alias).</li>
+                                <li>Asosiy vazifasi HTML elementlarini tanlash (selektorlar yordamida) va ularni jQuery ob'ektiga o'rashdir. Bu jQuery ob'ekti keyinchalik turli metodlarni chaqirish uchun ishlatiladi.</li>
+                                <pre><code>$(document); // Hujjat ob'ektini tanlash
+$("p");       // Barcha paragraf elementlarini tanlash
+$("#myDiv");  // id="myDiv" bo'lgan elementni tanlash
+$(".myClass"); // class="myClass" bo'lgan elementlarni tanlash</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Selektorlar (Selectors):</strong>
+                            <ul>
+                                <li>HTML elementlarini tanlash uchun CSS selektorlariga o'xshash sintaksisdan foydalaniladi. jQuery deyarli barcha CSS3 selektorlarini qo'llab-quvvatlaydi, shuningdek o'zining maxsus selektorlariga ham ega. (57-savolda batafsil)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>DOM Tayyor Bo'lishi Hodisasi (Document Ready Event):</strong>
+                            <ul>
+                                <li>jQuery kodini HTML hujjati to'liq yuklanib, DOM daraxti qurilib bo'lgandan keyingina bajarilishini ta'minlash uchun ishlatiladi. Bu DOM elementlari bilan ishlashdan oldin ularning mavjudligini kafolatlaydi.</li>
+                                <li>Sintaksis:
+                                    <pre><code>$(document).ready(function() {
+    // Bu yerda DOM tayyor bo'lgandan keyin bajariladigan jQuery kodi
+    $("p").hide(); // Masalan, barcha paragraflarni yashirish
+});
+
+// Yoki qisqartirilgan shakli:
+$(function() {
+    // Bu yerda ham DOM tayyor bo'lgandan keyin bajariladigan kod
+});</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>jQuery Ob'ekti (jQuery Object / Wrapped Set):</strong>
+                            <ul>
+                                <li><code>$()</code> funksiyasi yordamida tanlangan HTML element(lar)ini o'z ichiga olgan maxsus jQuery ob'ektini qaytaradi.</li>
+                                <li>Bu ob'ekt jQuery metodlarini (masalan, <code>.hide()</code>, <code>.show()</code>, <code>.css()</code>, <code>.html()</code>) chaqirish imkonini beradi.</li>
+                                <li>Agar selektor bir nechta elementga mos kelsa ham, jQuery ob'ekti ularning barchasiga bir vaqtda amal qiladi (implicit iteration).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Metodlarni Zanjirlash (Method Chaining):</strong>
+                            <ul>
+                                <li>Ko'pgina jQuery metodlari o'zlarini (jQuery ob'ektini) qaytargani uchun, bir nechta metodni bitta elementga ketma-ket zanjir sifatida chaqirish mumkin. Bu kodni ixcham va o'qilishi oson qiladi.</li>
+                                <pre><code>$("#myElement")
+    .css("color", "red")
+    .slideUp(2000)
+    .slideDown(2000)
+    .addClass("highlighted");</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Hodisalarni Qayta Ishlash (Event Handling):</strong>
+                            <ul>
+                                <li>Foydalanuvchi harakatlari (sichqoncha bosilishi, klaviatura bosilishi) yoki brauzer hodisalariga javob berish uchun qulay metodlar mavjud. (58-savolda batafsil)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Effektlar va Animatsiyalar:</strong>
+                            <ul>
+                                <li>Elementlarni yashirish/ko'rsatish, silliq sirpanish, xiralashish kabi o'rnatilgan effektlar va maxsus animatsiyalar yaratish imkoniyati.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>AJAX (Asynchronous JavaScript and XML):</strong>
+                            <ul>
+                                <li>Server bilan asinxron ma'lumot almashish uchun soddalashtirilgan metodlar (masalan, <code>$.ajax()</code>, <code>$.get()</code>, <code>$.post()</code>).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>Bu asosiy tushunchalar jQuery kutubxonasidan samarali foydalanish uchun poydevor hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 54-MAVZU TUGASHI -->
+
+        <!-- 55-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-55">
+                <span class="accordion-title">55. JQuery sintaksisi.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-55">
+                <div class="accordion-content-inner">
+                    <p>jQuery sintaksisi sodda va tushunarli bo'lishi uchun ishlab chiqilgan. Uning asosida <strong>selektorlar</strong> yordamida HTML elementlarini tanlash va keyin ularga nisbatan ma'lum bir <strong>harakat (metod)</strong> ni bajarish yotadi.</p>
+                    <h5>Asosiy sintaksis:</h5>
+                    <pre><code>$(selektor).harakat();</code></pre>
+                    <ul>
+                        <li><strong><code>$</code></strong>: jQuery funksiyasiga kirish uchun ishlatiladigan belgi (<code>jQuery</code> ning qisqartmasi).</li>
+                        <li><strong><code>(selektor)</code></strong>: HTML element(lar)ini topish yoki tanlash uchun ishlatiladi. Selektorlar CSS selektorlariga juda o'xshash (masalan, teg nomi, klass, ID).</li>
+                        <li><strong><code>.harakat()</code></strong>: Tanlangan element(lar) ustida bajariladigan jQuery metodi (funksiyasi). Metodlar elementlarni o'zgartirish (masalan, mazmunini, uslubini), yashirish/ko'rsatish, animatsiya qilish, hodisalarga javob berish kabi vazifalarni bajaradi.</li>
+                    </ul>
+
+                    <h5>Sintaksisning batafsilroq ko'rinishlari va misollari:</h5>
+                    <h6>1. Elementlarni Tanlash (Selektorlar):</h6>
+                    <pre><code>// Teg nomi bo'yicha tanlash
+$("p") <p> 
+
+$("#myId") 
+
+
+$(".myClass") 
+
+// Atribut bo'yicha tanlash
+$("[href]") // href atributiga ega barcha elementlarni tanlaydi
+$("[type='text']") // type="text" bo'lgan elementlarni tanlaydi
+
+$("ul li:first-child") // Har bir <ul> ichidagi birinchi <li> ni tanlaydi
+$("p.intro") // class="intro" bo'lgan <p> elementlarini tanlaydi</code></pre>
+
+                    <h6>2. DOM Tayyor Bo'lishi Hodisasi:</h6>
+                    <p>jQuery kodini HTML hujjati to'liq yuklanib, DOM manipulyatsiyaga tayyor bo'lgandan keyin bajarilishini ta'minlash uchun:</p>
+                    <pre><code>$(document).ready(function(){
+  
+   $("p").text("Hujjat tayyor!");
+});
+
+// Yoki qisqartirilgan shakli:
+$(function(){
+ 
+});</code></pre>
+
+                    <h6>3. Metodlarni Chaqirish:</h6>
+                    <p>Tanlangan jQuery ob'ektiga turli metodlarni qo'llash mumkin:</p>
+                    <pre><code>// Matnni o'zgartirish
+$("#sarlavha").text("Yangi Sarlavha");
+
+$("#contentDiv").html("<h2>Ichki kontent</h2><p>Bu yangi HTML.</p>");
+
+// CSS uslubini o'zgartirish
+$("p.muhim").css("color", "red");
+$("p.muhim").css({"font-weight": "bold", "font-size": "18px"}); // Bir nechta uslub
+
+$("#rasm").hide(); // Yashirish
+$("#rasm").show(); // Ko'rsatish
+$("#rasm").toggle(); // Holatini o'zgartirish (agar ko'rinib tursa yashiradi, aks holda ko'rsatadi)
+
+$("button").click(function(){
+  alert("Tugma bosildi!");
+});</code></pre>
+
+                    <h6>4. Metodlarni Zanjirlash (Chaining):</h6>
+                    <p>Bir nechta metodni bitta jQuery ob'ektiga ketma-ket qo'llash:</p>
+                    <pre><code>$("#box")
+  .fadeOut(1000) 
+  .fadeIn(1000)  
+  .addClass("active")
+  .text("Yangilandi!");</code></pre>
+
+                    <h6>5. Qiymatlarni Olish va O'rnatish (Getters and Setters):</h6>
+                    <p>Ko'pgina jQuery metodlari ham qiymat olish (getter), ham qiymat o'rnatish (setter) uchun ishlatilishi mumkin:</p>
+                    <pre><code>
+let matn = $("#myInput").val();
+let rang = $("p").css("color"); 
+
+
+$("#myInput").val("Yangi qiymat"); 
+$("p").css("color", "blue"); </code></pre>
+                    <p>jQuery sintaksisining soddaligi va CSS selektorlaridan keng foydalanishi uni o'rganish va ishlatishni osonlashtiradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 55-MAVZU TUGASHI -->
+
+        <!-- Qolgan jQuery va PHP mavzulari... -->
+        <!-- jQuery mavzulari davomi keyingi javobda -->
         <!-- Davomi... -->
 
 

@@ -1,70 +1,64 @@
 /* --- Global o'zgaruvchilar ranglar va shriftlar uchun (QORONG'U MAVZU) --- */
 :root {
     /* Qorong'u mavzu uchun ranglar */
-    --asosiy-rang: #3498db; /* Asosiy urg'u rangi (ko'k) - o'zgarishsiz qoldirish mumkin yoki ochroq qilish */
-    --asosiy-rang-toq: #2980b9; /* Ochilgan sarlavha uchun - o'zgarishsiz */
-    --ikkinchi-darajali-rang: #2ecc71; /* Yashil - o'zgarishsiz */
+    --asosiy-rang: #3498db; /* Asosiy urg'u rangi (ko'k) */
+    --asosiy-rang-toq: #2980b9; /* Ochilgan sarlavha uchun */
+    --ikkinchi-darajali-rang: #2ecc71; /* Yashil */
 
     --matn-rangi-toq: #e0e0e0; /* To'q matn (sarlavhalar) -> Och kulrang */
     --matn-rangi-orta: #c5c5c5; /* O'rta matn (savollar) -> Biroz to'qroq och kulrang */
     --matn-rangi-och: #a0a0a0;  /* Och matn (javoblar) -> Yanada ochroq kulrang */
 
     --fon-asosiy: #121212; /* Juda to'q sahifa foni (qora yoki to'q kulrang) */
-    --fon-akkordeon-konteyner: #1e1e1e; /* Akkordeon konteyneri uchun fon (biroz ochroq to'q) */
-    --fon-tugma-hover: #2a2a2a; /* Tugma ustiga sichqoncha kelganda fon */
-    --fon-javob-mazmuni: #242424; /* Javob mazmuni uchun biroz boshqacha to'q fon */
+    --fon-akkordeon-konteyner: #1e1e1e; /* Akkordeon konteyneri uchun fon */
+    --fon-tugma-ochiq: #2a2a2a; /* Akkordeon ochilganda tugma foni */
+    --fon-tugma-hover: #252525; /* Tugma ustiga sichqoncha kelganda fon (biroz ochroq) */
+    --fon-javob-mazmuni: #242424; /* Javob mazmuni uchun fon */
 
-    --chegara-rangi: #3a3a3a; /* Chegaralar rangi (to'q kulrang) */
+    --chegara-rangi: #3a3a3a; /* Chegaralar rangi */
 
-    /* Shriftlar va boshqa o'zgaruvchilar o'zgarishsiz qoladi */
+    /* Shriftlar va boshqa o'zgaruvchilar */
     --shrift-asosiy: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --shrift-kod: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
-    --soya-yumshoq: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soyani qorong'u fonga moslashtiramiz */
+    --soya-yumshoq: 0 4px 15px rgba(0, 0, 0, 0.2);
     --soya-orta: 0 8px 25px rgba(0, 0, 0, 0.3);
 
-    --chegara-radiusi-asosiy: 12px;
-    --chegara-radiusi-ichki: 8px;
+    --chegara-radiusi-asosiy: 10px; /* Avvalgi CSS da 8px edi, 10px ga o'zgartirdim */
+    --chegara-radiusi-ichki: 6px;
 }
 
 /* --- Asosiy uslublar --- */
 body {
     font-family: var(--shrift-asosiy);
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Sahifa chetlaridan bo'sh joy */
     background-color: var(--fon-asosiy);
     color: var(--matn-rangi-orta); /* Asosiy matn rangi */
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex; /* Akkordeonni markazlashtirish uchun */
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* HTMLdagi .cantent va .where uchun uslublar */
-.cantent {
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.where {
-    max-width: 800px;
-    margin: 30px auto;
+/* Sizning HTMLingizda .accordion-container kabi umumiy konteyner bo'lishi mumkin */
+.accordion-container {
+    width: 100%;
+    max-width: 800px; /* Akkordeon kengligi */
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: var(--fon-akkordeon-konteyner);
     border-radius: var(--chegara-radiusi-asosiy);
     box-shadow: var(--soya-orta);
-    padding: 25px 30px;
-}
-
-.where h1 {
-    text-align: center;
-    color: var(--matn-rangi-toq); /* O'zgartirilgan matn rangi */
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 1.8rem;
+    overflow: hidden; /* Chegara radiusini saqlash uchun */
 }
 
 /* --- Har bir akkordeon elementi uchun uslublar --- */
 .accordion-item {
-    border-bottom: 1px solid var(--chegara-rangi); /* O'zgartirilgan chegara rangi */
+    border-bottom: 1px solid var(--chegara-rangi);
 }
 .accordion-item:last-child {
     border-bottom: none;
@@ -76,29 +70,29 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 16px 0;
-    background-color: transparent;
+    padding: 16px 20px; /* Ichki bo'shliqlar */
+    background-color: transparent; /* Tugma foni akkordeon konteyneriniki bilan bir xil */
     border: none;
     text-align: left;
     font-size: 1.05rem;
     font-weight: 600;
-    color: var(--matn-rangi-orta); /* O'zgartirilgan matn rangi */
+    color: var(--matn-rangi-orta);
     cursor: pointer;
     outline: none;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .accordion-button:hover {
-    background-color: var(--fon-tugma-hover); /* O'zgartirilgan hover foni */
+    background-color: var(--fon-tugma-hover);
 }
 
 .accordion-button:hover .accordion-title,
 .accordion-button:focus .accordion-title {
-    color: var(--asosiy-rang); /* Asosiy rangni saqlab qoldim, lekin kerak bo'lsa oq yoki ochroq rangga o'zgartirish mumkin */
+    color: var(--asosiy-rang);
 }
 .accordion-button:focus-visible {
-    box-shadow: 0 0 0 2px var(--asosiy-rang) inset; /* Fokus rangini asosiy rangga o'zgartirdim */
-    border-radius: var(--chegara-radiusi-ichki);
+    box-shadow: 0 0 0 2px var(--asosiy-rang) inset;
+    border-radius: 0; /* Agar global border-radius bo'lsa, bu kerak bo'lmasligi mumkin */
 }
 
 .accordion-title {
@@ -110,8 +104,8 @@ body {
 /* --- "+" va "X" belgilari uchun uslublar --- */
 .accordion-icon {
     font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--asosiy-rang); /* Ikona rangini o'zgarishsiz qoldirdim */
+    font-weight: 400; /* Belgilar uchun normal qalinlik */
+    color: var(--matn-rangi-orta); /* Belgilarning boshlang'ich rangi */
     margin-left: 10px;
     transition: transform 0.3s ease, color 0.3s ease;
     min-width: 18px;
@@ -122,8 +116,7 @@ body {
 
 .accordion-button .close-icon {
     display: none;
-    color: #ff6b6b; /* "X" uchun yorqinroq qizil (qora fonda yaxshi ko'rinishi uchun) */
-    transform: rotate(0deg);
+    /* color: #ff6b6b; // Bu qizil rangni olib tashladim, asosiy rang yaxshiroq ko'rinadi */
 }
 
 .accordion-button[aria-expanded="true"] .open-icon {
@@ -132,57 +125,53 @@ body {
 
 .accordion-button[aria-expanded="true"] .close-icon {
     display: inline;
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); // Agar "X" haqiqiy bo'lsa, aylantirish kerak emas */
 }
-.accordion-button[aria-expanded="true"] .close-icon.actual-x {
-    transform: rotate(0deg);
-}
-
 
 .accordion-button[aria-expanded="true"] .accordion-title {
-    color: var(--asosiy-rang); /* Ochilgan sarlavha rangini asosiy rangga o'zgartirdim */
+    color: var(--asosiy-rang);
 }
 .accordion-button[aria-expanded="true"] {
-    background-color: var(--fon-tugma-hover); /* O'zgartirilgan fon */
+    background-color: var(--fon-tugma-ochiq);
 }
-
+.accordion-button[aria-expanded="true"] .accordion-icon {
+    color: var(--asosiy-rang); /* Ochilganda belgining rangini o'zgartiramiz */
+}
 
 /* --- Javob mazmuni uchun uslublar --- */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-out,
-                padding-top 0.4s ease-out,
-                padding-bottom 0.4s ease-out,
-                opacity 0.3s ease-out;
-    background-color: var(--fon-javob-mazmuni); /* O'zgartirilgan fon */
+                opacity 0.3s ease-out 0.1s; /* Opacity uchun kichik kechikish */
+    background-color: var(--fon-javob-mazmuni);
     opacity: 0;
 }
 
-.accordion-content.open {
-    max-height: 3000px;
+.accordion-button[aria-expanded="true"] + .accordion-content {
+    max-height: 3000px; /* Kontent sig'ishi uchun yetarli balandlik */
     opacity: 1;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    border-top: 1px solid var(--chegara-rangi); /* O'zgartirilgan chegara rangi */
+    /* Javob ochilganda tepa va pastdan padding qo'shish uchun: */
+    /* padding-top: 15px; */
+    /* padding-bottom: 20px; */
+    /* Agar padding bilan birga animatsiya kerak bo'lsa, .accordion-content-inner ga qo'shiladi */
 }
 
 .accordion-content-inner {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: var(--matn-rangi-och); /* O'zgartirilgan matn rangi */
+    padding: 20px; /* Javob mazmuni uchun ichki bo'shliq */
+    color: var(--matn-rangi-och);
     font-size: 0.95rem;
     line-height: 1.65;
 }
 
 .accordion-content-inner h5 {
-    color: var(--asosiy-rang); /* h5 sarlavhalari uchun asosiy rang */
+    color: var(--matn-rangi-toq); /* Sarlavhalar uchun asosiy matn rangidan foydalanamiz */
     margin-top: 18px;
-    margin-bottom: 8px;
-    font-size: 1rem;
+    margin-bottom: 10px; /* Ko'proq bo'sh joy */
+    font-size: 1.05rem; /* Biroz kattaroq */
     font-weight: 600;
-    border-bottom: 1px solid var(--chegara-rangi); /* O'zgartirilgan chegara rangi */
-    padding-bottom: 5px;
+    border-bottom: 1px solid var(--chegara-rangi);
+    padding-bottom: 8px; /* Chiziqdan keyin bo'sh joy */
 }
 .accordion-content-inner h5:first-child {
     margin-top: 0;
@@ -191,13 +180,18 @@ body {
 .accordion-content-inner p,
 .accordion-content-inner ul li,
 .accordion-content-inner ol li {
-    margin-bottom: 10px;
-    color: var(--matn-rangi-och); /* O'zgartirilgan matn rangi */
+    margin-bottom: 12px; /* Ko'proq bo'sh joy */
+}
+
+.accordion-content-inner strong {
+    color: var(--matn-rangi-toq); /* strong teglari uchun */
+    font-weight: 600;
 }
 
 .accordion-content-inner ul,
 .accordion-content-inner ol {
     padding-left: 20px;
+    margin-left: 5px; /* Ro'yxatlarni biroz ichkariga suramiz */
 }
 .accordion-content-inner ul {
     list-style-type: disc;
@@ -205,93 +199,78 @@ body {
 .accordion-content-inner ol {
     list-style-type: decimal;
 }
-/* Ro'yxat belgilarining rangini moslashtirish (agar kerak bo'lsa) */
 .accordion-content-inner ul li::marker,
 .accordion-content-inner ol li::marker {
-    color: var(--matn-rangi-och); /* Yoki boshqa kontrastli rang */
+    color: var(--matn-rangi-orta); /* Ro'yxat belgilarining rangi */
 }
 
 
 .accordion-content-inner ul ul,
 .accordion-content-inner ol ol {
     list-style-type: circle;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 .accordion-content-inner ol ul,
 .accordion-content-inner ul ol {
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
+/* Havolalar uchun stil (agar kontentda bo'lsa) */
+.accordion-content-inner a {
+    color: var(--asosiy-rang);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--asosiy-rang);
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
 
-/* --- Formulalar va Kod bloklari uchun uslublar (QORONG'U MAVZU) --- */
-pre, code {
+.accordion-content-inner a:hover,
+.accordion-content-inner a:focus {
+    color: var(--asosiy-rang-toq);
+    border-bottom-color: var(--asosiy-rang-toq);
+}
+
+/* Kod bloklari uchun uslublar (QORONG'U MAVZU) */
+.accordion-content-inner pre,
+.accordion-content-inner code {
     font-family: var(--shrift-kod);
-    background-color: #2c2c2c; /* Kod bloki uchun to'qroq fon */
+    background-color: #2c2c2c;
     padding: 12px 16px;
     border-radius: var(--chegara-radiusi-ichki);
-    border: 1px solid #444; /* Kod bloki uchun chegara */
+    border: 1px solid #444;
     overflow-x: auto;
     margin: 15px 0;
     font-size: 0.88rem;
     line-height: 1.55;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Kodning uzun qatorlarini o'tkazish */
     word-break: break-all;
-    color: #d0d0d0; /* Kod matni uchun och kulrang */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soyani moslashtirdim */
+    color: #d0d0d0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 /* Inline kod uchun (QORONG'U MAVZU) */
-code:not(pre code) {
-    padding: 0.15em 0.35em;
-    margin: 0;
-    font-size: 82%;
-    background-color: #333; /* Inline kod uchun to'q fon */
-    color: #ddd; /* Inline kod uchun och matn */
+.accordion-content-inner code:not(pre code) {
+    padding: 0.15em 0.4em; /* padding ni to'g'riladim */
+    margin: 0 0.1em; /* atrofdan kichik joy */
+    font-size: 85%; /* inline kod uchun mosroq o'lcham */
+    background-color: #333;
+    color: #ddd;
     border-radius: 3px;
-}
-
-/* Jadval uchun qo'shimcha uslub (QORONG'U MAVZU) */
-.table-container {
-    overflow-x: auto;
-    margin: 18px 0;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-}
-th, td {
-    border: 1px solid var(--chegara-rangi); /* O'zgartirilgan chegara rangi */
-    padding: 8px 10px;
-    text-align: left;
-    vertical-align: top;
-}
-th {
-    background-color: #2a2a2a; /* Sarlavha qatori uchun to'q fon */
-    font-weight: 600;
-    color: var(--matn-rangi-toq); /* O'zgartirilgan matn rangi */
-}
-tbody tr:nth-child(odd) {
-    background-color: #242424; /* Har ikkinchi qator uchun biroz ochroq to'q fon */
-}
-tbody tr:hover {
-    background-color: #303030; /* Hoverda qator foni */
+    border: none; /* inline kod uchun chegara kerak emas */
+    box-shadow: none; /* inline kod uchun soya kerak emas */
 }
 
 /* --- Media So'rovlari (Adaptivlik uchun) --- */
 @media (max-width: 768px) {
-    .where {
-        margin: 20px auto;
-        padding: 20px 25px;
+    body {
+        padding: 15px;
     }
-    .where h1 {
-        font-size: 1.5rem; /* Kichikroq ekranlar uchun sarlavha hajmi */
-        margin-bottom: 20px;
+    .accordion-container {
+        margin: 15px auto;
     }
     .accordion-button {
         font-size: 1rem;
-        padding: 14px 0;
+        padding: 14px 15px;
     }
     .accordion-icon {
         font-size: 1.3rem;
@@ -300,36 +279,25 @@ tbody tr:hover {
     .accordion-content-inner {
         font-size: 0.9rem;
         line-height: 1.6;
+        padding: 15px;
     }
     .accordion-content-inner h5 {
-        font-size: 0.95rem;
+        font-size: 1rem; /* h5 sarlavhasini biroz kattaroq qildim */
     }
-    pre, code {
-        font-size: 0.82rem;
+    .accordion-content-inner pre,
+    .accordion-content-inner code {
+        font-size: 0.85rem; /* Kod o'lchamini moslashtirdim */
         padding: 10px 14px;
-    }
-    table {
-        font-size: 0.85rem;
-    }
-    th, td {
-        padding: 6px 8px;
     }
 }
 
 @media (max-width: 480px) {
-    .cantent {
-        padding: 10px; /* Eng kichik ekranlar uchun padding */
-    }
-    .where {
-        padding: 15px 20px;
-        margin: 15px auto;
-    }
-    .where h1 {
-        font-size: 1.3rem;
+    body {
+        padding: 10px;
     }
     .accordion-button {
         font-size: 0.95rem;
-        padding: 12px 0;
+        padding: 12px 10px;
     }
     .accordion-title {
         padding-right: 5px;
@@ -338,11 +306,8 @@ tbody tr:hover {
         font-size: 1.2rem;
         margin-left: 5px;
     }
-    .accordion-content.open {
-        padding-top: 10px;
-        padding-bottom: 15px;
-    }
     .accordion-content-inner {
-        font-size: 0.85rem;
+        font-size: 0.88rem; /* Kichik ekranlar uchun matn o'lchami */
+        padding: 12px;
     }
 }
