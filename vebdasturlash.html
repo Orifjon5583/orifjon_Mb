@@ -2032,92 +2032,241 @@ h1 { text-align: center; }</code></pre>
         <!-- Davomi CSS va JavaScript mavzulari bo'yicha... -->
         <!-- Qolgan HTML mavzulari shu yerga qo'shiladi -->
 
-   <div class="accordion-item">
-            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-27">
-                <span class="accordion-title">27. CSS matn effektlari.</span>
+         <!-- 41-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-41">
+                <span class="accordion-title">41. JavaScript funksiyalari yordamida hodisalarni qayta ishlash.</span>
                 <span class="accordion-icon open-icon">+</span>
                 <span class="accordion-icon close-icon actual-x">×</span>
             </button>
-            <div class="accordion-content" id="content-web-27">
+            <div class="accordion-content" id="content-web-41">
                 <div class="accordion-content-inner">
-                    <p>CSS matnning ko'rinishini va o'qilishini yaxshilash uchun turli xil effektlarni qo'llash imkonini beradi. Bu effektlar matn rangi, tekislanishi, dekoratsiyasi, soyalari va boshqalarni o'z ichiga oladi.</p>
-                    <h5>Asosiy matn effektlari uchun CSS xususiyatlari:</h5>
+                    <p>JavaScriptda <strong>hodisalar (events)</strong> – bu foydalanuvchining harakatlari (masalan, sichqonchani bosish, klaviaturani bosish, formani jo'natish) yoki brauzer tomonidan yuzaga keladigan holatlar (masalan, sahifa yuklanishi, rasm yuklanishi) dir. Hodisalarni qayta ishlash (event handling) JavaScriptga bu hodisalarga javob berish va veb-sahifani interaktiv qilish imkonini beradi.</p>
+                    <p>JavaScript funksiyalari hodisalarni qayta ishlashning asosiy vositasidir. Hodisa yuz berganda ma'lum bir funksiya (hodisani qayta ishlovchi - event handler) chaqiriladi.</p>
+                    <h5>Hodisalarni qayta ishlash usullari:</h5>
+                    <ol>
+                        <li>
+                            <strong>HTML Hodisa Atributlari (Inline Event Handlers):</strong>
+                            <ul>
+                                <li>Hodisani qayta ishlovchi JavaScript kodi to'g'ridan-to'g'ri HTML elementining hodisa atributiga yoziladi (masalan, <code>onclick</code>, <code>onmouseover</code>).</li>
+                                <li>Oddiy holatlar uchun qulay, lekin HTML va JavaScriptni aralashtirgani uchun katta loyihalarda tavsiya etilmaydi.</li>
+                                <pre><code><button onclick="alert('Tugma bosildi!');">Meni bos</button>
+
+<script>
+    function xabarChiqar() {
+        console.log('Paragraf ustiga sichqoncha keldi!');
+    }
+</script>
+<p onmouseover="xabarChiqar()">Sichqonchani bu yerga olib keling</p></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>DOM Hodisa Xususiyatlari (DOM Event Properties):</strong>
+                            <ul>
+                                <li>JavaScript yordamida HTML elementining hodisa xususiyatiga funksiyani tayinlash. Har bir hodisa uchun faqat bitta qayta ishlovchi tayinlanishi mumkin.</li>
+                                <pre><code><button id="meningTugmam">Bos!</button>
+<script>
+    const tugma = document.getElementById('meningTugmam');
+    tugma.onclick = function() {
+        alert('DOM xususiyati orqali bosildi!');
+    };
+
+    // Yoki strelkali funksiya bilan:
+    // tugma.onclick = () => alert('DOM xususiyati orqali bosildi!');
+</script></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>addEventListener()</code> Metodi (Eng tavsiya etiladigan usul):</strong>
+                            <ul>
+                                <li>Bir xil hodisaga bir nechta qayta ishlovchi funksiyalarni qo'shish imkonini beradi.</li>
+                                <li>Hodisalarni qayta ishlash jarayonini yanada moslashuvchan boshqarish imkonini beradi (masalan, "capturing" va "bubbling" fazalari).</li>
+                                <li><code>removeEventListener()</code> metodi yordamida hodisa qayta ishlovchisini olib tashlash mumkin.</li>
+                                <pre><code><button id="yangiTugma">Yana Bos!</button>
+<script>
+    const yangiTugma = document.getElementById('yangiTugma');
+
+    function birinchiIshlovchi() {
+        console.log('Birinchi ishlovchi chaqirildi.');
+    }
+    function ikkinchiIshlovchi() {
+        alert('Ikkinchi ishlovchi chaqirildi!');
+    }
+
+    yangiTugma.addEventListener('click', birinchiIshlovchi);
+    yangiTugma.addEventListener('click', ikkinchiIshlovchi);
+
+    // Ishlovchini olib tashlash uchun (funksiya nomi bir xil bo'lishi kerak):
+    // yangiTugma.removeEventListener('click', birinchiIshlovchi);
+</script></code></pre>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>Umumiy hodisalar turlari:</h5>
                     <ul>
-                        <li>
-                            <strong><code>color</code>:</strong> Matn rangini belgilaydi. (22-savolda batafsil)
-                        </li>
-                        <li>
-                            <strong><code>text-align</code>:</strong> Matnni gorizontal tekislash usulini belgilaydi.
-                            <ul>
-                                <li>Qiymatlar: <code>left</code> (chapga), <code>right</code> (o'ngga), <code>center</code> (markazga), <code>justify</code> (ikki tomonga tekislash).</li>
-                                <pre><code>p { text-align: justify; }
-h1 { text-align: center; }</code></pre>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>text-decoration</code> (qisqartma xususiyat):</strong> Matnga dekorativ chiziqlar qo'shadi.
-                            <ul>
-                                <li>Xususiyatlari: <code>text-decoration-line</code>, <code>text-decoration-color</code>, <code>text-decoration-style</code>, <code>text-decoration-thickness</code>.</li>
-                                <li><code>text-decoration-line</code> qiymatlari: <code>none</code> (yo'q), <code>underline</code> (tagiga chiziq), <code>overline</code> (ustiga chiziq), <code>line-through</code> (ustidan chiziq).</li>
-                                <pre><code>a { text-decoration: none; } /* Havolalarning tagchizig'ini olib tashlash */
-.eski-narx { text-decoration: line-through; }</code></pre>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>text-transform</code>:</strong> Matn harflarining registri (katta/kichik) ni o'zgartiradi.
-                            <ul>
-                                <li>Qiymatlar: <code>none</code> (o'zgarishsiz), <code>capitalize</code> (har bir so'zning birinchi harfi katta), <code>uppercase</code> (barcha harflar katta), <code>lowercase</code> (barcha harflar kichik).</li>
-                                <pre><code>h2 { text-transform: uppercase; }</code></pre>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>text-indent</code>:</strong> Paragrafning birinchi qatoriga chekinish (otstup) qo'shadi.
-                            <pre><code>p { text-indent: 30px; }</code></pre>
-                        </li>
-                        <li>
-                            <strong><code>letter-spacing</code>:</strong> Harflar orasidagi bo'shliqni (masofani) belgilaydi.
-                            <pre><code>.keng-harflar { letter-spacing: 2px; }</code></pre>
-                        </li>
-                        <li>
-                            <strong><code>word-spacing</code>:</strong> So'zlar orasidagi bo'shliqni (masofani) belgilaydi.
-                            <pre><code>.keng-sozlar { word-spacing: 5px; }</code></pre>
-                        </li>
-                        <li>
-                            <strong><code>line-height</code>:</strong> Matn qatorlarining balandligini belgilaydi. (24-savolda batafsil)
-                        </li>
-                        <li>
-                            <strong><code>text-shadow</code>:</strong> Matnga soya effektini qo'shadi.
-                            <ul>
-                                <li>Qiymatlar: <code>gorizontal-siljish vertikal-siljish [yumshoqlik-radiusi] [rang]</code>. Bir nechta soya vergul bilan ajratib berilishi mumkin.</li>
-                                <pre><code>h1 { text-shadow: 2px 2px 5px gray; }</code></pre>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>white-space</code>:</strong> Element ichidagi bo'shliqlar va satr uzilishlari qanday qayta ishlanishini belgilaydi.
-                            <ul>
-                                <li>Qiymatlar: <code>normal</code>, <code>nowrap</code> (satr uzilishini oldini oladi), <code>pre</code> (<code><pre></code> tegidek), <code>pre-wrap</code>, <code>pre-line</code>.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>word-break</code>:</strong> Uzun so'zlarning qanday sindirilishini (keyingi qatorga o'tkazilishini) boshqaradi.
-                            <ul>
-                                <li>Qiymatlar: <code>normal</code>, <code>break-all</code> (istalgan joydan sindirish), <code>keep-all</code>.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>overflow-wrap</code> (yoki <code>word-wrap</code>):</strong> Sindirish mumkin bo'lmagan uzun so'zlarning element chegarasidan chiqib ketishini oldini olish uchun ularni sindirishga ruxsat beradi.
-                            <ul>
-                                <li>Qiymatlar: <code>normal</code>, <code>break-word</code>.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong><code>direction</code> va <code>unicode-bidi</code>:</strong> Matn yo'nalishini (chapdan o'ngga yoki o'ngdan chapga) boshqarish uchun.</li>
-                        </li>
+                        <li><strong>Sichqoncha hodisalari:</strong> <code>click</code>, <code>dblclick</code>, <code>mousedown</code>, <code>mouseup</code>, <code>mousemove</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code>, <code>mouseleave</code>.</li>
+                        <li><strong>Klaviatura hodisalari:</strong> <code>keydown</code>, <code>keyup</code>, <code>keypress</code> (eskirgan).</li>
+                        <li><strong>Forma hodisalari:</strong> <code>submit</code>, <code>reset</code>, <code>focus</code>, <code>blur</code>, <code>change</code>, <code>input</code>.</li>
+                        <li><strong>Oyna/Hujjat hodisalari:</strong> <code>load</code> (sahifa to'liq yuklanganda), <code>DOMContentLoaded</code> (DOM tayyor bo'lganda), <code>unload</code>, <code>resize</code> (oyna o'lchami o'zgarganda), <code>scroll</code>.</li>
                     </ul>
-                    <p>Bu xususiyatlardan to'g'ri foydalanish matnni yanada o'qilishi oson, jozibador va foydalanuvchi uchun qulay qilishga yordam beradi.</p>
+                    <h5>Hodisa Ob'ekti (Event Object):</h5>
+                    <p>Hodisa yuz berganda, brauzer avtomatik ravishda hodisa haqida ma'lumotlarni o'z ichiga olgan <strong>hodisa ob'ektini</strong> yaratadi va uni hodisani qayta ishlovchi funksiyaga argument sifatida uzatadi.</p>
+                    <pre><code>element.addEventListener('click', function(event) {
+    console.log(event.type); // "click"
+    console.log(event.target); // Hodisa yuz bergan element
+    console.log(event.clientX, event.clientY); // Sichqoncha koordinatalari
+    event.preventDefault(); // Brauzerning standart harakatini bekor qilish (masalan, havola bo'ylab o'tish)
+    event.stopPropagation(); // Hodisaning yuqoriga "suzib chiqishini" (bubbling) to'xtatish
+});</code></pre>
+                    <p>Hodisalarni qayta ishlash JavaScript yordamida dinamik va interaktiv veb-ilovalar yaratishning muhim qismidir.</p>
                 </div>
             </div>
         </div>
+        <!-- 41-MAVZU TUGASHI -->
+
+        <!-- 42-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-42">
+                <span class="accordion-title">42. JavaScriptda doimiy ifodalar.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-42">
+                <div class="accordion-content-inner">
+                    <p><strong>JavaScriptda Doimiy Ifodalar (Regular Expressions yoki RegExp)</strong> – bu matn ichida ma'lum bir naqshni (pattern) qidirish, topish yoki almashtirish uchun ishlatiladigan maxsus belgilar ketma-ketligidir. Ular matn bilan ishlashda juda kuchli vosita hisoblanadi.</p>
+                    <h5>Doimiy ifodalarni yaratish:</h5>
+                    <ol>
+                        <li><strong>Literal yozuvi (eng keng tarqalgan):</strong> Naqsh ikki slash (<code>/</code>) orasiga yoziladi.
+                            <pre><code>let naqsh = /salom/i; // "salom" so'zini qidiradi, 'i' flagi katta-kichik harfni e'tiborsiz qoldiradi</code></pre>
+                        </li>
+                        <li><strong><code>RegExp</code> konstruktori bilan:</strong>
+                            <pre><code>let naqshStr = "dunyo";
+let bayroqlar = "g"; // 'g' flagi global qidiruv (barcha mosliklarni topish)
+let naqshObyekt = new RegExp(naqshStr, bayroqlar);</code></pre>
+                        </li>
+                    </ol>
+                    <h5>Asosiy naqsh komponentlari:</h5>
+                    <ul>
+                        <li><strong>Oddiy belgilar:</strong> <code>a</code>, <code>b</code>, <code>1</code>, <code>2</code> kabi belgilar o'zlariga mos keladi.</li>
+                        <li><strong>Maxsus belgilar (Metacharacters):</strong> Maxsus ma'noga ega bo'lgan belgilar. Ularni oddiy belgi sifatida ishlatish uchun oldiga teskari slash (<code>\</code>) qo'yiladi (masalan, <code>\.</code> nuqtani bildiradi).
+                            <ul>
+                                <li><code>.</code> : Istalgan bitta belgi (satr uzilishidan tashqari).</li>
+                                <li><code>\d</code> : Istalgan raqam (<code>[0-9]</code> ga teng).</li>
+                                <li><code>\D</code> : Raqam bo'lmagan istalgan belgi.</li>
+                                <li><code>\w</code> : Istalgan harf, raqam yoki pastki chiziq (<code>[A-Za-z0-9_]</code> ga teng).</li>
+                                <li><code>\W</code> : <code>\w</code> ga teskari.</li>
+                                <li><code>\s</code> : Istalgan bo'shliq belgisi (bo'shliq, tabulyatsiya, yangi qator).</li>
+                                <li><code>\S</code> : Bo'shliq bo'lmagan istalgan belgi.</li>
+                                <li><code>^</code> : Satr boshlanishiga mos keladi (ko'p qatorli rejimda qator boshlanishiga).</li>
+                                <li><code>$</code> : Satr oxiriga mos keladi (ko'p qatorli rejimda qator oxiriga).</li>
+                                <li><code>*</code> : Oldingi belgi yoki guruhning nol yoki undan ko'p marta takrorlanishi.</li>
+                                <li><code>+</code> : Oldingi belgi yoki guruhning bir yoki undan ko'p marta takrorlanishi.</li>
+                                <li><code>?</code> : Oldingi belgi yoki guruhning nol yoki bir marta takrorlanishi.</li>
+                                <li><code>{n}</code> : Oldingi belgining aniq <code>n</code> marta takrorlanishi.</li>
+                                <li><code>{n,}</code> : Oldingi belgining kamida <code>n</code> marta takrorlanishi.</li>
+                                <li><code>{n,m}</code> : Oldingi belgining kamida <code>n</code> va ko'pi bilan <code>m</code> marta takrorlanishi.</li>
+                                <li><code>[...]</code> : Qavs ichidagi istalgan bitta belgiga mos keladi (masalan, <code>[abc]</code> 'a', 'b' yoki 'c' ga mos keladi). Diapazonlar ham ishlatilishi mumkin (masalan, <code>[a-z]</code>).</li>
+                                <li><code>[^...]</code> : Qavs ichida bo'lmagan istalgan bitta belgiga mos keladi.</li>
+                                <li><code>(...)</code> : Guruhlash. Guruhga kvantifikatorlar qo'llash yoki topilgan qismni ajratib olish uchun.</li>
+                                <li><code>|</code> : YOKI (OR) operatori (masalan, <code>olma|banan</code> "olma" yoki "banan" ga mos keladi).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h5>Bayroqlar (Flags):</h5>
+                    <p>Doimiy ifodaning xatti-harakatini o'zgartiradigan qo'shimcha parametrlar (literal yozuvda oxirgi slashdan keyin yoziladi):</p>
+                    <ul>
+                        <li><code>i</code> (ignoreCase): Katta-kichik harflarni e'tiborsiz qoldiradi.</li>
+                        <li><code>g</code> (global): Satrdagi barcha mosliklarni qidiradi (faqat birinchisini emas).</li>
+                        <li><code>m</code> (multiline): Ko'p qatorli rejim. <code>^</code> va <code>$</code> belgilarining har bir qator boshi va oxiriga mos kelishini ta'minlaydi.</li>
+                        <li><code>u</code> (unicode): To'liq Unicode qo'llab-quvvatlashini yoqadi.</li>
+                        <li><code>y</code> (sticky): Qidiruvni faqat aniq bir pozitsiyadan boshlaydi.</li>
+                        <li><code>s</code> (dotAll): Nuqta (<code>.</code>) belgisining yangi qator belgilariga ham mos kelishini ta'minlaydi.</li>
+                    </ul>
+                    <h5>Doimiy ifodalar bilan ishlash metodlari:</h5>
+                    <h6>String metodlari:</h6>
+                    <ul>
+                        <li><code>match(regexp)</code>: Satrdagi naqshga mos keladigan qismlarni topadi va massiv sifatida qaytaradi (yoki topilmasa <code>null</code>).</li>
+                        <li><code>search(regexp)</code>: Naqshga birinchi mos kelgan qismning indeksini qaytaradi (topilmasa -1).</li>
+                        <li><code>replace(regexp|substr, newSubstr|function)</code>: Naqshga mos keladigan qismlarni yangi satr yoki funksiya natijasi bilan almashtiradi.</li>
+                        <li><code>split(separator|regexp, limit)</code>: Satrni ajratuvchi (yoki naqsh) bo'yicha bo'lib, massiv qaytaradi.</li>
+                    </ul>
+                    <h6>RegExp metodlari:</h6>
+                    <ul>
+                        <li><code>test(string)</code>: Satrda naqshga mos keladigan qism mavjudligini tekshirib, <code>true</code> yoki <code>false</code> qaytaradi.</li>
+                        <li><code>exec(string)</code>: <code>match()</code> ga o'xshash, lekin global qidiruv (<code>g</code> flagi) bilan ishlatilganda keyingi moslikni topish uchun holatni saqlaydi.</li>
+                    </ul>
+                    <pre><code>let matn = "Salom Dunyo! Salom yana dunyo.";
+let naqsh1 = /salom/gi; // "salom" ni katta-kichik harfni e'tiborsiz qoldirib, global qidiradi
+console.log(matn.match(naqsh1)); // ["Salom", "Salom"]
+
+let emailNaqsh = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+let email = "test@example.com";
+console.log(emailNaqsh.test(email)); // true</code></pre>
+                    <p>Doimiy ifodalar ma'lumotlarni validatsiya qilish, matnni tahlil qilish va o'zgartirish kabi ko'plab vazifalarda juda foydalidir.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 42-MAVZU TUGASHI -->
+
+        <!-- 43-MAVZU BOSHLANISHI (va 48) -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-43">
+                <span class="accordion-title">43. JavaScript brauzer va veb-hujjat ob’ektlari modeli bilan ishlash.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-43">
+                <div class="accordion-content-inner">
+                    <p>JavaScript veb-brauzerlarda ishlaganda ikkita asosiy ob'ektlar modeli bilan o'zaro ta'sir qiladi: <strong>BOM (Browser Object Model – Brauzer Ob'ektlari Modeli)</strong> va <strong>DOM (Document Object Model – Hujjat Ob'ektlari Modeli)</strong>. Bu modellar JavaScriptga brauzer oynasi va veb-sahifa mazmuni bilan ishlash imkonini beradi.</p>
+
+                    <h5>BOM (Browser Object Model – Brauzer Ob'ektlari Modeli):</h5>
+                    <p>BOM brauzer oynasining o'zi bilan bog'liq bo'lgan ob'ektlar va funksiyalarni taqdim etadi. U standartlashtirilmagan, shuning uchun turli brauzerlarda ba'zi farqlar bo'lishi mumkin, ammo asosiy ob'ektlar odatda bir xil.</p>
+                    <h6>Asosiy BOM ob'ektlari:</h6>
+                    <ul>
+                        <li>
+                            <strong><code>window</code> ob'ekti:</strong>
+                            <ul>
+                                <li>BOM ierarxiyasining eng yuqori (global) ob'ekti. Brauzer oynasini yoki freymini ifodalaydi.</li>
+                                <li>Barcha global JavaScript o'zgaruvchilari, funksiyalari va ob'ektlari <code>window</code> ob'ektining xususiyatlari va metodlari hisoblanadi (ularni <code>window.</code> prefiksisiz ham chaqirish mumkin).</li>
+                                <li><strong>Xususiyatlari:</strong> <code>window.innerWidth</code>, <code>window.innerHeight</code> (oyna o'lchamlari), <code>window.location</code> (joriy URL), <code>window.history</code> (brauzer tarixi), <code>window.navigator</code> (brauzer haqida ma'lumot), <code>window.screen</code> (ekran haqida ma'lumot).</li>
+                                <li><strong>Metodlari:</strong> <code>window.alert()</code>, <code>window.prompt()</code>, <code>window.confirm()</code>, <code>window.open()</code>, <code>window.close()</code>, <code>window.setTimeout()</code>, <code>window.setInterval()</code>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>navigator</code> ob'ekti:</strong> Brauzer (nomi, versiyasi, operatsion tizim) va foydalanuvchi agenti haqida ma'lumot beradi.
+                            <pre><code>console.log(navigator.userAgent);
+console.log(navigator.language);</code></pre>
+                        </li>
+                        <li>
+                            <strong><code>screen</code> ob'ekti:</strong> Foydalanuvchi ekrani (kengligi, balandligi, rang chuqurligi) haqida ma'lumot beradi.
+                        </li>
+                        <li>
+                            <strong><code>location</code> ob'ekti:</strong> Joriy veb-sahifaning URL manzili bilan ishlash imkonini beradi (URL ni o'qish, yangi URL ga o'tish - <code>location.href = "yangi_manzil.html"</code>, qayta yuklash - <code>location.reload()</code>).
+                        </li>
+                        <li>
+                            <strong><code>history</code> ob'ekti:</strong> Brauzerning tashrif buyurilgan sahifalar tarixi bilan ishlash imkonini beradi (<code>history.back()</code>, <code>history.forward()</code>, <code>history.go(n)</code>).
+                        </li>
+                        <li><strong>Cookie lar bilan ishlash:</strong> <code>document.cookie</code> orqali (BOM ning bir qismi sifatida qaralishi mumkin, garchi <code>document</code> DOM ga tegishli bo'lsa ham).</li>
+                    </ul>
+
+                    <h5>DOM (Document Object Model – Hujjat Ob'ektlari Modeli):</h5>
+                    <p>DOM HTML yoki XML hujjatini ob'ektlar ierarxiyasi (daraxt) sifatida ifodalaydi. JavaScript DOM yordamida HTML elementlarini tanlashi, ularning mazmunini va atributlarini o'zgartirishi, yangi elementlar yaratishi yoki mavjudlarini o'chirishi mumkin. Bu veb-sahifalarni dinamik qilishning asosiy vositasidir.</p>
+                    <p>(DOM haqida batafsilroq ma'lumot 44 va 45-savollarda keltiriladi).</p>
+
+                    <h5>JavaScriptning BOM va DOM bilan ishlash prinsiplari:</h5>
+                    <ul>
+                        <li>JavaScript kodi brauzerda bajarilganda, u <code>window</code> ob'ektiga va uning orqali boshqa BOM ob'ektlariga kirish huquqiga ega bo'ladi.</li>
+                        <li><code>window.document</code> (yoki shunchaki <code>document</code>) orqali DOM ga kiriladi.</li>
+                        <li>Hodisalarni qayta ishlash (event handling) orqali foydalanuvchi harakatlariga yoki brauzer hodisalariga javob beriladi.</li>
+                        <li>Taymerlar (<code>setTimeout</code>, <code>setInterval</code>) yordamida kodni ma'lum bir vaqtdan keyin yoki davriy ravishda bajarish mumkin.</li>
+                    </ul>
+                    <p>BOM va DOM birgalikda JavaScriptga veb-sahifalarni to'liq nazorat qilish va ularni foydalanuvchi bilan interaktiv qilish uchun kuchli vositalar to'plamini taqdim etadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 43-MAVZU TUGASHI (va 48) -->
+
+        <!-- Davomi... -->
 
 
         

@@ -38,12 +38,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.cantent { /* Yoki .accordion-container */
+.cantent {
     padding: 20px;
     box-sizing: border-box;
 }
 
-.where { /* Yoki .accordion-container */
+.where {
     max-width: 800px;
     margin: 30px auto;
     background-color: var(--fon-akkordeon-konteyner);
@@ -123,7 +123,7 @@ body {
     color: #ff6b6b;
     transform: rotate(0deg);
 }
-/* actual-x klassi bo'lsa, bu faqat X uchun ishlaydi */
+
 .accordion-button[aria-expanded="true"] .open-icon {
     display: none;
 }
@@ -131,9 +131,12 @@ body {
 .accordion-button[aria-expanded="true"] .close-icon {
     display: inline;
 }
-/* Agar '+' belgisi 'X' ga aylanishi kerak bo'lsa (actual-x klassi bo'lmasa) */
+
 .accordion-button[aria-expanded="true"] .close-icon:not(.actual-x) {
     transform: rotate(45deg);
+}
+.accordion-button[aria-expanded="true"] .close-icon.actual-x {
+    transform: rotate(0deg); /* Agar haqiqiy "X" belgisi bo'lsa, aylanish shart emas */
 }
 
 
@@ -155,21 +158,19 @@ body {
                 opacity 0.3s ease-out;
     background-color: var(--fon-javob-mazmuni);
     opacity: 0;
-    /* Vertikal paddinglar .open klassi bilan qo'shiladi */
-    /* padding-left va padding-right .accordion-content-inner ga beriladi */
 }
 
 .accordion-content.open {
-    max-height: 3000px; /* Javob uzunligiga qarab kerak bo'lsa kattalashtiring */
+    max-height: 3000px;
     opacity: 1;
-    padding-top: 15px;    /* Ochilganda yuqoridan padding */
-    padding-bottom: 20px; /* Ochilganda pastdan padding */
+    padding-top: 15px;
+    padding-bottom: 20px;
     border-top: 1px solid var(--chegara-rangi);
 }
 
 .accordion-content-inner {
-    padding-left: 5px;  /* Javob matni uchun chapdan padding */
-    padding-right: 5px; /* Javob matni uchun o'ngdan padding */
+    padding-left: 5px;
+    padding-right: 5px;
     color: var(--matn-rangi-och);
     font-size: 0.95rem;
     line-height: 1.65;
@@ -226,10 +227,10 @@ body {
 
 
 /* --- Formulalar va Kod bloklari uchun uslublar (QORONG'U MAVZU) --- */
-pre, code {
+pre { /* `code` ni bu yerdan olib tashladim, chunki asosiy stillar pre uchun */
     font-family: var(--shrift-kod);
     background-color: #2c2c2c;
-    padding: auto 16px;
+    padding: 12px 16px; /* YUQORI/PASTKI: 12px, O'NG/CHAP: 16px */
     border-radius: var(--chegara-radiusi-ichki);
     border: 1px solid #444;
     overflow-x: auto;
@@ -237,27 +238,47 @@ pre, code {
     font-size: 0.88rem;
     line-height: 1.55;
     white-space: pre-wrap;
-    word-break: break-all;
+    overflow-wrap: break-word; /* Yoki word-break: break-word; */
     color: #d0d0d0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    max-width: 100%;
 }
+
+pre code { /* pre ichidagi code uchun minimal stillar */
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: inherit; /* pre dan shrift o'lchamini oladi */
+    line-height: inherit; /* pre dan qator balandligini oladi */
+    color: inherit; /* pre dan matn rangini oladi */
+    box-shadow: none;
+    white-space: inherit; /* pre dan white-space ni oladi */
+    overflow-wrap: inherit; /* pre dan overflow-wrap ni oladi */
+    word-break: inherit; /* pre dan word-break ni oladi */
+    /* Boshqa maxsus stillar kerak emas, chunki 'pre' o'zi formatlaydi */
+}
+
 /* Har bir kod misoli bloki uchun qo'shimcha (agar HTMLga qo'shilsa) */
 .code-example-block {
     margin-bottom: 15px;
 }
-.code-example-block pre { /* .code-example-block ichidagi pre uchun marginni olib tashlash yoki kamaytirish */
+.code-example-block pre {
     margin-top: 0;
-    margin-bottom: 0; /* Agar .code-example-block o'zi margin-bottomga ega bo'lsa */
+    margin-bottom: 0;
 }
 
 
-code:not(pre code) {
+code:not(pre code) { /* Bu faqat inline 'code' elementlari uchun */
     padding: 0.15em 0.35em;
     margin: 0;
     font-size: 82%;
     background-color: #333;
     color: #ddd;
     border-radius: 3px;
+    white-space: normal;
+    word-break: normal;
 }
 
 /* Jadval uchun qo'shimcha uslub (QORONG'U MAVZU) */
@@ -316,9 +337,10 @@ tbody tr:hover {
     .accordion-content-inner h5 {
         font-size: 0.95rem;
     }
-    pre, code {
-        font-size: 0.82rem;
-        padding: 10px 15px;
+    pre { /* Faqat 'pre' ni o'zgartiramiz, 'pre code' meros qilib oladi */
+        font-size: 0.8rem; /* Kichikroq ekranlar uchun shriftni yanada kichiklashtirish */
+        padding: 10px 12px;
+        line-height: 1.45;
     }
     table {
         font-size: 0.85rem;
@@ -357,8 +379,9 @@ tbody tr:hover {
     .accordion-content-inner {
         font-size: 0.85rem;
     }
-      pre, code {
-   
-        padding: 15px 18px;
+    pre { /* Faqat 'pre' ni o'zgartiramiz */
+        font-size: 0.75rem; /* Eng kichik ekranlar uchun yanada kichikroq shrift */
+        padding: 8px 10px;
+        line-height: 1.4;
     }
 }
