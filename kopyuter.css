@@ -2,19 +2,19 @@
 :root {
     --asosiy-rang: #3498db; /* Asosiy urg'u rangi (ko'k) */
     --asosiy-rang-toq: #2980b9;
-    --ikkinchi-darajali-rang: #2ecc71; /* Ikkilamchi urg'u (yashil) - "+" belgilari uchun ishlatilishi mumkin */
-    
+    --ikkinchi-darajali-rang: #2ecc71; /* Ikkilamchi urg'u (yashil) */
+
     --matn-rangi-toq: #2c3e50; /* To'q matn (sarlavhalar) */
     --matn-rangi-orta: #34495e; /* O'rta matn (savollar) */
     --matn-rangi-och: #5D6D7E;  /* Och matn (javoblar) */
-    
+
     --fon-asosiy: #f4f6f8; /* Juda och sahifa foni */
-    --fon-akkordeon: #ffffff;
-    --fon-tugma-hover: #f0f5fa; /* Tugma ustiga sichqoncha kelganda fon */
-    --fon-javob-mazmuni: #fdfefe; /* Javob mazmuni uchun biroz boshqacha fon */
-    
+    --fon-akkordeon-konteyner: #ffffff; /* Akkordeon konteyneri uchun fon */
+    --fon-tugma-hover: #eaf3f9;
+    --fon-javob-mazmuni: #fdfefe;
+
     --chegara-rangi: #e3e9ed; /* Chegaralar rangi */
-    
+
     --shrift-asosiy: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --shrift-kod: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
@@ -29,43 +29,44 @@
 body {
     font-family: var(--shrift-asosiy);
     margin: 0;
-    padding: 20px;
+    padding: 0; /* Body paddingini olib tashlaymiz, .cantent ga beramiz */
     background-color: var(--fon-asosiy);
     color: var(--matn-rangi-orta);
-    line-height: 1.7; /* Yaxshiroq o'qish uchun kattalashtiramiz */
-    -webkit-font-smoothing: antialiased; /* Webkit'da shriftlarni silliqlash */
-    -moz-osx-font-smoothing: grayscale; /* Firefox'da shriftlarni silliqlash */
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.accordion-container { /* HTMLda .accordion-container klassini hamma akkordeon elementlarini o'rab turgan divga bering */
-    max-width: 800px; /* Biroz kattalashtiramiz */
-    margin: 50px auto;
-    background-color: var(--fon-akkordeon);
+/* HTMLdagi .cantent va .where uchun uslublar */
+.cantent {
+    padding: 20px; /* Endi padding bu yerda */
+    box-sizing: border-box; /* Padding umumiy kenglikka ta'sir qilmasligi uchun */
+}
+
+.where { /* Agar bu .accordion-container ning o'rnini bosadigan bo'lsa */
+    max-width: 800px;
+    margin: 30px auto; /* Yuqoridan va pastdan biroz kamroq margin */
+    background-color: var(--fon-akkordeon-konteyner);
     border-radius: var(--chegara-radiusi-asosiy);
     box-shadow: var(--soya-orta);
-    padding: 30px 35px; /* Biroz ko'proq chekinishlar */
+    padding: 25px 30px; /* Ichki padding */
 }
 
-.accordion-container h1 { /* Agar umumiy sarlavha bo'lsa */
+.where h1 { /* Sarlavha uchun */
     text-align: center;
     color: var(--matn-rangi-toq);
-    margin-bottom: 40px; /* Pastdan ko'proq chekinish */
-    font-weight: 700; /* Qalinroq sarlavha */
-    font-size: 2rem; /* Hajmini kattalashtiramiz */
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.8rem; /* Sarlavha hajmini biroz kichiklashtirdim */
 }
 
 /* --- Har bir akkordeon elementi uchun uslublar --- */
 .accordion-item {
     border-bottom: 1px solid var(--chegara-rangi);
-    transition: background-color 0.3s ease; /* Hoverda butun element foni uchun silliq o'tish */
 }
 .accordion-item:last-child {
     border-bottom: none;
 }
-.accordion-item:hover {
-    /* background-color: var(--fon-tugma-hover); /* Hoverda butun element uchun yengil fon */
-}
-
 
 /* --- Savol-tugma uchun uslublar --- */
 .accordion-button {
@@ -73,61 +74,75 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 20px 10px 20px 5px; /* Matn chetga yaqinroq bo'lishi uchun gorizontal chekinishlarni kamaytirdim */
-    background-color: transparent; /* Fonni shaffof qilamiz */
+    padding: 16px 0; /* Vertikal padding, gorizontalni 0 qildim, chunki .accordion-title ga beramiz */
+    background-color: transparent;
     border: none;
     text-align: left;
-    font-size: 1.15rem; /* Biroz kattaroq */
-    font-weight: 600; /* Yanada ifodali shrift */
+    font-size: 1.05rem; /* Savol shriftini biroz kichiklashtirdim */
+    font-weight: 600;
     color: var(--matn-rangi-orta);
     cursor: pointer;
     outline: none;
-    transition: color 0.2s ease; /* Matn rangining silliq o'zgarishi */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.accordion-button:hover {
+    background-color: var(--fon-tugma-hover);
 }
 
 .accordion-button:hover .accordion-title,
 .accordion-button:focus .accordion-title {
-    color: var(--asosiy-rang); /* Hover/fokusda savol matni rangining o'zgarishi */
+    color: var(--asosiy-rang);
 }
-.accordion-button:focus-visible { /* Foydalanish imkoniyati uchun yaxshilangan fokus uslubi */
+.accordion-button:focus-visible {
     box-shadow: 0 0 0 2px var(--asosiy-rang-toq) inset;
-    border-radius: var(--chegara-radiusi-ichki); /* Fokus tugma ichida bo'lishi uchun */
+    border-radius: var(--chegara-radiusi-ichki);
 }
-
 
 .accordion-title {
-    flex-grow: 1; /* Sarlavha mavjud bo'sh joyni egallashi uchun */
-    transition: color 0.2s ease; /* Sarlavha rangi uchun silliq o'tish */
+    flex-grow: 1;
+    padding-right: 10px; /* Ikona bilan oraliq uchun */
+    transition: color 0.2s ease;
 }
 
 /* --- "+" va "X" belgilari uchun uslublar --- */
 .accordion-icon {
-    font-size: 1.6rem; /* Belgilar hajmi */
-    font-weight: 300; /* Yengilroq shrift og'irligi */
+    font-size: 1.4rem;
+    font-weight: 400;
     color: var(--asosiy-rang);
-    margin-left: 20px; /* Belgidan chapdagi bo'sh joy */
-    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.3s ease; /* Silliqroq animatsiya */
-    min-width: 24px; /* Belgining minimal kengligi */
-    text-align: center; /* Belgini markazlashtirish */
-    line-height: 1; /* Belgining qator balandligi */
+    margin-left: 10px; /* Sarlavhadan chapdagi bo'sh joyni kamaytirdim */
+    transition: transform 0.3s ease, color 0.3s ease;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+    flex-shrink: 0; /* Ikona qisqarmasligi uchun */
 }
 
 .accordion-button .close-icon {
-    display: none; /* Yopiq belgi sukut bo'yicha ko'rinmaydi */
-    color: #e74c3c; /* "X" uchun qizil rang */
-    transform: rotate(0deg); /* Animatsiya uchun boshlang'ich holat */
+    display: none;
+    color: #e74c3c;
+    transform: rotate(0deg);
 }
 
 .accordion-button[aria-expanded="true"] .open-icon {
-    display: none; /* Ochilganda "+" belgisi yo'qoladi */
+    display: none;
 }
 
 .accordion-button[aria-expanded="true"] .close-icon {
-    display: inline; /* Ochilganda "X" belgisi ko'rinadi */
-    transform: rotate(180deg); /* Agar bu boshqa belgi bo'lsa "X" ning silliq aylanishi (bu holda "X" uchun aylanish unchalik ahamiyatli emas) */
+    display: inline;
+    transform: rotate(45deg); /* Agar + belgisi ishlatilsa X ga aylantirish */
 }
+/* Agar alohida X belgisi bo'lsa (HTMLda .actual-x klassi bilan): */
+.accordion-button[aria-expanded="true"] .close-icon.actual-x {
+    transform: rotate(0deg);
+}
+
+
 .accordion-button[aria-expanded="true"] .accordion-title {
-    color: var(--asosiy-rang-toq); /* Ochilgan savol sarlavhasining rangi */
+    color: var(--asosiy-rang-toq);
+}
+.accordion-button[aria-expanded="true"] {
+    background-color: var(--fon-tugma-hover);
 }
 
 
@@ -135,75 +150,191 @@ body {
 .accordion-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), /* Yaxshilangan vaqt funksiyasi */
-                opacity 0.4s ease-out 0.1s; /* opacity uchun kechikish */
+    transition: max-height 0.4s ease-out,
+                padding-top 0.4s ease-out,
+                padding-bottom 0.4s ease-out,
+                opacity 0.3s ease-out;
     background-color: var(--fon-javob-mazmuni);
-    border-top: 1px solid transparent; /* Dastlab shaffof chegara */
     opacity: 0;
-    /* Agar Bootstrap bilan murakkab joylashuv zarurati bo'lmasa, position: absolute ni olib tashlaymiz */
+    /* padding-left va padding-rightni olib tashlaymiz, .accordion-content-inner ga beramiz */
 }
 
-.accordion-content.open { /* Bu klassni JavaScript orqali qo'shish kerak bo'ladi */
-    max-height: 2000px; /* Agar javoblar juda uzun bo'lsa, kattalashtiramiz */
+.accordion-content.open {
+    max-height: 3000px; /* Kerak bo'lsa kattalashtiring */
     opacity: 1;
-    border-top-color: var(--chegara-rangi); /* Ochilganda chegarani ko'rsatamiz */
-    /* padding-top va padding-bottom endi inner orqali */
+    padding-top: 15px; /* Ochilganda yuqoridan padding */
+    padding-bottom: 20px; /* Ochilganda pastdan padding */
+    border-top: 1px solid var(--chegara-rangi);
 }
 
 .accordion-content-inner {
-    /* Dastlabki holatda padding-top/bottom ni kichikroq qilib, ochilganda kattalashtirish mumkin (animatsiya uchun) */
-    padding: 400px 25px; /* Gorizontal chekinishlar (dastlab vertikal padding 0) */
+    padding-left: 5px;  /* Javob matni uchun chapdan padding */
+    padding-right: 5px; /* Javob matni uchun o'ngdan padding */
     color: var(--matn-rangi-och);
-    font-size: 1rem; /* Javob matnini biroz kattalashtiramiz */
-    transition: padding 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Padding uchun silliq o'tish */
+    font-size: 0.95rem; /* Javob matnini biroz kichiklashtirdim */
+    line-height: 1.65;
 }
-.accordion-content.open .accordion-content-inner {
-    padding-top: 25px; /* Ochilganda vertikal padding qo'shamiz */
-    padding-bottom: 25px;
-}
-
 
 .accordion-content-inner h5 {
     color: var(--asosiy-rang-toq);
-    margin-top: 25px;
-    margin-bottom: 12px;
-    font-size: 1.1rem;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 1rem;
     font-weight: 600;
-    border-bottom: 1px solid #e9eff3; /* Yumshoqroq ajratuvchi */
-    padding-bottom: 8px;
+    border-bottom: 1px solid #e9eff3;
+    padding-bottom: 5px;
 }
 .accordion-content-inner h5:first-child {
-    margin-top: 0; /* Birinchi h5 uchun yuqori chekinishni olib tashlaymiz */
+    margin-top: 0;
 }
 
 .accordion-content-inner p,
-.accordion-content-inner ul li {
-    margin-bottom: 12px; /* Matn va ro'yxat elementlari orasidagi bo'shliq */
-    color: var(--matn-rangi-och); /* Matn rangining meros bo'lishini ta'minlaymiz */
+.accordion-content-inner ul li,
+.accordion-content-inner ol li {
+    margin-bottom: 10px;
+    color: var(--matn-rangi-och);
 }
 
+.accordion-content-inner ul,
+.accordion-content-inner ol {
+    padding-left: 20px; /* Ro'yxat uchun chap chekinishni kamaytirdim */
+}
 .accordion-content-inner ul {
-    padding-left: 25px; /* Ro'yxat uchun chap chekinish */
-    list-style-type: disc; /* Standart ro'yxat belgilari */
+    list-style-type: disc;
 }
-.accordion-content-inner ul ul { /* Ichki ro'yxatlar uchun */
-    list-style-type: circle;
-    margin-top: 8px;
+.accordion-content-inner ol {
+    list-style-type: decimal;
 }
 
-/* --- Formulalar uchun uslublar --- */
-pre.formula {
+.accordion-content-inner ul ul,
+.accordion-content-inner ol ol {
+    list-style-type: circle;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.accordion-content-inner ol ul,
+.accordion-content-inner ul ol {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+
+/* --- Formulalar va Kod bloklari uchun uslublar --- */
+pre, code {
     font-family: var(--shrift-kod);
-    background-color: #f7f9fc; /* Juda och, deyarli oq fon */
-    padding: 18px 22px; /* Formulalar uchun ichki chekinishlar */
+    background-color: #f7f9fc;
+    padding: 12px 16px;
     border-radius: var(--chegara-radiusi-ichki);
-    border: 1px solid #e8edf2; /* Formula chegarasi */
-    overflow-x: auto; /* Agar formula sig'masa, gorizontal aylantirish */
-    margin: 20px 0; /* Formuladan oldin va keyin bo'shliq */
-    font-size: 0.95rem; /* Formula shrift hajmi */
-    line-height: 1.6;
-    white-space: pre-wrap; /* Uzun formulalarni keyingi qatorga o'tkazish */
-    word-break: break-word; /* So'zlarni sindirish (kerak bo'lsa) */
-    color: #3a506b; /* Kod/formulalar uchun to'q ko'k-kulrang */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03); /* Formulalar uchun yengil soya */
+    border: 1px solid #e8edf2;
+    overflow-x: auto;
+    margin: 15px 0;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: #3a506b;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+code:not(pre code) {
+    padding: 0.15em 0.35em;
+    margin: 0;
+    font-size: 82%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+}
+
+/* Jadval uchun qo'shimcha uslub */
+.table-container {
+    overflow-x: auto;
+    margin: 18px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+th, td {
+    border: 1px solid var(--chegara-rangi);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background-color: #f0f5fa;
+    font-weight: 600;
+    color: var(--matn-rangi-toq);
+}
+tbody tr:nth-child(odd) {
+    background-color: #fdfefe;
+}
+tbody tr:hover {
+    background-color: #f5f8fb;
+}
+
+/* --- Media So'rovlari (Adaptivlik uchun) --- */
+@media (max-width: 768px) {
+    .where {
+        margin: 20px auto;
+        padding: 20px 25px;
+    }
+    .where h1 {
+        font-size: 1.5rem; /* Kichikroq ekranlar uchun sarlavha hajmi */
+        margin-bottom: 20px;
+    }
+    .accordion-button {
+        font-size: 1rem;
+        padding: 14px 0;
+    }
+    .accordion-icon {
+        font-size: 1.3rem;
+        margin-left: 8px;
+    }
+    .accordion-content-inner {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .accordion-content-inner h5 {
+        font-size: 0.95rem;
+    }
+    pre, code {
+        font-size: 0.82rem;
+        padding: 10px 14px;
+    }
+    table {
+        font-size: 0.85rem;
+    }
+    th, td {
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cantent {
+        padding: 10px; /* Eng kichik ekranlar uchun padding */
+    }
+    .where {
+        padding: 15px 20px;
+        margin: 15px auto;
+    }
+    .where h1 {
+        font-size: 1.3rem;
+    }
+    .accordion-button {
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+    .accordion-title {
+        padding-right: 5px;
+    }
+    .accordion-icon {
+        font-size: 1.2rem;
+        margin-left: 5px;
+    }
+    .accordion-content.open {
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .accordion-content-inner {
+        font-size: 0.85rem;
+    }
 }

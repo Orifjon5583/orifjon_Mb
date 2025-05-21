@@ -63,7 +63,7 @@ body {
     border-bottom: none;
 }
 .accordion-item:hover {
-    /* background-color: var(--background-button-hover); /* Легкий фон для всего элемента при наведении */
+     background-color: var(--background-button-hover); 
 }
 
 
