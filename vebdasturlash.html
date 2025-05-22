@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -9,9 +10,8 @@
 </head>
 <body>
 
-<div class="cantent"> <!-- yoki .accordion-container, agar shunday nomlagan bo'lsangiz -->
-    <div class="where"> <!-- yoki .accordion-container, agar shunday nomlagan bo'lsangiz -->
-
+<div class="cantent">
+    <div class="where"> <!-- Bu klassni olib tashlashingiz yoki .cantent bilan birlashtirishingiz mumkin, agar alohida maqsadi bo'lmasa -->
         <h1>Veb Dasturlash Bo'yicha Savol-Javoblar</h1>
 
         <!-- 1-MAVZU BOSHLANISHI -->
@@ -19,7 +19,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-1">
                 <span class="accordion-title">1. Web dasturlashga kirish. Asosiy tushunchalar.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span> <!-- × belgisini to'g'riladim -->
             </button>
             <div class="accordion-content" id="content-web-1">
                 <div class="accordion-content-inner">
@@ -44,7 +44,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-2">
                 <span class="accordion-title">2. WWW rivojlanish bosqichlari. Web-sahifa, Web-sayt, Web-sеrvеr;</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-2">
                 <div class="accordion-content-inner">
@@ -95,7 +95,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-3">
                 <span class="accordion-title">3. Ssеnariyli tillar. "Kliеnt-sеrvеr" tеxnologiyasi;</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-3">
                 <div class="accordion-content-inner">
@@ -132,7 +132,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-4">
                 <span class="accordion-title">4. HTML haqida.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-4">
                 <div class="accordion-content-inner">
@@ -145,23 +145,23 @@
                         <li>Boshqa veb-sahifalar yoki resurslarga giperhavolalar yaratish.</li>
                     </ul>
                     <h5>HTML elementlari:</h5>
-                    <p>HTML hujjatlari <strong>elementlardan</strong> tashkil topadi. Elementlar odatda ochuvchi teg (masalan, <code><p></code>), kontent va yopuvchi tegdan (masalan, <code></p></code>) iborat bo'ladi. Ba'zi elementlar (masalan, <code><img></code>, <code><br></code>) bo'sh elementlar bo'lib, yopuvchi tegga ega emas.</p>
-                    <pre><code><teg_nomi atribut="qiymat">Bu yerda kontent</teg_nomi></code></pre>
+                    <p>HTML hujjatlari <strong>elementlardan</strong> tashkil topadi. Elementlar odatda ochuvchi teg (masalan, <code>&lt;p&gt;</code>), kontent va yopuvchi tegdan (masalan, <code>&lt;/p&gt;</code>) iborat bo'ladi. Ba'zi elementlar (masalan, <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>) bo'sh elementlar bo'lib, yopuvchi tegga ega emas.</p>
+                    <pre><code>&lt;teg_nomi atribut="qiymat"&gt;Bu yerda kontent&lt;/teg_nomi&gt;</code></pre>
                     <h5>HTML hujjatining asosiy tuzilishi:</h5>
-                    <pre><code><!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahifa Sarlavhasi</title>
-    <!-- Boshqa meta-teglar, CSS fayllariga havolalar va h.k. -->
-</head>
-<body>
-    <!-- Sahifaning ko'rinadigan mazmuni shu yerda joylashadi -->
-    <h1>Asosiy Sarlavha</h1>
-    <p>Bu birinchi paragraf.</p>
-</body>
-</html></code></pre>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Sahifa Sarlavhasi&lt;/title&gt;
+    &lt;!-- Boshqa meta-teglar, CSS fayllariga havolalar va h.k. --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Sahifaning ko'rinadigan mazmuni shu yerda joylashadi --&gt;
+    &lt;h1&gt;Asosiy Sarlavha&lt;/h1&gt;
+    &lt;p&gt;Bu birinchi paragraf.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
                     <p>HTML veb-dasturlashning poydevori bo'lib, CSS (stilizatsiya uchun) va JavaScript (interaktivlik uchun) bilan birgalikda zamonaviy veb-saytlarni yaratishda ishlatiladi.</p>
                 </div>
             </div>
@@ -173,7 +173,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-5">
                 <span class="accordion-title">5. HTML tarixi.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-5">
                 <div class="accordion-content-inner">
@@ -188,7 +188,7 @@
                         <li><strong>HTML 4.01 (1999):</strong> HTML 4.0 ga kichik tuzatishlar va aniqliklar kiritilgan versiya. Uzoq vaqt davomida eng keng qo'llanilgan standart bo'lib qoldi. U uch xil variantda (Strict, Transitional, Frameset) mavjud edi.</li>
                         <li><strong>XHTML 1.0 (2000):</strong> HTML ni XML (Extensible Markup Language) qoidalariga moslashtirishga urinish. Yanada qat'iy sintaksis talab qilgan.</li>
                         <li><strong>XHTML 1.1 (2001):</strong> XHTML ning modullarga ajratilgan versiyasi.</li>
-                        <li><strong>HTML5 (2014 - rasmiy tavsiya):</strong> Veb-texnologiyalarning navbatdagi katta sakrashi. Ko'plab yangi semantik teglar (<code><article></code>, <code><nav></code>, <code><header></code>, <code><footer></code>), multimedia elementlari (<code><audio></code>, <code><video></code>), grafikalar uchun <code><canvas></code>, yangi forma kiritish turlari va API lar (masalan, Geolocation, Local Storage) qo'shildi. HTML5 "tirik standart" (living standard) sifatida WHATWG (Web Hypertext Application Technology Working Group) tomonidan doimiy ravishda rivojlantirilmoqda.</li>
+                        <li><strong>HTML5 (2014 - rasmiy tavsiya):</strong> Veb-texnologiyalarning navbatdagi katta sakrashi. Ko'plab yangi semantik teglar (<code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>), multimedia elementlari (<code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>), grafikalar uchun <code>&lt;canvas&gt;</code>, yangi forma kiritish turlari va API lar (masalan, Geolocation, Local Storage) qo'shildi. HTML5 "tirik standart" (living standard) sifatida WHATWG (Web Hypertext Application Technology Working Group) tomonidan doimiy ravishda rivojlantirilmoqda.</li>
                     </ul>
                     <p>HTML ning rivojlanishi veb-texnologiyalarning imkoniyatlarini kengaytirib, Internetni bugungi kundagi ko'rinishga keltirishda muhim rol o'ynadi.</p>
                 </div>
@@ -201,7 +201,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-6">
                 <span class="accordion-title">6. HTML muharrirlari, Izohlar</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-6">
                 <div class="accordion-content-inner">
@@ -238,15 +238,15 @@
                     <h5>HTML da Izohlar (Comments):</h5>
                     <p>HTML kodiga izohlar qo'shish kodni tushunarliroq qilish, eslatmalar qoldirish yoki kodning ba'zi qismlarini vaqtincha o'chirib qo'yish (brauzer tomonidan ko'rsatilmasligi) uchun ishlatiladi. Izohlar brauzer tomonidan e'tiborga olinmaydi va veb-sahifada ko'rinmaydi.</p>
                     <p>HTML da izoh quyidagi sintaksis bilan yoziladi:</p>
-                    <pre><code><!-- Bu yerga izoh matni yoziladi --></code></pre>
+                    <pre><code>&lt;!-- Bu yerga izoh matni yoziladi --&gt;</code></pre>
                     <h6>Izohlardan foydalanishning ba'zi sabablari:</h6>
                     <ul>
                         <li><strong>Kodning qismlarini tushuntirish:</strong> Murakkab bo'limlar yoki maxsus funksiyalar uchun.</li>
                         <li><strong>Eslatmalar qoldirish:</strong> Kelajakda o'zgartirishlar kiritish yoki boshqa dasturchilar uchun ma'lumot qoldirish.</li>
                         <li><strong>Kod qismlarini vaqtincha o'chirish:</strong> Kodni butunlay o'chirmasdan, uning ishlashini vaqtincha to'xtatib turish (debugging uchun foydali).
-                            <pre><code><!-- Quyidagi paragraf vaqtincha o'chirilgan:
-<p>Bu paragraf hozircha ko'rinmaydi.</p>
---></code></pre>
+                            <pre><code>&lt;!-- Quyidagi paragraf vaqtincha o'chirilgan:
+&lt;p&gt;Bu paragraf hozircha ko'rinmaydi.&lt;/p&gt;
+--&gt;</code></pre>
                         </li>
                         <li><strong>Mualliflik huquqi yoki litsenziya ma'lumotlarini qo'shish.</strong></li>
                     </ul>
@@ -256,13 +256,13 @@
         </div>
         <!-- 6-MAVZU TUGASHI -->
 
-      
+
         <!-- 7-MAVZU BOSHLANISHI -->
         <div class="accordion-item">
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-7">
                 <span class="accordion-title">7. HTMLda Matn teglari</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-7">
                 <div class="accordion-content-inner">
@@ -313,7 +313,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-8">
                 <span class="accordion-title">8. HTMLda ro’yhat</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-8">
                 <div class="accordion-content-inner">
@@ -384,7 +384,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-9">
                 <span class="accordion-title">9. HTMLda Xususiyatlar</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-9">
                 <div class="accordion-content-inner">
@@ -477,7 +477,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-10">
                 <span class="accordion-title">10. HTMLda Jadval</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-10">
                 <div class="accordion-content-inner">
@@ -490,7 +490,7 @@
                         <li><strong><code>&lt;td&gt;</code> (Table Data):</strong> Jadval ma'lumot yacheykasini belgilaydi. Oddiy ma'lumotlar uchun ishlatiladi.</li>
                     </ul>
                     <h5>Oddiy jadval namunasi:</h5>
-                    <pre><code>&lt;table border="1"&gt; &lt;!-- 'border' atributi eskirgan, CSS orqali stil berish tavsiya etiladi --&gt;
+                    <pre><code>&lt;table&gt; &lt;!-- Chegaralar CSS orqali beriladi --&gt;
     &lt;tr&gt;
         &lt;th&gt;Ism&lt;/th&gt;
         &lt;th&gt;Familiya&lt;/th&gt;
@@ -542,7 +542,7 @@
                         <li><strong><code>colspan</code> atributi:</strong> Yacheykani gorizontal ravishda bir nechta ustun bo'ylab birlashtiradi.</li>
                         <li><strong><code>rowspan</code> atributi:</strong> Yacheykani vertikal ravishda bir nechta qator bo'ylab birlashtiradi.</li>
                     </ul>
-                    <pre><code>&lt;table border="1"&gt;
+                    <pre><code>&lt;table&gt;
     &lt;tr&gt;
         &lt;th&gt;Nomi&lt;/th&gt;
         &lt;th colspan="2"&gt;Telefon&lt;/th&gt;
@@ -568,7 +568,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-11">
                 <span class="accordion-title">11. HTML5 yangi standartlari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-11">
                 <div class="accordion-content-inner">
@@ -638,7 +638,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-12">
                 <span class="accordion-title">12. HTML5 yangi teglar.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-12">
                 <div class="accordion-content-inner">
@@ -690,7 +690,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-13">
                 <span class="accordion-title">13. HTML5 atributlari va ularning vazifalari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-13">
                 <div class="accordion-content-inner">
@@ -741,7 +741,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-14">
                 <span class="accordion-title">14. HTML5 da Audio, video va grafika bilan ishlash.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-14">
                 <div class="accordion-content-inner">
@@ -826,7 +826,7 @@
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-15">
                 <span class="accordion-title">15. CSS haqida</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-15">
                 <div class="accordion-content-inner">
@@ -875,7 +875,7 @@ p {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-16">
                 <span class="accordion-title">16. CSS texnologiyalari</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-16">
                 <div class="accordion-content-inner">
@@ -950,7 +950,7 @@ p {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-17">
                 <span class="accordion-title">17. CSS sintaksisi</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-17">
                 <div class="accordion-content-inner">
@@ -1023,7 +1023,7 @@ p {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-18">
                 <span class="accordion-title">18. CSS dan foydalanish</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-18">
                 <div class="accordion-content-inner">
@@ -1120,7 +1120,7 @@ h1 {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-19">
                 <span class="accordion-title">19. CSS da Selektor turlari</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-19">
                 <div class="accordion-content-inner">
@@ -1223,7 +1223,7 @@ h1 {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-20">
                 <span class="accordion-title">20. CSS da Ranglar</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-20">
                 <div class="accordion-content-inner">
@@ -1291,7 +1291,7 @@ div { background-color: hsl(240, 60%, 70%); } /* Och ko'k */</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-21">
                 <span class="accordion-title">21. CSS xususiyatlari CSS sahifalash.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-21">
                 <div class="accordion-content-inner">
@@ -1368,7 +1368,7 @@ table, figure {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-22">
                 <span class="accordion-title">22. CSS rang xususiyatlari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-22">
                 <div class="accordion-content-inner">
@@ -1485,7 +1485,7 @@ button {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-23">
                 <span class="accordion-title">23. CSSda orqa fon xususiyatlari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-23">
                 <div class="accordion-content-inner">
@@ -1614,7 +1614,7 @@ div { background-color: lightblue; }</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-24">
                 <span class="accordion-title">24. CSS shrift xususiyatlari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-24">
                 <div class="accordion-content-inner">
@@ -1707,7 +1707,7 @@ div { line-height: 24px; }</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-25">
                 <span class="accordion-title">25. Margin xususiyatlari. Padding xususiyatlari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-25">
                 <div class="accordion-content-inner">
@@ -1776,7 +1776,7 @@ div { line-height: 24px; }</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-26">
                 <span class="accordion-title">26. Box model tushunchasi, qoidalari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-26">
                 <div class="accordion-content-inner">
@@ -1828,8 +1828,8 @@ div { line-height: 24px; }</code></pre>
                         <li><strong>Margin Qulashi (Margin Collapsing):</strong> Vertikal joylashgan blok elementlarining yuqori va pastki marginlari ba'zan bir-biriga "qulashi" (qo'shilib ketishi) mumkin. Bunda faqat kattaroq margin qiymati ishlatiladi. Bu gorizontal marginlarga taalluqli emas.</li>
                         <li><strong>Blok va Inline Elementlar:</strong>
                             <ul>
-                                <li><strong>Blok elementlar</strong> (masalan, <code><div></code>, <code><p></code>, <code><h1></code>) yangi qatordan boshlanadi va mavjud bo'sh joyning butun kengligini egallaydi. Ularga <code>width</code>, <code>height</code>, <code>margin</code> (yuqori/past), <code>padding</code> berish mumkin.</li>
-                                <li><strong>Inline elementlar</strong> (masalan, <code><span></code>, <code><a></code>, <code><strong></code>) yangi qatordan boshlanmaydi va faqat o'z kontenti egallagan joyni oladi. Ularga <code>width</code>, <code>height</code> va vertikal <code>margin</code> (yuqori/past) berish odatda ta'sir qilmaydi (gorizontal <code>margin</code> va barcha <code>padding</code>lar ishlaydi).</li>
+                                <li><strong>Blok elementlar</strong> (masalan, <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>) yangi qatordan boshlanadi va mavjud bo'sh joyning butun kengligini egallaydi. Ularga <code>width</code>, <code>height</code>, <code>margin</code> (yuqori/past), <code>padding</code> berish mumkin.</li>
+                                <li><strong>Inline elementlar</strong> (masalan, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>) yangi qatordan boshlanmaydi va faqat o'z kontenti egallagan joyni oladi. Ularga <code>width</code>, <code>height</code> va vertikal <code>margin</code> (yuqori/past) berish odatda ta'sir qilmaydi (gorizontal <code>margin</code> va barcha <code>padding</code>lar ishlaydi).</li>
                                 <li><strong>Inline-blok elementlar</strong> (<code>display: inline-block;</code>): Inline element kabi bir qatorda joylashadi, lekin blok element kabi <code>width</code>, <code>height</code> va vertikal marginlarni qabul qiladi.</li>
                             </ul>
                         </li>
@@ -1845,7 +1845,7 @@ div { line-height: 24px; }</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-27">
                 <span class="accordion-title">27. CSS matn effektlari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-27">
                 <div class="accordion-content-inner">
@@ -1934,7 +1934,7 @@ h1 { text-align: center; }</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-28">
                 <span class="accordion-title">28. CSS da effektlar, transfarmatsiya.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-28">
                 <div class="accordion-content-inner">
@@ -2029,15 +2029,12 @@ h1 { text-align: center; }</code></pre>
         </div>
         <!-- 28-MAVZU TUGASHI -->
 
-        <!-- Davomi CSS va JavaScript mavzulari bo'yicha... -->
-        <!-- Qolgan HTML mavzulari shu yerga qo'shiladi -->
-
-         <!-- 41-MAVZU BOSHLANISHI -->
+        <!-- 41-MAVZU BOSHLANISHI -->
         <div class="accordion-item">
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-41">
                 <span class="accordion-title">41. JavaScript funksiyalari yordamida hodisalarni qayta ishlash.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-41">
                 <div class="accordion-content-inner">
@@ -2050,30 +2047,30 @@ h1 { text-align: center; }</code></pre>
                             <ul>
                                 <li>Hodisani qayta ishlovchi JavaScript kodi to'g'ridan-to'g'ri HTML elementining hodisa atributiga yoziladi (masalan, <code>onclick</code>, <code>onmouseover</code>).</li>
                                 <li>Oddiy holatlar uchun qulay, lekin HTML va JavaScriptni aralashtirgani uchun katta loyihalarda tavsiya etilmaydi.</li>
-                                <pre><code><button onclick="alert('Tugma bosildi!');">Meni bos</button>
+                                <pre><code>&lt;button onclick="alert('Tugma bosildi!');"&gt;Meni bos&lt;/button&gt;
 
-<script>
+&lt;script&gt;
     function xabarChiqar() {
         console.log('Paragraf ustiga sichqoncha keldi!');
     }
-</script>
-<p onmouseover="xabarChiqar()">Sichqonchani bu yerga olib keling</p></code></pre>
+&lt;/script&gt;
+&lt;p onmouseover="xabarChiqar()"&gt;Sichqonchani bu yerga olib keling&lt;/p&gt;</code></pre>
                             </ul>
                         </li>
                         <li>
                             <strong>DOM Hodisa Xususiyatlari (DOM Event Properties):</strong>
                             <ul>
                                 <li>JavaScript yordamida HTML elementining hodisa xususiyatiga funksiyani tayinlash. Har bir hodisa uchun faqat bitta qayta ishlovchi tayinlanishi mumkin.</li>
-                                <pre><code><button id="meningTugmam">Bos!</button>
-<script>
+                                <pre><code>&lt;button id="meningTugmam"&gt;Bos!&lt;/button&gt;
+&lt;script&gt;
     const tugma = document.getElementById('meningTugmam');
     tugma.onclick = function() {
         alert('DOM xususiyati orqali bosildi!');
     };
 
     // Yoki strelkali funksiya bilan:
-    // tugma.onclick = () => alert('DOM xususiyati orqali bosildi!');
-</script></code></pre>
+    // tugma.onclick = () =&gt; alert('DOM xususiyati orqali bosildi!');
+&lt;/script&gt;</code></pre>
                             </ul>
                         </li>
                         <li>
@@ -2082,8 +2079,8 @@ h1 { text-align: center; }</code></pre>
                                 <li>Bir xil hodisaga bir nechta qayta ishlovchi funksiyalarni qo'shish imkonini beradi.</li>
                                 <li>Hodisalarni qayta ishlash jarayonini yanada moslashuvchan boshqarish imkonini beradi (masalan, "capturing" va "bubbling" fazalari).</li>
                                 <li><code>removeEventListener()</code> metodi yordamida hodisa qayta ishlovchisini olib tashlash mumkin.</li>
-                                <pre><code><button id="yangiTugma">Yana Bos!</button>
-<script>
+                                <pre><code>&lt;button id="yangiTugma"&gt;Yana Bos!&lt;/button&gt;
+&lt;script&gt;
     const yangiTugma = document.getElementById('yangiTugma');
 
     function birinchiIshlovchi() {
@@ -2098,7 +2095,7 @@ h1 { text-align: center; }</code></pre>
 
     // Ishlovchini olib tashlash uchun (funksiya nomi bir xil bo'lishi kerak):
     // yangiTugma.removeEventListener('click', birinchiIshlovchi);
-</script></code></pre>
+&lt;/script&gt;</code></pre>
                             </ul>
                         </li>
                     </ol>
@@ -2129,7 +2126,7 @@ h1 { text-align: center; }</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-42">
                 <span class="accordion-title">42. JavaScriptda doimiy ifodalar.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-42">
                 <div class="accordion-content-inner">
@@ -2213,7 +2210,7 @@ console.log(emailNaqsh.test(email)); // true</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-43">
                 <span class="accordion-title">43. JavaScript brauzer va veb-hujjat ob’ektlari modeli bilan ishlash.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-43">
                 <div class="accordion-content-inner">
@@ -2270,7 +2267,7 @@ console.log(navigator.language);</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-44">
                 <span class="accordion-title">44. Hujjatning ob’ektli modeli haqida tushuncha (DOM).</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-44">
                 <div class="accordion-content-inner">
@@ -2281,8 +2278,8 @@ console.log(navigator.language);</code></pre>
                         <li><strong>Daraxtsimon Tuzilish (Tree Structure):</strong> HTML hujjati ierarxik daraxt sifatida tasvirlanadi:
                             <ul>
                                 <li>Eng yuqori tugun – <strong>hujjat tuguni (document node)</strong>.</li>
-                                <li>Uning bolasi – <strong>ildiz elementi (root element)</strong> (HTML uchun bu <code><html></code> tegi).</li>
-                                <li>Ildiz elementining bolalari – <code><head></code> va <code><body></code>.</li>
+                                <li>Uning bolasi – <strong>ildiz elementi (root element)</strong> (HTML uchun bu <code>&lt;html&gt;</code> tegi).</li>
+                                <li>Ildiz elementining bolalari – <code>&lt;head&gt;</code> va <code>&lt;body&gt;</code>.</li>
                                 <li>Va hokazo, har bir HTML tegi, atributi va matn bo'lagi daraxtda o'zining tuguniga ega bo'ladi.</li>
                             </ul>
                         </li>
@@ -2302,7 +2299,7 @@ console.log(navigator.language);</code></pre>
                     </ul>
                     <h5>DOM tugunlarining turlari:</h5>
                     <ul>
-                        <li><strong>Element tuguni (Element Node):</strong> Har bir HTML tegi (masalan, <code><p></code>, <code><div></code>, <code><img></code>).</li>
+                        <li><strong>Element tuguni (Element Node):</strong> Har bir HTML tegi (masalan, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;img&gt;</code>).</li>
                         <li><strong>Matn tuguni (Text Node):</strong> Element ichidagi matn.</li>
                         <li><strong>Atribut tuguni (Attribute Node):</strong> Elementning atributi (masalan, <code>href</code>, <code>src</code>).</li>
                         <li><strong>Izoh tuguni (Comment Node):</strong> HTML izohlari.</li>
@@ -2321,7 +2318,7 @@ console.log(navigator.language);</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-45">
                 <span class="accordion-title">45. Hujjatning ob’ektli modelida HTML ob’ektlari va CSS xususiyatlari bilan ishlash.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-45">
                 <div class="accordion-content-inner">
@@ -2349,7 +2346,7 @@ console.log(navigator.language);</code></pre>
                     <h6>2. Element Mazmunini O'zgartirish:</h6>
                     <ul>
                         <li><strong><code>element.innerHTML</code>:</strong> Element ichidagi HTML mazmunini o'qish yoki o'zgartirish.
-                            <pre><code>sarlavha.innerHTML = "Yangi Sarlavha <em>matni</em>";</code></pre>
+                            <pre><code>sarlavha.innerHTML = "Yangi Sarlavha &lt;em&gt;matni&lt;/em&gt;";</code></pre>
                         </li>
                         <li><strong><code>element.textContent</code>:</strong> Element ichidagi faqat matnli mazmunni (HTML teglarsiz) o'qish yoki o'zgartirish.
                             <pre><code>paragraflar[0].textContent = "Bu yangi matn.";</code></pre>
@@ -2429,7 +2426,7 @@ console.log(uslublar.fontSize);</code></pre>
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-46">
                 <span class="accordion-title">46. JavaScript brauzer ob’ekti modeli (BOM).</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-46">
                 <div class="accordion-content-inner">
@@ -2520,7 +2517,7 @@ console.log(screen.availWidth + "x" + screen.availHeight); // Mavjud ish maydoni
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-47">
                 <span class="accordion-title">47. Date ob’ekti usullari va xususiyalari.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-47">
                 <div class="accordion-content-inner">
@@ -2612,12 +2609,13 @@ console.log(sana.toLocaleDateString('uz-UZ')); // Masalan: 25.11.2023</code></pr
         <!-- 50-MAVZU (45 bilan bir xil, yuqorida javob berilgan) -->
         <!-- 51-MAVZU (46 bilan bir xil, yuqorida javob berilgan) -->
         <!-- 52-MAVZU (47 bilan bir xil, yuqorida javob berilgan) -->
+
         <!-- 53-MAVZU BOSHLANISHI -->
         <div class="accordion-item">
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-53">
                 <span class="accordion-title">53. JQUERY ga kirish.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-53">
                 <div class="accordion-content-inner">
@@ -2637,13 +2635,13 @@ console.log(sana.toLocaleDateString('uz-UZ')); // Masalan: 25.11.2023</code></pr
                     <p>jQuery dan foydalanish uchun uni HTML hujjatingizga ulashingiz kerak. Buni ikki yo'l bilan qilish mumkin:</p>
                     <ol>
                         <li><strong>Mahalliy nusxadan yuklash:</strong> jQuery kutubxonasini <a href="https://jquery.com/download/" target="_blank" rel="noopener noreferrer">jquery.com</a> saytidan yuklab olib, loyihangiz papkasiga joylashtirasiz va HTML da unga havola berasiz.
-                            <pre><code><script src="js/jquery-3.x.x.min.js"></script></code></pre>
+                            <pre><code>&lt;script src="js/jquery-3.x.x.min.js"&gt;&lt;/script&gt;</code></pre>
                         </li>
                         <li><strong>CDN (Content Delivery Network) orqali yuklash:</strong> Google, Microsoft kabi CDN provayderlari tomonidan taqdim etiladigan jQuery kutubxonasiga havola berasiz. Bu odatda tezroq yuklanishni ta'minlaydi, chunki foydalanuvchi brauzeri bu faylni allaqachon keshlagan bo'lishi mumkin.
-                            <pre><code><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></code></pre>
+                            <pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;</code></pre>
                         </li>
                     </ol>
-                    <p>jQuery kutubxonasi odatda <code><body></code> tegining yopilishidan oldin ulanadi.</p>
+                    <p>jQuery kutubxonasi odatda <code>&lt;body&gt;</code> tegining yopilishidan oldin ulanadi.</p>
                     <p>Garchi zamonaviy JavaScript (ES6+ va undan keyingi versiyalari) jQuery taklif qilgan ko'plab funksiyalarni tabiiy ravishda qo'llab-quvvatlasa-da (masalan, <code>document.querySelector</code>, <code>fetch API</code>), jQuery hali ham ko'plab mavjud loyihalarda qo'llaniladi va ba'zi hollarda tezkor prototiplash yoki sodda DOM manipulyatsiyalari uchun qulay bo'lishi mumkin.</p>
                 </div>
             </div>
@@ -2655,7 +2653,7 @@ console.log(sana.toLocaleDateString('uz-UZ')); // Masalan: 25.11.2023</code></pr
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-54">
                 <span class="accordion-title">54. Asosiy tushunchalar (jQuery).</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-54">
                 <div class="accordion-content-inner">
@@ -2744,7 +2742,7 @@ $(function() {
             <button class="accordion-button" aria-expanded="false" aria-controls="content-web-55">
                 <span class="accordion-title">55. JQuery sintaksisi.</span>
                 <span class="accordion-icon open-icon">+</span>
-                <span class="accordion-icon close-icon actual-x">×</span>
+                <span class="accordion-icon close-icon actual-x">&times;</span>
             </button>
             <div class="accordion-content" id="content-web-55">
                 <div class="accordion-content-inner">
@@ -2760,47 +2758,51 @@ $(function() {
                     <h5>Sintaksisning batafsilroq ko'rinishlari va misollari:</h5>
                     <h6>1. Elementlarni Tanlash (Selektorlar):</h6>
                     <pre><code>// Teg nomi bo'yicha tanlash
-$("p") <p> 
+$("p") // Barcha <p> elementlarini tanlaydi
 
-$("#myId") 
+// ID bo'yicha tanlash
+$("#myId") // id="myId" bo'lgan elementni tanlaydi
 
-
-$(".myClass") 
+// Klass bo'yicha tanlash
+$(".myClass") // class="myClass" bo'lgan barcha elementlarni tanlaydi
 
 // Atribut bo'yicha tanlash
 $("[href]") // href atributiga ega barcha elementlarni tanlaydi
 $("[type='text']") // type="text" bo'lgan elementlarni tanlaydi
 
+// Murakkab selektorlar
 $("ul li:first-child") // Har bir <ul> ichidagi birinchi <li> ni tanlaydi
 $("p.intro") // class="intro" bo'lgan <p> elementlarini tanlaydi</code></pre>
 
                     <h6>2. DOM Tayyor Bo'lishi Hodisasi:</h6>
                     <p>jQuery kodini HTML hujjati to'liq yuklanib, DOM manipulyatsiyaga tayyor bo'lgandan keyin bajarilishini ta'minlash uchun:</p>
                     <pre><code>$(document).ready(function(){
-  
+   // Bu yerda jQuery kodi
    $("p").text("Hujjat tayyor!");
 });
 
 // Yoki qisqartirilgan shakli:
 $(function(){
- 
+   // Bu yerda jQuery kodi
 });</code></pre>
 
                     <h6>3. Metodlarni Chaqirish:</h6>
                     <p>Tanlangan jQuery ob'ektiga turli metodlarni qo'llash mumkin:</p>
                     <pre><code>// Matnni o'zgartirish
 $("#sarlavha").text("Yangi Sarlavha");
-
-$("#contentDiv").html("<h2>Ichki kontent</h2><p>Bu yangi HTML.</p>");
+// HTML mazmunini o'zgartirish
+$("#contentDiv").html("&lt;h2&gt;Ichki kontent&lt;/h2&gt;&lt;p&gt;Bu yangi HTML.&lt;/p&gt;");
 
 // CSS uslubini o'zgartirish
 $("p.muhim").css("color", "red");
 $("p.muhim").css({"font-weight": "bold", "font-size": "18px"}); // Bir nechta uslub
 
+// Elementlarni yashirish/ko'rsatish
 $("#rasm").hide(); // Yashirish
 $("#rasm").show(); // Ko'rsatish
 $("#rasm").toggle(); // Holatini o'zgartirish (agar ko'rinib tursa yashiradi, aks holda ko'rsatadi)
 
+// Hodisaga javob berish
 $("button").click(function(){
   alert("Tugma bosildi!");
 });</code></pre>
@@ -2808,36 +2810,900 @@ $("button").click(function(){
                     <h6>4. Metodlarni Zanjirlash (Chaining):</h6>
                     <p>Bir nechta metodni bitta jQuery ob'ektiga ketma-ket qo'llash:</p>
                     <pre><code>$("#box")
-  .fadeOut(1000) 
-  .fadeIn(1000)  
-  .addClass("active")
-  .text("Yangilandi!");</code></pre>
+  .fadeOut(1000) // 1 soniyada xiralashib yo'qoladi
+  .fadeIn(1000)  // 1 soniyada paydo bo'ladi
+  .addClass("active") // "active" klassini qo'shadi
+  .text("Yangilandi!"); // Matnni o'zgartiradi</code></pre>
 
                     <h6>5. Qiymatlarni Olish va O'rnatish (Getters and Setters):</h6>
                     <p>Ko'pgina jQuery metodlari ham qiymat olish (getter), ham qiymat o'rnatish (setter) uchun ishlatilishi mumkin:</p>
-                    <pre><code>
-let matn = $("#myInput").val();
-let rang = $("p").css("color"); 
+                    <pre><code>// Qiymat olish (Getter)
+let matn = $("#myInput").val(); // Kiritish maydonining qiymatini oladi
+let rang = $("p").css("color"); // Paragrafning matn rangini oladi
 
-
-$("#myInput").val("Yangi qiymat"); 
-$("p").css("color", "blue"); </code></pre>
+// Qiymat o'rnatish (Setter)
+$("#myInput").val("Yangi qiymat"); // Kiritish maydoniga yangi qiymat o'rnatadi
+$("p").css("color", "blue"); // Paragrafning matn rangini ko'k qiladi</code></pre>
                     <p>jQuery sintaksisining soddaligi va CSS selektorlaridan keng foydalanishi uni o'rganish va ishlatishni osonlashtiradi.</p>
                 </div>
             </div>
         </div>
         <!-- 55-MAVZU TUGASHI -->
 
-        <!-- Qolgan jQuery va PHP mavzulari... -->
-        <!-- jQuery mavzulari davomi keyingi javobda -->
-        <!-- Davomi... -->
 
 
-        
-        <!-- Qolgan mavzular shu tarzda davom etadi... -->
-        <!-- Davomi (boshqa mavzular)... -->
+        <!-- 56-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-56">
+                <span class="accordion-title">56. JQuery dan foydalanish usullari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-56">
+                <div class="accordion-content-inner">
+                    <p>jQuery kutubxonasidan foydalanish uchun uni avvalo HTML hujjatingizga ulashingiz kerak. Shundan so'ng, jQuery sintaksisi yordamida uning funksiyalaridan foydalanish mumkin.</p>
+                    <h5>1. jQuery Kutubxonasini Ulash:</h5>
+                    <p>Buni ikki asosiy yo'l bilan amalga oshirish mumkin:</p>
+                    <ul>
+                        <li>
+                            <strong>Mahalliy nusxadan yuklash:</strong>
+                            <ol>
+                                <li>jQuery kutubxonasini rasmiy saytdan (<a href="https://jquery.com/download/" target="_blank" rel="noopener noreferrer">jquery.com</a>) yuklab oling (odatda siqilgan `.min.js` versiyasi ishlatiladi).</li>
+                                <li>Yuklab olingan faylni loyihangiz papkasiga (masalan, `js/` papkasiga) joylashtiring.</li>
+                                <li>HTML hujjatingizning <code><head></code> qismiga yoki <code><body></code> tegining yopilishidan oldin quyidagicha ulang:
+                                    <pre><code><script src="js/jquery-3.7.1.min.js"></script> <!-- Versiya raqami o'zgarishi mumkin --></code></pre>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>CDN (Content Delivery Network) orqali yuklash:</strong>
+                            <ul>
+                                <li>Bu usulda jQuery fayli Google, Microsoft kabi ommaviy CDN serverlaridan yuklanadi. Bu odatda tezroq yuklanishni ta'minlaydi, chunki foydalanuvchi brauzeri bu faylni boshqa saytlardan allaqachon keshlagan bo'lishi mumkin.</li>
+                                <li>HTML hujjatingizga quyidagicha ulang:
+                                    <pre><code><!-- Google CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        
+<!-- Yoki Microsoft CDN -->
+<!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script> --></code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>jQuery skriptini odatda boshqa JavaScript fayllaringizdan oldin va <code><body></code> tegining yopilishidan oldin joylashtirish tavsiya etiladi, bu DOM elementlarining yuklanib bo'lishini kutishga yordam beradi.</p>
+
+                    <h5>2. DOM Tayyor Bo'lishini Kutish:</h5>
+                    <p>jQuery kodini HTML hujjati to'liq yuklanib, DOM manipulyatsiyaga tayyor bo'lgandan keyingina bajarish uchun <code>$(document).ready()</code> (yoki uning qisqartmasi <code>$()</code>) ishlatiladi:</p>
+                    <pre><code>$(document).ready(function() {
+    // Bu yerda jQuery kodingizni yozasiz
+    // Masalan, barcha paragraf elementlarini yashirish:
+    $("p").hide();
+});
+
+// Yoki qisqartirilgan shakli:
+$(function() {
+    // Bu yerda ham jQuery kodingizni yozasiz
+    $(".my-class").css("color", "blue");
+});</code></pre>
+                    <p>Bu jQuery kodining DOM elementlari mavjud bo'lmasidan oldin bajarilishining oldini oladi.</p>
+
+                    <h5>3. jQuery Selektorlari va Metodlaridan Foydalanish:</h5>
+                    <p>jQueryning asosiy sintaksisi <code>$(selektor).metod()</code> ko'rinishida bo'ladi:</p>
+                    <ul>
+                        <li><strong>Elementlarni tanlash:</strong> CSS selektorlariga o'xshash sintaksis yordamida HTML elementlari tanlanadi.
+                            <pre><code>$("#myElement") // ID bo'yicha tanlash
+$(".myClass")   // Klass bo'yicha tanlash
+$("div p")      // Div ichidagi barcha paragraflarni tanlash</code></pre>
+                        </li>
+                        <li><strong>Metodlarni qo'llash:</strong> Tanlangan jQuery ob'ektiga turli xil metodlarni qo'llash orqali DOMni o'zgartirish, hodisalarni qayta ishlash, animatsiyalar yaratish va h.k. amalga oshiriladi.
+                            <pre><code>$("#message").text("Salom, jQuery!"); // Matnni o'zgartirish
+$("button").click(function() {         // Hodisaga javob berish
+    alert("Tugma bosildi!");
+});
+$("#box").fadeOut(1000);             // Animatsiya</code></pre>
+                        </li>
+                    </ul>
+                    <p>Bu usullar jQuery kutubxonasidan foydalanishning asosini tashkil etadi va veb-sahifalarni interaktiv qilish uchun keng imkoniyatlar yaratadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 56-MAVZU TUGASHI -->
+
+        <!-- 57-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-57">
+                <span class="accordion-title">57. JQuery selektorlari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-57">
+                <div class="accordion-content-inner">
+                    <p>jQuery selektorlari HTML elementlarini sahifadan topish va tanlash uchun ishlatiladi. Ular CSS selektorlarining sintaksisiga juda o'xshash va deyarli barcha CSS3 selektorlarini qo'llab-quvvatlaydi, shuningdek o'zining maxsus selektorlariga ham ega.</p>
+                    <p>jQuery selektorlari <code>$()</code> yoki <code>jQuery()</code> funksiyasi ichida satr (string) sifatida yoziladi.</p>
+                    <h5>Asosiy jQuery Selektorlari Turlari:</h5>
+                    <ol>
+                        <li>
+                            <strong>Asosiy Selektorlar (Basic Selectors):</strong>
+                            <ul>
+                                <li><strong><code>*</code> (Universal Selektor):</strong> Barcha elementlarni tanlaydi.
+                                    <pre><code>$("*") // Sahifadagi barcha elementlar</code></pre>
+                                </li>
+                                <li><strong><code>#id</code> (ID Selektori):</strong> Berilgan <code>id</code> atributiga ega yagona elementni tanlaydi.
+                                    <pre><code>$("#main-header") // id="main-header" bo'lgan element</code></pre>
+                                </li>
+                                <li><strong><code>.class</code> (Klass Selektori):</strong> Berilgan klass nomiga ega barcha elementlarni tanlaydi.
+                                    <pre><code>$(".important-text") // class="important-text" bo'lgan elementlar</code></pre>
+                                </li>
+                                <li><strong><code>element</code> (Element/Teg Selektori):</strong> Berilgan teg nomiga ega barcha elementlarni tanlaydi.
+                                    <pre><code>$("p") // Barcha <p> elementlari</code></pre>
+                                </li>
+                                <li><strong><code>selector1, selector2, ...</code> (Guruhlangan Selektor):</strong> Bir nechta selektorga mos keladigan barcha elementlarni tanlaydi.
+                                    <pre><code>$("h1, .my-class, #uniqueID")</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ierarxik Selektorlar (Hierarchy Selectors):</strong> DOM daraxtidagi elementlar orasidagi munosabatga asoslanadi.
+                            <ul>
+                                <li><strong><code>ancestor descendant</code> (Avlod Selektori):</strong> "ancestor" elementi ichidagi barcha "descendant" elementlarini tanlaydi.
+                                    <pre><code>$("div span") // <div> ichidagi barcha <span> elementlari</code></pre>
+                                </li>
+                                <li><strong><code>parent > child</code> (Bola Selektori):</strong> "parent" elementining bevosita bolasi bo'lgan "child" elementlarini tanlaydi.
+                                    <pre><code>$("ul > li") // <ul> ning bevosita bolasi bo'lgan <li> elementlari</code></pre>
+                                </li>
+                                <li><strong><code>prev + next</code> (Qo'shni Qardosh Selektori):</strong> "prev" elementidan keyin darhol keladigan "next" qardosh elementini tanlaydi.
+                                    <pre><code>$("h2 + p") // <h2> dan keyin keladigan birinchi <p></code></pre>
+                                </li>
+                                <li><strong><code>prev ~ siblings</code> (Umumiy Qardosh Selektori):</strong> "prev" elementidan keyin keladigan barcha "siblings" qardosh elementlarini tanlaydi.
+                                    <pre><code>$("h2 ~ p") // <h2> dan keyin keladigan barcha <p> qardoshlari</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Atribut Selektorlari (Attribute Selectors):</strong> Elementlarni ularning atributlari yoki atribut qiymatlariga qarab tanlaydi.
+                            <ul>
+                                <li><code>[attribute]</code>: Berilgan atributga ega elementlar. (masalan, <code>$("[href]")</code>)</li>
+                                <li><code>[attribute="value"]</code>: Atribut qiymati aniq "value" ga teng bo'lgan elementlar. (masalan, <code>$("[type='text']")</code>)</li>
+                                <li><code>[attribute!="value"]</code>: Atribut qiymati "value" ga teng bo'lmagan elementlar.</li>
+                                <li><code>[attribute^="value"]</code>: Atribut qiymati "value" bilan boshlanadigan elementlar.</li>
+                                <li><code>[attribute$="value"]</code>: Atribut qiymati "value" bilan tugaydigan elementlar.</li>
+                                <li><code>[attribute*="value"]</code>: Atribut qiymati "value" ni o'z ichiga olgan elementlar.</li>
+                                <li><code>[attribute~="value"]</code>: Atribut qiymati bo'shliq bilan ajratilgan so'zlar ro'yxatida "value" ni o'z ichiga olgan elementlar.</li>
+                                <li>Bir nechta atribut selektorini birlashtirish: <code>$("[type='submit'][name='login']")</code></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Filtr Selektorlari (Filtering Selectors):</strong> Tanlangan elementlar to'plamini yanada toraytirish uchun ishlatiladi. Ular odatda ikki nuqta (<code>:</code>) bilan boshlanadi.
+                            <ul>
+                                <li><strong>Asosiy Filtrlar:</strong> <code>:first</code>, <code>:last</code>, <code>:even</code>, <code>:odd</code>, <code>:eq(index)</code>, <code>:gt(index)</code>, <code>:lt(index)</code>, <code>:header</code>, <code>:animated</code>, <code>:focus</code>.
+                                    <pre><code>$("li:first") // Birinchi <li> elementi
+$("tr:odd")   // Toq qatorlar (indekslash 0 dan boshlanadi)</code></pre>
+                                </li>
+                                <li><strong>Kontent Filtrlar:</strong> <code>:contains(text)</code>, <code>:empty</code>, <code>:has(selector)</code>, <code>:parent</code>.
+                                    <pre><code>$("p:contains('Salom')") // "Salom" matnini o'z ichiga olgan <p> elementlari</code></pre>
+                                </li>
+                                <li><strong>Ko'rinuvchanlik Filtrlar:</strong> <code>:hidden</code>, <code>:visible</code>.
+                                    <pre><code>$("div:visible") // Ko'rinib turgan <div> elementlari</code></pre>
+                                </li>
+                                <li><strong>Bola Element Filtrlar:</strong> <code>:nth-child(n)</code>, <code>:first-child</code>, <code>:last-child</code>, <code>:only-child</code>.</li>
+                                <li><strong>Forma Elementlari Filtrlar:</strong> <code>:input</code>, <code>:text</code>, <code>:password</code>, <code>:radio</code>, <code>:checkbox</code>, <code>:submit</code>, <code>:image</code>, <code>:reset</code>, <code>:button</code>, <code>:file</code>, <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code>, <code>:selected</code>.
+                                    <pre><code>$(":text") // Barcha <input type="text"> elementlari
+$("input:checked") // Barcha belgilangan inputlar</code></pre>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>jQuery selektorlarining kuchli va moslashuvchan tizimi DOM elementlarini aniq va samarali tanlash imkonini beradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 57-MAVZU TUGASHI -->
+
+        <!-- 58-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-58">
+                <span class="accordion-title">58. JQuery hodisalari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-58">
+                <div class="accordion-content-inner">
+                    <p>jQuery veb-sahifadagi hodisalarni (foydalanuvchi harakatlari yoki brauzer holatlari) qayta ishlashni ancha soddalashtiradi. U hodisalarga ishlov beruvchilarni (event handlers) biriktirish uchun qulay metodlarni taqdim etadi.</p>
+                    <h5>Hodisalarga Ishlov Beruvchilarni Biriktirish:</h5>
+                    <p>Eng keng tarqalgan usul <code>.on()</code> metodidan foydalanishdir, ammo ko'plab hodisalar uchun maxsus qisqartma metodlar ham mavjud.</p>
+                    <ol>
+                        <li>
+                            <strong>Qisqartma Metodlar (Shortcut Methods):</strong>
+                            <p>jQuery ko'plab keng tarqalgan hodisalar uchun maxsus metodlarni taqdim etadi:</p>
+                            <ul>
+                                <li><strong>Sichqoncha hodisalari:</strong> <code>.click()</code>, <code>.dblclick()</code>, <code>.mousedown()</code>, <code>.mouseup()</code>, <code>.mousemove()</code>, <code>.mouseover()</code>, <code>.mouseout()</code>, <code>.mouseenter()</code>, <code>.mouseleave()</code>, <code>.hover()</code> (<code>mouseenter</code> va <code>mouseleave</code> uchun birlashma).</li>
+                                <li><strong>Klaviatura hodisalari:</strong> <code>.keydown()</code>, <code>.keyup()</code>, <code>.keypress()</code> (eskirgan).</li>
+                                <li><strong>Forma hodisalari:</strong> <code>.submit()</code>, <code>.change()</code>, <code>.focus()</code>, <code>.blur()</code>, <code>.select()</code>.</li>
+                                <li><strong>Hujjat/Oyna hodisalari:</strong> <code>.ready()</code> (DOM tayyor bo'lganda), <code>.load()</code> (resurslar yuklanganda), <code>.unload()</code> (eskirgan), <code>.resize()</code>, <code>.scroll()</code>.</li>
+                            </ul>
+                            <pre><code>// Tugma bosilganda
+$("button").click(function() {
+    alert("Tugma bosildi!");
+});
+
+// Input maydoniga fokus kelganda
+$("input[type='text']").focus(function() {
+    $(this).css("background-color", "yellow");
+});
+
+// Input maydonidan fokus ketganda
+$("input[type='text']").blur(function() {
+    $(this).css("background-color", "white");
+});
+
+// hover() metodi ikki funksiyani qabul qiladi: sichqoncha ustiga kelganda va ketganda
+$("#myDiv").hover(
+    function() { // mouseenter
+        $(this).addClass("highlight");
+    },
+    function() { // mouseleave
+        $(this).removeClass("highlight");
+    }
+);</code></pre>
+                        </li>
+                        <li>
+                            <strong><code>.on()</code> Metodi (Eng tavsiya etiladigan):</strong>
+                            <p>Bu universal metod bo'lib, bir yoki bir nechta hodisa turiga bitta yoki bir nechta ishlov beruvchini biriktirish imkonini beradi. Shuningdek, dinamik ravishda qo'shilgan elementlar uchun hodisalarni delegatsiya qilishda juda foydali.</p>
+                            <ul>
+                                <li><strong>Sintaksis (oddiy):</strong> <code>$(selektor).on(hodisaNomi, ishlovchiFunksiya);</code></li>
+                                <li><strong>Sintaksis (delegatsiya bilan):</strong> <code>$(otaElementSelektori).on(hodisaNomi, bolaElementSelektori, ishlovchiFunksiya);</code></li>
+                            </ul>
+                            <pre><code>// Tugma bosilganda
+$("#myButton").on("click", function() {
+    console.log("on() metodi orqali bosildi!");
+});
+
+// Bir nechta hodisaga bitta ishlovchi
+$("p").on("mouseenter mouseleave", function() {
+    $(this).toggleClass("active-paragraph");
+});
+
+// Hodisalarni delegatsiya qilish (dinamik qo'shilgan elementlar uchun)
+// Agar #list ichiga yangi <li> elementlari qo'shilsa ham, ularga click hodisasi ishlaydi
+$("#list").on("click", "li", function() {
+    $(this).remove(); // Bosilgan <li> elementini o'chirish
+});</code></pre>
+                        </li>
+                        <li>
+                            <strong><code>.off()</code> Metodi:</strong>
+                            <p><code>.on()</code> bilan biriktirilgan hodisa ishlov beruvchilarini olib tashlash uchun ishlatiladi.</p>
+                            <pre><code>$("#myButton").off("click"); // #myButton uchun click hodisasi ishlovchilarini olib tashlash</code></pre>
+                        </li>
+                    </ol>
+                    <h5>Hodisa Ob'ekti (Event Object):</h5>
+                    <p>jQuery hodisa ishlovchi funksiyasiga avtomatik ravishda <strong>hodisa ob'ektini</strong> argument sifatida uzatadi. Bu ob'ekt hodisa haqida qo'shimcha ma'lumotlarni (masalan, sichqoncha pozitsiyasi, bosilgan klavish, hodisa yuz bergan element) o'z ichiga oladi va standart harakatlarni bekor qilish imkonini beradi.</p>
+                    <pre><code>$("a").on("click", function(event) {
+    alert("Havola bosildi, lekin o'tmaymiz!");
+    console.log("Hodisa turi: " + event.type); // "click"
+    console.log("Hodisa nishoni: " + event.target.tagName); // "A"
+    event.preventDefault(); // Havolaning standart harakatini (o'tishni) bekor qilish
+});</code></pre>
+                    <h5>Boshqa muhim hodisa metodlari:</h5>
+                    <ul>
+                        <li><strong><code>.trigger()</code>:</strong> Tanlangan elementlar uchun ma'lum bir hodisani dasturiy ravishda chaqirish.</li>
+                        <li><strong><code>.one()</code>:</strong> Hodisa ishlovchisini faqat bir marta bajarish uchun biriktiradi.</li>
+                    </ul>
+                    <p>jQuery hodisalarni qayta ishlashni sodda va kuchli qiladi, bu esa veb-sahifalarga interaktivlik qo'shishni osonlashtiradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 58-MAVZU TUGASHI -->
+
+        <!-- 59-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-59">
+                <span class="accordion-title">59. JQuery UI.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-59">
+                <div class="accordion-content-inner">
+                    <p><strong>jQuery UI</strong> – bu jQuery kutubxonasiga asoslangan, foydalanuvchi interfeysini (UI - User Interface) yaratish uchun mo'ljallangan, tayyor vidjetlar, interaktiv harakatlar va effektlar to'plamini o'z ichiga olgan rasmiy jQuery kutubxonasidir.</p>
+                    <p>jQuery UI veb-ishlab chiquvchilarga murakkab va interaktiv foydalanuvchi interfeyslarini tez va oson yaratishga yordam beradi, bu esa ko'p kod yozish zaruratini kamaytiradi.</p>
+                    <h5>jQuery UI ning asosiy komponentlari:</h5>
+                    <ol>
+                        <li>
+                            <strong>Vidjetlar (Widgets):</strong>
+                            <ul>
+                                <li>Oldindan tayyorlangan, sozlanishi mumkin bo'lgan interfeys elementlari. Ular odatda ma'lum bir HTML strukturasiga jQuery UI metodlarini chaqirish orqali qo'llaniladi.</li>
+                                <li><strong>Eng mashhur vidjetlar:</strong>
+                                    <ul>
+                                        <li><strong>Accordion:</strong> Ochiladigan/yopiladigan kontent panellari.</li>
+                                        <li><strong>Autocomplete:</strong> Kiritish maydonida takliflar ro'yxatini ko'rsatuvchi avtomatik to'ldirish.</li>
+                                        <li><strong>Button:</strong> Oddiy tugmalarni yoki havolalarni stilizatsiya qilingan tugmalarga aylantirish.</li>
+                                        <li><strong>Datepicker:</strong> Sana tanlash uchun kalendar vidjeti.</li>
+                                        <li><strong>Dialog:</strong> Modal yoki modalsiz dialog oynalari.</li>
+                                        <li><strong>Menu:</strong> Ko'p darajali menyular yaratish.</li>
+                                        <li><strong>Progressbar:</strong> Jarayonning borishini ko'rsatuvchi progress paneli.</li>
+                                        <li><strong>Slider:</strong> Qiymatni sirpanuvchi yordamida tanlash.</li>
+                                        <li><strong>Spinner:</strong> Raqamli qiymatlarni yuqoriga/pastga tugmalar bilan o'zgartirish.</li>
+                                        <li><strong>Tabs:</strong> Vkladkalar yordamida kontentni almashtirish.</li>
+                                        <li><strong>Tooltip:</strong> Element ustiga sichqoncha kelganda qo'shimcha ma'lumot ko'rsatuvchi qalqib chiquvchi oynacha.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Interaktiv Harakatlar (Interactions):</strong>
+                            <ul>
+                                <li>Foydalanuvchining sichqoncha harakatlariga javob beradigan interaktiv xususiyatlar.</li>
+                                <li><strong>Eng mashhurlari:</strong>
+                                    <ul>
+                                        <li><strong>Draggable:</strong> Elementlarni sudrab olib tashlash imkoniyati.</li>
+                                        <li><strong>Droppable:</strong> Elementlarni boshqa element ustiga tashlashni qabul qilish.</li>
+                                        <li><strong>Resizable:</strong> Elementlarning o'lchamlarini o'zgartirish imkoniyati.</li>
+                                        <li><strong>Selectable:</strong> Sichqoncha yordamida ro'yxatdagi elementlarni tanlash.</li>
+                                        <li><strong>Sortable:</strong> Ro'yxatdagi elementlarning tartibini sudrab o'zgartirish.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Effektlar (Effects):</strong>
+                            <ul>
+                                <li>jQuery ning standart effektlariga qo'shimcha ravishda yanada murakkab va sozlanishi mumkin bo'lgan animatsiya effektlari.</li>
+                                <li>Masalan: <code>explode</code>, <code>bounce</code>, <code>highlight</code>, <code>pulsate</code>, <code>shake</code>, <code>slide</code> (kengaytirilgan), <code>transfer</code>.</li>
+                                <li>Shuningdek, klasslarni qo'shish/olib tashlash yoki elementlarni yashirish/ko'rsatishda maxsus effektlar bilan birga ishlatilishi mumkin (<code>addClass()</code>, <code>removeClass()</code>, <code>show()</code>, <code>hide()</code>, <code>toggle()</code> metodlariga effekt nomini berish orqali).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Temalar (Theming):</strong>
+                            <ul>
+                                <li>jQuery UI vidjetlarining tashqi ko'rinishini o'zgartirish uchun tayyor temalar tizimi (ThemeRoller yordamida o'z temangizni ham yaratishingiz mumkin). Bu saytingiz dizayniga mos keladigan ko'rinishni osongina yaratish imkonini beradi.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>jQuery UI dan foydalanish:</h5>
+                    <ol>
+                        <li><strong>jQuery kutubxonasini ulash</strong> (jQuery UI jQuery ga bog'liq).</li>
+                        <li><strong>jQuery UI kutubxonasini ulash:</strong>
+                            <ul>
+                                <li>jQuery UI ning JavaScript faylini ulash.</li>
+                                <li>jQuery UI ning CSS faylini (tema uchun) ulash.</li>
+                                <li>Buni ham mahalliy nusxadan yoki CDN orqali qilish mumkin.</li>
+                            </ul>
+                            <pre><code><!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- jQuery UI CSS (masalan, "smoothness" temasi) -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+
+<!-- jQuery UI JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+<script>
+$(function() {
+    // jQuery UI vidjetlarini ishga tushirish
+    $("#datepicker").datepicker();
+    $("#accordion").accordion();
+    $("#draggable").draggable();
+});
+</script></code></pre>
+                        </li>
+                        <li>HTML da kerakli struktura yaratish va jQuery UI metodlarini chaqirish.</li>
+                    </ol>
+                    <p>jQuery UI veb-ilovalar uchun boy va interaktiv foydalanuvchi interfeyslarini yaratishda samarali vosita bo'lib qolmoqda, ammo zamonaviy JavaScript freymvorklari (React, Vue, Angular) o'zlarining komponentlar tizimlariga ega bo'lgani uchun yangi loyihalarda uning o'rniga ushbu freymvorklar ko'proq ishlatilishi mumkin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 59-MAVZU TUGASHI -->
+
+        <!-- 60-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-60">
+                <span class="accordion-title">60. Bootstrap framework texnologiyasi.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-60">
+                <div class="accordion-content-inner">
+                    <p><strong>Bootstrap</strong> – bu eng mashhur, bepul va ochiq kodli frontend freymvork (framework) bo'lib, moslashuvchan (responsive) va mobil qurilmalarga yo'naltirilgan (mobile-first) veb-saytlar va veb-ilovalar yaratishni tezlashtirish va soddalashtirish uchun mo'ljallangan.</p>
+                    <p>U Twitter jamoasi tomonidan ishlab chiqilgan va HTML, CSS hamda JavaScript (jQuery ga bog'liqlik eski versiyalarda bo'lgan, Bootstrap 5 dan boshlab jQuerysiz ishlaydi) asosida qurilgan komponentlar va vositalar to'plamini taqdim etadi.</p>
+                    <h5>Bootstrapning asosiy xususiyatlari va afzalliklari:</h5>
+                    <ol>
+                        <li>
+                            <strong>Moslashuvchan Grid Tizimi (Responsive Grid System):</strong>
+                            <ul>
+                                <li>Bootstrapning eng kuchli jihatlaridan biri. U 12 ustunli grid tizimiga asoslangan bo'lib, veb-sahifa layoutini turli ekran o'lchamlariga (telefonlar, planshetlar, noutbuklar, katta ekranlar) osongina moslashtirish imkonini beradi. Maxsus CSS klasslari yordamida elementlarning kengligi va joylashuvi boshqariladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Tayyor Komponentlar (Pre-styled Components):</strong>
+                            <ul>
+                                <li>Bootstrap ko'plab oldindan stilizatsiya qilingan va ishlatishga tayyor komponentlarni taqdim etadi, masalan:
+                                    <ul>
+                                        <li>Tugmalar (Buttons)</li>
+                                        <li>Navigatsiya panellari (Navbars)</li>
+                                        <li>Forma elementlari (Forms)</li>
+                                        <li>Kartochkalar (Cards)</li>
+                                        <li>Modal oynalar (Modals)</li>
+                                        <li>Karussellar (Carousels/Sliders)</li>
+                                        <li>Ochiladigan menyular (Dropdowns)</li>
+                                        <li>Ogohlantirishlar (Alerts)</li>
+                                        <li>Progress panellari (Progress Bars)</li>
+                                        <li>Jadvallar (Tables)</li>
+                                        <li>Pagination</li>
+                                        <li>Va boshqalar.</li>
+                                    </ul>
+                                </li>
+                                <li>Bu komponentlar yordamida tezda chiroyli va funksional interfeyslar yaratish mumkin.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>JavaScript Plaginlari:</strong>
+                            <ul>
+                                <li>Ko'pgina interaktiv komponentlar (masalan, modal, karusel, ochiladigan menyu) uchun JavaScript plaginlari mavjud. Bootstrap 5 da bular vanil JavaScript (jQuerysiz) yordamida qayta yozilgan.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Yordamchi Klasslar (Utility Classes):</strong>
+                            <ul>
+                                <li>Tezkor stilizatsiya uchun ko'plab yordamchi klasslar mavjud (masalan, matnni tekislash, ranglar, bo'shliqlar (margin/padding), ko'rinuvchanlikni boshqarish).</li>
+                                <pre><code><p class="text-center text-primary mt-3">Bu markazlashtirilgan ko'k matn.</p></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Moslashuvchanlik va Sozlanishi Mumkinligi (Customization):</strong>
+                            <ul>
+                                <li>Bootstrapni Sass o'zgaruvchilari yordamida o'zgartirish va loyihangizga moslashtirish mumkin.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Brauzerlararo Muvofiqlik:</strong>
+                            <ul>
+                                <li>Bootstrap zamonaviy brauzerlarda yaxshi ishlashini ta'minlashga harakat qiladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Katta Hamjamiyat va Hujjatlar:</strong>
+                            <ul>
+                                <li>Keng qo'llanilgani uchun juda yaxshi hujjatlangan va katta hamjamiyat tomonidan qo'llab-quvvatlanadi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Tezkor Prototplash:</strong>
+                            <ul>
+                                <li>G'oyalarni tezda prototipga aylantirish uchun juda qulay.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>Bootstrapdan foydalanish:</h5>
+                    <ol>
+                        <li><strong>CDN orqali:</strong> Eng oson yo'li Bootstrap CSS va JavaScript fayllarini CDN orqali HTML hujjatingizga ulash.
+                            <pre><code><!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JavaScript (va Popper.js, agar kerak bo'lsa) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script></code></pre>
+                        </li>
+                        <li><strong>Mahalliy nusxadan:</strong> Bootstrap fayllarini rasmiy saytdan (<a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">getbootstrap.com</a>) yuklab olib, loyihangizga qo'shish.</li>
+                        <li><strong>Paket menejerlari orqali:</strong> npm yoki yarn kabi paket menejerlari yordamida o'rnatish.</li>
+                    </ol>
+                    <p>Bootstrap veb-ishlab chiqish jarayonini sezilarli darajada tezlashtirishi va standartlashtirishi mumkin, ammo ba'zida uning oldindan belgilangan uslublari tufayli saytlar bir-biriga o'xshab qolishi mumkin (buni moslashtirish orqali oldini olish mumkin).</p>
+                </div>
+            </div>
+        </div>
+        <!-- 60-MAVZU TUGASHI -->
+
+        <!-- 61-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-61">
+                <span class="accordion-title">61. PHP ga kirish.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-61">
+                <div class="accordion-content-inner">
+                    <p><strong>PHP (Hypertext Preprocessor – Gipermatn Preprotsessori)</strong> – bu server tomonida ishlaydigan, keng tarqalgan, ochiq kodli, umumiy maqsadli skriptlash (ssenariyli) tilidir. U asosan veb-ishlab chiqish uchun mo'ljallangan va HTML ichiga joylashtirilishi mumkin.</p>
+                    <p>PHP kodi veb-serverda (masalan, Apache, Nginx) PHP interpretatori yordamida bajariladi va natija (odatda HTML) foydalanuvchining brauzeriga yuboriladi. Bu shuni anglatadiki, foydalanuvchi brauzeri hech qachon PHP kodining o'zini ko'rmaydi, faqat uning bajarilishi natijasida hosil bo'lgan HTML, CSS va JavaScriptni ko'radi.</p>
+                    <h5>PHP ning asosiy xususiyatlari va qo'llanilish sohalari:</h5>
+                    <ul>
+                        <li><strong>Server Tomonida Ishlash (Server-Side Scripting):</strong> PHPning asosiy vazifasi serverda dinamik veb-sahifalar yaratishdir. U formadan kelgan ma'lumotlarni qayta ishlash, ma'lumotlar bazasi bilan ishlash (MySQL, PostgreSQL va boshqalar), sessiyalar va cookie fayllarini boshqarish, fayllarni yuklash kabi vazifalarni bajarishi mumkin.</li>
+                        <li><strong>HTML Ichiga Joylashtirilishi Mumkinligi:</strong> PHP kodini to'g'ridan-to'g'ri HTML fayllari ichiga <code><?php ... ?></code> teglari orasiga yozish mumkin.</li>
+                        <li><strong>Platformadan Mustaqillik:</strong> PHP turli xil operatsion tizimlarda (Windows, Linux, macOS) va veb-serverlarda ishlay oladi.</li>
+                        <li><strong>Keng Ma'lumotlar Bazalarini Qo'llab-quvvatlash:</strong> MySQL, PostgreSQL, SQLite, Oracle, Microsoft SQL Server kabi ko'plab ma'lumotlar bazalari bilan ishlash uchun drayverlarga ega.</li>
+                        <li><strong>Ochiq Kodli va Bepul:</strong> PHP ochiq kodli litsenziya ostida tarqatiladi va foydalanish uchun bepul.</li>
+                        <li><strong>Katta Hamjamiyat va Resurslar:</strong> Keng qo'llanilgani uchun katta dasturchilar hamjamiyatiga, ko'plab hujjatlarga, kutubxonalarga va freymvorklarga ega.</li>
+                        <li><strong>O'rganish Osonligi (nisbatan):</strong> Boshqa ba'zi server tomoni tillariga qaraganda PHPni o'rganish nisbatan osonroq hisoblanadi, ayniqsa boshlang'ich darajada.</li>
+                        <li><strong>Keng Tarqalganligi:</strong> Dunyodagi ko'plab veb-saytlar (shu jumladan WordPress, Drupal, Joomla kabi mashhur CMSlar) PHP da yozilgan.</li>
+                        <li><strong>Freymvorklar:</strong> PHP uchun Laravel, Symfony, CodeIgniter, Yii kabi kuchli freymvorklar mavjud bo'lib, ular murakkab veb-ilovalarni ishlab chiqishni tezlashtiradi va standartlashtiradi.</li>
+                    </ul>
+                    <h5>PHP nima qila oladi?</h5>
+                    <ul>
+                        <li>Dinamik veb-sahifa kontentini generatsiya qilish.</li>
+                        <li>Serverda fayllar yaratish, ochish, o'qish, yozish va yopish.</li>
+                        <li>Formadan kelgan ma'lumotlarni yig'ish va qayta ishlash.</li>
+                        <li>Cookie fayllarini yuborish va qabul qilish.</li>
+                        <li>Ma'lumotlar bazasiga ma'lumot qo'shish, o'chirish va o'zgartirish.</li>
+                        <li>Foydalanuvchilarni autentifikatsiya qilish va avtorizatsiya qilish.</li>
+                        <li>Ma'lumotlarni shifrlash.</li>
+                        <li>Rasmlar bilan ishlash (masalan, GD kutubxonasi yordamida).</li>
+                        <li>PDF fayllarini generatsiya qilish.</li>
+                        <li>Elektron pochta yuborish.</li>
+                        <li>API lar bilan ishlash.</li>
+                    </ul>
+                    <p>PHP veb-dasturlash sohasida muhim o'rin tutadi va ko'plab veb-loyihalar uchun ishonchli va samarali yechim hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 61-MAVZU TUGASHI -->
+
+        <!-- 62-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-62">
+                <span class="accordion-title">62. PHP asoslari, sintaksisi.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-62">
+                <div class="accordion-content-inner">
+                    <p>PHP (Hypertext Preprocessor) skriptlash tilining o'ziga xos sintaksisi va asosiy qoidalari mavjud.</p>
+                    <h5>PHP Skriptlarini Belgilash:</h5>
+                    <p>PHP kodi serverda bajariladi va odatda HTML ichiga joylashtiriladi. PHP kodini belgilash uchun maxsus ochuvchi va yopuvchi teglar ishlatiladi:</p>
+                    <ul>
+                        <li><strong>Standart teg:</strong> <code><?php ... ?></code> (Eng keng tarqalgan va tavsiya etiladigan usul).</li>
+                        <li>Qisqa ochuvchi teg: <code><? ... ?></code> (Agar <code>short_open_tag</code> direktivasi <code>php.ini</code> faylida yoqilgan bo'lsa ishlaydi. Tavsiya etilmaydi, chunki portabellikni kamaytirishi mumkin).</li>
+                        <li>ASP uslubidagi teglar: <code><% ... %></code> (Agar <code>asp_tags</code> direktivasi yoqilgan bo'lsa. Tavsiya etilmaydi).</li>
+                        <li>Skript tegi: <code><script language="php">  </script></code> (Kamdan-kam ishlatiladi).</li>
+                    </ul>
+                    <p><strong>Misol:</strong></p>
+                    <pre><code><!DOCTYPE html>
+<html>
+<body>
+    <h1>Mening birinchi PHP sahifam</h1>
+    <?php
+        echo "Salom, Dunyo!"; // echo - ma'lumotni chiqarish uchun ishlatiladi
+    ?>
+</body>
+</html></code></pre>
+                    <p>Yuqoridagi kodda, server PHP blokini (<code><?php ... ?></code>) qayta ishlaydi va uning o'rniga "Salom, Dunyo!" matnini HTMLga joylashtiradi.</p>
+
+                    <h5>Izohlar (Comments) PHP da:</h5>
+                    <p>PHP kodiga izohlar qo'shish kodni tushunarliroq qilish uchun ishlatiladi. Izohlar interpretator tomonidan e'tiborga olinmaydi.</p>
+                    <ul>
+                        <li><strong>Bir qatorli izohlar:</strong>
+                            <ul>
+                                <li><code>// Bu bir qatorli izoh</code></li>
+                                <li><code># Bu ham bir qatorli izoh (kamroq ishlatiladi)</code></li>
+                            </ul>
+                        </li>
+                        <li><strong>Ko'p qatorli izohlar:</strong>
+                            <ul>
+                                <li><code>/* <br>   Bu ko'p qatorli <br>   izohdir. <br>*/</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <pre><code><?php
+// Bu o'zgaruvchini e'lon qilish
+$ism = "Ali"; // Ism saqlanadi
+
+/*
+  Quyidagi kod foydalanuvchi bilan salomlashadi.
+  Bu yerda bir nechta qatorli izoh ishlatilgan.
+*/
+echo "Salom, " . $ism . "!"; # Va nuqta belgisi.
+?></code></pre>
+
+                    <h5>Buyruqlarning Tugashi:</h5>
+                    <p>PHP da har bir buyruq (statement) odatda nuqtali vergul (<code>;</code>) bilan tugaydi. Bu PHP interpretatoriga bitta buyruq qayerda tugab, keyingisi qayerda boshlanishini bildiradi.</p>
+                    <pre><code><?php
+    $x = 5;
+    $y = 10;
+    $sum = $x + $y;
+    echo "Yig'indi: " . $sum;
+?></code></pre>
+                    <p>PHP blokining oxirgi yopuvchi tegi (<code>?></code>) oldidagi oxirgi buyruq uchun nuqtali vergul ixtiyoriy, ammo yaxshi amaliyot sifatida uni har doim qo'yish tavsiya etiladi.</p>
+
+                    <h5>Katta-Kichik Harflarga Sezgirlik (Case Sensitivity):</h5>
+                    <ul>
+                        <li><strong>O'zgaruvchi nomlari</strong> PHP da katta-kichik harflarga sezgir (case-sensitive). Ya'ni, <code>$ism</code>, <code>$Ism</code> va <code>$ISM</code> uch xil o'zgaruvchi hisoblanadi.</li>
+                        <li><strong>Funksiya nomlari, klass nomlari va PHP ning o'rnatilgan konstruksiyalari</strong> (masalan, <code>echo</code>, <code>if</code>, <code>else</code>, <code>while</code>) odatda katta-kichik harflarga sezgir emas. Ya'ni, <code>echo</code>, <code>ECHO</code> va <code>EcHo</code> bir xil ishlaydi (ammo bir xil uslubda yozish tavsiya etiladi, odatda kichik harflarda).</li>
+                    </ul>
+
+                    <h5>HTML Ichida PHP dan Foydalanish:</h5>
+                    <p>PHP kodi HTML teglari bilan aralashib kelishi mumkin:</p>
+                    <pre><code><p>Bugungi sana: <?php echo date("Y-m-d"); ?></p>
+
+<?php
+$foydalanuvchi_salomlashgan = true;
+if ($foydalanuvchi_salomlashgan) {
+?>
+    <p>Xush kelibsiz, qayta tashrifingizdan xursandmiz!</p>
+<?php
+} else {
+?>
+    <p>Saytimizga xush kelibsiz!</p>
+<?php
+}
+?></code></pre>
+                    <p>Bu PHP ning asosiy sintaktik qoidalari bo'lib, ular yordamida dinamik veb-sahifalar yaratish mumkin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 62-MAVZU TUGASHI -->
+
+        <!-- 63-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-63">
+                <span class="accordion-title">63. PHP versiyalari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-63">
+                <div class="accordion-content-inner">
+                    <p>PHP (Hypertext Preprocessor) o'zining rivojlanish tarixi davomida bir nechta muhim versiyalarni bosib o'tgan. Har bir yangi versiya odatda yangi funksiyalar, ishlash samaradorligini oshirish, xavfsizlik yaxshilanishlari va eskirgan xususiyatlarni olib tashlash kabi o'zgarishlarni o'z ichiga oladi.</p>
+                    <h5>Asosiy PHP Versiyalari va Ularning Muhim Jihatlari:</h5>
+                    <ul>
+                        <li>
+                            <strong>PHP 1 (1995):</strong> Rasmus Lerdorf tomonidan "Personal Home Page Tools" nomi bilan yaratilgan. Juda oddiy funksiyalarga ega bo'lgan.
+                        </li>
+                        <li>
+                            <strong>PHP 2 (1997):</strong> PHP/FI (Forms Interpreter) nomi bilan ham tanilgan. PHP ni haqiqiy dasturlash tiliga aylantirish yo'lidagi dastlabki qadamlar.
+                        </li>
+                        <li>
+                            <strong>PHP 3 (1998):</strong> Zeev Suraski va Andi Gutmans tomonidan qayta yozilgan yadro (Zend Engine). Bu versiya PHP ning keng tarqalishiga katta turtki berdi. Ob'ektga yo'naltirilgan dasturlash (OOP) ning dastlabki elementlari paydo bo'ldi.
+                        </li>
+                        <li>
+                            <strong>PHP 4 (2000):</strong> Zend Engine 1.0 bilan. Ishlash samaradorligi yaxshilandi, sessiyalarni qo'llab-quvvatlash, bir qator yangi konstruksiyalar qo'shildi. Ko'plab veb-saytlar uzoq vaqt PHP 4 da ishladi.
+                        </li>
+                        <li>
+                            <strong>PHP 5 (2004):</strong> Eng muhim va uzoq muddatli versiyalardan biri.
+                            <ul>
+                                <li><strong>Zend Engine II:</strong> Yangilangan yadro.</li>
+                                <li><strong>To'liqroq OOP Modeli:</strong> <code>public</code>, <code>private</code>, <code>protected</code> kabi kirish modifikatorlari, interfeyslar, abstrakt klasslar, konstruktorlar (<code>__construct</code>), destruktorlar, statik metodlar va xususiyatlar, <code>try/catch</code> bloklari bilan istisnolarni qayta ishlash.</li>
+                                <li><strong>MySQLi (MySQL improved) va PDO (PHP Data Objects):</strong> Ma'lumotlar bazalari bilan ishlash uchun yangi va xavfsizroq kengaytmalar.</li>
+                                <li>XML bilan ishlash uchun kuchli vositalar (SimpleXML, DOM).</li>
+                                <li>PHP 5.3 da nomlar fazosi (namespaces), kech statik bog'lanish (late static bindings), lambda funksiyalari (closures) qo'shildi.</li>
+                                <li>PHP 5.4 da treytlar (traits), qisqa massiv sintaksisi (<code>[]</code>), o'rnatilgan veb-server qo'shildi.</li>
+                                <li>PHP 5.5 da generatorlar, <code>finally</code> bloki (try/catch uchun), <code>password_hash()</code> API qo'shildi.</li>
+                                <li>PHP 5.6 da konstant ifodalar, o'zgaruvchan argumentli funksiyalar (<code>...</code> operatori), <code>phpdbg</code> (interaktiv disk raskadrovka) qo'shildi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>PHP 6 (Loyihasi bekor qilingan):</strong> Asosiy maqsadi Unicode ni to'liq qo'llab-quvvatlash edi, ammo murakkabliklar tufayli bu versiya chiqarilmadi. Uning ba'zi g'oyalari keyingi versiyalarga o'tdi.
+                        </li>
+                        <li>
+                            <strong>PHP 7 (2015):</strong> Ishlash samaradorligi bo'yicha katta sakrash.
+                            <ul>
+                                <li><strong>Zend Engine 3 (PHPNG - PHP Next Generation):</strong> Ishlash tezligi PHP 5.6 ga nisbatan deyarli ikki baravar oshdi va xotira sarfi kamaydi.</li>
+                                <li><strong>Skalyar turdagi maslahatlar (Scalar Type Hints):</strong> Funksiya parametrlari va qaytariladigan qiymatlar uchun <code>int</code>, <code>float</code>, <code>string</code>, <code>bool</code> kabi turlarni ko'rsatish imkoniyati.</li>
+                                <li><strong>Qaytish turi deklaratsiyalari (Return Type Declarations).</strong></li>
+                                <li><strong>Null Coalescing Operator (<code>??</code>).</strong></li>
+                                <li><strong>Spaceship Operator (<code><=></code>).</strong></li>
+                                <li>Anonim klasslar.</li>
+                                <li><code>Error</code> va <code>Exception</code> ierarxiyasi yaxshilandi.</li>
+                                <li>PHP 7.1, 7.2, 7.3, 7.4 versiyalarida qo'shimcha funksiyalar (nullable types, void return type, typed properties, arrow functions (qisqa), FFI va boshqalar) qo'shildi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>PHP 8 (2020):</strong> Muhim yangi funksiyalar va yaxshilanishlar bilan.
+                            <ul>
+                                <li><strong>JIT (Just-In-Time) Kompilyatori:</strong> Ba'zi turdagi yuklamalar uchun ishlash samaradorligini oshirishi mumkin.</li>
+                                <li><strong>Named Arguments (Nomlangan Argumentlar).</strong></li>
+                                <li><strong>Attributes (Annotatsiyalar).</strong></li>
+                                <li><strong>Match Expression (<code>match</code> ifodasi).</strong></li>
+                                <li><strong>Constructor Property Promotion (Konstruktor xususiyatlarini targ'ib qilish).</strong></li>
+                                <li><strong>Union Types (Birlashma Turlari).</strong></li>
+                                <li><strong><code>nullsafe</code> Operator (<code>?-></code>).</strong></li>
+                                <li><code>WeakMap</code> klassi.</li>
+                                <li>PHP 8.1, 8.2, 8.3 versiyalarida qo'shimcha funksiyalar (enums, readonly properties, intersection types, fibers, first-class callable syntax, deprecated dynamic properties va boshqalar) qo'shildi.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h5>Nima uchun yangi versiyalardan foydalanish muhim?</h5>
+                    <ul>
+                        <li><strong>Ishlash Samaradorligi:</strong> Yangi versiyalar odatda tezroq ishlaydi.</li>
+                        <li><strong>Xavfsizlik:</strong> Yangi versiyalarda ma'lum bo'lgan xavfsizlik zaifliklari tuzatiladi. Eskirgan versiyalar qo'llab-quvvatlanmay qolganda, ular xavfli bo'lib qoladi.</li>
+                        <li><strong>Yangi Funksiyalar:</strong> Yangi imkoniyatlar kod yozishni osonlashtiradi va dasturlarni kuchliroq qiladi.</li>
+                        <li><strong>Qo'llab-quvvatlash:</strong> PHP hamjamiyati va hosting provayderlari odatda eng so'nggi barqaror versiyalarni qo'llab-quvvatlaydi.</li>
+                    </ul>
+                    <p>Har doim loyihangiz uchun eng so'nggi barqaror (stable) PHP versiyasidan foydalanish tavsiya etiladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 63-MAVZU TUGASHI -->
+
+        <!-- 64-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-64">
+                <span class="accordion-title">64. PHPDA O‘zgaruvchilar, konstantalar, ma’lumotlar turlari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-64">
+                <div class="accordion-content-inner">
+                    <h5>O'zgaruvchilar (Variables) PHP da:</h5>
+                    <p>PHP da o'zgaruvchilar ma'lumotlarni saqlash uchun ishlatiladigan nomlangan xotira joylaridir. O'zgaruvchi nomi har doim dollar belgisi (<code>$</code>) bilan boshlanadi.</p>
+                    <h6>O'zgaruvchilarni e'lon qilish va qiymat berish qoidalari:</h6>
+                    <ul>
+                        <li>O'zgaruvchi nomi harf yoki pastki chiziq (<code>_</code>) bilan boshlanishi kerak.</li>
+                        <li>O'zgaruvchi nomi raqam bilan boshlanishi mumkin emas.</li>
+                        <li>O'zgaruvchi nomi faqat harflar (a-z, A-Z), raqamlar (0-9) va pastki chiziqdan (<code>_</code>) iborat bo'lishi mumkin.</li>
+                        <li>O'zgaruvchi nomlari katta-kichik harflarga sezgir (masalan, <code>$ism</code> va <code>$Ism</code> ikki xil o'zgaruvchi).</li>
+                        <li>PHP da o'zgaruvchini e'lon qilishdan oldin uning turini ko'rsatish shart emas (dinamik tipizatsiya). O'zgaruvchining turi unga berilgan qiymatga qarab avtomatik aniqlanadi.</li>
+                    </ul>
+                    <pre><code><?php
+$matn = "Salom, Dunyo!"; // String (matn) turidagi o'zgaruvchi
+$son = 123;             // Integer (butun son) turidagi o'zgaruvchi
+$haqiqiy_son = 10.5;    // Float (haqiqiy son) turidagi o'zgaruvchi
+$mantiqiy = true;       // Boolean (mantiqiy) turidagi o'zgaruvchi
+$_yosh = 25;
+
+echo $matn;
+echo "<br>"; // Yangi qatorga o'tish uchun HTML tegi
+echo $son + $haqiqiy_son; // Natija: 133.5
+?></code></pre>
+
+                    <h5>Konstantalar (Constants) PHP da:</h5>
+                    <p>Konstantalar – bu qiymati skript davomida o'zgarmaydigan nomlardir. Ular bir marta e'lon qilingandan so'ng, ularning qiymatini o'zgartirib bo'lmaydi.</p>
+                    <h6>Konstantalarni e'lon qilish:</h6>
+                    <ul>
+                        <li><code>define()</code> funksiyasi yordamida:
+                            <pre><code>define("PI_QIYMATI", 3.14159);
+define("SALOM", "Xush kelibsiz!");</code></pre>
+                            <p><code>define()</code> yordamida e'lon qilingan konstanta nomlari odatda katta harflarda yoziladi va ular global ko'rinish sohasiga ega bo'ladi.</p>
+                        </li>
+                        <li><code>const</code> kalit so'zi yordamida (klasslar ichida yoki global miqyosda PHP 5.3 dan boshlab, skriptning yuqori darajasida PHP 5.6 dan boshlab):
+                            <pre><code>const SAYT_NOMI = "Mening Veb Saytim";</code></pre>
+                            <p><code>const</code> yordamida e'lon qilingan konstantalar ham katta-kichik harflarga sezgir bo'lishi mumkin (garchi katta harflar tavsiya etilsa ham) va ular kompilyatsiya vaqtida aniqlanadi.</p>
+                        </li>
+                    </ul>
+                    <p>Konstantalarga murojaat qilishda dollar belgisi (<code>$</code>) ishlatilmaydi:</p>
+                    <pre><code><?php
+define("MIN_YOSH", 18);
+const MAX_YOSH = 65;
+
+echo "Minimal yosh: " . MIN_YOSH . "<br>";
+echo "Maksimal yosh: " . MAX_YOSH;
+?></code></pre>
+
+                    <h5>Ma'lumotlar Turlari (Data Types) PHP da:</h5>
+                    <p>PHP quyidagi asosiy ma'lumotlar turlarini qo'llab-quvvatlaydi:</p>
+                    <ul>
+                        <li><strong>Skalyar turlar (Scalar Types):</strong>
+                            <ul>
+                                <li><strong><code>string</code> (Satr):</strong> Belgilar ketma-ketligi (masalan, <code>"Salom"</code>, <code>'PHP tili'</code>).</li>
+                                <li><strong><code>integer</code> (Butun son):</strong> Butun sonlar (masalan, <code>10</code>, <code>-5</code>, <code>0</code>).</li>
+                                <li><strong><code>float</code> (yoki <code>double</code>, Haqiqiy son):</strong> O'nli kasrli sonlar (masalan, <code>3.14</code>, <code>-0.001</code>).</li>
+                                <li><strong><code>boolean</code> (Mantiqiy):</strong> Ikki qiymatdan birini qabul qiladi: <code>true</code> (rost) yoki <code>false</code> (yolg'on).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Murakkab turlar (Compound Types):</strong>
+                            <ul>
+                                <li><strong><code>array</code> (Massiv):</strong> Bir nechta qiymatni bitta o'zgaruvchida saqlash imkonini beradi. Massivlar indekslangan (raqamli indekslar bilan) yoki assotsiativ (nomlangan kalitlar bilan) bo'lishi mumkin.</li>
+                                <li><strong><code>object</code> (Ob'ekt):</strong> Klasslarning nusxasi (instance). Ma'lumotlar va ularni qayta ishlaydigan funksiyalarni (metodlarni) o'z ichiga oladi.</li>
+                                <li><strong><code>callable</code> (Chaqiriladigan):</strong> Funksiya yoki metodga havola.</li>
+                                <li><strong><code>iterable</code> (Iteratsiyalanadigan):</strong> <code>foreach</code> tsikli yordamida iteratsiya qilish mumkin bo'lgan har qanday tur (massivlar yoki <code>Traversable</code> interfeysini amalga oshirgan ob'ektlar).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Maxsus turlar (Special Types):</strong>
+                            <ul>
+                                <li><strong><code>null</code>:</strong> Maxsus tur bo'lib, faqat bitta qiymatga ega: <code>NULL</code>. Bu o'zgaruvchining qiymati yo'qligini bildiradi.</li>
+                                <li><strong><code>resource</code> (Resurs):</strong> Tashqi resursga (masalan, faylga ulanish, ma'lumotlar bazasiga ulanish) havola saqlaydigan maxsus o'zgaruvchi.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>O'zgaruvchining turini <code>gettype()</code> funksiyasi yordamida yoki <code>is_string()</code>, <code>is_int()</code>, <code>is_array()</code> kabi maxsus funksiyalar yordamida tekshirish mumkin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 64-MAVZU TUGASHI -->
+
+        <!-- 65-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-65">
+                <span class="accordion-title">65. PHPDA Operatorlar</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-65">
+                <div class="accordion-content-inner">
+                    <p>PHP da operatorlar o'zgaruvchilar va qiymatlar ustida amallar bajarish uchun ishlatiladigan maxsus belgilar yoki kalit so'zlardir. PHP turli xil operatorlar guruhlarini qo'llab-quvvatlaydi:</p>
+                    <h5>1. Arifmetik Operatorlar:</h5>
+                    <p>Sonlar ustida matematik amallar bajarish uchun:</p>
+                    <ul>
+                        <li><code>+</code> (Qo'shish): <code>$a + $b</code></li>
+                        <li><code>-</code> (Ayirish): <code>$a - $b</code></li>
+                        <li><code>*</code> (Ko'paytirish): <code>$a * $b</code></li>
+                        <li><code>/</code> (Bo'lish): <code>$a / $b</code></li>
+                        <li><code>%</code> (Modul - qoldiqni olish): <code>$a % $b</code></li>
+                        <li><code>**</code> (Darajaga ko'tarish - PHP 5.6+): <code>$a ** $b</code> (<code>$a</code> ning <code>$b</code>-darajasi)</li>
+                    </ul>
+                    <h5>2. Tayinlash Operatorlari (Assignment Operators):</h5>
+                    <p>O'zgaruvchilarga qiymat berish uchun:</p>
+                    <ul>
+                        <li><code>=</code> (Oddiy tayinlash): <code>$x = 5;</code></li>
+                        <li><code>+=</code> (Qo'shib tayinlash): <code>$x += 2;</code> (<code>$x = $x + 2;</code> ga teng)</li>
+                        <li><code>-=</code> (Ayirib tayinlash): <code>$x -= 2;</code></li>
+                        <li><code>*=</code> (Ko'paytirib tayinlash): <code>$x *= 2;</code></li>
+                        <li><code>/=</code> (Bo'lib tayinlash): <code>$x /= 2;</code></li>
+                        <li><code>%=</code> (Modulni olib tayinlash): <code>$x %= 2;</code></li>
+                        <li><code>.=</code> (Satrlarni birlashtirib tayinlash): <code>$satr .= " dunyo";</code> (<code>$satr = $satr . " dunyo";</code> ga teng)</li>
+                    </ul>
+                    <h5>3. Taqqoslash Operatorlari (Comparison Operators):</h5>
+                    <p>Ikki qiymatni taqqoslash va mantiqiy (boolean) natija (<code>true</code> yoki <code>false</code>) qaytarish uchun:</p>
+                    <ul>
+                        <li><code>==</code> (Teng): Qiymatlari tengmi?</li>
+                        <li><code>===</code> (Aynan teng / Identik): Qiymatlari va turlari tengmi? (Qat'iy taqqoslash)</li>
+                        <li><code>!=</code> yoki <code><></code> (Teng emas): Qiymatlari teng emasmi?</li>
+                        <li><code>!==</code> (Aynan teng emas / Identik emas): Qiymatlari yoki turlari teng emasmi?</li>
+                        <li><code><</code> (Kichik)</li>
+                        <li><code>></code> (Katta)</li>
+                        <li><code><=</code> (Kichik yoki teng)</li>
+                        <li><code>>=</code> (Katta yoki teng)</li>
+                        <li><code><=></code> (Spaceship operatori - PHP 7+): Agar <code>$a < $b</code> bo'lsa -1, agar <code>$a == $b</code> bo'lsa 0, agar <code>$a > $b</code> bo'lsa 1 qaytaradi.</li>
+                    </ul>
+                    <h5>4. Mantiqiy Operatorlar (Logical Operators):</h5>
+                    <p>Shartli ifodalarni birlashtirish uchun:</p>
+                    <ul>
+                        <li><code>and</code> yoki <code>&&</code> (Mantiqiy VA): Ikkala shart ham rost bo'lsa <code>true</code>. (<code>&&</code> yuqoriroq ustuvorlikka ega)</li>
+                        <li><code>or</code> yoki <code>||</code> (Mantiqiy YOKI): Kamida bitta shart rost bo'lsa <code>true</code>. (<code>||</code> yuqoriroq ustuvorlikka ega)</li>
+                        <li><code>xor</code> (Mantiqiy Istisno qiluvchi YOKI): Faqat bitta shart rost bo'lsa <code>true</code>.</li>
+                        <li><code>!</code> (Mantiqiy INKOR / EMAS): Shartning qiymatini teskarisiga o'zgartiradi.</li>
+                    </ul>
+                    <h5>5. Inkrement/Dekrement Operatorlari (Increment/Decrement Operators):</h5>
+                    <p>O'zgaruvchi qiymatini birga oshirish yoki kamaytirish uchun:</p>
+                    <ul>
+                        <li><code>++$x</code> (Prefiks inkrement): <code>$x</code> ni birga oshiradi, keyin <code>$x</code> ning yangi qiymatini qaytaradi.</li>
+                        <li><code>$x++</code> (Postfiks inkrement): <code>$x</code> ning joriy qiymatini qaytaradi, keyin <code>$x</code> ni birga oshiradi.</li>
+                        <li><code>--$x</code> (Prefiks dekrement): <code>$x</code> ni birga kamaytiradi, keyin <code>$x</code> ning yangi qiymatini qaytaradi.</li>
+                        <li><code>$x--</code> (Postfiks dekrement): <code>$x</code> ning joriy qiymatini qaytaradi, keyin <code>$x</code> ni birga kamaytiradi.</li>
+                    </ul>
+                    <h5>6. Satr Operatorlari (String Operators):</h5>
+                    <ul>
+                        <li><code>.</code> (Birlashtirish operatori): Ikki satrni birlashtiradi.
+                            <pre><code>$satr1 = "Salom"; $satr2 = "Dunyo"; $birlashgan = $satr1 . " " . $satr2; // "Salom Dunyo"</code></pre>
+                        </li>
+                        <li><code>.=</code> (Birlashtirib tayinlash operatori): (Yuqorida tayinlash operatorlarida ko'rsatilgan).</li>
+                    </ul>
+                    <h5>7. Massiv Operatorlari (Array Operators):</h5>
+                    <ul>
+                        <li><code>+</code> (Birlashma): Ikki massivni birlashtiradi (agar kalitlar bir xil bo'lsa, birinchisidagi qiymat saqlanadi).</li>
+                        <li><code>==</code> (Tenglik): Agar massivlar bir xil kalit/qiymat juftliklariga ega bo'lsa <code>true</code>.</li>
+                        <li><code>===</code> (Identiklik): Agar massivlar bir xil kalit/qiymat juftliklariga ega bo'lsa va elementlar bir xil tartibda va bir xil turda bo'lsa <code>true</code>.</li>
+                        <li><code>!=</code> yoki <code><></code> (Teng emaslik)</li>
+                        <li><code>!==</code> (Identik emaslik)</li>
+                    </ul>
+                    <h5>8. Shartli Tayinlash Operatorlari (Conditional Assignment Operators):</h5>
+                    <ul>
+                        <li><strong>Ternar operator (<code>?:</code>):</strong> <code>$natija = (shart) ? qiymat_agar_rost_bo'lsa : qiymat_agar_yolg'on_bo'lsa;</code></li>
+                        <li><strong>Null Coalescing Operator (<code>??</code> - PHP 7+):</strong> Birinchi operand <code>null</code> bo'lmasa uni, aks holda ikkinchi operandni qaytaradi.
+                            <pre><code>$ism = $_GET['foydalanuvchi'] ?? 'Mehmon';</code></pre>
+                        </li>
+                        <li><strong>Null Coalescing Assignment Operator (<code>??=</code> - PHP 7.4+):</strong> Agar o'zgaruvchi <code>null</code> bo'lsa, unga qiymat tayinlaydi.
+                            <pre><code>$config['host'] ??= 'localhost';</code></pre>
+                        </li>
+                    </ul>
+                    <h5>9. Xatoliklarni Boshqarish Operatori (Error Control Operator):</h5>
+                    <ul>
+                        <li><code>@</code>: Ifodadan oldin qo'yilsa, u ifoda tomonidan yuzaga kelishi mumkin bo'lgan xatolik xabarlarini bostiradi. Ehtiyotkorlik bilan ishlatish kerak.</li>
+                    </ul>
+                    <h5>10. Bajarish Operatori (Execution Operator):</h5>
+                    <ul>
+                        <li>Backticklar (``` `` ```): Operatsion tizim buyruqlarini bajaradi va natijasini satr sifatida qaytaradi. Xavfsizlik nuqtai nazaridan juda ehtiyotkorlik bilan ishlatilishi kerak va ko'pincha o'chirib qo'yilgan bo'ladi.</li>
+                    </ul>
+                    <h5>11. Tur Operatorlari (Type Operators):</h5>
+                    <ul>
+                        <li><code>instanceof</code>: Ob'ekt ma'lum bir klassning nusxasi yoki ma'lum bir interfeysni amalga oshirganligini tekshiradi.</li>
+                    </ul>
+                    <p>Operatorlarning ustuvorligi (precedence) va assotsiativligi (associativity) ularning ifodalarda qanday tartibda bajarilishini belgilaydi. Murakkab ifodalarda qavslardan foydalanish o'qilishi osonroq kod yozishga yordam beradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 65-MAVZU TUGASHI -->
+
+        <!-- Qolgan mavzular shu tartibda davom etadi... -->
+        <!-- ... -->
+
+
+
+
+
+        <!-- ... Qolgan mavzular shu yerga qo'shiladi ... -->
 
     </div>
 </div>
@@ -2849,30 +3715,51 @@ document.addEventListener('DOMContentLoaded', function () {
     accordionButtons.forEach(button => {
         button.addEventListener('click', () => {
             const content = button.nextElementSibling;
+            // aria-expanded qiymatini boolean qiymatga o'tkazamiz
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-            // Agar faqat bitta akkordeon ochiq bo'lishi kerak bo'lsa, bu qismni aktivlashtiring
-            // accordionButtons.forEach(btn => {
-            //     if (btn !== button) {
-            //         const otherContent = btn.nextElementSibling;
-            //         btn.setAttribute('aria-expanded', 'false');
-            //         otherContent.classList.remove('open');
-            //         otherContent.style.maxHeight = null;
-            //     }
-            // });
+            // Barcha ochiq akkordeonlarni yopish (agar bittasi ochiq bo'lishi kerak bo'lsa)
+            // Bu qismni aktivlashtirish uchun kommentni olib tashlang:
+            /*
+            if (!isExpanded) { // Faqat yangi akkordeon ochilayotganda boshqalarni yopamiz
+                accordionButtons.forEach(btn => {
+                    if (btn !== button) {
+                        const otherContent = btn.nextElementSibling;
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('active'); // active klassini ham olib tashlaymiz
+                        if (otherContent && otherContent.classList.contains('accordion-content')) {
+                             otherContent.classList.remove('open');
+                             otherContent.style.maxHeight = null;
+                             otherContent.style.paddingTop = "0"; // Paddingni ham olib tashlaymiz
+                             otherContent.style.paddingBottom = "0";
+                        }
+                    }
+                });
+            }
+            */
 
+            // Joriy akkordeonni ochish/yopish
             if (isExpanded) {
                 button.setAttribute('aria-expanded', 'false');
-                content.classList.remove('open');
-                content.style.maxHeight = null;
+                button.classList.remove('active');
+                if (content && content.classList.contains('accordion-content')) {
+                    content.classList.remove('open');
+                    content.style.maxHeight = null;
+                    content.style.paddingTop = "0";
+                    content.style.paddingBottom = "0";
+                }
             } else {
                 button.setAttribute('aria-expanded', 'true');
-                content.classList.add('open');
-                // Kontent ochilishi uchun max-height ni o'rnatamiz
-                // `scrollHeight` ni to'g'ri olish uchun biroz kechikish qo'shish mumkin
-                requestAnimationFrame(() => { // Yoki setTimeout(..., 0)
-                    content.style.maxHeight = content.scrollHeight + "px";
-                });
+                button.classList.add('active');
+                if (content && content.classList.contains('accordion-content')) {
+                    content.classList.add('open');
+                    // Kontent ochilishi uchun max-height ni o'rnatamiz
+                    // `scrollHeight` to'g'ri hisoblanishi uchun biroz kutishimiz mumkin
+                    requestAnimationFrame(() => {
+                         content.style.maxHeight = content.scrollHeight + "px";
+                    });
+                    // CSS da padding-top/bottom transition uchun 'open' klassida belgilangan
+                }
             }
         });
     });
