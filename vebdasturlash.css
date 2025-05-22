@@ -78,7 +78,7 @@ body {
 .cantent {
     max-width: 880px;
     margin: 0 auto; /* Sahifani markazlashtirish */
-    background-color: var(--rang-fon-kontent-bloki); /* Rasmdagiga mos fon */
+
     border-radius: var(--radius-katta);
     box-shadow: var(--soya-orta);
     padding: 30px 35px; /* Ichki padding */
