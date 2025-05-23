@@ -58,84 +58,19 @@
     --transition-tez: 0.2s ease;
     --transition-orta: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-/* Barcha matnli elementlarga oq rangni meros qilish */
-body, h1, h2, h3, h4, h5, h6,
-p, span, a, li, ul, ol, blockquote,
-table, th, td, caption,
-pre, code, strong, em, small {
-    color: var(--rang-matn-asosiy);
-    background-color: transparent; /* Har ehtimolga qarshi */
-}
-
-/* Havolalar uchun hover rang */
-a {
-    color: var(--rang-matn-link);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--rang-matn-link-hover);
-}
-
-/* Kod bloklari */
-pre, code {
-    background-color: var(--rang-fon-pre);
-    color: var(--rang-matn-kod);
-}
-
-/* Jadval */
-table {
-    background-color: var(--rang-fon-kontent-bloki);
-    border-collapse: collapse;
-}
-th {
-    background-color: var(--rang-fon-jadval-sarlavha);
-    color: var(--rang-matn-jadval-sarlavha);
-}
-tr:nth-child(odd) {
-    background-color: var(--rang-fon-jadval-qator-toq);
-}
-tr:hover {
-    background-color: var(--rang-fon-jadval-qator-hover);
-}
-
-/* Matn ichidagi <strong> elementlar */
-strong {
-    color: var(--rang-matn-strong);
-}
-
-/* Inline code */
-code {
-    background-color: var(--rang-fon-inline-kod);
-    color: var(--rang-matn-inline-kod);
-    padding: 2px 5px;
-    border-radius: var(--radius-kichik);
-}
-
-/* Borderlar aniqligi uchun */
-hr {
-    border-color: var(--rang-chegara-ajratuvchi);
-}
-
-/* Meta info */
-.meta-info {
-    color: var(--rang-matn-meta-info);
-    font-size: 0.85em;
-}
 
 /* --- Asosiy uslublar --- */
 body {
     font-family: var(--shrift-asosiy);
     margin: 0;
     padding: 0; /* Body paddingini olib tashlaymiz, .cantent ga beramiz */
-    background-color: var(--rang-fon-asosiy) !important; /* Sizning ko'rsatmangiz: #303030 */
-    color: var(--rang-matn-asosiy) !important;
+    background-color: var(--rang-fon-asosiy); /* Sizning ko'rsatmangiz: #303030 */
+    color: var(--rang-matn-asosiy);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
 }
-
-
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -165,13 +100,12 @@ body {
 /* --- Akkordeon --- */
 .accordion-item {
     background-color: var(--rang-fon-akk-item);
- border: 1px solid var(--rang-chegara-asosiy); 
+    /* border: 1px solid var(--rang-chegara-asosiy); Rasmdagidek chegara yo'q */
     border: none; /* Chegarani olib tashlash */
     border-radius: var(--radius-orta); /* Rasmdagidek burchaklar yo'q, lekin qoldirdim */
     margin-bottom: 2px; /* Elementlar orasida juda kichik masofa */
     box-shadow: none; /* Soyani olib tashlash */
     overflow: hidden;
-    color:var(    --rang-matn-asosiy); 
 }
 .accordion-item:last-child {
     margin-bottom: 0;
@@ -214,7 +148,7 @@ body {
 
 .accordion-button:hover {
     background-color: var(--rang-fon-akk-tugma-hover);
-
+    color: var(--rang-matn-akk-tugma-hover); /* SIZNING KO'RSATMANGIZ: #fff */
 }
 
 .accordion-button:focus-visible {
@@ -291,12 +225,6 @@ body {
      ular sizning so'nggi ko'rsatmalaringizga zid emas) ... */
 
 /* Quyidagi stillarni media so'rovlari ichida ham moslashtirish kerak bo'lishi mumkin */
-@media (max-width: 768px) {
-    body {
-        background-color: var(--rang-fon-asosiy); /* Qo‘shimcha */
-    }
-}
-
 @media (max-width: 768px) {
     body { padding: 10px; }
     .cantent {

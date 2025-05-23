@@ -3696,17 +3696,2804 @@ echo "Maksimal yosh: " . MAX_YOSH;
         </div>
         <!-- 65-MAVZU TUGASHI -->
 
+        <!-- 66-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-66">
+                <span class="accordion-title">66. PHPda massivlar.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-66">
+                <div class="accordion-content-inner">
+                    <p><strong>PHP da Massivlar (Arrays)</strong> – bu bir nechta qiymatni bitta o'zgaruvchida saqlash imkonini beruvchi murakkab ma'lumotlar turidir. Massivdagi har bir qiymat o'zining <strong>indeksi (kaliti)</strong> bilan aniqlanadi.</p>
+                    <p>PHP da uch turdagi massivlar mavjud:</p>
+                    <ol>
+                        <li>
+                            <strong>Indekslangan Massivlar (Indexed Arrays):</strong>
+                            <ul>
+                                <li>Elementlari raqamli indekslar (0 dan boshlanadi) bilan aniqlanadi.</li>
+                                <pre><code><?php
+// Yaratish usullari:
+$mevalar = array("Olma", "Banan", "Anor");
+$ranglar = ["qizil", "yashil", "ko'k"]; // PHP 5.4+ qisqa sintaksis
+
+// Elementlarga murojaat:
+echo $mevalar[0]; // "Olma"
+echo $ranglar[1]; // "yashil"
+
+// Element qo'shish:
+$mevalar[] = "Shaftoli"; // Oxiriga qo'shiladi
+print_r($mevalar); // Massivni ko'rish uchun
+?></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Assotsiativ Massivlar (Associative Arrays):</strong>
+                            <ul>
+                                <li>Elementlari nomlangan kalitlar (string) bilan aniqlanadi.</li>
+                                <pre><code><?php
+// Yaratish usullari:
+$yosh = array("Ali"=>25, "Vali"=>30, "Guli"=>22);
+$ballar = [
+    "matematika" => 5,
+    "fizika" => 4,
+    "informatika" => 5
+];
+
+// Elementlarga murojaat:
+echo $yosh["Vali"]; // 30
+echo $ballar["fizika"]; // 4
+
+// Element qo'shish/o'zgartirish:
+$yosh["Anvar"] = 28;
+$ballar["matematika"] = 4;
+print_r($yosh);
+?></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ko'p o'lchovli Massivlar (Multidimensional Arrays):</strong>
+                            <ul>
+                                <li>Boshqa massiv(lar)ni o'z ichiga olgan massivlar.</li>
+                                <pre><code><?php
+$talabalar = [
+    ["ismi"=>"Ali", "yoshi"=>20, "kursi"=>2],
+    ["ismi"=>"Vali", "yoshi"=>21, "kursi"=>3],
+    ["ismi"=>"Salima", "yoshi"=>19, "kursi"=>1]
+];
+
+// Elementlarga murojaat:
+echo $talabalar[0]["ismi"]; // "Ali"
+echo $talabalar[1]["kursi"]; // 3
+?></code></pre>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>Massivlar bilan ishlash uchun asosiy funksiyalar:</h5>
+                    <ul>
+                        <li><code>count($massiv)</code> yoki <code>sizeof($massiv)</code>: Massivdagi elementlar sonini qaytaradi.</li>
+                        <li><code>print_r($massiv)</code> va <code>var_dump($massiv)</code>: Massiv tarkibini o'qilishi mumkin bo'lgan formatda chiqaradi (debug uchun).</li>
+                        <li><code>is_array($o'zgaruvchi)</code>: O'zgaruvchining massiv ekanligini tekshiradi.</li>
+                        <li><code>sort($massiv)</code>, <code>rsort($massiv)</code>: Indekslangan massiv elementlarini qiymati bo'yicha o'sish/kamayish tartibida saralaydi.</li>
+                        <li><code>asort($massiv)</code>, <code>arsort($massiv)</code>: Assotsiativ massiv elementlarini qiymati bo'yicha o'sish/kamayish tartibida saralaydi (kalit-qiymat bog'liqligini saqlaydi).</li>
+                        <li><code>ksort($massiv)</code>, <code>krsort($massiv)</code>: Assotsiativ massiv elementlarini kaliti bo'yicha o'sish/kamayish tartibida saralaydi.</li>
+                        <li><code>array_push($massiv, qiymat1, qiymat2...)</code>: Massiv oxiriga bir yoki bir nechta element qo'shadi.</li>
+                        <li><code>array_pop($massiv)</code>: Massivning oxirgi elementini olib tashlaydi va qaytaradi.</li>
+                        <li><code>array_shift($massiv)</code>: Massivning birinchi elementini olib tashlaydi va qaytaradi.</li>
+                        <li><code>array_unshift($massiv, qiymat1, qiymat2...)</code>: Massiv boshiga bir yoki bir nechta element qo'shadi.</li>
+                        <li><code>array_keys($massiv)</code>: Massivning barcha kalitlarini o'z ichiga olgan yangi massiv qaytaradi.</li>
+                        <li><code>array_values($massiv)</code>: Massivning barcha qiymatlarini o'z ichiga olgan yangi massiv qaytaradi.</li>
+                        <li><code>in_array(qidirilayotgan_qiymat, $massiv)</code>: Massivda ma'lum bir qiymat mavjudligini tekshiradi.</li>
+                        <li><code>array_merge($massiv1, $massiv2, ...)</code>: Bir yoki bir nechta massivni birlashtiradi.</li>
+                        <li><code>array_slice($massiv, boshlanish_indeksi, [uzunlik])</code>: Massivning bir qismini kesib oladi.</li>
+                    </ul>
+                    <p>Massivlar PHP da ma'lumotlarni guruhlash va ular bilan samarali ishlash uchun juda muhim vosita hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 66-MAVZU TUGASHI -->
+
+        <!-- 67-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-67">
+                <span class="accordion-title">67. PHPDA Satrlar bilan ishlash.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-67">
+                <div class="accordion-content-inner">
+                    <p><strong>PHP da Satrlar (Strings)</strong> – bu belgilar ketma-ketligidir. PHP satrlar bilan ishlash uchun ko'plab o'rnatilgan funksiyalarni taqdim etadi.</p>
+                    <h5>Satrlarni E'lon Qilish:</h5>
+                    <p>Satrlarni e'lon qilishning bir nechta usuli mavjud:</p>
+                    <ul>
+                        <li><strong>Bitta qo'shtirnoq (<code>' '</code>):</strong> Ichidagi o'zgaruvchilar va maxsus belgilar (masalan, <code>\n</code>) qayta ishlanmaydi (<code>\'</code> va <code>\\</code> dan tashqari).
+                            <pre><code>$ism = 'Ali';
+$satr1 = 'Salom, $ism!\nBu yangi qator.'; // $ism va \n o'zgarishsiz qoladi</code></pre>
+                        </li>
+                        <li><strong>Ikkita qo'shtirnoq (<code>" "</code>):</strong> Ichidagi o'zgaruvchilar interpretatsiya qilinadi va maxsus belgilar (<code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\$</code>, <code>\"</code> va h.k.) qayta ishlanadi.
+                            <pre><code>$yosh = 25;
+$satr2 = "Mening yoshim: $yosh.\nBu esa keyingi qator.";</code></pre>
+                        </li>
+                        <li><strong>Heredoc sintaksisi:</strong> Ko'p qatorli satrlarni yozish uchun qulay. <code><<<IDENTIFIER</code> bilan boshlanadi va <code>IDENTIFIER;</code> bilan tugaydi. O'zgaruvchilar interpretatsiya qilinadi.
+                            <pre><code>$shahar = "Toshkent";
+$heredocSatr = <<<TEXT
+
+
+
+                        </li>
+                        <li><strong>Nowdoc sintaksisi (PHP 5.3+):</strong> Heredoc ga o'xshaydi, lekin bitta qo'shtirnoq kabi ishlaydi, ya'ni ichidagi <br> o'zgaruvchilar interpretatsiya qilinmaydi. <code><<<'IDENTIFIER'</code> bilan boshlanadi.
+                            <pre><code>$nowdocSatr = <<<'EOT'
+EOT;</code></pre>
+                        </li>
+                    </ul>
+                    <h5>Satrlar bilan ishlash uchun asosiy funksiyalar:</h5>
+                    <ul>
+                        <li><strong>Satr uzunligi:</strong>
+                            <ul>
+                                <li><code>strlen($satr)</code>: Satrdagi baytlar sonini qaytaradi (ko'p baytli kodirovkalar uchun belgilar soniga teng bo'lmasligi mumkin).</li>
+                                <li><code>mb_strlen($satr, 'UTF-8')</code>: Satrdagi belgilar sonini qaytaradi (ko'p baytli kodirovkalar uchun, masalan, UTF-8).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Satrlarni birlashtirish:</strong>
+                            <ul>
+                                <li>Nuqta (<code>.</code>) operatori: <code>$yangi_satr = $satr1 . " " . $satr2;</code></li>
+                            </ul>
+                        </li>
+                        <li><strong>Qism satrlarni qidirish:</strong>
+                            <ul>
+                                <li><code>strpos($asosiy_satr, $qidirilayotgan_satr, [boshlanish_indeksi])</code>: Qidirilayotgan satrning birinchi uchragan pozitsiyasini (indeksini) qaytaradi yoki topilmasa <code>false</code>. Katta-kichik harflarga sezgir.</li>
+                                <li><code>stripos($asosiy_satr, $qidirilayotgan_satr, ...)</code>: <code>strpos</code> ga o'xshash, lekin katta-kichik harflarga sezgir emas.</li>
+                                <li><code>strstr($asosiy_satr, $qidirilayotgan_satr, [true_agar_oldin_bo'lsa])</code> yoki <code>strchr()</code>: Qidirilayotgan satrning birinchi uchragan joyidan boshlab satrning qolgan qismini qaytaradi.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Satrlarni almashtirish:</strong>
+                            <ul>
+                                <li><code>str_replace($qidirilayotgan, $almashtiriladigan, $asosiy_satr, [&$hisoblagich])</code>: Satrdagi barcha qidirilayotgan qismlarni almashtiriladigan bilan almashtiradi. Katta-kichik harflarga sezgir.</li>
+                                <li><code>str_ireplace(...)</code>: <code>str_replace</code> ga o'xshash, lekin katta-kichik harflarga sezgir emas.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Qism satrni kesib olish:</strong>
+                            <ul>
+                                <li><code>substr($satr, $boshlanish, [uzunlik])</code>: Satrning bir qismini qaytaradi.</li>
+                                <li><code>mb_substr($satr, $boshlanish, [uzunlik], 'UTF-8')</code>: Ko'p baytli satrlar uchun.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Harflar registri bilan ishlash:</strong>
+                            <ul>
+                                <li><code>strtolower($satr)</code>: Satrni kichik harflarga o'tkazadi.</li>
+                                <li><code>strtoupper($satr)</code>: Satrni katta harflarga o'tkazadi.</li>
+                                <li><code>ucfirst($satr)</code>: Satrning birinchi harfini katta qiladi.</li>
+                                <li><code>ucwords($satr)</code>: Satrdagi har bir so'zning birinchi harfini katta qiladi.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bo'shliqlarni olib tashlash:</strong>
+                            <ul>
+                                <li><code>trim($satr, [belgilar_to'plami])</code>: Satrning boshi va oxiridagi bo'shliqlarni (yoki ko'rsatilgan belgilarni) olib tashlaydi.</li>
+                                <li><code>ltrim($satr, ...)</code>: Chap tomondagi bo'shliqlarni olib tashlaydi.</li>
+                                <li><code>rtrim($satr, ...)</code>: O'ng tomondagi bo'shliqlarni olib tashlaydi.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Satrni massivga bo'lish va massivni satrga birlashtirish:</strong>
+                            <ul>
+                                <li><code>explode($ajratuvchi, $satr, [limit])</code>: Satrni ajratuvchi bo'yicha bo'lib, massiv qaytaradi.</li>
+                                <li><code>implode($birlashtiruvchi, $massiv)</code> yoki <code>join()</code>: Massiv elementlarini birlashtiruvchi yordamida bitta satrga birlashtiradi.</li>
+                            </ul>
+                        </li>
+                        <li><strong>HTML maxsus belgilarini qayta ishlash:</strong>
+                            <ul>
+                                <li><code>htmlspecialchars($satr)</code>: Maxsus HTML belgilarini (masalan, <code><</code>, <code>></code>, <code>&</code>, <code>"</code>) ularning HTML ekvivalentlariga (masalan, <code><</code>, <code>></code>, <code>&</code>, <code>"</code>) o'zgartiradi (XSS hujumlaridan himoyalanish uchun foydali).</li>
+                                <li><code>htmlentities($satr)</code>: Barcha mos keladigan belgilarni HTML ekvivalentlariga o'zgartiradi.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Satrlarni formatlash:</strong>
+                            <ul>
+                                <li><code>sprintf($format, $arg1, $arg2, ...)</code>: Formatlangan satrni qaytaradi.</li>
+                                <li><code>printf($format, $arg1, $arg2, ...)</code>: Formatlangan satrni to'g'ridan-to'g'ri chiqaradi.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>PHP satrlar bilan ishlash uchun juda ko'p va xilma-xil funksiyalarni taqdim etadi, bu esa matnli ma'lumotlarni qayta ishlashni osonlashtiradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 67-MAVZU TUGASHI -->
+
+        <!-- 68-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-68">
+                <span class="accordion-title">68. PHPDA Formalar bilan ishlash.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-68">
+                <div class="accordion-content-inner">
+                    <p>PHP veb-dasturlashda foydalanuvchidan ma'lumot olishning asosiy vositasi bo'lgan HTML formalari bilan ishlash uchun keng imkoniyatlarga ega. Forma ma'lumotlari serverga yuborilganda, PHP ularni qabul qilishi, qayta ishlashi, validatsiya qilishi va ma'lumotlar bazasiga saqlashi mumkin.</p>
+                    <h5>Formalar Qanday Ishlaydi?</h5>
+                    <ol>
+                        <li>Foydalanuvchi HTML formasidagi maydonlarni to'ldiradi va "Jo'natish" (Submit) tugmasini bosadi.</li>
+                        <li>Brauzer forma ma'lumotlarini forma tegining <code>method</code> atributida ko'rsatilgan usul (<code>GET</code> yoki <code>POST</code>) yordamida <code>action</code> atributida ko'rsatilgan serverdagi skriptga (odatda PHP fayli) yuboradi.</li>
+                        <li>PHP skripti yuborilgan ma'lumotlarni maxsus superglobal massivlar (<code>$_GET</code>, <code>$_POST</code>, <code>$_REQUEST</code>) orqali qabul qiladi.</li>
+                        <li>PHP skripti bu ma'lumotlarni qayta ishlaydi (masalan, validatsiya qiladi, ma'lumotlar bazasiga yozadi, javob generatsiya qiladi).</li>
+                        <li>Natija (odatda yangi HTML sahifa) foydalanuvchining brauzeriga qaytariladi.</li>
+                    </ol>
+                    <h5>HTML Forma Namuna:</h5>
+                    <pre><code><!-- index.html yoki form.php -->
+<form action="process.php" method="post">
+    Ism: <input type="text" name="foydalanuvchi_ismi"><br>
+    Email: <input type="email" name="foydalanuvchi_email"><br>
+    Xabar: <textarea name="xabar"></textarea><br>
+    <input type="submit" value="Jo'natish">
+</form></code></pre>
+                    <p>Bu yerda <code>action="process.php"</code> forma ma'lumotlari `process.php` fayliga yuborilishini, <code>method="post"</code> esa POST usuli ishlatilishini bildiradi.</p>
+
+                    <h5>PHP da Forma Ma'lumotlarini Qabul Qilish:</h5>
+                    <p>PHP yuborilgan forma ma'lumotlarini quyidagi superglobal massivlar orqali oladi:</p>
+                    <ul>
+                        <li><strong><code>$_GET</code>:</strong> URL orqali (<code>method="get"</code> bilan) yuborilgan ma'lumotlarni o'z ichiga olgan assotsiativ massiv. Kalitlar forma maydonlarining <code>name</code> atributlari.
+                            <pre><code>// Agar URL: example.com/script.php?ism=Ali&yosh=25
+$ism = $_GET['ism']; // "Ali"
+$yosh = $_GET['yosh']; // "25"</code></pre>
+                        </li>
+                        <li><strong><code>$_POST</code>:</strong> HTTP POST so'rovi tanasi orqali (<code>method="post"</code> bilan) yuborilgan ma'lumotlarni o'z ichiga olgan assotsiativ massiv. Kalitlar forma maydonlarining <code>name</code> atributlari. Bu usul katta hajmdagi yoki maxfiy ma'lumotlar uchun tavsiya etiladi.
+                            <pre><code>// process.php faylida (yuqoridagi HTML formadan keyin)
+ {<p>if ($_SERVER["REQUEST_METHOD"] == "POST")
+    $ism = $_POST['foydalanuvchi_ismi'];
+    $email = $_POST['foydalanuvchi_email'];
+    $xabar = $_POST['xabar'];
+ </p>
+    
+
+    // Ma'lumotlarni qayta ishlash...
+    echo "Salom, " . htmlspecialchars($ism) . "! Emailingiz: " . htmlspecialchars($email);
+}</code></pre>
+                        </li>
+                        <li><strong><code>$_REQUEST</code>:</strong> Ham <code>$_GET</code>, ham <code>$_POST</code>, ham <code>$_COOKIE</code> ma'lumotlarini o'z ichiga oladi. Odatda xavfsizlik va aniqlik nuqtai nazaridan <code>$_GET</code> yoki <code>$_POST</code> ni to'g'ridan-to'g'ri ishlatish afzalroq.</li>
+                    </ul>
+                    <h5>Ma'lumotlarni Validatsiya Qilish va Xavfsizlik:</h5>
+                    <p>Foydalanuvchidan kelgan har qanday ma'lumotni ishlatishdan oldin uni validatsiya qilish (to'g'riligini tekshirish) va xavfsizlantirish (sanitizatsiya qilish) juda muhim. Bu XSS (Cross-Site Scripting) va SQL Injection kabi hujumlardan himoyalanishga yordam beradi.</p>
+                    <ul>
+                        <li><strong>Bo'sh maydonlarni tekshirish:</strong> <code>empty()</code>, <code>isset()</code> funksiyalari.</li>
+                        <li><strong>Formatni tekshirish:</strong> Regular ifodalar (<code>preg_match()</code>), <code>filter_var()</code> funksiyasi (masalan, <code>FILTER_VALIDATE_EMAIL</code>, <code>FILTER_VALIDATE_INT</code>).</li>
+                        <li><strong>HTML maxsus belgilarini ekvivalentlash:</strong> <code>htmlspecialchars()</code> (ma'lumotni sahifaga chiqarishdan oldin).</li>
+                        <li><strong>Ma'lumotlar bazasiga yozishdan oldin:</strong> Prepared statements (MySQLi yoki PDO bilan) ishlatish.</li>
+                    </ul>
+                    <pre><code>// process.php da validatsiya namunasi
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $ism = trim($_POST['foydalanuvchi_ismi']); // Boshliqlarni olib tashlash
+    $email = $_POST['foydalanuvchi_email'];
+
+    if (empty($ism)) {
+        echo "Ism kiritilishi shart!";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Noto'g'ri email format!";
+    } else {
+        // Ma'lumotlarni qayta ishlash
+        echo "Rahmat, " . htmlspecialchars($ism) . "!";
+    }
+}</code></pre>
+                    <h5>Formani o'ziga jo'natish (Self-Processing Form):</h5>
+                    <p>Ko'pincha forma ma'lumotlari o'sha sahifaning o'ziga jo'natiladi va PHP kodi HTML bilan bir faylda joylashadi.</p>
+                    <pre><code><!-- form.php -->
+<?php
+$ism_xato = "";
+$ism = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["ism"])) {
+        $ism_xato = "Ism kiritilishi kerak";
+    } else {
+        $ism = htmlspecialchars(trim($_POST["ism"]));
+        // Ma'lumotlarni qayta ishlash...
+        echo "Salom, " . $ism;
+    }
+}
+?>
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    Ism: <input type="text" name="ism" value="<?php echo $ism; ?>">
+    <span style="color:red;">* <?php echo $ism_xato; ?></span><br>
+    <input type="submit" value="Jo'natish">
+</form></code></pre>
+                    <p><code>$_SERVER["PHP_SELF"]</code> joriy skript fayli nomini qaytaradi. <code>htmlspecialchars()</code> XSS hujumlaridan himoyalanish uchun ishlatiladi.</p>
+                    <p>PHP da formalar bilan ishlash interaktiv veb-ilovalar yaratishning muhim qismidir.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 68-MAVZU TUGASHI -->
+
         <!-- Qolgan mavzular shu tartibda davom etadi... -->
         <!-- ... -->
 
 
 
+        <!-- 69-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-69">
+                <span class="accordion-title">69. GET va POST orasidagi asosiy farqlari</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-69">
+                <div class="accordion-content-inner">
+                    <p><code>GET</code> va <code>POST</code> – bu HTTP protokolida mijoz (masalan, brauzer) va server o'rtasida ma'lumot almashish uchun ishlatiladigan ikkita asosiy so'rov usulidir. Ular HTML formalari orqali ma'lumot yuborishda keng qo'llaniladi.</p>
+                    <h5>Asosiy farqlar:</h5>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Xususiyat</th>
+                                    <th>GET</th>
+                                    <th>POST</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ma'lumotlarni yuborish joyi</strong></td>
+                                    <td>Ma'lumotlar URL manziliga (so'rov satrida) qo'shib yuboriladi (masalan, <code>script.php?ism=Ali&yosh=25</code>).</td>
+                                    <td>Ma'lumotlar HTTP so'rovi tanasida (body) yuboriladi, URL da ko'rinmaydi.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ko'rinuvchanlik</strong></td>
+                                    <td>Yuborilayotgan ma'lumotlar URL da ko'rinib turadi, shuning uchun brauzer tarixida va server jurnallarida saqlanib qolishi mumkin.</td>
+                                    <td>Yuborilayotgan ma'lumotlar URL da ko'rinmaydi, bu ularni biroz maxfiyroq qiladi (lekin shifrlanmagan bo'lsa, tarmoq orqali ushlab olinishi mumkin).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hajm chegarasi</strong></td>
+                                    <td>URL uzunligi chegaralanganligi sababli (odatda 2048 belgi atrofida, brauzerga bog'liq), GET orqali yuboriladigan ma'lumotlar hajmi cheklangan.</td>
+                                    <td>POST orqali yuboriladigan ma'lumotlar hajmi uchun amaliy cheklov yo'q (server konfiguratsiyasiga bog'liq).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Xavfsizlik</strong></td>
+                                    <td>Maxfiy ma'lumotlarni (parollar, kredit karta raqamlari) yuborish uchun tavsiya etilmaydi, chunki ular URL da ochiq ko'rinadi.</td>
+                                    <td>Maxfiy ma'lumotlarni yuborish uchun GET ga qaraganda xavfsizroq, lekin HTTPS ishlatilmasa, ma'lumotlar hali ham himoyalanmagan bo'ladi.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Idempotentlik</strong></td>
+                                    <td>GET so'rovlari odatda idempotent hisoblanadi, ya'ni bir xil so'rovni bir necha marta takrorlash bir xil natijani berishi kerak (masalan, ma'lumot olish).</td>
+                                    <td>POST so'rovlari odatda idempotent emas, ya'ni bir xil so'rovni bir necha marta takrorlash serverda turli xil o'zgarishlarga olib kelishi mumkin (masalan, yangi yozuv qo'shish).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bookmark (Xatcho'p) qilish</strong></td>
+                                    <td>GET so'rovlari natijasida hosil bo'lgan URL manzillarni xatcho'pga qo'shish mumkin, chunki barcha parametrlar URL da mavjud.</td>
+                                    <td>POST so'rovlari natijasida hosil bo'lgan sahifalarni odatda to'g'ridan-to'g'ri xatcho'pga qo'shib bo'lmaydi (qayta yuborish ogohlantirishi chiqishi mumkin).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Keshlanish</strong></td>
+                                    <td>GET so'rovlari brauzer tomonidan keshlanishi mumkin.</td>
+                                    <td>POST so'rovlari odatda brauzer tomonidan keshlanmaydi.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>"Orqaga" tugmasi / Qayta yuklash</strong></td>
+                                    <td>Brauzerda "orqaga" tugmasini bosish yoki sahifani qayta yuklash odatda muammosiz ishlaydi.</td>
+                                    <td>POST so'rovi yuborilgan sahifani qayta yuklashda brauzer odatda "formani qayta yuborish" haqida ogohlantirish chiqaradi.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Qo'llanilishi</strong></td>
+                                    <td>Ma'lumotlarni olish (qidiruv, sahifalash), resurslarni so'rash uchun.</td>
+                                    <td>Serverdagi ma'lumotlarni o'zgartirish (yaratish, yangilash, o'chirish), fayl yuklash, maxfiy ma'lumotlarni yuborish uchun.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5>PHP da Foydalanish:</h5>
+                    <ul>
+                        <li>GET orqali yuborilgan ma'lumotlar <code>$_GET</code> superglobal massivida saqlanadi.</li>
+                        <li>POST orqali yuborilgan ma'lumotlar <code>$_POST</code> superglobal massivida saqlanadi.</li>
+                    </ul>
+                    <p>To'g'ri usulni tanlash bajarilayotgan vazifaning tabiatiga va xavfsizlik talablariga bog'liq.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 69-MAVZU TUGASHI -->
+
+        <!-- 70-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-70">
+                <span class="accordion-title">70. PHP funksiyalari va ob’ektlari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-70">
+                <div class="accordion-content-inner">
+                    <h5>PHP Funksiyalari (Functions):</h5>
+                    <p><strong>Funksiya</strong> – bu ma'lum bir vazifani bajarish uchun mo'ljallangan, qayta ishlatilishi mumkin bo'lgan kod bloki. Funksiyalar kodni modullarga ajratish, uni tartibli saqlash va takrorlanishning oldini olishga yordam beradi.</p>
+                    <h6>Funksiyalarni E'lon Qilish:</h6>
+                    <p>PHP da funksiya <code>function</code> kalit so'zi bilan boshlanadi, keyin funksiya nomi va qavslar <code>()</code> keladi. Qavslar ichida argumentlar (parametrlar) ko'rsatilishi mumkin. Funksiya tanasi jingalak qavslar <code>{ }</code> ichida yoziladi.</p>
+                    <pre><code><?php
+// Argumentsiz oddiy funksiya
+function salomBer() {
+    echo "Salom, Dunyo!";
+}
+
+// Argumentli funksiya
+function ismBilanSalomBer($ism) {
+    echo "Salom, " . htmlspecialchars($ism) . "!";
+}
+
+// Qiymat qaytaradigan funksiya
+function yigindi($a, $b) {
+    $sum = $a + $b;
+    return $sum; // return kalit so'zi qiymatni qaytaradi
+}
+?></code></pre>
+                    <h6>Funksiyalarni Chaqirish:</h6>
+                    <p>Funksiya uni nomi va qavslar yordamida chaqiriladi. Agar funksiya argumentlar qabul qilsa, ular qavslar ichida beriladi.</p>
+                    <pre><code><?php
+salomBer(); // "Salom, Dunyo!" ni chiqaradi
+echo "<br>";
+ismBilanSalomBer("Ali"); // "Salom, Ali!" ni chiqaradi
+echo "<br>";
+$natija = yigindi(5, 3);
+echo "5 + 3 = " . $natija; // "5 + 3 = 8" ni chiqaradi
+?></code></pre>
+                    <h6>Funksiya Argumentlari:</h6>
+                    <ul>
+                        <li><strong>Sukutiy qiymatli argumentlar:</strong> Agar argumentga qiymat berilmasa, sukutiy qiymat ishlatiladi.
+                            <pre><code>function xabar($matn = "Standart xabar") { echo htmlspecialchars($matn); }</code></pre>
+                        </li>
+                        <li><strong>O'zgaruvchan argumentlar soni (Variadic functions - PHP 5.6+):</strong> <code>...</code> operatori yordamida.</li>
+                        <li><strong>Tur bo'yicha maslahatlar (Type Hinting/Declarations - PHP 7+):</strong> Argumentlar va qaytariladigan qiymatlar uchun turlarni ko'rsatish.</li>
+                    </ul>
+                    <p>PHP da juda ko'p o'rnatilgan (built-in) funksiyalar mavjud (masalan, satrlar, massivlar, sana bilan ishlash uchun).</p>
+
+                    <h5>PHP Ob'ektlari (Objects):</h5>
+                    <p>PHP ob'ektga yo'naltirilgan dasturlashni (OOP) qo'llab-quvvatlaydi. <strong>Ob'ekt</strong> – bu ma'lum bir klassning nusxasi (instance). Ob'ektlar o'zida ma'lumotlarni (xususiyatlar - properties) va shu ma'lumotlar ustida amallar bajaradigan funksiyalarni (metodlar - methods) mujassamlashtiradi.</p>
+                    <h6>Klasslarni E'lon Qilish:</h6>
+                    <p>Klasslar ob'ektlar uchun shablon (blueprint) hisoblanadi. Ular <code>class</code> kalit so'zi bilan e'lon qilinadi.</p>
+                    <pre><code><?php
+class Meva {
+    // Xususiyatlar (Properties)
+    public $nomi;
+    public $rangi;
+
+    // Konstruktor metodi (ob'ekt yaratilganda avtomatik chaqiriladi)
+    public function __construct($nom, $rang) {
+        $this->nomi = $nom;
+        $this->rangi = $rang;
+    }
+
+    // Metodlar (Methods)
+    public function get_info() {
+        return "Bu " . htmlspecialchars($this->rangi) . " " . htmlspecialchars($this->nomi) . ".";
+    }
+}
+?></code></pre>
+                    <h6>Ob'ektlar Yaratish (Instantiation):</h6>
+                    <p>Ob'ektlar klass nomidan keyin <code>new</code> kalit so'zi yordamida yaratiladi.</p>
+                    <pre><code><?php
+// Meva klassidan ikkita ob'ekt yaratish
+$olma = new Meva("Olma", "Qizil");
+$banan = new Meva("Banan", "Sariq");
+
+// Ob'ekt metodlarini chaqirish
+echo $olma->get_info() . "<br>";  // "Bu Qizil Olma."
+echo $banan->get_info(); // "Bu Sariq Banan."
+?></code></pre>
+                    <p>PHP da OOP ning asosiy konsepsiyalari (inkapsulyatsiya, merosxo'rlik, polimorfizm) haqida batafsilroq ma'lumot 74 va 76-savollarda keltiriladi.</p>
+                    <p>Funksiyalar va ob'ektlar PHP da kodni tuzilishini yaxshilash, qayta foydalanishni osonlashtirish va murakkab dasturlar yaratish uchun muhim vositalardir.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 70-MAVZU TUGASHI -->
+
+        <!-- 71-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-71">
+                <span class="accordion-title">71. PHPda global o‘zgaruvchilar.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-71">
+                <div class="accordion-content-inner">
+                    <p>PHP da <strong>global o'zgaruvchilar</strong> – bu skriptning istalgan joyidan (funksiyalar ichidan ham) foydalanish mumkin bo'lgan o'zgaruvchilardir. Ular odatda skriptning eng yuqori darajasida (hech qanday funksiya yoki klass ichida emas) e'lon qilinadi.</p>
+                    <p>Biroq, funksiya ichidan global o'zgaruvchiga to'g'ridan-to'g'ri murojaat qilib bo'lmaydi. Buning uchun maxsus usullar mavjud:</p>
+                    <h5>1. <code>global</code> Kalit So'zi:</h5>
+                    <p>Funksiya ichida global o'zgaruvchidan foydalanish uchun uning oldiga <code>global</code> kalit so'zini qo'yish kerak. Bu PHP ga ushbu o'zgaruvchini global ko'rinish sohasidan izlashni bildiradi.</p>
+                    <pre><code><?php
+$x = 5;
+$y = 10;
+
+function yigindiQil() {
+    global $x, $y; // Global o'zgaruvchilarni funksiya ichida e'lon qilish
+    $y = $x + $y;
+}
+
+yigindiQil();
+echo $y; // Natija: 15 (global $y o'zgardi)
+?></code></pre>
+                    <h5>2. <code>$GLOBALS</code> Superglobal Massivi:</h5>
+                    <p>PHP barcha global o'zgaruvchilarni <code>$GLOBALS</code> nomli maxsus assotsiativ massivda saqlaydi. Bu massivning kalitlari global o'zgaruvchilarning nomlari bo'ladi. Funksiya ichidan global o'zgaruvchiga <code>$GLOBALS['o'zgaruvchi_nomi']</code> orqali murojaat qilish mumkin.</p>
+                    <pre><code><?php
+$a = 1;
+$b = 2;
+
+function kopaytmaQil() {
+    $GLOBALS['b'] = $GLOBALS['a'] * $GLOBALS['b'];
+}
+
+kopaytmaQil();
+echo $GLOBALS['b']; // Natija: 2
+echo $b;            // Natija: 2 (global $b o'zgardi)
+?></code></pre>
+                    <p><code>$GLOBALS</code> massivi skriptning istalgan joyidan (funksiya ichidan ham, tashqarisidan ham) foydalanish mumkin bo'lgan superglobal massivdir.</p>
+                    <h5>Superglobal Massivlar:</h5>
+                    <p>PHP da bir nechta oldindan belgilangan superglobal massivlar mavjud bo'lib, ular har doim barcha ko'rinish sohalarida mavjud bo'ladi va ularga <code>global</code> kalit so'zisiz murojaat qilish mumkin. Bularga quyidagilar kiradi:</p>
+                    <ul>
+                        <li><code>$GLOBALS</code></li>
+                        <li><code>$_SERVER</code></li>
+                        <li><code>$_REQUEST</code></li>
+                        <li><code>$_POST</code></li>
+                        <li><code>$_GET</code></li>
+                        <li><code>$_FILES</code></li>
+                        <li><code>$_ENV</code></li>
+                        <li><code>$_COOKIE</code></li>
+                        <li><code>$_SESSION</code></li>
+                    </ul>
+                    <p>(Bu supergloballar haqida batafsilroq 72-savolda.)</p>
+                    <h5>Global O'zgaruvchilardan Foydalanishda Ehtiyotkorlik:</h5>
+                    <p>Global o'zgaruvchilardan haddan tashqari ko'p foydalanish kodni tushunishni va disk raskadrovka qilishni qiyinlashtirishi mumkin, chunki o'zgaruvchining qiymati skriptning istalgan joyida o'zgarishi mumkin. Bu "yon ta'sirlar" (side effects) ga olib kelishi va kodning bog'liqligini oshirishi mumkin.</p>
+                    <p>Mumkin bo'lgan hollarda, funksiyalarga kerakli ma'lumotlarni argumentlar orqali uzatish va natijalarni <code>return</code> orqali qaytarish yaxshiroq amaliyot hisoblanadi. Bu kodni yanada modulli va test qilish osonroq qiladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 71-MAVZU TUGASHI -->
+
+        <!-- 72-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-72">
+                <span class="accordion-title">72. PHPDA COOKIE, SESSION, SERVER, REQUEST, ENV, FILES.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-72">
+                <div class="accordion-content-inner">
+                    <p>PHP da bir nechta oldindan belgilangan <strong>superglobal</strong> o'zgaruvchilar (massivlar) mavjud. Ular skriptning istalgan joyidan (funksiyalar, klasslar ichidan ham) <code>global</code> kalit so'zisiz foydalanish mumkin bo'lgan maxsus massivlardir.</p>
+                    <h5>Asosiy PHP Supergloballari:</h5>
+                    <ul>
+                        <li>
+                            <strong><code>$_COOKIE</code>:</strong>
+                            <ul>
+                                <li>Mijoz brauzerida HTTP cookie fayllari orqali saqlangan ma'lumotlarni o'z ichiga olgan assotsiativ massiv.</li>
+                                <li>Cookie fayllari foydalanuvchini eslab qolish, sozlamalarni saqlash kabi maqsadlarda ishlatiladi.</li>
+                                <li><code>setcookie()</code> funksiyasi yordamida cookie o'rnatiladi (bu funksiya HTTP sarlavhalari yuborilishidan oldin chaqirilishi kerak).</li>
+                                <pre><code>// Cookie o'rnatish (1 soatga)
+setcookie("foydalanuvchi", "Ali", time() + 3600, "/");
+
+// Cookie ni olish
+if(isset($_COOKIE["foydalanuvchi"])) {
+    echo "Xush kelibsiz, " . htmlspecialchars($_COOKIE["foydalanuvchi"]) . "!";
+} else {
+    echo "Xush kelibsiz, Mehmon!";
+}</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>$_SESSION</code>:</strong>
+                            <ul>
+                                <li>Foydalanuvchi sessiyasi davomida ma'lumotlarni serverda saqlash uchun ishlatiladigan assotsiativ massiv. Sessiyalar foydalanuvchini bir nechta sahifalar bo'ylab kuzatib borish, savat ma'lumotlarini saqlash kabi maqsadlarda ishlatiladi.</li>
+                                <li>Sessiyadan foydalanish uchun avval <code>session_start()</code> funksiyasi chaqirilishi kerak (skript boshida, har qanday chiqishdan oldin).</li>
+                                <pre><code>session_start();
+
+// Sessiya o'zgaruvchisini o'rnatish
+$_SESSION["sevimli_rang"] = "ko'k";
+$_SESSION["hayvon"] = "mushuk";
+
+// Sessiya o'zgaruvchisini olish
+echo "Sevimli rangingiz: " . htmlspecialchars($_SESSION["sevimli_rang"]);
+
+// Sessiyani yo'q qilish
+// session_unset(); // Barcha sessiya o'zgaruvchilarini o'chirish
+// session_destroy(); // Sessiyani butunlay yo'q qilish</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>$_SERVER</code>:</strong>
+                            <ul>
+                                <li>Server va bajarilayotgan skript muhiti haqida ma'lumotlarni (sarlavhalar, yo'llar, skript joylashuvi) o'z ichiga olgan assotsiativ massiv.</li>
+                                <li>Ba'zi keng tarqalgan kalitlari: <code>'PHP_SELF'</code>, <code>'SERVER_NAME'</code>, <code>'HTTP_HOST'</code>, <code>'HTTP_USER_AGENT'</code>, <code>'SCRIPT_FILENAME'</code>, <code>'REQUEST_METHOD'</code>, <code>'REMOTE_ADDR'</code> (foydalanuvchi IP manzili).</li>
+                                <pre><code>echo "Skript nomi: " . $_SERVER['PHP_SELF'];
+echo "<br>Server nomi: " . $_SERVER['SERVER_NAME'];</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>$_REQUEST</code>:</strong>
+                            <ul>
+                                <li><code>$_GET</code>, <code>$_POST</code> va <code>$_COOKIE</code> supergloballaridagi ma'lumotlarni birlashtirgan assotsiativ massiv.</li>
+                                <li>Odatda <code>$_GET</code> yoki <code>$_POST</code> ni to'g'ridan-to'g'ri ishlatish tavsiya etiladi, chunki bu ma'lumot manbasini aniqroq ko'rsatadi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>$_ENV</code>:</strong>
+                            <ul>
+                                <li>Server muhiti o'zgaruvchilarini (environment variables) o'z ichiga olgan assotsiativ massiv.</li>
+                                <li>Bu o'zgaruvchilar server konfiguratsiyasi orqali o'rnatiladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>$_FILES</code>:</strong>
+                            <ul>
+                                <li>HTTP POST orqali yuklangan fayllar haqida ma'lumotlarni o'z ichiga olgan assotsiativ massiv.</li>
+                                <li>Fayl yuklash formasi <code>enctype="multipart/form-data"</code> atributiga ega bo'lishi kerak.</li>
+                                <li>Har bir yuklangan fayl uchun <code>$_FILES['input_name']</code> massivi quyidagi kalitlarni o'z ichiga oladi: <code>'name'</code> (fayl nomi), <code>'type'</code> (MIME turi), <code>'tmp_name'</code> (serverdagi vaqtinchalik fayl yo'li), <code>'error'</code> (xatolik kodi), <code>'size'</code> (baytlardagi hajmi).</li>
+                                <pre><code>// Fayl yuklash formasidan keyin
+if(isset($_FILES['rasm_fayli'])) {
+    $faylNomi = $_FILES['rasm_fayli']['name'];
+    $tmpFaylYoli = $_FILES['rasm_fayli']['tmp_name'];
+    // move_uploaded_file($tmpFaylYoli, "uploads/" . $faylNomi);
+}</code></pre>
+                            </ul>
+                        </li>
+                        <li><strong><code>$_GET</code> va <code>$_POST</code>:</strong> (68 va 69-savollarda batafsil ko'rib chiqilgan)</li>
+                    </ul>
+                    <p>Bu superglobal massivlar PHP da veb-ilovalar bilan ishlashda juda muhim rol o'ynaydi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 72-MAVZU TUGASHI -->
+
+        <!-- Qolgan mavzular (73-84) keyingi qismda davom etadi -->
+
+        <!-- 73-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-73">
+                <span class="accordion-title">73. PHPDA O‘zgaruvchilarning ko‘rinish sohalari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-73">
+                <div class="accordion-content-inner">
+                    <p>PHP da <strong>o'zgaruvchilarning ko'rinish sohasi (variable scope)</strong> – bu skriptning qaysi qismida o'zgaruvchiga murojaat qilish va uni ishlatish mumkinligini belgilaydi. PHP da asosan uchta ko'rinish sohasi mavjud:</p>
+                    <ol>
+                        <li>
+                            <strong>Lokal (Local Scope):</strong>
+                            <ul>
+                                <li>Funksiya ichida e'lon qilingan o'zgaruvchilar lokal ko'rinish sohasiga ega.</li>
+                                <li>Ular faqat e'lon qilingan funksiya ichida mavjud va funksiyadan tashqarida ularga murojaat qilib bo'lmaydi.</li>
+                                <li>Funksiya bajarilishi tugagandan so'ng, uning lokal o'zgaruvchilari odatda yo'q qilinadi.</li>
+                                <pre><code><?php
+function meningFunksiyam() {
+    $lokalOzgaruvchi = "Men lokalman"; // Lokal o'zgaruvchi
+    echo $lokalOzgaruvchi;
+}
+
+meningFunksiyam(); // "Men lokalman" ni chiqaradi
+// echo $lokalOzgaruvchi; // Xatolik! Funksiyadan tashqarida murojaat qilib bo'lmaydi
+?></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Global (Global Scope):</strong>
+                            <ul>
+                                <li>Funksiyalardan tashqarida (skriptning eng yuqori darajasida) e'lon qilingan o'zgaruvchilar global ko'rinish sohasiga ega.</li>
+                                <li>Global o'zgaruvchilarga skriptning istalgan joyidan (funksiyalardan tashqarida) murojaat qilish mumkin.</li>
+                                <li>Biroq, funksiya ichidan global o'zgaruvchiga to'g'ridan-to'g'ri murojaat qilish uchun <code>global</code> kalit so'zidan yoki <code>$GLOBALS</code> superglobal massividan foydalanish kerak (71-savolda batafsil).</li>
+                                <pre><code><?php
+$globalOzgaruvchi = "Men globalman";
+
+function boshqaFunksiya() {
+    // echo $globalOzgaruvchi; // Xatolik! To'g'ridan-to'g'ri murojaat yo'q
+    global $globalOzgaruvchi;
+    echo $globalOzgaruvchi; // "Men globalman"
+}
+
+boshqaFunksiya();
+echo "<br>" . $globalOzgaruvchi; // "Men globalman"
+?></code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Statik (Static Scope):</strong>
+                            <ul>
+                                <li>Odatda, funksiya bajarilishi tugagandan so'ng uning lokal o'zgaruvchilari yo'q qilinadi. Ammo, agar lokal o'zgaruvchi <code>static</code> kalit so'zi bilan e'lon qilinsa, u funksiya chaqiruvlari orasida o'z qiymatini saqlab qoladi.</li>
+                                <li>Statik o'zgaruvchi faqat birinchi marta e'lon qilinganda initsializatsiya qilinadi.</li>
+                                <pre><code><?php
+function hisoblagich() {
+    static $sanoq = 0; // Statik o'zgaruvchi
+    $sanoq++;
+    echo $sanoq . "<br>";
+}
+
+hisoblagich(); // 1
+hisoblagich(); // 2
+hisoblagich(); // 3
+?></code></pre>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>Funksiya Argumentlari (Function Parameters):</h5>
+                    <p>Funksiya argumentlari ham lokal ko'rinish sohasiga ega. Ular faqat e'lon qilingan funksiya ichida mavjud.</p>
+                    <p>O'zgaruvchilarning ko'rinish sohalarini to'g'ri tushunish kodning xatosiz ishlashi va kutilgan natijalarni berishi uchun muhimdir.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 73-MAVZU TUGASHI -->
+
+        <!-- 74-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-74">
+                <span class="accordion-title">74. PHPda ob’ektga yo‘naltirilgan dasturlash.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-74">
+                <div class="accordion-content-inner">
+                    <p><strong>PHP da Ob'ektga Yo'naltirilgan Dasturlash (Object-Oriented Programming - OOP)</strong> – bu dasturlarni ob'ektlar (objects) va ular o'rtasidagi o'zaro ta'sirlar yordamida modellashtirish paradigmasidir. OOP kodni yanada tartibli, qayta ishlatiladigan, kengaytiriladigan va qo'llab-quvvatlanadigan qilishga yordam beradi.</p>
+                    <p>PHP 5 dan boshlab OOP ni to'liq qo'llab-quvvatlaydi va keyingi versiyalarda bu imkoniyatlar yanada takomillashtirilgan.</p>
+                    <h5>OOP ning Asosiy Tamoyillari (Prinsiplari):</h5>
+                    <ol>
+                        <li>
+                            <strong>Inkapsulyatsiya (Encapsulation):</strong>
+                            <ul>
+                                <li>Ma'lumotlarni (xususiyatlarni) va ularni qayta ishlaydigan metodlarni (funksiyalarni) bitta birlik – ob'ekt ichiga "o'rash".</li>
+                                <li>Ob'ektning ichki holatini tashqi ta'sirlardan himoya qilish. Kirish modifikatorlari (<code>public</code>, <code>private</code>, <code>protected</code>) yordamida xususiyatlar va metodlarga kirishni cheklash.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Merosxo'rlik (Inheritance):</strong>
+                            <ul>
+                                <li>Mavjud klass (ota-ona klassi yoki superklass) asosida yangi klass (bola klassi yoki subklass) yaratish imkoniyati.</li>
+                                <li>Bola klass ota-ona klassining xususiyatlari va metodlarini meros qilib oladi va ularni kengaytirishi yoki qayta belgilashi (override) mumkin. Bu kod takrorlanishining oldini oladi.</li>
+                                <li>PHP da <code>extends</code> kalit so'zi bilan amalga oshiriladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Polimorfizm (Polymorphism):</strong>
+                            <ul>
+                                <li>"Ko'p shakllilik" degan ma'noni anglatadi. Turli xil ob'ektlarning bir xil nomdagi metodga (yoki interfeysga) turlicha javob berish qobiliyati.</li>
+                                <li>Bu odatda interfeyslar yoki abstrakt klasslar yordamida amalga oshiriladi. Bir xil interfeysni amalga oshirgan turli klasslarning ob'ektlari bir xil metod nomiga ega bo'lishi mumkin, lekin har biri o'ziga xos tarzda bajaradi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Abstraksiya (Abstraction):</strong>
+                            <ul>
+                                <li>Ob'ektning faqat muhim jihatlarini ko'rsatib, murakkab ichki tafsilotlarni yashirish. Foydalanuvchiga faqat kerakli interfeysni taqdim etish.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>PHP da OOP ning Asosiy Elementlari:</h5>
+                    <ul>
+                        <li><strong>Klasslar (Classes):</strong> Ob'ektlar uchun shablon yoki loyiha. Ular xususiyatlar (o'zgaruvchilar) va metodlar (funksiyalar) ni belgilaydi. <code>class</code> kalit so'zi bilan e'lon qilinadi.</li>
+                        <li><strong>Ob'ektlar (Objects):</strong> Klassning aniq bir nusxasi (instance). <code>new</code> kalit so'zi bilan yaratiladi.</li>
+                        <li><strong>Xususiyatlar (Properties):</strong> Klass ichidagi o'zgaruvchilar, ob'ektning holatini tavsiflaydi.</li>
+                        <li><strong>Metodlar (Methods):</strong> Klass ichidagi funksiyalar, ob'ektning xatti-harakatini belgilaydi.</li>
+                        <li><strong>Konstruktorlar (Constructors):</strong> Ob'ekt yaratilganda avtomatik ravishda chaqiriladigan maxsus metod (PHP da <code>__construct()</code>). Ob'ektni initsializatsiya qilish uchun ishlatiladi.</li>
+                        <li><strong>Destruktorlar (Destructors):</strong> Ob'ekt yo'q qilinishidan oldin avtomatik ravishda chaqiriladigan maxsus metod (PHP da <code>__destruct()</code>). Resurslarni bo'shatish uchun ishlatilishi mumkin.</li>
+                        <li><strong>Kirish Modifikatorlari (Access Modifiers):</strong>
+                            <ul>
+                                <li><code>public</code>: Istalgan joydan murojaat qilish mumkin.</li>
+                                <li><code>protected</code>: Klassning o'zi va uning bola klasslari ichidan murojaat qilish mumkin.</li>
+                                <li><code>private</code>: Faqat e'lon qilingan klassning o'zi ichidan murojaat qilish mumkin.</li>
+                            </ul>
+                        </li>
+                        <li><strong><code>$this</code> Kalit So'zi:</strong> Klass metodi ichida joriy ob'ektga ishora qiladi.</li>
+                        <li><strong>Statik Xususiyatlar va Metodlar (Static Properties and Methods):</strong> Klassga tegishli bo'lib, ob'ekt yaratmasdan turib murojaat qilish mumkin (<code>self::</code> yoki <code>static::</code> yoki <code>ClassName::</code> orqali).</li>
+                        <li><strong>Nomlar Fazosi (Namespaces):</strong> Kodni guruhlash va nomlar to'qnashuvining oldini olish uchun.</li>
+                        <li><strong>Interfeyslar (Interfaces):</strong> Klasslar amalga oshirishi kerak bo'lgan metodlar to'plamini belgilaydi.</li>
+                        <li><strong>Abstrakt Klasslar va Metodlar (Abstract Classes and Methods):</strong> To'liq amalga oshirilmagan klasslar va metodlar, bola klasslar tomonidan kengaytirilishi kerak.</li>
+                        <li><strong>Treytlar (Traits - PHP 5.4+):</strong> Kodni qayta ishlatish mexanizmi, klasslarga gorizontal ravishda funksionallik qo'shish imkonini beradi.</li>
+                        <li><strong>Kech Statik Bog'lanish (Late Static Bindings - PHP 5.3+).</strong></li>
+                        <li><strong>Magic Metodlar:</strong> Maxsus nomlarga ega bo'lgan metodlar (masalan, <code>__get()</code>, <code>__set()</code>, <code>__call()</code>, <code>__toString()</code>), ular ma'lum bir hodisalar yuz berganda avtomatik chaqiriladi.</li>
+                    </ul>
+                    <p>OOP PHP da katta va murakkab veb-ilovalar yaratishda keng qo'llaniladi va kodning sifatini oshirishga yordam beradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 74-MAVZU TUGASHI -->
+
+        <!-- 75-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-75">
+                <span class="accordion-title">75. MVC (Model,View, Controller) texnologiyasi haqida.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-75">
+                <div class="accordion-content-inner">
+                    <p><strong>MVC (Model-View-Controller – Model-Ko'rinish-Nazoratchi)</strong> – bu dasturiy ta'minot arxitektura naqshidir (design pattern). U dasturni uchta asosiy, o'zaro bog'liq, lekin alohida komponentlarga ajratishni taklif qiladi. Bu ajratish dasturning mantiqiy qismlarini mustaqil ravishda ishlab chiqish, test qilish va qo'llab-quvvatlashni osonlashtiradi.</p>
+                    <p>MVC ayniqsa foydalanuvchi interfeysiga ega bo'lgan ilovalarda (masalan, veb-ilovalar) keng qo'llaniladi.</p>
+                    <h5>MVC Komponentlari:</h5>
+                    <ol>
+                        <li>
+                            <strong>Model (Model):</strong>
+                            <ul>
+                                <li>Dasturning ma'lumotlari va biznes mantiqini boshqaradi.</li>
+                                <li>Ma'lumotlar bazasi bilan ishlash (o'qish, yozish, yangilash), ma'lumotlarni validatsiya qilish, hisob-kitoblar va dasturning asosiy funksionalligi uchun javobgar.</li>
+                                <li>Ko'rinish (View) va Nazoratchi (Controller) dan mustaqil bo'lishi kerak.</li>
+                                <li>Model o'zgarganda, u odatda o'zgarishlar haqida kuzatuvchilarni (observers - ko'pincha Nazoratchi yoki Ko'rinish) xabardor qiladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ko'rinish (View):</strong>
+                            <ul>
+                                <li>Ma'lumotlarni foydalanuvchiga taqdim etish uchun javobgar (foydalanuvchi interfeysi).</li>
+                                <li>Odatda Modeldan olingan ma'lumotlarni ko'rsatadi.</li>
+                                <li>Ko'rinish o'zida minimal mantiqqa ega bo'lishi kerak; asosiy mantiq Nazoratchi va Modelda bo'ladi.</li>
+                                <li>Veb-ilovalarda bu HTML shablonlari, CSS va ba'zan mijoz tomoni JavaScripti bo'lishi mumkin.</li>
+                                <li>Foydalanuvchining harakatlari (masalan, tugma bosilishi) haqida Nazoratchiga xabar beradi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Nazoratchi (Controller):</strong>
+                            <ul>
+                                <li>Model va Ko'rinish o'rtasidagi vositachi.</li>
+                                <li>Foydalanuvchidan kelgan so'rovlarni (masalan, HTTP so'rovlari) qabul qiladi.</li>
+                                <li>So'rovga muvofiq Modelni chaqirib, undan kerakli ma'lumotlarni oladi yoki Modelning holatini o'zgartiradi.</li>
+                                <li>Olingan ma'lumotlarni qayta ishlab, mos Ko'rinishni tanlaydi va unga ma'lumotlarni uzatadi.</li>
+                                <li>Ko'rinish foydalanuvchiga taqdim etiladi.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>MVC ning Afzalliklari:</h5>
+                    <ul>
+                        <li><strong>Mas'uliyatlarni Ajratish (Separation of Concerns):</strong> Dasturning turli qismlari aniq belgilangan vazifalarga ega bo'ladi, bu esa kodni tushunarliroq va boshqariladigan qiladi.</li>
+                        <li><strong>Qayta Foydalanish Imkoniyati:</strong> Model va Ko'rinish komponentlari turli Nazoratchilar bilan qayta ishlatilishi mumkin.</li>
+                        <li><strong>Mustaqil Ishlab Chiqish:</strong> Turli jamoalar Model, Ko'rinish va Nazoratchi ustida parallel ravishda ishlashi mumkin.</li>
+                        <li><strong>Oson Test Qilish:</strong> Har bir komponentni alohida test qilish osonroq.</li>
+                        <li><strong>Oson Qo'llab-quvvatlash va Kengaytirish:</strong> Bir komponentga kiritilgan o'zgartirishlar boshqalariga minimal ta'sir qiladi.</li>
+                    </ul>
+                    <h5>MVC ning Kamchiliklari (ba'zan):</h5>
+                    <ul>
+                        <li><strong>Murakkablik:</strong> Kichik loyihalar uchun MVC ortiqcha murakkablik tug'dirishi mumkin.</li>
+                        <li><strong>Ko'proq Kod:</strong> Ba'zan oddiy vazifalar uchun ko'proq kod yozish talab etilishi mumkin.</li>
+                        <li><strong>O'rganish Egri Chizig'i:</strong> Yangi dasturchilar uchun MVC ni to'g'ri tushunish va qo'llash biroz vaqt talab qilishi mumkin.</li>
+                    </ul>
+                    <p>Ko'plab zamonaviy PHP freymvorklari (masalan, Laravel, Symfony, CodeIgniter) MVC arxitekturasiga asoslangan yoki uni qo'llab-quvvatlaydi. MVC veb-ilovalarni tuzilishini yaxshilash va ularni sifatli qilish uchun muhim vosita hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 75-MAVZU TUGASHI -->
+
+        <!-- 76-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-76">
+                <span class="accordion-title">76. PHPda OOP ning asosiy tushunchalari</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-76">
+                <div class="accordion-content-inner">
+                    <p>PHP da Ob'ektga Yo'naltirilgan Dasturlash (OOP) bir nechta asosiy tushunchalarga asoslanadi. Bu tushunchalar kodni tuzilishini yaxshilash, qayta foydalanishni osonlashtirish va murakkab dasturlar yaratish uchun xizmat qiladi.</p>
+                    <h5>OOP ning Asosiy Tushunchalari (PHP kontekstida):</h5>
+                    <ol>
+                        <li>
+                            <strong>Klass (Class):</strong>
+                            <ul>
+                                <li>Ob'ektlar uchun shablon, loyiha yoki "retsept". U ob'ektning xususiyatlari (ma'lumotlari) va metodlari (xatti-harakatlari) ni belgilaydi.</li>
+                                <li><code>class</code> kalit so'zi bilan e'lon qilinadi.</li>
+                                <pre><code>class Avtomobil { /* ... */ }</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ob'ekt (Object):</strong>
+                            <ul>
+                                <li>Klassning aniq bir nusxasi (instance). Klassda belgilangan xususiyatlar va metodlarga ega bo'ladi.</li>
+                                <li><code>new</code> kalit so'zi bilan yaratiladi.</li>
+                                <pre><code>$bmw = new Avtomobil();
+$nexia = new Avtomobil();</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Xususiyatlar (Properties):</strong>
+                            <ul>
+                                <li>Klass ichidagi o'zgaruvchilar. Ular ob'ektning holatini yoki atributlarini ifodalaydi.</li>
+                                <li>Klass ichida <code>public</code>, <code>protected</code>, yoki <code>private</code> kalit so'zlari bilan e'lon qilinadi.</li>
+                                <pre><code>class Avtomobil {
+    public $rangi = "Qizil";
+    public $tezlik = 0;
+}</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Metodlar (Methods):</strong>
+                            <ul>
+                                <li>Klass ichidagi funksiyalar. Ular ob'ektning xatti-harakatini yoki bajarishi mumkin bo'lgan amallarni belgilaydi.</li>
+                                <pre><code>class Avtomobil {
+    public function tezlanish($miqdor) {
+        $this->tezlik += $miqdor;
+    }
+}</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Inkapsulyatsiya (Encapsulation):</strong>
+                            <ul>
+                                <li>Ob'ektning xususiyatlari (ma'lumotlari) va ularni boshqaradigan metodlarini bitta birlik (klass) ichiga "o'rash" va ularga kirishni cheklash (<code>public</code>, <code>protected</code>, <code>private</code> yordamida). Bu ob'ektning ichki holatini himoya qiladi va tashqi kodning to'g'ridan-to'g'ri aralashuvini kamaytiradi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Merosxo'rlik (Inheritance):</strong>
+                            <ul>
+                                <li>Bir klass (bola klass) boshqa klassning (ota-ona klass) xususiyatlari va metodlarini meros qilib olishi. Bu kodni qayta ishlatish va ierarxik tuzilmalar yaratish imkonini beradi.</li>
+                                <li><code>extends</code> kalit so'zi bilan amalga oshiriladi.</li>
+                                <pre><code>class YukAvtomobili extends Avtomobil { /* ... */ }</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Polimorfizm (Polymorphism):</strong>
+                            <ul>
+                                <li>"Ko'p shakllilik". Turli klasslarning ob'ektlari bir xil nomdagi metodga o'ziga xos tarzda javob berishi. Bu odatda interfeyslar yoki abstrakt metodlarni qayta belgilash (overriding) orqali amalga oshiriladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Abstraksiya (Abstraction):</strong>
+                            <ul>
+                                <li>Murakkab tizimning faqat muhim jihatlarini ko'rsatib, keraksiz tafsilotlarni yashirish. Foydalanuvchiga sodda interfeys taqdim etish.</li>
+                                <li><strong>Abstrakt klasslar</strong> (<code>abstract class</code>) va <strong>abstrakt metodlar</strong> (<code>abstract function</code>) bu tamoyilni amalga oshirishga yordam beradi. Abstrakt klassdan ob'ekt yaratib bo'lmaydi, u faqat meros olinishi kerak. Abstrakt metodlar bola klassda amalga oshirilishi shart.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Interfeyslar (Interfaces):</strong>
+                            <ul>
+                                <li>Klass amalga oshirishi kerak bo'lgan ommaviy (public) metodlar to'plamini belgilaydigan shartnoma. Klass bir yoki bir nechta interfeysni <code>implements</code> kalit so'zi bilan amalga oshirishi mumkin.</li>
+                                <pre><code>interface Harakatlanuvchi {
+    public function harakatlan();
+}
+class Mashina implements Harakatlanuvchi {
+    public function harakatlan() { /* ... */ }
+}</code></pre>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>$this</code> Kalit So'zi:</strong>
+                            <ul>
+                                <li>Klass metodi ichida joriy ob'ektning o'ziga (uning xususiyatlari va metodlariga) murojaat qilish uchun ishlatiladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Konstruktor (<code>__construct()</code>):</strong> Ob'ekt yaratilganda avtomatik chaqiriladigan maxsus metod.</li>
+                        </li>
+                        <li>
+                            <strong>Destruktor (<code>__destruct()</code>):</strong> Ob'ekt yo'q qilinishidan oldin avtomatik chaqiriladigan maxsus metod.</li>
+                        </li>
+                        <li>
+                            <strong>Statik Xususiyatlar va Metodlar (<code>static</code>):</strong> Klassga tegishli bo'lib, ob'ekt yaratmasdan turib chaqirilishi mumkin.</li>
+                        </li>
+                        <li>
+                            <strong>Treytlar (<code>trait</code> - PHP 5.4+):</strong> Kodni gorizontal ravishda qayta ishlatish mexanizmi.</li>
+                        </li>
+                    </ol>
+                    <p>Bu asosiy tushunchalar PHP da kuchli va boshqariladigan ob'ektga yo'naltirilgan dasturlar yaratish uchun poydevor hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 76-MAVZU TUGASHI -->
+
+        <!-- Qolgan mavzular (77-84) quyida davom etadi -->
+
+        <!-- 77-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-77">
+                <span class="accordion-title">77. Php va Mysql</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-77">
+                <div class="accordion-content-inner">
+                    <p><strong>PHP va MySQL</strong> – bu veb-ishlab chiqishda juda keng tarqalgan va kuchli kombinatsiyadir. PHP server tomonida ishlaydigan skriptlash tili sifatida dinamik kontent yaratish va mantiqni bajarish uchun, MySQL esa relyatsion ma'lumotlar bazasini boshqarish tizimi (RDBMS) sifatida ma'lumotlarni saqlash, boshqarish va ulardan samarali foydalanish uchun ishlatiladi.</p>
+                    <h5>Nima uchun PHP va MySQL birgalikda mashhur?</h5>
+                    <ul>
+                        <li><strong>Ochiq Kodli va Bepul:</strong> Ikkala texnologiya ham ochiq kodli bo'lib, ulardan foydalanish uchun litsenziya to'lovlari talab qilinmaydi. Bu kichik va katta loyihalar uchun ularni jozibador qiladi.</li>
+                        <li><strong>O'rnatish va Sozlash Osonligi (nisbatan):</strong> Ko'pgina veb-hosting provayderlari PHP va MySQL ni standart tarzda taklif qiladi va ularni o'rnatish va sozlash jarayoni nisbatan sodda. XAMPP, WAMP, MAMP kabi paketlar mahalliy ishlab chiqish muhitini oson o'rnatish imkonini beradi.</li>
+                        <li><strong>Katta Hamjamiyat va Resurslar:</strong> Ikkala texnologiya ham ulkan va faol hamjamiyatlarga ega. Bu ko'plab hujjatlar, darsliklar, forumlar va tayyor yechimlar mavjudligini anglatadi.</li>
+                        <li><strong>Platformadan Mustaqillik:</strong> PHP va MySQL turli xil operatsion tizimlarda (Linux, Windows, macOS) ishlay oladi.</li>
+                        <li><strong>Yaxshi Integratsiya:</strong> PHP MySQL bilan ishlash uchun maxsus kengaytmalar (MySQLi va PDO) ni taqdim etadi, bu esa ma'lumotlar bazasiga ulanish, so'rovlar yuborish va natijalarni qayta ishlashni osonlashtiradi.</li>
+                        <li><strong>Tezkorlik va Ishonchlilik:</strong> To'g'ri optimallashtirilganda, PHP va MySQL kombinatsiyasi yuqori trafikli veb-saytlar uchun ham yetarli darajada tezkor va ishonchli bo'lishi mumkin.</li>
+                        <li><strong>Keng Qo'llanilishi:</strong> Ko'plab mashhur CMSlar (WordPress, Joomla, Drupal), forum dasturlari (phpBB) va elektron tijorat platformalari (Magento, OpenCart - ba'zilari) PHP va MySQL ga asoslangan.</li>
+                    </ul>
+                    <h5>PHP ning MySQL bilan ishlash usullari:</h5>
+                    <p>PHP MySQL ma'lumotlar bazasi bilan bog'lanish va so'rovlarni bajarish uchun bir nechta interfeyslarni (kengaytmalarni) taklif qiladi:</p>
+                    <ol>
+                        <li>
+                            <strong>MySQLi (MySQL Improved Extension):</strong>
+                            <ul>
+                                <li>Bu kengaytma faqat MySQL ma'lumotlar bazalari bilan ishlash uchun mo'ljallangan (MySQL 4.1.3 va undan yuqori versiyalari).</li>
+                                <li>Ham protsedurali, ham ob'ektga yo'naltirilgan interfeyslarni taklif qiladi.</li>
+                                <li>Prepared statements (tayyorlangan so'rovlar) va tranzaksiyalarni qo'llab-quvvatlaydi, bu esa SQL Injection hujumlaridan himoyalanishga va ma'lumotlar yaxlitligini ta'minlashga yordam beradi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>PDO (PHP Data Objects):</strong>
+                            <ul>
+                                <li>PDO ma'lumotlarga kirish uchun yagona va izchil interfeysni taqdim etadi, bu esa turli xil ma'lumotlar bazalari (MySQL, PostgreSQL, SQLite, Oracle va boshqalar) bilan ishlash imkonini beradi. Agar kelajakda ma'lumotlar bazasini o'zgartirish ehtimoli bo'lsa, PDO afzalroq tanlovdir.</li>
+                                <li>Faqat ob'ektga yo'naltirilgan interfeysga ega.</li>
+                                <li>Shuningdek, prepared statements va tranzaksiyalarni qo'llab-quvvatlaydi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><code>mysql_*</code> funksiyalari (Eskirgan):</strong>
+                            <ul>
+                                <li>Bu PHP ning eski MySQL kengaytmasi bo'lib, PHP 5.5.0 da eskirgan deb e'lon qilingan va PHP 7.0.0 da butunlay olib tashlangan.</li>
+                                <li>Yangi loyihalarda <strong>hech qachon ishlatilmasligi kerak</strong>, chunki u xavfsizlik zaifliklariga ega va zamonaviy MySQL xususiyatlarini qo'llab-quvvatlamaydi.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>PHP va MySQL birgalikda dinamik, ma'lumotlarga asoslangan veb-ilovalar yaratish uchun kuchli va moslashuvchan platformani tashkil etadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 77-MAVZU TUGASHI -->
+
+        <!-- 78-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-78">
+                <span class="accordion-title">78. MySQL ma’lumotlar bazasini boshqarish tizimi.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-78">
+                <div class="accordion-content-inner">
+                    <p><strong>MySQL</strong> – bu dunyodagi eng mashhur ochiq kodli <strong>Relyatsion Ma'lumotlar Bazasini Boshqarish Tizimi (RDBMS)</strong> dir. U Oracle korporatsiyasi tomonidan ishlab chiqilgan va qo'llab-quvvatlanadi (avvalroq Sun Microsystems, undan oldin MySQL AB).</p>
+                    <p>MySQL ma'lumotlarni jadvallar ko'rinishida saqlaydi. Har bir jadval qatorlar (yozuvlar) va ustunlar (maydonlar) dan iborat bo'lib, ular o'rtasida munosabatlar o'rnatilishi mumkin.</p>
+                    <h5>MySQL ning asosiy xususiyatlari va afzalliklari:</h5>
+                    <ul>
+                        <li><strong>Ochiq Kodli va Bepul (ko'p hollarda):</strong> MySQL Community Edition versiyasi bepul tarqatiladi va keng qo'llaniladi. Tijoriy litsenziyalar va qo'llab-quvvatlash uchun pullik versiyalari ham mavjud.</li>
+                        <li><strong>Tezkorlik va Samaradorlik:</strong> MySQL o'qish operatsiyalari uchun yuqori tezlikka ega bo'lib, ko'plab veb-ilovalar uchun yaxshi ishlash samaradorligini ta'minlaydi.</li>
+                        <li><strong>Ishonchlilik va Barqarorlik:</strong> Yillar davomida sinovdan o'tgan va barqaror tizim hisoblanadi.</li>
+                        <li><strong>Masshtablanuvchanlik:</strong> Kichik loyihalardan tortib yirik, yuqori yuklamali tizimlargacha qo'llanilishi mumkin. Replikatsiya va klasterlash kabi mexanizmlar yordamida masshtablanishni qo'llab-quvvatlaydi.</li>
+                        <li><strong>Platformadan Mustaqillik:</strong> Turli xil operatsion tizimlarda (Linux, Windows, macOS va boshqalar) ishlay oladi.</li>
+                        <li><strong>SQL (Structured Query Language) ni Qo'llab-quvvatlash:</strong> Ma'lumotlar bazasi bilan ishlash uchun standart SQL tilidan foydalanadi.</li>
+                        <li><strong>Xavfsizlik Xususiyatlari:</strong> Foydalanuvchilarga kirish huquqlarini boshqarish, ma'lumotlarni shifrlash kabi xavfsizlik mexanizmlariga ega.</li>
+                        <li><strong>Saqlash Dvigatellari (Storage Engines):</strong> MySQL turli xil saqlash dvigatellarini (masalan, InnoDB, MyISAM) qo'llab-quvvatlaydi. Har bir dvigatel o'zining afzalliklari va kamchiliklariga ega (masalan, InnoDB tranzaksiyalarni va tashqi kalitlarni qo'llab-quvvatlaydi, MyISAM esa to'liq matnli qidiruv uchun optimallashtirilgan).</li>
+                        <li><strong>Keng Qo'llanilishi:</strong> Veb-ilovalar, korporativ tizimlar, ma'lumotlar omborlari va boshqa ko'plab sohalarda ishlatiladi.</li>
+                        <li><strong>Integratsiya:</strong> PHP, Java, Python, C++, Ruby kabi ko'plab dasturlash tillari bilan oson integratsiya qilinadi.</li>
+                        <li><strong>Katta Hamjamiyat va Resurslar:</strong> Keng hamjamiyat, hujjatlar va yordamchi vositalar mavjud.</li>
+                    </ul>
+                    <h5>MySQL arxitekturasi (soddalashtirilgan):</h5>
+                    <ul>
+                        <li><strong>Mijoz (Client):</strong> Ma'lumotlar bazasiga so'rov yuboruvchi dastur (masalan, PHP skripti, mysql buyruq qatori vositasi, phpMyAdmin).</li>
+                        <li><strong>Server (MySQL Server):</strong> So'rovlarni qabul qiladigan, qayta ishlaydigan va ma'lumotlar bilan amallar bajaradigan asosiy dastur.</li>
+                        <li><strong>So'rovlarni Tahlil Qiluvchi (Parser):</strong> SQL so'rovlarining sintaksisini tekshiradi.</li>
+                        <li><strong>Optimallashtiruvchi (Optimizer):</strong> So'rovlarni samarali bajarish uchun eng yaxshi yo'lni tanlaydi.</li>
+                        <li><strong>Saqlash Dvigatellari (Storage Engines):</strong> Ma'lumotlarni diskda saqlash va ulardan foydalanish logikasini amalga oshiradi.</li>
+                        <li><strong>Kesh (Cache):</strong> Tez-tez ishlatiladigan ma'lumotlarni va so'rov natijalarini xotirada saqlab, ishlash tezligini oshiradi.</li>
+                    </ul>
+                    <h5>MySQL bilan ishlash uchun vositalar:</h5>
+                    <ul>
+                        <li><strong><code>mysql</code> buyruq qatori mijozi:</strong> Serverga to'g'ridan-to'g'ri SQL buyruqlarini yuborish uchun.</li>
+                        <li><strong>phpMyAdmin:</strong> Veb-interfeys orqali MySQL ma'lumotlar bazalarini boshqarish uchun mashhur vosita.</li>
+                        <li><strong>MySQL Workbench:</strong> Rasmiy grafik vosita bo'lib, ma'lumotlar bazasini loyihalash, ishlab chiqish va boshqarish uchun keng imkoniyatlar taqdim etadi.</li>
+                        <li>Boshqa ko'plab uchinchi tomon vositalari (masalan, DBeaver, Navicat, SQLYog).</li>
+                    </ul>
+                    <p>MySQL relyatsion ma'lumotlarni saqlash va ularga samarali kirishni ta'minlash uchun kuchli va ishonchli yechim hisoblanadi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 78-MAVZU TUGASHI -->
+
+        <!-- 79-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-79">
+                <span class="accordion-title">79. PHPda ma’lumotlar bazasi bilan ishlash (CRUD) amallari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-79">
+                <div class="accordion-content-inner">
+                    <p>PHP da ma'lumotlar bazasi bilan ishlashning asosiy amallari <strong>CRUD</strong> (Create, Read, Update, Delete – Yaratish, O'qish, Yangilash, O'chirish) operatsiyalaridir. Bu operatsiyalar MySQLi yoki PDO kengaytmalari yordamida SQL so'rovlari orqali amalga oshiriladi.</p>
+                    <p>Quyida MySQLi (ob'ektga yo'naltirilgan uslub) yordamida CRUD amallarining namunalari keltirilgan. Avvalo, ma'lumotlar bazasiga ulanish o'rnatilgan deb faraz qilinadi (masalan, <code>$conn</code> o'zgaruvchisi orqali).</p>
+                    <pre><code><?php
+// Ma'lumotlar bazasiga ulanish (namuna)
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mydatabase";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Ulanishda xatolik: " . $conn->connect_error);
+}
+$conn->set_charset("utf8mb4"); // Kodirovkani o'rnatish
+?></code></pre>
+
+                    <h5>1. Create (Yaratish - <code>INSERT</code>): Yangi ma'lumot qo'shish</h5>
+                    <pre><code><?php
+// Masalan, "users" jadvaliga yangi foydalanuvchi qo'shish
+$ism = "Anvar";
+$email = "anvar@example.com";
+
+// Prepared statement xavfsizlik uchun
+$stmt = $conn->prepare("INSERT INTO users (name, email) VALUES (?, ?)");
+$stmt->bind_param("ss", $ism, $email); // "ss" - ikkala parametr ham string
+
+if ($stmt->execute()) {
+    $last_id = $conn->insert_id; // Oxirgi qo'shilgan yozuv ID si
+    echo "Yangi yozuv muvaffaqiyatli qo'shildi. ID: " . $last_id;
+} else {
+    echo "Xatolik: " . $stmt->error;
+}
+$stmt->close();
+?></code></pre>
+
+                    <h5>2. Read (O'qish - <code>SELECT</code>): Ma'lumotlarni olish</h5>
+                    <pre><code><?php
+// "users" jadvalidan barcha foydalanuvchilarni olish
+$sql = "SELECT id, name, email FROM users";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Har bir qatordagi ma'lumotlarni chiqarish
+    while($row = $result->fetch_assoc()) {
+        echo "ID: " . $row["id"]. " - Ism: " . htmlspecialchars($row["name"]). " - Email: " . htmlspecialchars($row["email"]). "<br>";
+    }
+} else {
+    echo "0 natija";
+}
+
+// Maxsus shart bilan ma'lumot olish (prepared statement bilan)
+$foydalanuvchi_id = 1;
+$stmt = $conn->prepare("SELECT name, email FROM users WHERE id = ?");
+$stmt->bind_param("i", $foydalanuvchi_id); // "i" - integer
+$stmt->execute();
+$result_user = $stmt->get_result();
+if ($user_row = $result_user->fetch_assoc()) {
+    echo "Foydalanuvchi: " . htmlspecialchars($user_row['name']);
+}
+$stmt->close();
+?></code></pre>
+
+                    <h5>3. Update (Yangilash - <code>UPDATE</code>): Mavjud ma'lumotlarni o'zgartirish</h5>
+                    <pre><code><?php
+// ID si 1 bo'lgan foydalanuvchining emailini yangilash
+$yangi_email = "anvar.yangi@example.com";
+$id_uchun_yangilash = 1;
+
+$stmt = $conn->prepare("UPDATE users SET email = ? WHERE id = ?");
+$stmt->bind_param("si", $yangi_email, $id_uchun_yangilash);
+
+if ($stmt->execute()) {
+    if ($stmt->affected_rows > 0) {
+        echo "Yozuv muvaffaqiyatli yangilandi";
+    } else {
+        echo "Yozuv topilmadi yoki o'zgartirish kiritilmadi.";
+    }
+} else {
+    echo "Xatolik: " . $stmt->error;
+}
+$stmt->close();
+?></code></pre>
+
+                    <h5>4. Delete (O'chirish - <code>DELETE</code>): Ma'lumotlarni o'chirish</h5>
+                    <pre><code><?php
+// ID si 2 bo'lgan foydalanuvchini o'chirish
+$id_uchun_ochirish = 2;
+
+$stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
+$stmt->bind_param("i", $id_uchun_ochirish);
+
+if ($stmt->execute()) {
+    if ($stmt->affected_rows > 0) {
+        echo "Yozuv muvaffaqiyatli o'chirildi";
+    } else {
+        echo "Yozuv topilmadi.";
+    }
+} else {
+    echo "Xatolik: " . $stmt->error;
+}
+$stmt->close();
+
+// $conn->close(); // Barcha amallar tugagach ulanishni yopish
+?></code></pre>
+                    <p><strong>Muhim Eslatmalar:</strong></p>
+                    <ul>
+                        <li><strong>Xavfsizlik:</strong> Har doim foydalanuvchidan kelgan ma'lumotlarni SQL so'rovlariga to'g'ridan-to'g'ri qo'shishdan oldin ularni xavfsizlantiring. Buning uchun <strong>prepared statements</strong> (tayyorlangan so'rovlar) dan foydalanish eng yaxshi amaliyot hisoblanadi. Bu SQL Injection hujumlarining oldini oladi.</li>
+                        <li><strong>Xatoliklarni Tekshirish:</strong> Har bir ma'lumotlar bazasi operatsiyasidan keyin xatoliklarni tekshiring (masalan, <code>$conn->error</code>, <code>$stmt->error</code>).</li>
+                        <li><strong>Resurslarni Bo'shatish:</strong> Statement ob'ektlarini (<code>$stmt->close()</code>) va oxirida ma'lumotlar bazasi ulanishini (<code>$conn->close()</code>) yopishni unutmang.</li>
+                    </ul>
+                    <p>PDO kengaytmasi ham xuddi shunga o'xshash CRUD amallarini bajarish imkonini beradi, faqat sintaksis va metod nomlari biroz farq qiladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 79-MAVZU TUGASHI -->
+
+        <!-- 80-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-80">
+                <span class="accordion-title">80. Jadval yaratish. Jadvaldagi ma’lumotlarni o‘qish, o‘zgartirish, o‘chirish. PHP da AJAX texnologiyasi bilan ishlash.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-80">
+                <div class="accordion-content-inner">
+                    <p>Bu savol bir nechta muhim jihatlarni o'z ichiga oladi: MySQL da jadval yaratish, CRUD amallari (79-savolda qisman ko'rib chiqilgan) va PHP da AJAX bilan ishlash.</p>
+                    <h5>1. MySQL da Jadval Yaratish (<code>CREATE TABLE</code>):</h5>
+                    <p>Jadval yaratish uchun SQL ning <code>CREATE TABLE</code> buyrug'i ishlatiladi. PHP orqali bu buyruqni bajarish mumkin.</p>
+                    <pre><code><?php
+// $conn - ma'lumotlar bazasiga ulanish ob'ekti (oldingi savollardagidek)
+
+$sql_create_table = "CREATE TABLE IF NOT EXISTS products (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description TEXT,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+
+if ($conn->query($sql_create_table) === TRUE) {
+    echo " 'products' jadvali muvaffaqiyatli yaratildi yoki allaqachon mavjud.";
+} else {
+    echo "Jadval yaratishda xatolik: " . $conn->error;
+}
+?></code></pre>
+                    <p>Bu yerda:</p>
+                    <ul>
+                        <li><code>INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY</code>: <code>id</code> ustuni, avtomatik o'suvchi, belgilanmagan butun son va asosiy kalit.</li>
+                        <li><code>VARCHAR(255) NOT NULL</code>: Maksimal 255 belgidan iborat satr, bo'sh bo'lishi mumkin emas.</li>
+                        <li><code>DECIMAL(10, 2)</code>: O'nli kasr, jami 10 ta raqam, shundan 2 tasi kasrdan keyin.</li>
+                        <li><code>TEXT</code>: Uzun matnlar uchun.</li>
+                        <li><code>TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</code>: Yozuv yaratilganda va yangilanganda avtomatik vaqt belgisi.</li>
+                    </ul>
+
+                    <h5>2. Jadvaldagi Ma'lumotlarni O'qish, O'zgartirish, O'chirish (CRUD):</h5>
+                    <p>Bu amallar 79-savolda batafsil ko'rsatilgan (<code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code> so'rovlari orqali).</p>
+
+                    <h5>3. PHP da AJAX Texnologiyasi Bilan Ishlash:</h5>
+                    <p><strong>AJAX (Asynchronous JavaScript and XML)</strong> – bu veb-sahifani to'liq qayta yuklamasdan server bilan fon rejimida ma'lumot almashish imkonini beruvchi texnologiyalar to'plamidir. Bu foydalanuvchi tajribasini sezilarli darajada yaxshilaydi, chunki sahifalar tezroq javob beradi va dinamikroq bo'ladi.</p>
+                    <p>AJAX da asosan JavaScript (mijoz tomonida) serverdagi PHP skriptiga so'rov yuboradi. PHP skripti ma'lumotlarni qayta ishlaydi (masalan, ma'lumotlar bazasidan o'qiydi yoki unga yozadi) va javobni (odatda JSON yoki XML formatida, ba'zan HTML) JavaScriptga qaytaradi. JavaScript esa olingan javob asosida sahifaning ma'lum bir qismini yangilaydi.</p>
+
+                    <h6>Mijoz Tomoni (JavaScript - masalan, Fetch API yoki jQuery AJAX bilan):</h6>
+                    <pre><code><!-- index.html yoki script.js -->
+<button id="loadDataBtn">Ma'lumotlarni Yuklash</button>
+<div id="resultArea"></div>
+
+<script>
+document.getElementById('loadDataBtn').addEventListener('click', function() {
+    // Fetch API yordamida
+    fetch('data_handler.php?action=get_products') // PHP fayliga GET so'rovi
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Tarmoq javobi yaxshi emas: ' + response.statusText);
+            }
+            return response.json(); // Javobni JSON sifatida o'qish
+        })
+        .then(data => {
+            let output = '<ul>';
+            data.forEach(function(product) {
+                output += '<li>' + product.product_name + ' - $' + product.price + '</li>';
+            });
+            output += '</ul>';
+            document.getElementById('resultArea').innerHTML = output;
+        })
+        .catch(error => {
+            console.error('Ma\'lumotlarni olishda xatolik:', error);
+            document.getElementById('resultArea').innerHTML = 'Xatolik yuz berdi.';
+        });
+});
+
+// POST so'rovi uchun (masalan, forma ma'lumotlarini yuborish)
+/*
+let formData = new FormData();
+formData.append('product_name', 'Yangi Mahsulot');
+formData.append('price', '19.99');
+
+fetch('data_handler.php?action=add_product', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    console.log('Qo\'shish natijasi:', data);
+})
+.catch(error => console.error('Xatolik:', error));
+*/
+</script></code></pre>
+
+                    <h6>Server Tomoni (PHP - <code>data_handler.php</code>):</h6>
+                    <pre><code><?php
+// Ma'lumotlar bazasiga ulanish ($conn)
+// ... (oldingi ulanish kodingiz) ...
+header('Content-Type: application/json'); // Javob turi JSON ekanligini bildirish
+
+$action = $_GET['action'] ?? ''; // Yoki $_POST['action']
+
+if ($conn->connect_error) {
+    echo json_encode(['error' => 'Database connection failed: ' . $conn->connect_error]);
+    exit;
+}
+
+switch ($action) {
+    case 'get_products':
+        $products = [];
+        $sql = "SELECT product_name, price FROM products";
+        $result = $conn->query($sql);
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $products[] = $row;
+            }
+            echo json_encode($products);
+        } else {
+            echo json_encode(['error' => 'Could not retrieve products: ' . $conn->error]);
+        }
+        break;
+
+    case 'add_product':
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $product_name = $_POST['product_name'] ?? '';
+            $price = $_POST['price'] ?? 0;
+
+            if (!empty($product_name) && is_numeric($price)) {
+                $stmt = $conn->prepare("INSERT INTO products (product_name, price) VALUES (?, ?)");
+                $stmt->bind_param("sd", $product_name, $price); // s - string, d - double
+                if ($stmt->execute()) {
+                    echo json_encode(['success' => true, 'message' => 'Mahsulot qo\'shildi!', 'id' => $conn->insert_id]);
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'Xatolik: ' . $stmt->error]);
+                }
+                $stmt->close();
+            } else {
+                echo json_encode(['success' => false, 'message' => 'Noto\'g\'ri ma\'lumotlar.']);
+            }
+        }
+        break;
+
+    default:
+        echo json_encode(['error' => 'Noto\'g\'ri amal.']);
+        break;
+}
+
+$conn->close();
+?></code></pre>
+                    <p>Bu AJAX bilan ishlashning sodda namunasi. Haqiqiy ilovalarda xatoliklarni qayta ishlash, xavfsizlik va foydalanuvchi interfeysini yangilash yanada murakkabroq bo'lishi mumkin. jQuery AJAX metodlari (<code>$.ajax()</code>, <code>$.get()</code>, <code>$.post()</code>) ham bu jarayonni soddalashtirishi mumkin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 80-MAVZU TUGASHI -->
+
+        <!-- 81-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-81">
+                <span class="accordion-title">81. CMS (Content Management System-kontentlarni boshqarish tizimlari) texnologiyasi haqida.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-81">
+                <div class="accordion-content-inner">
+                    <p><strong>CMS (Content Management System – Kontentlarni Boshqarish Tizimlari)</strong> – bu veb-sayt mazmunini (matn, rasm, video, audio va boshqa fayllar) yaratish, tahrirlash, boshqarish va nashr etishni osonlashtiradigan dasturiy ta'minot yoki veb-ilova.</p>
+                    <p>CMS ning asosiy maqsadi foydalanuvchilarga (ayniqsa texnik bilimlari cheklanganlarga) veb-sayt mazmunini chuqur dasturlash bilimlarisiz boshqarish imkonini berishdir.</p>
+                    <h5>CMS Texnologiyasining Asosiy Komponentlari va Ishlash Printsipi:</h5>
+                    <ol>
+                        <li>
+                            <strong>Ma'lumotlar Bazasi (Database):</strong>
+                            <ul>
+                                <li>Veb-saytning barcha kontenti (maqolalar, sahifalar, foydalanuvchi ma'lumotlari, sozlamalar va h.k.) odatda ma'lumotlar bazasida (ko'pincha MySQL) saqlanadi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Kontentni Boshqarish Ilovasi (Content Management Application - CMA):</strong>
+                            <ul>
+                                <li>Bu CMS ning administrator yoki muharrir tomonidan ishlatiladigan qismi. U kontentni yaratish, o'zgartirish, o'chirish va tashkil etish uchun foydalanuvchiga qulay interfeysni (odatda veb-asoslangan) taqdim etadi.</li>
+                                <li>Ko'pincha WYSIWYG (What You See Is What You Get) muharrirlari, media boshqaruvchilari va boshqa vositalarni o'z ichiga oladi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Kontentni Yetkazib Berish Ilovasi (Content Delivery Application - CDA):</strong>
+                            <ul>
+                                <li>Bu komponent ma'lumotlar bazasidagi kontentni yig'adi, uni shablonlar (templates) yordamida formatlaydi va veb-sayt sifatida foydalanuvchining brauzeriga yetkazib beradi.</li>
+                                <li>U URL manzillarini boshqarish, navigatsiya yaratish va dinamik kontentni generatsiya qilish uchun javobgar.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Shablonlar (Templates) / Mavzular (Themes):</strong>
+                            <ul>
+                                <li>Veb-saytning tashqi ko'rinishi va dizaynini belgilaydi. Kontent shablonlarga joylashtiriladi. Ko'pgina CMSlar oldindan tayyorlangan shablonlarni taklif qiladi yoki yangilarini yaratish/moslashtirish imkonini beradi.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Plaginlar (Plugins) / Kengaytmalar (Extensions) / Modullar (Modules):</strong>
+                            <ul>
+                                <li>CMS ning standart funksionalligini kengaytirish uchun qo'shimcha dasturiy komponentlar. Ular yordamida SEO vositalari, ijtimoiy tarmoq integratsiyasi, elektron tijorat imkoniyatlari, forumlar, aloqa formalari kabi yangi xususiyatlarni qo'shish mumkin.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h5>CMS ning Ishlash Jarayoni (soddalashtirilgan):</h5>
+                    <ol>
+                        <li><strong>Kontent Yaratish/Tahrirlash:</strong> Administrator yoki muharrir CMA interfeysi orqali yangi kontent qo'shadi yoki mavjudini o'zgartiradi. Bu ma'lumotlar ma'lumotlar bazasiga saqlanadi.</li>
+                        <li><strong>Foydalanuvchi So'rovi:</strong> Foydalanuvchi brauzeri orqali veb-saytning ma'lum bir sahifasiga so'rov yuboradi.</li>
+                        <li><strong>So'rovni Qayta Ishlash:</strong> CDA so'rovni qabul qiladi, kerakli kontentni ma'lumotlar bazasidan oladi.</li>
+                        <li><strong>Sahifani Generatsiya Qilish:</strong> CDA olingan kontentni mos shablon (tema) yordamida HTML sahifaga aylantiradi.</li>
+                        <li><strong>Javob Yuborish:</strong> Generatsiya qilingan HTML sahifa (CSS va JavaScript bilan birga) foydalanuvchining brauzeriga yuboriladi va ko'rsatiladi.</li>
+                    </ol>
+                    <p>CMS texnologiyasi veb-sayt yaratish va boshqarish jarayonini ancha soddalashtiradi, bu esa turli xil ehtiyojlar uchun (shaxsiy bloglardan tortib yirik korporativ portallargacha) veb-saytlarni samarali ravishda yaratish va qo'llab-quvvatlash imkonini beradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 81-MAVZU TUGASHI -->
+
+        <!-- 82-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-82">
+                <span class="accordion-title">82. CMS(Content Management System- Kontentlarni boshqarish tizimlari)dan foydalanishning afzallik va kamchiliklari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-82">
+                <div class="accordion-content-inner">
+                    <p>Kontentlarni Boshqarish Tizimlari (CMS) dan foydalanish ko'plab afzalliklarga ega bo'lishi bilan birga, ba'zi kamchiliklarni ham o'z ichiga oladi.</p>
+                    <h5>CMS dan Foydalanishning Afzalliklari:</h5>
+                    <ul>
+                        <li><strong>Foydalanish Osonligi:</strong> Eng katta afzalliklardan biri. Ko'pgina CMSlar intuitiv, foydalanuvchiga qulay interfeyslarni (ko'pincha WYSIWYG muharrirlari bilan) taklif qiladi, bu esa texnik bilimlarga ega bo'lmagan shaxslarga ham kontentni osongina yaratish, tahrirlash va boshqarish imkonini beradi.</li>
+                        <li><strong>Tezkor Ishlab Chiqish va O'rnatish:</strong> Tayyor shablonlar (mavzular) va plaginlar yordamida veb-saytni tezda ishga tushirish mumkin. Ko'p kod yozish zarurati yo'q.</li>
+                        <li><strong>Xarajatlarni Tejalishi (ba'zan):</strong> Ko'plab ochiq kodli CMSlar (masalan, WordPress, Joomla, Drupal) bepul. Bu dastlabki xarajatlarni kamaytiradi, ammo maxsus dizayn, plaginlar va qo'llab-quvvatlash uchun xarajatlar bo'lishi mumkin.</li>
+                        <li><strong>Foydalanuvchi Rollari va Ruxsatlarini Boshqarish:</strong> Ko'pgina CMSlar turli foydalanuvchi guruhlari (administrator, muharrir, muallif) uchun kirish huquqlarini oson boshqarish imkonini beradi.</li>
+                        <li><strong>SEO ga Qulaylik:</strong> Ko'pgina CMSlar SEO (Qidiruv Tizimlarini Optimallashtirish) uchun o'rnatilgan vositalarga yoki plaginlarga ega (masalan, meta-teglar, sayt xaritalari, URL tuzilishi).</li>
+                        <li><strong>Mavzular va Shablonlar Ko'pligi:</strong> Veb-sayt dizaynini o'zgartirish uchun keng tanlovdagi tayyor mavzular (ko'pincha bepul yoki pullik) mavjud.</li>
+                        <li><strong>Kengaytirilishi Mumkinligi (Plaginlar/Modullar):</strong> Plaginlar yordamida CMS ning standart funksionalligini (masalan, elektron tijorat, forum, ijtimoiy tarmoq integratsiyasi) osongina kengaytirish mumkin.</li>
+                        <li><strong>Katta Hamjamiyat va Qo'llab-quvvatlash:</strong> Ommabop CMSlar katta va faol hamjamiyatlarga ega, bu esa hujjatlar, darsliklar, forumlar va yordam topishni osonlashtiradi.</li>
+                        <li><strong>Hamkorlikda Ishlash Imkoniyati:</strong> Bir nechta foydalanuvchi bir vaqtning o'zida kontent ustida ishlashi mumkin.</li>
+                        <li><strong>Yangilanishlar va Xavfsizlik (qisman):</strong> Odatda CMS ishlab chiquvchilari muntazam ravishda yangilanishlar va xavfsizlik yamoqlarini chiqaradi (ularni o'z vaqtida o'rnatish muhim).</li>
+                    </ul>
+                    <h5>CMS dan Foydalanishning Kamchiliklari:</h5>
+                    <ul>
+                        <li><strong>Xavfsizlik Xatarlari:</strong> Ommabop CMSlar (ayniqsa WordPress) xakerlar uchun keng tarqalgan nishon hisoblanadi. Agar CMS, mavzular va plaginlar muntazam yangilanib turilmasa, xavfsizlik zaifliklari paydo bo'lishi mumkin.</li>
+                        <li><strong>Ishlash Samaradorligi Muammolari:</strong> Ba'zan CMSlar maxsus kodlangan saytlarga qaraganda sekinroq ishlashi mumkin, ayniqsa ko'plab plaginlar o'rnatilgan bo'lsa yoki server noto'g'ri sozlangan bo'lsa.</li>
+                        <li><strong>Moslashtirish Cheklovlari:</strong> Garchi CMSlar moslashuvchan bo'lsa-da, ba'zida juda maxsus dizayn yoki funksionallikni amalga oshirish qiyin bo'lishi yoki qimmatga tushishi mumkin.</li>
+                        <li><strong>Ortiqcha Yuk (Bloat):</strong> Ba'zi CMSlar sizga kerak bo'lmagan ko'plab funksiyalarni o'z ichiga olishi mumkin, bu esa tizimni murakkablashtirishi va sekinlashtirishi mumkin.</li>
+                        <li><strong>O'rganish Egri Chizig'i:</strong> Oddiy foydalanuvchilar uchun oson bo'lsa-da, CMS ni to'liq sozlash, mavzularni o'zgartirish yoki murakkab plaginlar bilan ishlash ma'lum bir o'rganishni talab qiladi.</li>
+                        <li><strong>Yangilanishlar Bilan Bog'liq Muammolar:</strong> Ba'zan CMS yadrosi, mavzular yoki plaginlarni yangilash boshqa komponentlar bilan mos kelmaslik muammolarini keltirib chiqarishi mumkin (sayt "sinishi" mumkin).</li>
+                        <li><strong>Bog'liqlik:</strong> Siz ma'lum bir CMS platformasiga va uning ekotizimiga (plaginlar, mavzular) bog'lanib qolishingiz mumkin.</li>
+                        <li><strong>Dizayn Bir Xilligi:</strong> Agar standart mavzular ko'p o'zgartirilmasa, ko'plab CMS saytlari bir-biriga o'xshab qolishi mumkin.</li>
+                        <li><strong>Server Resurslariga Talab:</strong> Ba'zi CMSlar oddiy statik saytlarga qaraganda ko'proq server resurslarini (xotira, protsessor vaqti) talab qilishi mumkin.</li>
+                    </ul>
+                    <p>CMS tanlashda loyihaning ehtiyojlari, byudjeti, texnik imkoniyatlar va kelajakdagi rivojlanish rejalarini hisobga olish kerak.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 82-MAVZU TUGASHI -->
+
+        <!-- 83-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-83">
+                <span class="accordion-title">83. CMS (Content Management System)xususiyatlari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-83">
+                <div class="accordion-content-inner">
+                    <p>Kontentlarni Boshqarish Tizimlari (CMS) veb-sayt yaratish, boshqarish va mazmunini yangilab turishni osonlashtirish uchun keng ko'lamli xususiyatlarni taklif etadi. Bu xususiyatlar CMS turiga va maqsadiga qarab farq qilishi mumkin, ammo quyidagilar eng keng tarqalganlari hisoblanadi:</p>
+                    <ol>
+                        <li>
+                            <strong>Kontent Yaratish va Tahrirlash:</strong>
+                            <ul>
+                                <li><strong>WYSIWYG (What You See Is What You Get) Muharriri:</strong> Matnni formatlash, rasmlar qo'shish, havolalar yaratish kabi amallarni vizual tarzda bajarish imkonini beradi (Microsoft Word ga o'xshash).</li>
+                                <li><strong>Media Boshqaruvi:</strong> Rasmlar, videolar, audio fayllar va boshqa media resurslarni yuklash, saqlash, tartiblash va kontentga qo'shish.</li>
+                                <li><strong>Kontent Versiyalari (Versioning):</strong> O'zgartirishlar tarixini saqlash va kerak bo'lganda oldingi versiyalarga qaytish imkoniyati.</li>
+                                <li><strong>Rejalashtirilgan Nashr (Scheduled Publishing):</strong> Kontentni ma'lum bir sana va vaqtda avtomatik ravishda nashr etish.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Foydalanuvchilarni Boshqarish va Rollar:</strong>
+                            <ul>
+                                <li><strong>Foydalanuvchi Ro'yxatdan O'tishi va Profillari:</strong></li>
+                                <li><strong>Rolga Asoslangan Kirishni Boshqarish (RBAC):</strong> Turli foydalanuvchi guruhlari (masalan, Administrator, Muharrir, Muallif, A'zo) uchun turli xil huquq va ruxsatlarni belgilash.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Dizayn va Tashqi Ko'rinishni Sozlash (Templating & Theming):</strong>
+                            <ul>
+                                <li><strong>Mavzular (Themes) / Shablonlar (Templates):</strong> Veb-saytning umumiy dizayni va layoutini o'zgartirish uchun tayyor yoki maxsus yaratilgan shablonlar.</li>
+                                <li><strong>Mavzularni Moslashtirish:</strong> Ranglar, shriftlar, layout qismlari kabi dizayn elementlarini sozlash imkoniyati.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Kengaytiriluvchanlik (Extensibility):</strong>
+                            <ul>
+                                <li><strong>Plaginlar (Plugins) / Modullar (Modules) / Kengaytmalar (Extensions):</strong> CMS ning standart funksionalligini qo'shimcha xususiyatlar bilan boyitish (masalan, SEO, ijtimoiy tarmoqlar, elektron tijorat, forumlar, xavfsizlik).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Kontentni Tashkil Etish va Navigatsiya:</strong>
+                            <ul>
+                                <li><strong>Kategoriyalar va Teglar:</strong> Kontentni mavzular bo'yicha guruhlash va belgilash.</li>
+                                <li><strong>Menyularni Boshqarish:</strong> Sayt navigatsiyasini (menyu va submenu) osonlik bilan yaratish va o'zgartirish.</li>
+                                <li><strong>Maxsus Post Turlari (Custom Post Types):</strong> Standart sahifa yoki maqoladan farq qiladigan maxsus kontent turlarini (masalan, mahsulotlar, portfoliolar, tadbirlar) yaratish.</li>
+                                <li><strong>URL Tuzilishini Boshqarish (Permalinks):</strong> O'qilishi oson va SEO ga qulay URL manzillarini yaratish.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>SEO (Search Engine Optimization) Vositalari:</strong>
+                            <ul>
+                                <li>Meta-teglar (sarlavha, tavsif, kalit so'zlar) ni tahrirlash.</li>
+                                <li>Sayt xaritasi (Sitemap) generatsiyasi.</li>
+                                <li>Qidiruv tizimlari uchun "do'stona" URL lar.</li>
+                                <li>Kanonik URL lar va qayta yo'naltirishlarni boshqarish (ko'pincha plaginlar orqali).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ko'p Tillilik (Multilingual Support):</strong>
+                            <ul>
+                                <li>Sayt mazmunini bir nechta tilda taqdim etish imkoniyati (o'rnatilgan yoki plaginlar yordamida).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Xavfsizlik Xususiyatlari:</strong>
+                            <ul>
+                                <li>Foydalanuvchi autentifikatsiyasi va avtorizatsiyasi.</li>
+                                <li>Spamdan himoya qilish vositalari.</li>
+                                <li>Muntazam yangilanishlar (agar CMS qo'llab-quvvatlansa va o'rnatilsa).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Ish Jarayonini Boshqarish (Workflow Management):</strong>
+                            <ul>
+                                <li>Kontentni yaratish, ko'rib chiqish va tasdiqlash jarayonlarini boshqarish (ko'pincha yirik CMS larda).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Zaxira Nusxalash va Tiklash (Backup and Restore):</strong>
+                            <ul>
+                                <li>Sayt ma'lumotlarini zaxiralash va kerak bo'lganda tiklash imkoniyati (ba'zan o'rnatilgan, ba'zan plaginlar orqali).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>Bu xususiyatlar to'plami CMS ni veb-sayt yaratish va boshqarish uchun kuchli va moslashuvchan vositaga aylantiradi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 83-MAVZU TUGASHI -->
+
+        <!-- 84-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-84">
+                <span class="accordion-title">84. Mavjud zamonaviy CMS (Content Management System)turlari.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-84">
+                <div class="accordion-content-inner">
+                    <p>Zamonaviy Kontentlarni Boshqarish Tizimlari (CMS) turli xil ehtiyojlar va texnik yondashuvlarga mos keladigan bir nechta asosiy turlarga bo'linadi. Ular arxitekturasi, foydalanish maqsadi va texnologik stekiga qarab farqlanadi.</p>
+                    <h5>Asosiy zamonaviy CMS turlari:</h5>
+                    <ol>
+                        <li>
+                            <strong>An'anaviy (Monolitik / Coupled) CMS:</strong>
+                            <ul>
+                                <li><strong>Ta'rif:</strong> Bu turdagi CMS larda kontentni boshqarish qismi (backend) va kontentni taqdim etish qismi (frontend) bitta tizim ichida chambarchas bog'langan.</li>
+                                <li><strong>Xususiyatlari:</strong> Odatda "hammasi birda" yechim bo'lib, o'rnatish va sozlash nisbatan oson. Foydalanuvchilar uchun keng ko'lamli mavzular va plaginlar taklif qiladi.</li>
+                                <li><strong>Misollar:</strong> WordPress (eng mashhuri), Joomla, Drupal (garchi Drupal ham decoupled yoki headless rejimda ishlatilishi mumkin bo'lsa ham).</li>
+                                <li><strong>Qo'llanilishi:</strong> Bloglar, kichik va o'rta biznes saytlari, yangiliklar portallari, oddiy onlayn do'konlar.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Headless (Boshsiz / API-First) CMS:</strong>
+                            <ul>
+                                <li><strong>Ta'rif:</strong> Bu CMS larda kontentni boshqarish ombori (backend) taqdimot qatlamidan (frontend) to'liq ajratilgan. Kontent API (odatda RESTful yoki GraphQL) orqali istalgan frontend ga (veb-sayt, mobil ilova, IoT qurilmasi) yetkazib beriladi.</li>
+                                <li><strong>Xususiyatlari:</strong> Frontend texnologiyasini tanlashda to'liq erkinlik, yuqori ishlash samaradorligi, yaxshilangan xavfsizlik, ko'p kanalli kontent tarqatish imkoniyati.</li>
+                                <li><strong>Misollar:</strong> Contentful, Strapi, Sanity, Kontent.ai (Kentico Kontent), Directus, Storyblok.</li>
+                                <li><strong>Qo'llanilishi:</strong> Zamonaviy JavaScript freymvorklari (React, Vue, Angular) bilan quriladigan veb-saytlar, mobil ilovalar, raqamli displeylar, bir nechta platformada bir xil kontentni ishlatadigan loyihalar.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Decoupled (Ajratilgan / Gibrid) CMS:</strong>
+                            <ul>
+                                <li><strong>Ta'rif:</strong> Headless CMS ga o'xshash, lekin odatda o'zining standart frontend taqdimot tizimiga ham ega bo'ladi, shu bilan birga kontentni API orqali boshqa kanallarga ham yetkazib bera oladi. Bu an'anaviy va headless CMS o'rtasidagi gibrid yondashuv.</li>
+                                <li><strong>Xususiyatlari:</strong> Ham an'anaviy veb-sayt, ham boshqa raqamli mahsulotlar uchun kontentni boshqarish imkoniyati.</li>
+                                <li><strong>Misollar:</strong> Drupal, ba'zi hollarda WordPress (REST API bilan).</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>SaaS (Software as a Service) CMS / Veb-sayt Konstruktorlari:</strong>
+                            <ul>
+                                <li><strong>Ta'rif:</strong> Bulutli platformalar bo'lib, CMS dasturiy ta'minoti, hosting, texnik xizmat ko'rsatish va yangilanishlar provayder tomonidan ta'minlanadi. Foydalanuvchilar odatda oylik yoki yillik obuna to'laydi.</li>
+                                <li><strong>Xususiyatlari:</strong> O'rnatish oson, texnik bilim talab qilmaydi, ko'pincha "sudrab olib tashlash" (drag-and-drop) interfeysiga ega. Moslashtirish imkoniyatlari cheklangan bo'lishi mumkin.</li>
+                                <li><strong>Misollar:</strong> Wix, Squarespace, Shopify (asosan elektron tijorat, lekin kuchli CMS imkoniyatlariga ega), Webflow.</li>
+                                <li><strong>Qo'llanilishi:</strong> Kichik bizneslar, shaxsiy portfoliolar, oddiy onlayn do'konlar, tezda sayt yaratish kerak bo'lgan holatlar.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Statik Sayt Generatorlari (SSG) bilan ishlatiladigan CMS lar:</strong>
+                            <ul>
+                                <li><strong>Ta'rif:</strong> Bu to'g'ridan-to'g'ri CMS turi emas, balki SSG lar (masalan, Jekyll, Hugo, Gatsby, Next.js (static export)) bilan birgalikda ishlatiladigan kontentni boshqarish yondashuvlari. Kontent odatda Markdown fayllarida, JSON/YAML da yoki Headless CMS da saqlanadi.</li>
+                                <li><strong>Xususiyatlari:</strong> Natijada juda tezkor, xavfsiz va arzon hosting talab qiladigan statik saytlar hosil bo'ladi.</li>
+                                <li><strong>CMS Misollari (SSG uchun):</strong> Netlify CMS (hozirda Decap CMS), Forestry.io (hozirda TinaCMS ning bir qismi), TinaCMS, yoki istalgan Headless CMS.</li>
+                                <li><strong>Qo'llanilishi:</strong> Bloglar, hujjatlar saytlari, portfoliolar, tezlik va xavfsizlik muhim bo'lgan loyihalar.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Git-ga Asoslangan CMS (Git-based CMS):</strong>
+                            <ul>
+                                <li><strong>Ta'rif:</strong> Kontent to'g'ridan-to'g'ri Git omborida (masalan, GitHub, GitLab) saqlanadi va versiyalanadi. Odatda Markdown fayllari bilan ishlaydi.</li>
+                                <li><strong>Xususiyatlari:</strong> Dasturchilar uchun qulay ish jarayoni, kontent versiyalarini to'liq nazorat qilish, ko'pincha bepul yoki arzon.</li>
+                                <li><strong>Misollar:</strong> Yuqorida aytilgan SSG uchun CMS larning ko'pchiligi (Decap CMS, TinaCMS).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>CMS turini tanlash loyihaning o'ziga xos talablari, jamoaning texnik ko'nikmalari, byudjeti va kelajakdagi rivojlanish rejalariga bog'liq.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 84-MAVZU TUGASHI -->
 
 
+
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-85">
+                <span class="accordion-title">85. $mevalar = ["olma", "banan"]; Massivga yangi element qo‘shing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-85">
+                <div class="accordion-content-inner">
+                    <p>Massivga yangi element qo'shishning bir necha yo'li bor:</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan"];
+$mevalar[] = "anor";
+array_push($mevalar, "shaftoli");
+print_r($mevalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 85-MAVZU TUGASHI -->
+
+        <!-- 86-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-86">
+                <span class="accordion-title">86. $mevalar = ["olma", "banan", "anor"]; Massivning oxirgi elementini olib tashlang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-86">
+                <div class="accordion-content-inner">
+                    <p><code>array_pop()</code> funksiyasi massivning oxirgi elementini olib tashlaydi va uni qaytaradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor"];
+$ochirilgan_meva = array_pop($mevalar);
+echo "O'chirilgan meva: " . $ochirilgan_meva . "<br>";
+print_r($mevalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 86-MAVZU TUGASHI -->
+
+        <!-- 87-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-87">
+                <span class="accordion-title">87. $meva1 = ["olma", "banan"]; $meva2 = ["anor", "uzum"]; Ikki massivni birlashtiring.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-87">
+                <div class="accordion-content-inner">
+                    <p><code>array_merge()</code> funksiyasi bir yoki bir nechta massivni birlashtiradi.</p>
+                    <pre><code><?php
+$meva1 = ["olma", "banan"];
+$meva2 = ["anor", "uzum"];
+$birlashgan_mevalar = array_merge($meva1, $meva2);
+print_r($birlashgan_mevalar);
+?></code></pre>
+                    <p>Agar kalitlar bir xil bo'lsa (assotsiativ massivlarda), keyingisi oldingisini ustiga yozadi.
+                    Indekslangan massivlarda esa shunchaki ketma-ket qo'shiladi.
+                    Agar + operatori ishlatilsa, bir xil kalitlar uchun birinchi massivdagi qiymat saqlanib qoladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 87-MAVZU TUGASHI -->
+
+        <!-- 88-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-88">
+                <span class="accordion-title">88. $mevalar = ["olma", "banan", "anor"]; Massivda anor borligini tekshiruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-88">
+                <div class="accordion-content-inner">
+                    <p><code>in_array()</code> funksiyasi massivda ma'lum bir qiymat mavjudligini tekshiradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor"];
+$qidirilayotgan_meva = "anor";
+
+if (in_array($qidirilayotgan_meva, $mevalar)) {
+    echo "'" . $qidirilayotgan_meva . "' massivda mavjud.<br>";
+} else {
+    echo "'" . $qidirilayotgan_meva . "' massivda mavjud emas.<br>";
+}
+
+$boshqa_meva = "shaftoli";
+if (in_array($boshqa_meva, $mevalar)) {
+    echo "'" . $boshqa_meva . "' massivda mavjud.<br>";
+} else {
+    echo "'" . $boshqa_meva . "' massivda mavjud emas.<br>";
+}
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 88-MAVZU TUGASHI -->
+
+        <!-- 89-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-89">
+                <span class="accordion-title">89. $mevalar = ["olma", "banan", "anor"]; Massivda elementni qidiruvchi va uning indeksini qaytaruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-89">
+                <div class="accordion-content-inner">
+                    <p><code>array_search()</code> funksiyasi massivda berilgan qiymatni qidiradi va agar topilsa, uning birinchi uchragan kalitini (indeksini) qaytaradi. Agar topilmasa, <code>false</code> qaytaradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor", "banan"];
+$qidirilayotgan_element = "banan";
+$indeks = array_search($qidirilayotgan_element, $mevalar);
+
+if ($indeks !== false) {
+    echo "'" . $qidirilayotgan_element . "' elementi " . $indeks . "-indeksda topildi.<br>";
+} else {
+    echo "'" . $qidirilayotgan_element . "' elementi massivda topilmadi.<br>";
+}
+
+$topilmaydigan_element = "uzum";
+$indeks_yoq = array_search($topilmaydigan_element, $mevalar);
+if ($indeks_yoq !== false) {
+    echo "'" . $topilmaydigan_element . "' elementi " . $indeks_yoq . "-indeksda topildi.<br>";
+} else {
+    echo "'" . $topilmaydigan_element . "' elementi massivda topilmadi.<br>";
+}
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 89-MAVZU TUGASHI -->
+        <!-- 90-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-90">
+                <span class="accordion-title">90. $mevalar = ["olma", "banan", "anor"];Massivdagi barcha elementlarni katta harfga o'zgartiring.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-90">
+                <div class="accordion-content-inner">
+                    <p><code>array_map()</code> funksiyasi massivning har bir elementiga ma'lum bir funksiyani qo'llaydi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor"];
+$katta_harfli_mevalar = array_map('strtoupper', $mevalar);
+print_r($katta_harfli_mevalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 90-MAVZU TUGASHI -->
+        <!-- 101-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-101">
+                <span class="accordion-title">101. $matnlar = ["olma", "banan", "anor"];Massivdagi barcha elementlarning birinchi harfini o'zgartirib, yangi massivga saqlang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-101">
+                <div class="accordion-content-inner">
+                    <p><code>array_map()</code> va <code>ucfirst()</code> funksiyalari yordamida.</p>
+                    <pre><code><?php
+$matnlar = ["olma", "banan", "anor"];
+$bosh_harfi_ozgartirilgan = array_map('ucfirst', $matnlar);
+print_r($bosh_harfi_ozgartirilgan);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 101-MAVZU TUGASHI -->
+
+        <!-- 102-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-102">
+                <span class="accordion-title">102. $sonlar = [10, 20, 30, 40, 50];Massivdagi har bir sonning kvadratini hisoblab, yangi massivga saqlang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-102">
+                <div class="accordion-content-inner">
+                    <p><code>array_map()</code> funksiyasidan foydalanamiz.</p>
+                    <pre><code><?php
+$sonlar = [10, 20, 30, 40, 50];
+$kvadratlar = array_map(function($son) {
+    return $son * $son;
+}, $sonlar);
+print_r($kvadratlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 102-MAVZU TUGASHI -->
+
+        <!-- 103-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-103">
+                <span class="accordion-title">103. $raqamlar = [10, 15, 20, 25, 30];Massivda faqat 15 dan katta qiymatlarni qoldiruvchi dastur yozing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-103">
+                <div class="accordion-content-inner">
+                    <p><code>array_filter()</code> funksiyasi yordamida.</p>
+                    <pre><code><?php
+$raqamlar = [10, 15, 20, 25, 30, 12, 18];
+$kattalar_15dan = array_filter($raqamlar, function($raqam) {
+    return $raqam > 15;
+});
+print_r($kattalar_15dan);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 103-MAVZU TUGASHI -->
+
+        <!-- 104-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-104">
+                <span class="accordion-title">104. $sonlar = [5, 8, 12, 15, 19];Massivdagi eng katta va eng kichik elementning farqini hisoblang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-104">
+                <div class="accordion-content-inner">
+                    <p><code>max()</code> va <code>min()</code> funksiyalaridan foydalanamiz.</p>
+                    <pre><code><?php
+$sonlar = [5, 8, 12, 15, 19, 2];
+if (count($sonlar) >= 2) {
+    $eng_katta = max($sonlar);
+    $eng_kichik = min($sonlar);
+    $farq = $eng_katta - $eng_kichik;
+
+    echo "Eng katta: " . $eng_katta . "<br>";
+    echo "Eng kichik: " . $eng_kichik . "<br>";
+    echo "Farqi: " . $farq;
+} elseif (!empty($sonlar)) {
+    echo "Farqni hisoblash uchun kamida 2 ta element kerak.";
+} else {
+    echo "Massiv bo'sh.";
+}
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 104-MAVZU TUGASHI -->
+
+        <!-- 105-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-105">
+                <span class="accordion-title">105. $mevalar = ["olma", "banan", "anor"];Massivdagi barcha elementlarni vergul bilan birlashtiruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-105">
+                <div class="accordion-content-inner">
+                    <p><code>implode()</code> (yoki uning sinonimi <code>join()</code>) funksiyasi massiv elementlarini berilgan ajratuvchi bilan bitta satrga birlashtiradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor", "shaftoli"];
+$birlashtirilgan_satr = implode(", ", $mevalar);
+echo $birlashtirilgan_satr;
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 105-MAVZU TUGASHI -->
+        <!-- 106-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-106">
+                <span class="accordion-title">106. $sonlar = [10, 20, 30, 40, 50];Massivdagi elementlarning toq indekslilarini ajratib oling.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-106">
+                <div class="accordion-content-inner">
+                    <p><code>foreach</code> tsikli va indeksni tekshirish yordamida.</p>
+                    <pre><code><?php
+$sonlar = [10, 20, 30, 40, 50, 60, 70];
+$toq_indekslilar = [];
+
+foreach ($sonlar as $indeks => $qiymat) {
+    if ($indeks % 2 != 0) {
+        $toq_indekslilar[] = $qiymat;
+    }
+}
+print_r($toq_indekslilar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 106-MAVZU TUGASHI -->
+
+        <!-- 107-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-107">
+                <span class="accordion-title">107. $raqamlar = [10, 15, 20, 25];Massivdan faqat toq sonlarni olib, yangi massiv yarating.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-107">
+                <div class="accordion-content-inner">
+                    <p><code>array_filter()</code> funksiyasi yordamida.</p>
+                    <pre><code><?php
+$raqamlar = [10, 15, 20, 25, 30, 33, 48];
+$toq_sonlar = array_filter($raqamlar, function($raqam) {
+    return ($raqam % 2 != 0);
+});
+print_r($toq_sonlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 107-MAVZU TUGASHI -->
+
+        <!-- 108-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-108">
+                <span class="accordion-title">108. $matnlar = ["olma", "banan", "anor"];Massiv elementlarini uzunligi bo'yicha saralang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-108">
+                <div class="accordion-content-inner">
+                    <p><code>usort()</code> funksiyasi yordamida maxsus taqqoslash funksiyasini ishlatib saralash mumkin.</p>
+                    <pre><code><?php
+$matnlar = ["olma", "bananAnor", "uzum", "behi"];
+usort($matnlar, function($a, $b) {
+    $uzunlik_a = mb_strlen($a, 'UTF-8');
+    $uzunlik_b = mb_strlen($b, 'UTF-8');
+    if ($uzunlik_a == $uzunlik_b) {
+        return 0;
+    }
+    return ($uzunlik_a < $uzunlik_b) ? -1 : 1;
+});
+print_r($matnlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 108-MAVZU TUGASHI -->
+
+        <!-- 109-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-109">
+                <span class="accordion-title">109. $sonlar = [10, 15, 20, 25];Massivni PHPda ketma-ket matn shakliga aylantiring. Masalan, "10, 15, 20, 25".</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-109">
+                <div class="accordion-content-inner">
+                    <p><code>implode()</code> funksiyasi ishlatiladi (105-savolga qarang).</p>
+                    <pre><code><?php
+$sonlar = [10, 15, 20, 25];
+$matn_shaklida = implode(", ", $sonlar);
+echo $matn_shaklida;
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 109-MAVZU TUGASHI -->
+
+        <!-- 110-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-110">
+                <span class="accordion-title">110. $raqamlar = [1, 2, 3, 4, 5];Massivdagi har bir elementni faqat juft indekslarda teskari tartibda chiqaruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-110">
+                <div class="accordion-content-inner">
+                    <p>Avval juft indekslardagi elementlarni ajratib olib, keyin ularni teskari tartibda chiqaramiz.</p>
+                    <pre><code><?php
+$raqamlar = [1, 2, 3, 4, 5, 6, 7];
+$juft_indekslilar = [];
+
+foreach ($raqamlar as $indeks => $qiymat) {
+    if ($indeks % 2 == 0) {
+        $juft_indekslilar[] = $qiymat;
+    }
+}
+$teskari_juft_indekslilar = array_reverse($juft_indekslilar);
+
+echo "Juft indekslardagi elementlar teskari tartibda: <br>";
+print_r($teskari_juft_indekslilar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 110-MAVZU TUGASHI -->
+        <!-- 111-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-111">
+                <span class="accordion-title">111. $mevalar = ["olma", "banan", "anor"];Massivning har bir elementini bosh harfi bo'yicha saralang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-111">
+                <div class="accordion-content-inner">
+                    <p>Bu aslida oddiy alfavit tartibida saralashni (<code>sort()</code>) anglatadi, chunki satrlarni taqqoslash odatda birinchi harfdan boshlanadi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor", "shaftoli", "behi"];
+sort($mevalar);
+print_r($mevalar);
+?></code></pre>
+                    <p>Agar maxsus, faqat birinchi harfga qarab boshqacha saralash logikasi kerak bo'lsa (masalan, birinchi harflar bir xil bo'lsa boshqa mezon), <code>usort()</code> dan foydalanish kerak bo'ladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 111-MAVZU TUGASHI -->
+
+        <!-- 112-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-112">
+                <span class="accordion-title">112. $raqamlar = [1, 2, 3, 4, 5];Massivda juft indekslardagi elementlarning yig'indisini hisoblang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-112">
+                <div class="accordion-content-inner">
+                    <pre><code><?php
+$raqamlar = [1, 2, 3, 4, 5, 10, 12];
+$yigindi = 0;
+
+foreach ($raqamlar as $indeks => $qiymat) {
+    if ($indeks % 2 == 0) {
+        $yigindi += $qiymat;
+    }
+}
+echo "Juft indekslardagi elementlar yig'indisi: " . $yigindi;
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 112-MAVZU TUGASHI -->
+
+        <!-- 113-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-113">
+                <span class="accordion-title">113. $raqamlar = [1, 2, 3, 4, 5];Massivni boshqa massiv bilan birlashtirgan holda yangi massiv yarating.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-113">
+                <div class="accordion-content-inner">
+                    <p><code>array_merge()</code> funksiyasi ishlatiladi (87-savolga qarang).</p>
+                    <pre><code><?php
+$raqamlar1 = [1, 2, 3, 4, 5];
+$raqamlar2 = [6, 7, 8];
+$birlashgan_raqamlar = array_merge($raqamlar1, $raqamlar2);
+print_r($birlashgan_raqamlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 113-MAVZU TUGASHI -->
+
+        <!-- 114-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-114">
+                <span class="accordion-title">114. $raqamlar = [1, 2, 3, 4, 5];Massivning o'rtacha qiymatidan katta barcha elementlarni chiqaruvchi dastur yozing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-114">
+                <div class="accordion-content-inner">
+                    <pre><code><?php
+$raqamlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$ortachadan_kattalar = [];
+
+if (count($raqamlar) > 0) {
+    $yigindi = array_sum($raqamlar);
+    $ortacha_qiymat = $yigindi / count($raqamlar);
+    echo "O'rtacha qiymat: " . $ortacha_qiymat . "<br>";
+
+    $ortachadan_kattalar = array_filter($raqamlar, function($raqam) use ($ortacha_qiymat) {
+        return $raqam > $ortacha_qiymat;
+    });
+}
+
+echo "O'rtacha qiymatdan katta elementlar: <br>";
+print_r($ortachadan_kattalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 114-MAVZU TUGASHI -->
+
+        <!-- 115-MAVZU BOSHLANISHI -->
+       <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-85">
+                <span class="accordion-title">85. $mevalar = ["olma", "banan"]; Massivga yangi element qo‘shing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-85">
+                <div class="accordion-content-inner">
+                    <p>Massivga yangi element qo'shishning bir necha yo'li bor:</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan"];
+$mevalar[] = "anor";
+array_push($mevalar, "shaftoli");
+print_r($mevalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 85-MAVZU TUGASHI -->
+
+        <!-- 86-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-86">
+                <span class="accordion-title">86. $mevalar = ["olma", "banan", "anor"]; Massivning oxirgi elementini olib tashlang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-86">
+                <div class="accordion-content-inner">
+                    <p><code>array_pop()</code> funksiyasi massivning oxirgi elementini olib tashlaydi va uni qaytaradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor"];
+$ochirilgan_meva = array_pop($mevalar);
+echo "O'chirilgan meva: " . $ochirilgan_meva . "<br>";
+print_r($mevalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 86-MAVZU TUGASHI -->
+
+        <!-- 87-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-87">
+                <span class="accordion-title">87. $meva1 = ["olma", "banan"]; $meva2 = ["anor", "uzum"]; Ikki massivni birlashtiring.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-87">
+                <div class="accordion-content-inner">
+                    <p><code>array_merge()</code> funksiyasi bir yoki bir nechta massivni birlashtiradi.</p>
+                    <pre><code><?php
+$meva1 = ["olma", "banan"];
+$meva2 = ["anor", "uzum"];
+$birlashgan_mevalar = array_merge($meva1, $meva2);
+print_r($birlashgan_mevalar);
+?></code></pre>
+                    <p>Agar kalitlar bir xil bo'lsa (assotsiativ massivlarda), keyingisi oldingisini ustiga yozadi.
+                    Indekslangan massivlarda esa shunchaki ketma-ket qo'shiladi.
+                    Agar + operatori ishlatilsa, bir xil kalitlar uchun birinchi massivdagi qiymat saqlanib qoladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 87-MAVZU TUGASHI -->
+
+        <!-- 88-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-88">
+                <span class="accordion-title">88. $mevalar = ["olma", "banan", "anor"]; Massivda anor borligini tekshiruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-88">
+                <div class="accordion-content-inner">
+                    <p><code>in_array()</code> funksiyasi massivda ma'lum bir qiymat mavjudligini tekshiradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor"];
+$qidirilayotgan_meva = "anor";
+
+if (in_array($qidirilayotgan_meva, $mevalar)) {
+    echo "'" . $qidirilayotgan_meva . "' massivda mavjud.<br>";
+} else {
+    echo "'" . $qidirilayotgan_meva . "' massivda mavjud emas.<br>";
+}
+
+$boshqa_meva = "shaftoli";
+if (in_array($boshqa_meva, $mevalar)) {
+    echo "'" . $boshqa_meva . "' massivda mavjud.<br>";
+} else {
+    echo "'" . $boshqa_meva . "' massivda mavjud emas.<br>";
+}
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 88-MAVZU TUGASHI -->
+
+        <!-- 89-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-89">
+                <span class="accordion-title">89. $mevalar = ["olma", "banan", "anor"]; Massivda elementni qidiruvchi va uning indeksini qaytaruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-89">
+                <div class="accordion-content-inner">
+                    <p><code>array_search()</code> funksiyasi massivda berilgan qiymatni qidiradi va agar topilsa, uning birinchi uchragan kalitini (indeksini) qaytaradi. Agar topilmasa, <code>false</code> qaytaradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor", "banan"];
+$qidirilayotgan_element = "banan";
+$indeks = array_search($qidirilayotgan_element, $mevalar);
+
+if ($indeks !== false) {
+    echo "'" . $qidirilayotgan_element . "' elementi " . $indeks . "-indeksda topildi.<br>";
+} else {
+    echo "'" . $qidirilayotgan_element . "' elementi massivda topilmadi.<br>";
+}
+
+$topilmaydigan_element = "uzum";
+$indeks_yoq = array_search($topilmaydigan_element, $mevalar);
+if ($indeks_yoq !== false) {
+    echo "'" . $topilmaydigan_element . "' elementi " . $indeks_yoq . "-indeksda topildi.<br>";
+} else {
+    echo "'" . $topilmaydigan_element . "' elementi massivda topilmadi.<br>";
+}
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 89-MAVZU TUGASHI -->
+        <!-- 90-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-90">
+                <span class="accordion-title">90. $mevalar = ["olma", "banan", "anor"];Massivdagi barcha elementlarni katta harfga o'zgartiring.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-90">
+                <div class="accordion-content-inner">
+                    <p><code>array_map()</code> funksiyasi massivning har bir elementiga ma'lum bir funksiyani qo'llaydi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor"];
+$katta_harfli_mevalar = array_map('strtoupper', $mevalar);
+print_r($katta_harfli_mevalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 90-MAVZU TUGASHI -->
+        <!-- 101-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-101">
+                <span class="accordion-title">101. $matnlar = ["olma", "banan", "anor"];Massivdagi barcha elementlarning birinchi harfini o'zgartirib, yangi massivga saqlang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-101">
+                <div class="accordion-content-inner">
+                    <p><code>array_map()</code> va <code>ucfirst()</code> funksiyalari yordamida.</p>
+                    <pre><code><?php
+$matnlar = ["olma", "banan", "anor"];
+$bosh_harfi_ozgartirilgan = array_map('ucfirst', $matnlar);
+print_r($bosh_harfi_ozgartirilgan);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 101-MAVZU TUGASHI -->
+
+        <!-- 102-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-102">
+                <span class="accordion-title">102. $sonlar = [10, 20, 30, 40, 50];Massivdagi har bir sonning kvadratini hisoblab, yangi massivga saqlang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-102">
+                <div class="accordion-content-inner">
+                    <p><code>array_map()</code> funksiyasidan foydalanamiz.</p>
+                    <pre><code><?php
+$sonlar = [10, 20, 30, 40, 50];
+$kvadratlar = array_map(function($son) {
+    return $son * $son;
+}, $sonlar);
+print_r($kvadratlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 102-MAVZU TUGASHI -->
+
+        <!-- 103-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-103">
+                <span class="accordion-title">103. $raqamlar = [10, 15, 20, 25, 30];Massivda faqat 15 dan katta qiymatlarni qoldiruvchi dastur yozing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-103">
+                <div class="accordion-content-inner">
+                    <p><code>array_filter()</code> funksiyasi yordamida.</p>
+                    <pre><code><?php
+$raqamlar = [10, 15, 20, 25, 30, 12, 18];
+$kattalar_15dan = array_filter($raqamlar, function($raqam) {
+    return $raqam > 15;
+});
+print_r($kattalar_15dan);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 103-MAVZU TUGASHI -->
+
+        <!-- 104-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-104">
+                <span class="accordion-title">104. $sonlar = [5, 8, 12, 15, 19];Massivdagi eng katta va eng kichik elementning farqini hisoblang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-104">
+                <div class="accordion-content-inner">
+                    <p><code>max()</code> va <code>min()</code> funksiyalaridan foydalanamiz.</p>
+                    <pre><code><?php
+$sonlar = [5, 8, 12, 15, 19, 2];
+if (count($sonlar) >= 2) {
+    $eng_katta = max($sonlar);
+    $eng_kichik = min($sonlar);
+    $farq = $eng_katta - $eng_kichik;
+
+    echo "Eng katta: " . $eng_katta . "<br>";
+    echo "Eng kichik: " . $eng_kichik . "<br>";
+    echo "Farqi: " . $farq;
+} elseif (!empty($sonlar)) {
+    echo "Farqni hisoblash uchun kamida 2 ta element kerak.";
+} else {
+    echo "Massiv bo'sh.";
+}
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 104-MAVZU TUGASHI -->
+
+        <!-- 105-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-105">
+                <span class="accordion-title">105. $mevalar = ["olma", "banan", "anor"];Massivdagi barcha elementlarni vergul bilan birlashtiruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-105">
+                <div class="accordion-content-inner">
+                    <p><code>implode()</code> (yoki uning sinonimi <code>join()</code>) funksiyasi massiv elementlarini berilgan ajratuvchi bilan bitta satrga birlashtiradi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor", "shaftoli"];
+$birlashtirilgan_satr = implode(", ", $mevalar);
+echo $birlashtirilgan_satr;
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 105-MAVZU TUGASHI -->
+        <!-- 106-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-106">
+                <span class="accordion-title">106. $sonlar = [10, 20, 30, 40, 50];Massivdagi elementlarning toq indekslilarini ajratib oling.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-106">
+                <div class="accordion-content-inner">
+                    <p><code>foreach</code> tsikli va indeksni tekshirish yordamida.</p>
+                    <pre><code><?php
+$sonlar = [10, 20, 30, 40, 50, 60, 70];
+$toq_indekslilar = [];
+
+foreach ($sonlar as $indeks => $qiymat) {
+    if ($indeks % 2 != 0) {
+        $toq_indekslilar[] = $qiymat;
+    }
+}
+print_r($toq_indekslilar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 106-MAVZU TUGASHI -->
+
+        <!-- 107-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-107">
+                <span class="accordion-title">107. $raqamlar = [10, 15, 20, 25];Massivdan faqat toq sonlarni olib, yangi massiv yarating.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-107">
+                <div class="accordion-content-inner">
+                    <p><code>array_filter()</code> funksiyasi yordamida.</p>
+                    <pre><code><?php
+$raqamlar = [10, 15, 20, 25, 30, 33, 48];
+$toq_sonlar = array_filter($raqamlar, function($raqam) {
+    return ($raqam % 2 != 0);
+});
+print_r($toq_sonlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 107-MAVZU TUGASHI -->
+
+        <!-- 108-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-108">
+                <span class="accordion-title">108. $matnlar = ["olma", "banan", "anor"];Massiv elementlarini uzunligi bo'yicha saralang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-108">
+                <div class="accordion-content-inner">
+                    <p><code>usort()</code> funksiyasi yordamida maxsus taqqoslash funksiyasini ishlatib saralash mumkin.</p>
+                    <pre><code><?php
+$matnlar = ["olma", "bananAnor", "uzum", "behi"];
+usort($matnlar, function($a, $b) {
+    $uzunlik_a = mb_strlen($a, 'UTF-8');
+    $uzunlik_b = mb_strlen($b, 'UTF-8');
+    if ($uzunlik_a == $uzunlik_b) {
+        return 0;
+    }
+    return ($uzunlik_a < $uzunlik_b) ? -1 : 1;
+});
+print_r($matnlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 108-MAVZU TUGASHI -->
+
+        <!-- 109-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-109">
+                <span class="accordion-title">109. $sonlar = [10, 15, 20, 25];Massivni PHPda ketma-ket matn shakliga aylantiring. Masalan, "10, 15, 20, 25".</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-109">
+                <div class="accordion-content-inner">
+                    <p><code>implode()</code> funksiyasi ishlatiladi (105-savolga qarang).</p>
+                    <pre><code><?php
+$sonlar = [10, 15, 20, 25];
+$matn_shaklida = implode(", ", $sonlar);
+echo $matn_shaklida;
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 109-MAVZU TUGASHI -->
+
+        <!-- 110-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-110">
+                <span class="accordion-title">110. $raqamlar = [1, 2, 3, 4, 5];Massivdagi har bir elementni faqat juft indekslarda teskari tartibda chiqaruvchi dastur tuzing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-110">
+                <div class="accordion-content-inner">
+                    <p>Avval juft indekslardagi elementlarni ajratib olib, keyin ularni teskari tartibda chiqaramiz.</p>
+                    <pre><code><?php
+$raqamlar = [1, 2, 3, 4, 5, 6, 7];
+$juft_indekslilar = [];
+
+foreach ($raqamlar as $indeks => $qiymat) {
+    if ($indeks % 2 == 0) {
+        $juft_indekslilar[] = $qiymat;
+    }
+}
+$teskari_juft_indekslilar = array_reverse($juft_indekslilar);
+
+echo "Juft indekslardagi elementlar teskari tartibda: <br>";
+print_r($teskari_juft_indekslilar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 110-MAVZU TUGASHI -->
+        <!-- 111-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-111">
+                <span class="accordion-title">111. $mevalar = ["olma", "banan", "anor"];Massivning har bir elementini bosh harfi bo'yicha saralang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-111">
+                <div class="accordion-content-inner">
+                    <p>Bu aslida oddiy alfavit tartibida saralashni (<code>sort()</code>) anglatadi, chunki satrlarni taqqoslash odatda birinchi harfdan boshlanadi.</p>
+                    <pre><code><?php
+$mevalar = ["olma", "banan", "anor", "shaftoli", "behi"];
+sort($mevalar);
+print_r($mevalar);
+?></code></pre>
+                    <p>Agar maxsus, faqat birinchi harfga qarab boshqacha saralash logikasi kerak bo'lsa (masalan, birinchi harflar bir xil bo'lsa boshqa mezon), <code>usort()</code> dan foydalanish kerak bo'ladi.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 111-MAVZU TUGASHI -->
+
+        <!-- 112-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-112">
+                <span class="accordion-title">112. $raqamlar = [1, 2, 3, 4, 5];Massivda juft indekslardagi elementlarning yig'indisini hisoblang.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-112">
+                <div class="accordion-content-inner">
+                    <pre><code><?php
+$raqamlar = [1, 2, 3, 4, 5, 10, 12];
+$yigindi = 0;
+
+foreach ($raqamlar as $indeks => $qiymat) {
+    if ($indeks % 2 == 0) {
+        $yigindi += $qiymat;
+    }
+}
+echo "Juft indekslardagi elementlar yig'indisi: " . $yigindi;
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 112-MAVZU TUGASHI -->
+
+        <!-- 113-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-113">
+                <span class="accordion-title">113. $raqamlar = [1, 2, 3, 4, 5];Massivni boshqa massiv bilan birlashtirgan holda yangi massiv yarating.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-113">
+                <div class="accordion-content-inner">
+                    <p><code>array_merge()</code> funksiyasi ishlatiladi (87-savolga qarang).</p>
+                    <pre><code><?php
+$raqamlar1 = [1, 2, 3, 4, 5];
+$raqamlar2 = [6, 7, 8];
+$birlashgan_raqamlar = array_merge($raqamlar1, $raqamlar2);
+print_r($birlashgan_raqamlar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 113-MAVZU TUGASHI -->
+
+        <!-- 114-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-114">
+                <span class="accordion-title">114. $raqamlar = [1, 2, 3, 4, 5];Massivning o'rtacha qiymatidan katta barcha elementlarni chiqaruvchi dastur yozing.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-114">
+                <div class="accordion-content-inner">
+                    <pre><code><?php
+$raqamlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$ortachadan_kattalar = [];
+
+if (count($raqamlar) > 0) {
+    $yigindi = array_sum($raqamlar);
+    $ortacha_qiymat = $yigindi / count($raqamlar);
+    echo "O'rtacha qiymat: " . $ortacha_qiymat . "<br>";
+
+    $ortachadan_kattalar = array_filter($raqamlar, function($raqam) use ($ortacha_qiymat) {
+        return $raqam > $ortacha_qiymat;
+    });
+}
+
+echo "O'rtacha qiymatdan katta elementlar: <br>";
+print_r($ortachadan_kattalar);
+?></code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- 114-MAVZU TUGASHI -->
+
+        <!-- 115-MAVZU BOSHLANISHI -->
+        <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-115">
+                <span class="accordion-title">115. $raqamlar = [1, 2, 3, 4, 5];Massivni shunday tartiblangki, juft elementlar boshida, toq elementlar oxirida joylashsin.</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-115">
+                <div class="accordion-content-inner">
+                    <p><code>usort()</code> funksiyasi yordamida maxsus taqqoslash funksiyasini ishlatib saralash mumkin.</p>
+                    <pre><code>
+                     //dastur bosh lanishi<  ?php
+$raqamlar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+usort($raqamlar, function($a, $b) {
+    $a_is_even = ($a % 2 == 0);
+    $b_is_even = ($b % 2 == 0);
+
+    if ($a_is_even && !$b_is_even) {
+        return -1;
+    }
+    if (!$a_is_even && $b_is_even) {
+        return 1;
+    }
+   
+    return $a <=> $b; 
+});
+print_r($raqamlar);
+?>//
+</code></pre>
+                    <p>Yuqoridagi kodda, agar ikkala element ham juft yoki ikkalasi ham toq bo'lsa, ular o'zaro son qiymatlari bo'yicha qo'shimcha saralanadi. Agar faqat juft/toq guruhlash kerak bo'lib, guruh ichidagi tartib muhim bo'lmasa, oxirgi <code>return $a <=> $b;</code> o'rniga <code>return 0;</code> ishlatish mumkin.</p>
+                </div>
+            </div>
+        </div>
+        <!-- 115-MAVZU TUGASHI -->
+        <!-- 115-MAVZU TUGASHI -->
         <!-- ... Qolgan mavzular shu yerga qo'shiladi ... -->
+ <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-116">
+                <span class="accordion-title">116. jadval yaratish</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-116">
+                <div class="accordion-content-inner">
+                    <p><code>usort()</code> funksiyasi yordamida talabalar massivi (har bir elementi assotsiativ massiv) 'Marks' kaliti bo'yicha kamayish tartibida saralanadi. Maxsus yozilgan taqqoslash funksiyasi ikkita elementni (<code>$a</code> va <code>$b</code>) qabul qiladi va ularning 'Marks' qiymatlarini solishtiradi. <code>$b['Marks'] <=> $a['Marks']</code> ifodasi kamayish tartibini beradi: agar <code>$b</code>ning bahosi <code>$a</code>nikidan katta bo'lsa, <code>$b</code> oldinroqqa, kichik bo'lsa keyinroqqa o'tadi.</p>
+                    <pre><code>
+                     //dastur bosh lanishi<?php
+$talabalar = [
+    ['ID' => 1, 'Name' => 'Alice', 'Subject' => 'Biology', 'Marks' => 88],
+    ['ID' => 2, 'Name' => 'Bob', 'Subject' => 'Chemistry', 'Marks' => 74],
+    ['ID' => 3, 'Name' => 'Carol', 'Subject' => 'History', 'Marks' => 92],
+    ['ID' => 4, 'Name' => 'David', 'Subject' => 'Math', 'Marks' => 88], // Baholardagi tenglikni ko'rsatish uchun
+    ['ID' => 5, 'Name' => 'Eve', 'Subject' => 'Physics', 'Marks' => 70],
+];
 
-    </div>
+usort($talabalar, function($a, $b) {
+    // 'Marks' bo'yicha kamayish tartibida saralash
+    // Agar $b['Marks'] > $a['Marks'] bo'lsa, $b oldinroq keladi (natija < 0).
+    // Agar $b['Marks'] < $a['Marks'] bo'lsa, $a oldinroq keladi (natija > 0).
+    // Agar teng bo'lsa, ularning nisbiy tartibi o'zgarmaydi (natija = 0).
+    return $b['Marks'] <=> $a['Marks'];
+});
+
+print_r($talabalar);
+?>//
+</code></pre>
+                    <p>Natija (<code>print_r</code> chiqishi taxminan quyidagicha bo'ladi, baholari teng bo'lgan elementlarning o'zaro tartibi PHP versiyasiga qarab o'zgarishi mumkin):</p>
+                    <pre><code>
+Array
+(
+    [0] => Array
+        (
+            [ID] => 3
+            [Name] => Carol
+            [Subject] => History
+            [Marks] => 92
+        )
+    [1] => Array // Alice yoki David birinchi kelishi mumkin
+        (
+            [ID] => 1
+            [Name] => Alice
+            [Subject] => Biology
+            [Marks] => 88
+        )
+    [2] => Array // David yoki Alice ikkinchi kelishi mumkin
+        (
+            [ID] => 4
+            [Name] => David
+            [Subject] => Math
+            [Marks] => 88
+        )
+    [3] => Array
+        (
+            [ID] => 2
+            [Name] => Bob
+            [Subject] => Chemistry
+            [Marks] => 74
+        )
+    [4] => Array
+        (
+            [ID] => 5
+            [Name] => Eve
+            [Subject] => Physics
+            [Marks] => 70
+        )
+)
+</code></pre>
+                    <p><strong>Izoh:</strong> Agar bir nechta talabaning baholari bir xil bo'lsa (masalan, Alice va Davidning baholari 88), ularning o'zaro tartibi <code>$b['Marks'] <=> $a['Marks']</code> ifodasi 0 qaytarganligi sababli <code>usort</code> funksiyasining ichki stabilligiga bog'liq bo'ladi. Odatda, bunday hollarda qo'shimcha ikkilamchi saralash sharti (masalan, ismlar bo'yicha) kiritilmasa, ularning dastlabki nisbiy tartibi saqlanib qolishi kafolatlanmaydi.</p>
+                </div>
+            </div>
+        </div>
+
+ <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="content-web-117">
+                <span class="accordion-title">117. O'zbekiston Bayrog'i (HTML & CSS yordamida yasash)</span>
+                <span class="accordion-icon open-icon">+</span>
+                <span class="accordion-icon close-icon actual-x">×</span>
+            </button>
+            <div class="accordion-content" id="content-web-117">
+                <div class="accordion-content-inner">
+                    <p>Quyida O'zbekiston Respublikasi Davlat Bayrog'ining HTML va CSS yordamida soddalashtirilgan ko'rinishi (rangli yo'laklar) va uning kodi keltirilgan.</p>
+                    
+                    <!-- Bayroqning o'zi uchun CSS (shu yerda joylashtiriladi, chunki pre ichida ishlamaydi) -->
+                    <style>
+                        .example-uzbek-flag-container { /* Klass nomini boshqa misollardan farqlash uchun o'zgartirdim */
+                            width: 300px; /* Bayroq eni */
+                            height: 150px; /* Bayroq bo'yi */
+                            border: 1px solid #ccc; /* Chegarasi (ko'rinish uchun) */
+                            display: flex;
+                            flex-direction: column; /* Elementlarni vertikal joylashtirish */
+                            margin-bottom: 15px; /* Koddan ajratib turish uchun */
+                        }
+                        .example-uzbek-flag-container .flag-stripe { /* Ichki klasslarga ham konteyner klassini qo'shdim */
+                            width: 100%; /* Har bir yo'l to'liq enni egallaydi */
+                        }
+                        .example-uzbek-flag-container .flag-blue {
+                            background-color: #0072CE; /* Moviy rang */
+                            flex: 1; /* Qolgan bo'sh joyni egallaydi */
+                        }
+                        .example-uzbek-flag-container .flag-white {
+                            background-color: #FFFFFF; /* Oq rang */
+                            flex: 1; /* Qolgan bo'sh joyni egallaydi */
+                        }
+                        .example-uzbek-flag-container .flag-green {
+                            background-color: #43B02A; /* Yashil rang */
+                            flex: 1; /* Qolgan bo'sh joyni egallaydi */
+                        }
+                        .example-uzbek-flag-container .flag-red-fimbriation {
+                            background-color: #DA291C; /* Qizil rang */
+                            height: 3px; /* Qizil chiziqning qalinligi */
+                        }
+                    </style>
+
+                    <!-- Bayroqning HTML strukturasi (bu brauzerda ko'rsatiladi) -->
+                    <p><strong>Bayroq namunasi:</strong></p>
+                    <div class="example-uzbek-flag-container">
+                        <div class="flag-stripe flag-blue"></div>
+                        <div class="flag-stripe flag-red-fimbriation"></div>
+                        <div class="flag-stripe flag-white"></div>
+                        <div class="flag-stripe flag-red-fimbriation"></div>
+                        <div class="flag-stripe flag-green"></div>
+                    </div>
+
+                    <p><strong>HTML kodi:</strong></p>
+                    <pre><code>
+<!-- Bayroq uchun konteyner (klass nomi saytdagi boshqa elementlar bilan chalkashmasligi uchun o'zgartirilishi mumkin) -->
+<div class="example-uzbek-flag-container">
+    <!-- Moviy yo'lak -->
+    <div class="flag-stripe flag-blue"></div>
+    <!-- Birinchi qizil hoshiya -->
+    <div class="flag-stripe flag-red-fimbriation"></div>
+    <!-- Oq yo'lak -->
+    <div class="flag-stripe flag-white"></div>
+    <!-- Ikkinchi qizil hoshiya -->
+    <div class="flag-stripe flag-red-fimbriation"></div>
+    <!-- Yashil yo'lak -->
+    <div class="flag-stripe flag-green"></div>
 </div>
+</code></pre>
+                    <p><strong>CSS kodi:</strong></p>
+                    <pre><code>
+/* CSS qoida nomlari HTML strukturasidagi klass nomlariga mos kelishi kerak */
+.example-uzbek-flag-container {
+    width: 300px; /* Bayroq eni */
+    height: 150px; /* Bayroq bo'yi */
+    border: 1px solid #ccc; /* Chegarasi (ko'rinish uchun) */
+    display: flex;
+    flex-direction: column; /* Elementlarni vertikal joylashtirish */
+}
+.example-uzbek-flag-container .flag-stripe { /* Yoki har bir stripe klassiga alohida yozish mumkin */
+    width: 100%; /* Har bir yo'l to'liq enni egallaydi */
+}
+.example-uzbek-flag-container .flag-blue {
+    background-color: #0072CE; /* Moviy rang */
+    flex: 1; /* Qolgan bo'sh joyni egallaydi */
+}
+.example-uzbek-flag-container .flag-white {
+    background-color: #FFFFFF; /* Oq rang */
+    flex: 1; /* Qolgan bo'sh joyni egallaydi */
+}
+.example-uzbek-flag-container .flag-green {
+    background-color: #43B02A; /* Yashil rang */
+    flex: 1; /* Qolgan bo'sh joyni egallaydi */
+}
+.example-uzbek-flag-container .flag-red-fimbriation {
+    background-color: #DA291C; /* Qizil rang */
+    height: 3px; /* Qizil chiziqning qalinligi */
+}
+</code></pre>
+                    <p><strong>Tushuntirish:</strong></p>
+                    <ul>
+                        <li>Bayroq beshta gorizontal yo'lakdan iborat: moviy, ingichka qizil, oq, ingichka qizil va yashil.</li>
+                        <li>HTMLda har bir yo'lak uchun alohida <code><div></code> ishlatilgan.</li>
+                        <li>CSSda <code>.example-uzbek-flag-container</code> asosiy konteyner bo'lib, unga <code>display: flex</code> va <code>flex-direction: column</code> berilgan. Bu ichki yo'laklarni vertikal joylashtiradi.</li>
+                        <li>Moviy, oq va yashil yo'laklarga <code>flex: 1</code> berilgan, bu ularning qizil chiziqlar egallagan joydan qolgan bo'shliqni teng taqsimlab olishini ta'minlaydi.</li>
+                        <li>Qizil hoshiyalarga (<code>.flag-red-fimbriation</code>) aniq balandlik (<code>height: 3px</code>) berilgan.</li>
+                        <li>Bayroqning umumiy o'lchamlari (<code>width</code> va <code>height</code>) <code>.example-uzbek-flag-container</code> klassida belgilangan.</li>
+                        <li><strong>Muhim:</strong> CSS klass nomlari (masalan, <code>.example-uzbek-flag-container</code>) saytingizdagi boshqa CSS qoidalari bilan ziddiyatga uchramasligi uchun unikal bo'lishi yoki yanada aniqroq selektorlar bilan ishlatilishi kerak. Yuqoridagi namunada CSS qoidalariga konteyner klassini qo'shib, ularni yanada aniqroq qildim.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
