@@ -1,269 +1,254 @@
-/* style.css */
-
-/* General Reset and Base Styles */
-* {
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Kontent tepadan boshlanishi uchun */
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
+  background-color: #f0f2f5;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f9;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-/* Container */
 .container {
-  max-width: 800px;
-  width: 100%;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
 }
 
-/* Screen Sections */
 .screen {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .hidden {
-  display: none;
+  display: none !important; /* Muhim, boshqa stillarni bekor qilish uchun */
 }
 
-/* Section Selection Screen */
-#section-selection-screen h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2c3e50;
+h1, h2 {
+  color: #333;
 }
 
-#section-selection-screen p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Tugmalar uchun umumiy stil */
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.next-btn {
+  background-color: #4CAF50; /* Yashil rang */
+  border: none;             /* Chegara chizig'ini olib tashlash */
+  color: white;             /* Matn rangi oq */
+  padding: 15px 32px;       /* Ichki bo'shliq (tepa/pastga 15px, yon tomonlarga 32px) */
+  text-align: center;       /* Matnni markazga tekislash */
+  text-decoration: none;    /* Matn ostidagi chiziqni olib tashlash */
+  display: inline-block;    /* Elementni qator ichida blok sifatida ko'rsatish */
+  font-size: 16px;          /* Matn o'lchami */
+  margin: 4px 2px;          /* Tashqi bo'shliq */
+  cursor: pointer;          /* Sichqoncha kursorini "qo'l" shakliga o'zgartirish */
+  border-radius: 8px;       /* Burchaklarni yumaloqlash */
+  transition-duration: 0.4s; /* O'tish (hover) effekti uchun davomiylik */
+}
+
+/* Sichqoncha tugma ustiga kelganda (hover) effekti */
+.next-btn:hover {
+  background-color: #45a049; /* Biroz to'qroq yashil rang */
+}
+.btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: #545b62;
 }
 
 #section-buttons-container {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Buttons */
-.btn {
-  padding: 12px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  width: 100%;
+  flex-wrap: wrap; /* Tugmalar sig'masa pastga tushishi uchun */
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .section-btn {
-  background-color: #3498db;
-  color: #fff;
+  min-width: 200px; /* Bo'lim tugmalarining minimal kengligi */
 }
 
-.section-btn:hover:not(:disabled) {
-  background-color: #2980b9;
-  transform: scale(1.02);
-}
 
-.section-btn:disabled {
-  background-color: #bdc3c7;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-/* Quiz Screen */
+/* Quiz ekrani */
 .quiz-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 20px;
-  background-color: #ecf0f1;
-  border-radius: 5px;
   margin-bottom: 20px;
-}
-
-#question-number,
-#score {
-  font-size: 1.1rem;
   font-weight: bold;
-  color: #2c3e50;
 }
 
 #question-container {
   margin-bottom: 20px;
-  width: 100%;
+  min-height: 50px; /* Savol matni uchun joy */
 }
 
 #question-text {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #34495e;
-  margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 #options-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
+  max-width: 500px; /* Variantlar uchun maksimal kenglik */
+  margin: 0 auto 20px auto;
 }
 
 .option-btn {
-  padding: 12px;
-  font-size: 1rem;
-  background-color: #ecf0f1;
+  background-color: #f8f9fa;
   color: #333;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
   text-align: left;
+  font-size: 1em;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .option-btn:hover:not(:disabled) {
-  background-color: #dfe6e9;
-  border-color: #7f8c8d;
+  background-color: #e9ecef;
+  border-color: #ccc;
 }
 
 .option-btn:disabled {
-  cursor: not-allowed;
+  cursor: default;
+  opacity: 0.8;
 }
 
 .option-btn.correct {
-  background-color: #2ecc71;
-  color: #fff;
-  border-color: #27ae60;
+  background-color: #28a745 !important; /* Muhim, boshqa stillarni bekor qilish uchun */
+  color: white !important;
+  border-color: #28a745 !important;
 }
 
 .option-btn.incorrect {
-  background-color: #e74c3c;
-  color: #fff;
-  border-color: #c0392b;
+  background-color: #dc3545 !important; /* Muhim, boshqa stillarni bekor qilish uchun */
+  color: white !important;
+  border-color: #dc3545 !important;
 }
 
-/* Feedback */
 .feedback {
-  font-size: 1.1rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-weight: bold;
-  margin-bottom: 20px;
+  min-height: 24px; /* Feedback matni uchun joy */
 }
 
 .feedback.correct {
-  color: #27ae60;
+  color: #28a745;
 }
 
 .feedback.incorrect {
-  color: #c0392b;
+  color: #dc3545;
 }
 
-/* Next Button */
-.next-btn {
-  padding: 12px 20px;
-  font-size: 1rem;
-  background-color: #2ecc71;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.1s;
-  margin-bottom: 20px;
+.next-btn { /* "Keyingi savol" tugmasi uchun alohida stil, agar kerak bo'lsa */
+    /* width: 100%; */ /* Agar to'liq kenglikda bo'lishini xohlasangiz */
+    /* max-width: 250px; */
+    /* margin-top: 10px; */
 }
 
-.next-btn:hover:not(:disabled) {
-  background-color: #27ae60;
-  transform: scale(1.02);
-}
-
-.next-btn:disabled {
-  background-color: #bdc3c7;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-/* Back to Sections Button */
-.btn-secondary {
-  background-color: #7f8c8d;
-  color: #fff;
-}
-
-.btn-secondary:hover:not(:disabled) {
-  background-color: #6c7a89;
-  transform: scale(1.02);
-}
-
-/* Result Screen */
-#result-screen h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #2c3e50;
-}
-
+/* Natija ekrani */
 #final-score {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: #3498db;
+  margin-bottom: 10px;
 }
 
 #result-message {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-#restart-btn {
-  background-color: #3498db;
-  color: #fff;
+
+/* Akkordion uchun stillar */
+.accordion-container {
+    width: 100%;
+    max-width: 600px; /* Akkordionning maksimal kengligi */
+    margin: 20px auto; /* Markazga joylash */
 }
 
-#restart-btn:hover:not(:disabled) {
-  background-color: #2980b9;
-  transform: scale(1.02);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .container {
+.accordion-button {
+    background-color: #e9ecef;
+    color: #333;
+    cursor: pointer;
     padding: 15px;
-  }
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    margin-bottom: 2px; /* Tugmalar orasidagi masofa */
+    display: flex; /* Ikonkani yonma-yon joylashtirish uchun */
+    justify-content: space-between; /* Matn va ikonka orasida masofa */
+    align-items: center;
+}
 
-  #section-selection-screen h1 {
-    font-size: 1.5rem;
-  }
+.accordion-button:hover {
+    background-color: #ced4da;
+}
 
-  #question-text {
-    font-size: 1rem;
-  }
+.accordion-button .icon {
+    font-size: 1.2em;
+    font-weight: bold;
+}
 
-  .btn,
-  .option-btn,
-  .next-btn {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border: 1px solid #eee;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    text-align: left; /* Kontentni chapga tekislash */
+}
+.accordion-content p {
+    margin: 15px 0;
+}
 
-  .quiz-header {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
+.accordion-content.open {
+    /* max-height JS orqali o'rnatiladi */
+    border-top: 1px solid #eee; /* Ochilganda yuqori chegara */
 }

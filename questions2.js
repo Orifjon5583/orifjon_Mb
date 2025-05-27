@@ -14,7 +14,7 @@ const questionsSet2 = [
       "Faqat oyligi 5 mln dan yuqori bo'lgan o'qituvchilarni ko'rsatadi, lavozimiga qaramaydi",
     ],
     answer:
-      "Lavozimi 'assistant o''qituvchi' bo'lgan VA oyligi 5 mln yoki undan yuqori bo'lgan o'qituvchilarni ko'rsatadi (bu yerda `o''qituvchi` satr ichidagi bitta tirnoqni ('') ifodalash uchun ishlatilgan)",
+      "Lavozimi 'assistant o''qituvchi' bo'lgan VA oyligi 5 mln yoki undan yuqori bo'lgan o'qituvchilarni ko'rsatadi",
   },
   {
     question:
@@ -26,7 +26,7 @@ const questionsSet2 = [
       "Bir nechta qiymatlardan biriga mos kelishini tekshiradi",
     ],
     answer:
-      "Qiymat `NULL` yoki `NOT NULL` ekanligini tekshirish uchun ishlatiladi (masalan, `WHERE ustun_nomi IS NULL`)",
+      "Qiymat `NULL` yoki `NOT NULL` ekanligini tekshirish uchun ishlatiladi",
   },
   {
     question: "`BETWEEN` operatori vazifasi nima?",
@@ -37,7 +37,7 @@ const questionsSet2 = [
       "Matn ichidan qismni ajratib olish uchun",
     ],
     answer:
-      "Ikki qiymat orasidagi (shu jumladan chegaralar) qiymatlarni tanlash uchun (masalan, `WHERE narx BETWEEN 100 AND 200` 100 va 200 ni ham o'z ichiga oladi)",
+      "Ikki qiymat orasidagi (shu jumladan chegaralar) qiymatlarni tanlash uchun",
   },
   {
     question: "`IN` operatori vazifasi nima?",
@@ -48,7 +48,7 @@ const questionsSet2 = [
       "Natijalarni tartiblaydi",
     ],
     answer:
-      "Qiymat berilgan ro'yxatdagi qiymatlardan biriga mos kelishini tekshiradi (masalan, `WHERE shahar IN ('Toshkent', 'Buxoro')`)",
+      "Qiymat berilgan ro'yxatdagi qiymatlardan biriga mos kelishini tekshiradi",
   },
   {
     question: "`LIKE` operatori vazifasi nima?",
@@ -59,7 +59,7 @@ const questionsSet2 = [
       "Bo'sh (NULL) qiymatlarni tekshiradi",
     ],
     answer:
-      "Maxsus belgilar (`%` - istalgan belgilar ketma-ketligi, `_` - bitta belgi) yordamida matnli shablonga mos kelishini tekshiradi",
+      "Maxsus belgilar (`%`, `_`) yordamida matnli shablonga mos kelishini tekshiradi",
   },
   {
     question: "`ORDER BY` operatori vazifasi nima?",
@@ -69,7 +69,7 @@ const questionsSet2 = [
       "Natijalarni bir yoki bir nechta ustun(lar) bo'yicha tartiblash",
       "Jadvallarni birlashtirish",
     ],
-    answer: "Natijalarni bir yoki bir nechta ustun(lar) bo'yicha tartiblash (ASC - o'sish, DESC - kamayish tartibida)",
+    answer: "Natijalarni bir yoki bir nechta ustun(lar) bo'yicha tartiblash",
   },
   {
     question: "`DISTINCT` kalit so'zi nima vazifani bajaradi?",
@@ -80,7 +80,7 @@ const questionsSet2 = [
       "Natijalarni teskari tartibda saralaydi",
     ],
     answer:
-      "Natijalardan takrorlanuvchi qatorlarni olib tashlab, faqat noyoblarini qoldiradi (masalan, `SELECT DISTINCT shahar FROM mijozlar;`)",
+      "Natijalardan takrorlanuvchi qatorlarni olib tashlab, faqat noyoblarini qoldiradi",
   },
   {
     question: "`LIMIT` kalit so'zi nima vazifani bajaradi?",
@@ -90,7 +90,7 @@ const questionsSet2 = [
       "Ustunlar sonini cheklaydi",
       "Jadvallar sonini cheklaydi",
     ],
-    answer: "Natijalarni ma'lum bir sondan ko'p bo'lmagan miqdorda cheklaydi (qaytariladigan qatorlar sonini cheklaydi)",
+    answer: "Natijalarni ma'lum bir sondan ko'p bo'lmagan miqdorda cheklaydi",
   },
   {
     question:
@@ -102,7 +102,7 @@ const questionsSet2 = [
       "So'rovning maksimal bajarilish vaqtini belgilaydi",
     ],
     answer:
-      "Natijalarni qaytarishni boshlashdan oldin o'tkazib yuboriladigan qatorlar sonini belgilaydi (sahifalash uchun ishlatiladi, masalan `LIMIT 10 OFFSET 20`)",
+      "Natijalarni qaytarishni boshlashdan oldin o'tkazib yuboriladigan qatorlar sonini belgilaydi",
   },
   {
     question:
@@ -113,29 +113,29 @@ const questionsSet2 = [
       "SELECT * FROM uqituvchilar WHERE lavozimi IN ('assistent', 'stajor');",
       "Ikkala A va C variantlari to'g'ri",
     ],
-    answer: "Ikkala A va C variantlari to'g'ri (OR bilan ham, IN bilan ham bir xil natijaga erishish mumkin)",
+    answer: "Ikkala A va C variantlari to'g'ri",
   },
   {
     question:
       "Uqituvchilar jadvalidan yillik_staji 5 yildan 9 yilgacha bo'lgan o'qituvchilar ro'yxatini chiqarish so'rovini ko'rsating.",
     options: [
-      "SELECT * FROM uqituvchilar WHERE yillik_staji > 5 AND yillik_staji < 9;", // Bu 5 va 9 ni o'z ichiga olmaydi
+      "SELECT * FROM uqituvchilar WHERE yillik_staji > 5 AND yillik_staji < 9;",
       "SELECT * FROM uqituvchilar WHERE yillik_staji BETWEEN 5 AND 9;",
       "SELECT * FROM uqituvchilar WHERE yillik_staji IN (5, 6, 7, 8, 9);",
       "Barcha javoblar to'g'ri",
     ],
-    answer: "SELECT * FROM uqituvchilar WHERE yillik_staji BETWEEN 5 AND 9; (`BETWEEN` chegaralarni ham o'z ichiga oladi)",
+    answer: "SELECT * FROM uqituvchilar WHERE yillik_staji BETWEEN 5 AND 9;",
   },
   {
     question:
       "Uqituvchilar jadvalidan 4 mln dan 7 mln gacha oylik oluvchi o'qituvchilarni ro'yxatini chiqarish so'rovini ko'rsating.",
     options: [
-      "SELECT * FROM uqituvchilar WHERE oylik >= 4000000 AND oylik <= 7000000;",
-      "SELECT * FROM uqituvchilar WHERE oylik BETWEEN 4000000 AND 7000000;",
-      "SELECT * FROM uqituvchilar WHERE oylik IN (4000000 TO 7000000);",
-      "Ikkala A va B variantlari to'g'ri",
+      "A)SELECT * FROM uqituvchilar WHERE oylik >= 4000000 AND oylik <= 7000000;",
+      "B)SELECT * FROM uqituvchilar WHERE oylik BETWEEN 4000000 AND 7000000;",
+      "C)SELECT * FROM uqituvchilar WHERE oylik IN (4000000 TO 7000000);", // IN operatori diapazonlar uchun emas, ro'yxatlar uchun
+      "D)Ikkala A va B variantlari to'g'ri",
     ],
-    answer: "Ikkala A va B variantlari to'g'ri (`>= AND <=` ham, `BETWEEN` ham bu shartni bajaradi)",
+    answer: "D)Ikkala A va B variantlari to'g'ri",
   },
   {
     question:
@@ -146,7 +146,7 @@ const questionsSet2 = [
       "SELECT * FROM talabalar WHERE fio LIKE '%Alisher%';",
       "SELECT * FROM talabalar WHERE fio CONTAINS 'Alisher';",
     ],
-    answer: "SELECT * FROM talabalar WHERE fio LIKE 'Alisher %'; (ism boshida kelishi va undan keyin boshqa belgilar bo'lishi mumkinligini bildiradi)",
+    answer: "SELECT * FROM talabalar WHERE fio LIKE 'Alisher %';",
   },
   {
     question:
@@ -179,7 +179,7 @@ const questionsSet2 = [
       "WHERE ism LIKE '_A%'",
       "WHERE ism = 'A*'",
     ],
-    answer: "WHERE ism LIKE 'A%' (`%` 'A' dan keyin istalgan belgilar kelishi mumkinligini bildiradi)",
+    answer: "WHERE ism LIKE 'A%'",
   },
   {
     question: "`AS` kalit so'zi vazifasini ko'rsating.",
@@ -189,7 +189,7 @@ const questionsSet2 = [
       "Agregat funksiyalarni chaqirish uchun",
       "Ma'lumot turini o'zgartirish uchun",
     ],
-    answer: "Ustun yoki jadvalga vaqtinchalik nom (alias) berish uchun (masalan, `SELECT ism AS FIO FROM talabalar;`)",
+    answer: "Ustun yoki jadvalga vaqtinchalik nom (alias) berish uchun",
   },
   {
     question: "`MIN()` funksiyasi vazifasini ko'rsating.",
@@ -240,7 +240,7 @@ const questionsSet2 = [
       "Ustundagi noyob qiymatlar sonini qaytaradi",
     ],
     answer:
-      "Belgilangan shartga mos keladigan qatorlar sonini (`COUNT(*)`) yoki ustundagi NULL bo'lmagan qiymatlar sonini (`COUNT(ustun_nomi)`) qaytaradi",
+      "Belgilangan shartga mos keladigan qatorlar sonini (yoki ustundagi NULL bo'lmagan qiymatlar sonini) qaytaradi",
   },
   {
     question: "`ROUND()` funksiyasi vazifasini ko'rsating.",
@@ -251,7 +251,7 @@ const questionsSet2 = [
       "Sonni modulini topadi",
     ],
     answer:
-      "Sonni eng yaqin butun songacha yoki ko'rsatilgan o'nlik xonagacha yaxlitlaydi (masalan, `ROUND(123.456, 2)` natijasi `123.46`)",
+      "Sonni eng yaqin butun songacha yoki ko'rsatilgan o'nlik xonagacha yaxlitlaydi",
   },
   {
     question: "`LENGTH()` (yoki `LEN()`) funksiyasi vazifasini ko'rsating.",
@@ -261,7 +261,7 @@ const questionsSet2 = [
       "Matndagi belgilar sonini (uzunligini) qaytaradi",
       "Matnni kichik harflarga o'tkazadi",
     ],
-    answer: "Matndagi belgilar sonini (uzunligini) qaytaradi (MySQL'da `CHAR_LENGTH()` belgilar sonini, `LENGTH()` baytlar sonini beradi; SQL Server'da `LEN()` ishlatiladi)",
+    answer: "Matndagi belgilar sonini (uzunligini) qaytaradi",
   },
   {
     question: "`LEFT()` funksiyasi vazifasini ko'rsating.",
@@ -293,7 +293,7 @@ const questionsSet2 = [
       "Matnni teskari tartibda yozadi",
     ],
     answer:
-      "Matnning ma'lum bir pozitsiyasidan boshlab belgilangan uzunlikdagi qismni ajratib oladi (pozitsiyalar odatda 1 dan boshlanadi)",
+      "Matnning ma'lum bir pozitsiyasidan boshlab belgilangan uzunlikdagi qismni ajratib oladi",
   },
   {
     question: "`UPPER()` funksiyasi vazifasini ko'rsating.",
@@ -324,7 +324,7 @@ const questionsSet2 = [
       "Matn ichidan qismni qidiradi",
       "Matnni bo'laklarga ajratadi",
     ],
-    answer: "Bir nechta matnlarni (satrlarni) birlashtiradi (SQL Server'da `+` operatori ham ishlatiladi)",
+    answer: "Bir nechta matnlarni (satrlarni) birlashtiradi",
   },
   {
     question: "`REPLACE()` funksiyasi vazifasini ko'rsating.",
@@ -334,7 +334,7 @@ const questionsSet2 = [
       "Matndagi barcha takrorlanuvchi belgilarni olib tashlaydi",
       "Matnni ma'lum bir uzunlikka qisqartiradi",
     ],
-    answer: "Matnning bir qismini boshqa matn bilan almashtiradi (matndagi barcha mos keluvchi qismlarni almashtiradi)",
+    answer: "Matnning bir qismini boshqa matn bilan almashtiradi",
   },
   {
     question: "`POSITION()` (yoki `INSTR()`) funksiyasi vazifasini ko'rsating.",
@@ -345,7 +345,7 @@ const questionsSet2 = [
       "Matnni belgilangan pozitsiyadan boshlab kesadi",
     ],
     answer:
-      "Bir matn ichida boshqa bir matnning (qism satrning) birinchi uchragan o'rnini (pozitsiyasini) qaytaradi (agar topilmasa 0 qaytaradi)",
+      "Bir matn ichida boshqa bir matnning (qism satrning) birinchi uchragan o'rnini (pozitsiyasini) qaytaradi",
   },
   {
     question: "`DAY()` funksiyasi vazifasini ko'rsating (sana qiymatidan).",
@@ -387,7 +387,7 @@ const questionsSet2 = [
       "Jadvallarni birlashtiradi",
     ],
     answer:
-      "Natijalarni bir yoki bir nechta ustun qiymatlari bo'yicha guruhlaydi, odatda agregat funksiyalar (`SUM()`, `AVG()`, `COUNT()` va hokazo) bilan ishlatiladi",
+      "Natijalarni bir yoki bir nechta ustun qiymatlari bo'yicha guruhlaydi, odatda agregat funksiyalar bilan ishlatiladi",
   },
   {
     question: "`HAVING` operatori vazifasini ko'rsating.",
@@ -398,7 +398,7 @@ const questionsSet2 = [
       "Har doim `SELECT`dan oldin yoziladi",
     ],
     answer:
-      "`GROUP BY` bilan guruhlangan natijalarga shart qo'yish uchun ishlatiladi (agregat funksiyalarga shart qo'yish mumkin, masalan `HAVING COUNT(*) > 5`)",
+      "`GROUP BY` bilan guruhlangan natijalarga shart qo'yish uchun ishlatiladi (agregat funksiyalarga shart qo'yish mumkin)",
   },
   {
     question:
@@ -442,7 +442,7 @@ const questionsSet2 = [
       "SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ...",
       "SELECT ... FROM ... HAVING ... WHERE ... GROUP BY ...",
     ],
-    answer: "SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ... (keyin ORDER BY va LIMIT kelishi mumkin)",
+    answer: "SELECT ... FROM ... WHERE ... GROUP BY ... HAVING ...",
   },
   {
     question:
@@ -459,7 +459,7 @@ const questionsSet2 = [
     question:
       "`SELECT 35 % 8 AS result;` so'rovining natijasini ko'rsating (`%` - qoldiq operatori).",
     options: ["4", "3", "5", "4.375"],
-    answer: "3 (35 ni 8 ga bo'lganda qoldiq 3 ga teng)",
+    answer: "3",
   },
   {
     question:
@@ -471,7 +471,7 @@ const questionsSet2 = [
     question:
       "`SELECT SUBSTR(\"Hemis\",1,2) AS result;` so'rovining natijasini ko'rsating (birinchi belgi 1-pozitsiyada).",
     options: ["He", "em", "is", "H"],
-    answer: "He (birinchi belgidan boshlab 2 ta belgini oladi)",
+    answer: "He",
   },
   {
     question: "`WHERE` va `HAVING` operatorlarining farqi nimada?",
@@ -482,7 +482,7 @@ const questionsSet2 = [
       "`WHERE` faqat `SELECT` bilan, `HAVING` esa `UPDATE` bilan ishlatiladi",
     ],
     answer:
-      "`WHERE` qatorlarni guruhlashdan oldin (individual qatorlarga) filtrlaydi, `HAVING` esa guruhlangan natijalarga (agregat funksiya natijalariga) filtrlaydi",
+      "`WHERE` qatorlarni guruhlashdan oldin filtrlaydi, `HAVING` esa guruhlangan natijalarni filtrlaydi",
   },
   {
     question:
@@ -494,7 +494,7 @@ const questionsSet2 = [
       "Eng ko'p uchraydigan yillik stajni topadi",
     ],
     answer:
-      "Har bir noyob yillik staj qiymatini o'zi (o'rtachasi) sifatida qaytaradi, bu unchalik ma'noli emas (chunki har bir guruhda yillik_staji bir xil bo'ladi, uning o'rtachasi ham o'sha qiymatga teng)",
+      "Har bir noyob yillik staj qiymatini o'zi (o'rtachasi) sifatida qaytaradi, bu unchalik ma'noli emas",
   },
   {
     question:
@@ -505,7 +505,7 @@ const questionsSet2 = [
       "REMOVE FROM talabalar WHERE guruh = '911-19' OR guruh = '912-19';",
       "DELETE talabalar WHERE guruh LIKE '91%-19';",
     ],
-    answer: "DELETE FROM talabalar WHERE guruh IN ('911-19', '912-19'); (yoki `WHERE guruh = '911-19' OR guruh = '912-19';` ham to'g'ri bo'lardi)",
+    answer: "DELETE FROM talabalar WHERE guruh IN ('911-19', '912-19');",
   },
   {
     question:
@@ -519,7 +519,3 @@ const questionsSet2 = [
     answer: "UPDATE uqituvchilar SET oyligi = 5000000 WHERE oyligi < 5000000;",
   },
 ];
-
-// Misol uchun, birinchi savolni va uning javobini konsolga chiqarish:
-// console.log("Savol:", questionsSet2[0].question);
-// console.log("Javob:", questionsSet2[0].answer);

@@ -1,6 +1,8 @@
 console.log("4 Bo'limli script.js yuklandi (Bloklash olib tashlandi)");
 
-const sectionSelectionScreen = document.getElementById("section-selection-screen");
+const sectionSelectionScreen = document.getElementById(
+  "section-selection-screen"
+);
 const quizScreen = document.getElementById("quiz-screen");
 const resultScreen = document.getElementById("result-screen");
 
@@ -36,22 +38,77 @@ let shuffledQuestions = [];
 
 console.log("Savol to'plamlari yuklanishidan oldin (globalda mavjudligi):", {
   qs1_type: typeof questionsSet1,
-  qs1_len: typeof questionsSet1 !== "undefined" && Array.isArray(questionsSet1) ? questionsSet1.length : "topilmadi yoki massiv emas",
+  qs1_len:
+    typeof questionsSet1 !== "undefined" && Array.isArray(questionsSet1)
+      ? questionsSet1.length
+      : "topilmadi yoki massiv emas",
   qs2_type: typeof questionsSet2,
-  qs2_len: typeof questionsSet2 !== "undefined" && Array.isArray(questionsSet2) ? questionsSet2.length : "topilmadi yoki massiv emas",
+  qs2_len:
+    typeof questionsSet2 !== "undefined" && Array.isArray(questionsSet2)
+      ? questionsSet2.length
+      : "topilmadi yoki massiv emas",
   qs3_type: typeof questionsSet3,
-  qs3_len: typeof questionsSet3 !== "undefined" && Array.isArray(questionsSet3) ? questionsSet3.length : "topilmadi yoki massiv emas",
+  qs3_len:
+    typeof questionsSet3 !== "undefined" && Array.isArray(questionsSet3)
+      ? questionsSet3.length
+      : "topilmadi yoki massiv emas",
   qs4_type: typeof questionsSet4,
-  qs4_len: typeof questionsSet4 !== "undefined" && Array.isArray(questionsSet4) ? questionsSet4.length : "topilmadi yoki massiv emas",
+  qs4_len:
+    typeof questionsSet4 !== "undefined" && Array.isArray(questionsSet4)
+      ? questionsSet4.length
+      : "topilmadi yoki massiv emas",
+  qs5_type: typeof questionsSet5,
+  qs5_len:
+    typeof questionsSet5 !== "undefined" && Array.isArray(questionsSet5)
+      ? questionsSet5.length
+      : "topilmadi yoki massiv emas",
+  qs6_type: typeof questionsSet6,
+  qs6_len:
+    typeof questionsSet6 !== "undefined" && Array.isArray(questionsSet6)
+      ? questionsSet6.length
+      : "topilmadi yoki massiv emas",
+  qs7_type: typeof questionsSet7,
+  qs7_len:
+    typeof questionsSet7 !== "undefined" && Array.isArray(questionsSet7)
+      ? questionsSet7.length
+      : "topilmadi yoki massiv emas",
+  qs8_type: typeof questionsSet8,
+  qs8_len:
+    typeof questionsSet8 !== "undefined" && Array.isArray(questionsSet8)
+      ? questionsSet8.length
+      : "topilmadi yoki massiv emas",
 });
 
 const allQuestionSets = [
-  typeof questionsSet1 !== "undefined" && Array.isArray(questionsSet1) ? questionsSet1 : [],
-  typeof questionsSet2 !== "undefined" && Array.isArray(questionsSet2) ? questionsSet2 : [],
-  typeof questionsSet3 !== "undefined" && Array.isArray(questionsSet3) ? questionsSet3 : [],
-  typeof questionsSet4 !== "undefined" && Array.isArray(questionsSet4) ? questionsSet4 : [],
+  typeof questionsSet1 !== "undefined" && Array.isArray(questionsSet1)
+    ? questionsSet1
+    : [],
+  typeof questionsSet2 !== "undefined" && Array.isArray(questionsSet2)
+    ? questionsSet2
+    : [],
+  typeof questionsSet3 !== "undefined" && Array.isArray(questionsSet3)
+    ? questionsSet3
+    : [],
+  typeof questionsSet4 !== "undefined" && Array.isArray(questionsSet4)
+    ? questionsSet4
+    : [],
+  typeof questionsSet5 !== "undefined" && Array.isArray(questionsSet5)
+    ? questionsSet5
+    : [],
+  typeof questionsSet6 !== "undefined" && Array.isArray(questionsSet6)
+    ? questionsSet6
+    : [],
+  typeof questionsSet7 !== "undefined" && Array.isArray(questionsSet7)
+    ? questionsSet7
+    : [],
+  typeof questionsSet8 !== "undefined" && Array.isArray(questionsSet8)
+    ? questionsSet8
+    : [],
 ];
-console.log("allQuestionSets tuzildi:", allQuestionSets.map((set) => `Massiv(${set.length})`));
+console.log(
+  "allQuestionSets tuzildi:",
+  allQuestionSets.map((set) => `Massiv(${set.length})`)
+);
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -64,15 +121,35 @@ function shuffleArray(array) {
 function startQuizForSection(sectionIndex) {
   console.log(`startQuizForSection chaqirildi, sectionIndex: ${sectionIndex}`);
 
-  if (sectionIndex < 0 || sectionIndex >= allQuestionSets.length || !allQuestionSets[sectionIndex] || allQuestionSets[sectionIndex].length === 0) {
-    alert(`Kechirasiz, ${sectionIndex + 1}-bo'lim uchun savollar topilmadi yoki yuklanmadi. Iltimos, konsolni tekshiring.`);
-    console.error(`startQuizForSection: Savollar topilmadi yoki sectionIndex xato. sectionIndex: ${sectionIndex}`, `allQuestionSets[${sectionIndex}]:`, allQuestionSets[sectionIndex] ? `Uzunligi: ${allQuestionSets[sectionIndex].length}` : "mavjud emas");
+  if (
+    sectionIndex < 0 ||
+    sectionIndex >= allQuestionSets.length ||
+    !allQuestionSets[sectionIndex] ||
+    allQuestionSets[sectionIndex].length === 0
+  ) {
+    alert(
+      `Kechirasiz, ${
+        sectionIndex + 1
+      }-bo'lim uchun savollar topilmadi yoki yuklanmadi. Iltimos, konsolni tekshiring.`
+    );
+    console.error(
+      `startQuizForSection: Savollar topilmadi yoki sectionIndex xato. sectionIndex: ${sectionIndex}`,
+      `allQuestionSets[${sectionIndex}]:`,
+      allQuestionSets[sectionIndex]
+        ? `Uzunligi: ${allQuestionSets[sectionIndex].length}`
+        : "mavjud emas"
+    );
     showSectionSelectionScreen();
     return;
   }
 
   shuffledQuestions = shuffleArray([...allQuestionSets[sectionIndex]]);
-  console.log("Tanlangan va aralashtirilgan savollar:", shuffledQuestions.length > 0 ? `${shuffledQuestions.length} ta savol` : "SAVOLLAR YO'Q!");
+  console.log(
+    "Tanlangan va aralashtirilgan savollar:",
+    shuffledQuestions.length > 0
+      ? `${shuffledQuestions.length} ta savol`
+      : "SAVOLLAR YO'Q!"
+  );
 
   if (!sectionSelectionScreen || !quizScreen || !resultScreen) {
     console.error("Ekran elementlaridan biri topilmadi! HTMLni tekshiring.");
@@ -94,7 +171,13 @@ function startQuizForSection(sectionIndex) {
 }
 
 function displayQuestion() {
-  if (!questionNumberEl || !questionTextEl || !optionsContainer || !feedbackTextEl || !nextBtn) {
+  if (
+    !questionNumberEl ||
+    !questionTextEl ||
+    !optionsContainer ||
+    !feedbackTextEl ||
+    !nextBtn
+  ) {
     console.error("displayQuestion: Kerakli HTML elementlar topilmadi!");
     return;
   }
@@ -103,7 +186,9 @@ function displayQuestion() {
     return;
   }
   const currentQuestion = shuffledQuestions[currentQuestionIndex];
-  questionNumberEl.textContent = `Savol ${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
+  questionNumberEl.textContent = `Savol ${currentQuestionIndex + 1}/${
+    shuffledQuestions.length
+  }`;
   questionTextEl.textContent = currentQuestion.question;
   optionsContainer.innerHTML = "";
   feedbackTextEl.textContent = "";
@@ -116,7 +201,9 @@ function displayQuestion() {
     const button = document.createElement("button");
     button.textContent = option;
     button.classList.add("option-btn");
-    button.addEventListener("click", () => selectAnswer(option, button, currentQuestion.answer));
+    button.addEventListener("click", () =>
+      selectAnswer(option, button, currentQuestion.answer)
+    );
     optionsContainer.appendChild(button);
   });
 }
@@ -159,18 +246,22 @@ function showResults() {
   resultScreen.classList.remove("hidden");
   finalScoreEl.textContent = `Sizning natijangiz: ${score} / ${shuffledQuestions.length}`;
   let message = "";
-  const percentage = shuffledQuestions.length > 0 ? (score / shuffledQuestions.length) * 100 : 0;
+  const percentage =
+    shuffledQuestions.length > 0 ? (score / shuffledQuestions.length) * 100 : 0;
   if (shuffledQuestions.length === 0) {
     message = "Testda savollar mavjud emas edi.";
     finalScoreEl.textContent = "Natija yo'q";
   } else if (percentage >= 80) {
-    message = "Ajoyib! Siz testdan muvaffaqiyatli o'tdingiz! Bilimlaringiz mustahkam!";
+    message =
+      "Ajoyib! Siz testdan muvaffaqiyatli o'tdingiz! Bilimlaringiz mustahkam!";
   } else if (percentage >= 60) {
-    message = "Yaxshi natija! Yana bir oz harakat qilsangiz, yanada yaxshi bo'ladi.";
+    message =
+      "Yaxshi natija! Yana bir oz harakat qilsangiz, yanada yaxshi bo'ladi.";
   } else if (percentage >= 40) {
     message = "Qoniqarli. Takrorlash va ko'proq mashq qilish tavsiya etiladi.";
   } else {
-    message = "Keyingi safar yaxshiroq harakat qiling. O'rganishda davom eting va ruhdan tushmang!";
+    message =
+      "Keyingi safar yaxshiroq harakat qiling. O'rganishda davom eting va ruhdan tushmang!";
   }
   resultMessageEl.textContent = message;
 }
@@ -178,7 +269,9 @@ function showResults() {
 function showSectionSelectionScreen() {
   console.log("showSectionSelectionScreen chaqirildi");
   if (!quizScreen || !resultScreen || !sectionSelectionScreen) {
-    console.error("showSectionSelectionScreen: Ekran elementlaridan biri topilmadi! HTMLni tekshiring.");
+    console.error(
+      "showSectionSelectionScreen: Ekran elementlaridan biri topilmadi! HTMLni tekshiring."
+    );
     return;
   }
   quizScreen.classList.add("hidden");
@@ -187,7 +280,10 @@ function showSectionSelectionScreen() {
 }
 
 if (sectionButtons && sectionButtons.length > 0) {
-  console.log("Bo'lim tugmalariga event listener qo'shilmoqda:", sectionButtons);
+  console.log(
+    "Bo'lim tugmalariga event listener qo'shilmoqda:",
+    sectionButtons
+  );
   sectionButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const sectionIndex = parseInt(button.dataset.section);
@@ -196,24 +292,32 @@ if (sectionButtons && sectionButtons.length > 0) {
     });
   });
 } else {
-  console.error("Bo'lim tanlash tugmalari topilmadi (sectionButtons)! HTMLni tekshiring.");
+  console.error(
+    "Bo'lim tanlash tugmalari topilmadi (sectionButtons)! HTMLni tekshiring."
+  );
 }
 
 if (restartBtn) {
   restartBtn.addEventListener("click", showSectionSelectionScreen);
 } else {
-  console.error("Qayta boshlash tugmasi (restartBtn) topilmadi! HTMLni tekshiring.");
+  console.error(
+    "Qayta boshlash tugmasi (restartBtn) topilmadi! HTMLni tekshiring."
+  );
 }
 
 if (backToSectionsBtn) {
   backToSectionsBtn.addEventListener("click", () => {
-    const confirmExit = confirm("Haqiqatan ham bo'limlar ro'yxatiga qaytmoqchimisiz? Joriy natijalaringiz saqlanmaydi.");
+    const confirmExit = confirm(
+      "Haqiqatan ham bo'limlar ro'yxatiga qaytmoqchimisiz? Joriy natijalaringiz saqlanmaydi."
+    );
     if (confirmExit) {
       showSectionSelectionScreen();
     }
   });
 } else {
-  console.error("Bo'limlarga qaytish tugmasi (backToSectionsBtn) topilmadi! HTMLni tekshiring.");
+  console.error(
+    "Bo'limlarga qaytish tugmasi (backToSectionsBtn) topilmadi! HTMLni tekshiring."
+  );
 }
 
 if (nextBtn) {
@@ -222,18 +326,35 @@ if (nextBtn) {
     displayQuestion();
   });
 } else {
-  console.error("Keyingi savol tugmasi (nextBtn) topilmadi! HTMLni tekshiring.");
+  console.error(
+    "Keyingi savol tugmasi (nextBtn) topilmadi! HTMLni tekshiring."
+  );
 }
 
 showSectionSelectionScreen();
 
 allQuestionSets.forEach((set, index) => {
   let setName = `questionsSet${index + 1}`;
-  if (typeof window[setName] === "undefined" || !Array.isArray(window[setName]) || window[setName].length === 0) {
-    console.warn(`Diqqat: Bo'lim ${index + 1} uchun savollar (${setName}) topilmadi, massiv emas yoki bo'sh. Iltimos, ${setName.replace("questionsSet", "questions")}.js faylini va uning HTML'ga to'g'ri ulanganligini tekshiring.`);
+  if (
+    typeof window[setName] === "undefined" ||
+    !Array.isArray(window[setName]) ||
+    window[setName].length === 0
+  ) {
+    console.warn(
+      `Diqqat: Bo'lim ${
+        index + 1
+      } uchun savollar (${setName}) topilmadi, massiv emas yoki bo'sh. Iltimos, ${setName.replace(
+        "questionsSet",
+        "questions"
+      )}.js faylini va uning HTML'ga to'g'ri ulanganligini tekshiring.`
+    );
   } else {
-    console.log(`Bo'lim ${index + 1} (${setName}) savollari muvaffaqiyatli topildi.`);
-    const btnToEnable = document.querySelector(`.section-btn[data-section="${index}"]`);
+    console.log(
+      `Bo'lim ${index + 1} (${setName}) savollari muvaffaqiyatli topildi.`
+    );
+    const btnToEnable = document.querySelector(
+      `.section-btn[data-section="${index}"]`
+    );
     if (btnToEnable) {
       btnToEnable.disabled = false;
       btnToEnable.style.opacity = 1;
@@ -243,58 +364,59 @@ allQuestionSets.forEach((set, index) => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const accordionButtons = document.querySelectorAll('.accordion-button');
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionButtons = document.querySelectorAll(".accordion-button");
 
-    accordionButtons.forEach(button => {
-        // Находим иконки для текущей кнопки
-        const openIcon = button.querySelector('.open-icon');
-        const closeIcon = button.querySelector('.close-icon');
-        // Находим контент для текущей кнопки
-        const content = button.nextElementSibling;
+  accordionButtons.forEach((button) => {
+    // Находим иконки для текущей кнопки
+    const openIcon = button.querySelector(".open-icon");
+    const closeIcon = button.querySelector(".close-icon");
+    // Находим контент для текущей кнопки
+    const content = button.nextElementSibling;
 
-        // Начальное состояние иконок (X скрыт)
-        if (closeIcon) closeIcon.style.display = 'none';
-        if (openIcon) openIcon.style.display = 'inline'; // Убедимся, что "+" виден
+    // Начальное состояние иконок (X скрыт)
+    if (closeIcon) closeIcon.style.display = "none";
+    if (openIcon) openIcon.style.display = "inline"; // Убедимся, что "+" виден
 
-        button.addEventListener('click', function () {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    button.addEventListener("click", function () {
+      const isExpanded = this.getAttribute("aria-expanded") === "true";
 
-            // Сначала закрываем все ДРУГИЕ открытые аккордеоны
-            accordionButtons.forEach(otherButton => {
-                if (otherButton !== this) { // Если это не текущая кнопка
-                    const otherContent = otherButton.nextElementSibling;
-                    const otherOpenIcon = otherButton.querySelector('.open-icon');
-                    const otherCloseIcon = otherButton.querySelector('.close-icon');
+      // Сначала закрываем все ДРУГИЕ открытые аккордеоны
+      accordionButtons.forEach((otherButton) => {
+        if (otherButton !== this) {
+          // Если это не текущая кнопка
+          const otherContent = otherButton.nextElementSibling;
+          const otherOpenIcon = otherButton.querySelector(".open-icon");
+          const otherCloseIcon = otherButton.querySelector(".close-icon");
 
-                    otherButton.setAttribute('aria-expanded', 'false');
-                    otherContent.classList.remove('open');
-                    otherContent.style.maxHeight = null; // Сбрасываем max-height для анимации закрытия
-                    
-                    // Возвращаем иконки других кнопок в состояние "закрыто"
-                    if (otherOpenIcon) otherOpenIcon.style.display = 'inline';
-                    if (otherCloseIcon) otherCloseIcon.style.display = 'none';
-                }
-            });
+          otherButton.setAttribute("aria-expanded", "false");
+          otherContent.classList.remove("open");
+          otherContent.style.maxHeight = null; // Сбрасываем max-height для анимации закрытия
 
-            // Теперь переключаем текущий аккордеон
-            if (isExpanded) {
-                // Закрываем текущий
-                this.setAttribute('aria-expanded', 'false');
-                content.classList.remove('open');
-                content.style.maxHeight = null;
-                if (openIcon) openIcon.style.display = 'inline';
-                if (closeIcon) closeIcon.style.display = 'none';
-            } else {
-                // Открываем текущий
-                this.setAttribute('aria-expanded', 'true');
-                content.classList.add('open');
-                // Устанавливаем max-height для анимации открытия.
-                // scrollHeight дает реальную высоту контента.
-                content.style.maxHeight = content.scrollHeight + "px";
-                if (openIcon) openIcon.style.display = 'none';
-                if (closeIcon) closeIcon.style.display = 'inline';
-            }
-        });
+          // Возвращаем иконки других кнопок в состояние "закрыто"
+          if (otherOpenIcon) otherOpenIcon.style.display = "inline";
+          if (otherCloseIcon) otherCloseIcon.style.display = "none";
+        }
+      });
+
+      // Теперь переключаем текущий аккордеон
+      if (isExpanded) {
+        // Закрываем текущий
+        this.setAttribute("aria-expanded", "false");
+        content.classList.remove("open");
+        content.style.maxHeight = null;
+        if (openIcon) openIcon.style.display = "inline";
+        if (closeIcon) closeIcon.style.display = "none";
+      } else {
+        // Открываем текущий
+        this.setAttribute("aria-expanded", "true");
+        content.classList.add("open");
+        // Устанавливаем max-height для анимации открытия.
+        // scrollHeight дает реальную высоту контента.
+        content.style.maxHeight = content.scrollHeight + "px";
+        if (openIcon) openIcon.style.display = "none";
+        if (closeIcon) closeIcon.style.display = "inline";
+      }
     });
+  });
 });

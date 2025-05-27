@@ -8,7 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <section id="section-selection-screen" class="screen" aria-labelledby="section-title">
+      <section
+        id="section-selection-screen"
+        class="screen"
+        aria-labelledby="section-title"
+      >
         <h1 id="section-title">SQL Test Bo'limlari</h1>
         <p>O'zingiz sinamoqchi bo'lgan bo'limni tanlang:</p>
         <div id="section-buttons-container">
@@ -24,10 +28,26 @@
           <button class="btn section-btn" data-section="3" type="button">
             Bo'lim 4 (151-200 savollar)
           </button>
+          <button class="btn section-btn" data-section="4" type="button">
+            Dastur Injnering-1 bo'lim (1-50 gacha)
+          </button>
+          <button class="btn section-btn" data-section="5" type="button">
+            Dastur Injnering-2 bo'lim (51-100 gacha)
+          </button>
+          <button class="btn section-btn" data-section="6" type="button">
+            Dastur Injnering-3 bo'lim (101-150 gacha)
+          </button>
+          <button class="btn section-btn" data-section="7" type="button">
+            Nusxa Rasimga Asosan
+          </button>
         </div>
       </section>
 
-      <section id="quiz-screen" class="screen hidden" aria-labelledby="quiz-header">
+      <section
+        id="quiz-screen"
+        class="screen hidden"
+        aria-labelledby="quiz-header"
+      >
         <header class="quiz-header">
           <span id="question-number" aria-live="polite">Savol 1/X</span>
           <span id="score" aria-live="polite">Ball: 0</span>
@@ -35,19 +55,35 @@
         <div id="question-container">
           <p id="question-text">Savol...</p>
         </div>
-        <div id="options-container" role="radiogroup" aria-labelledby="question-text">
+        <div
+          id="options-container"
+          role="radiogroup"
+          aria-labelledby="question-text"
+        >
           <!-- Variantlar JavaScript orqali qo'shiladi -->
         </div>
         <div id="feedback-text" class="feedback" aria-live="assertive"></div>
-     <button id="next-btn" class="next-btn" disabled>Keyingi savol</button>
-        <button id="back-to-sections-btn" class="btn btn-secondary" type="button"> Bo'limlarga qaytish       </button>
+        <button id="next-btn" class="next-btn" disabled>Keyingi savol</button>
+        <button
+          id="back-to-sections-btn"
+          class="btn btn-secondary"
+          type="button"
+        >
+          Bo'limlarga qaytish
+        </button>
       </section>
 
-      <section id="result-screen" class="screen hidden" aria-labelledby="result-title">
+      <section
+        id="result-screen"
+        class="screen hidden"
+        aria-labelledby="result-title"
+      >
         <h2 id="result-title">Test Natijalari</h2>
         <p id="final-score" aria-live="polite">Natija: 0/0</p>
         <p id="result-message">Xabar.</p>
-        <button id="restart-btn" class="btn" type="button">Boshqa Bo'limni Tanlash</button>
+        <button id="restart-btn" class="btn" type="button">
+          Boshqa Bo'limni Tanlash
+        </button>
       </section>
     </div>
 
@@ -56,6 +92,10 @@
     <script src="questions2.js"></script>
     <script src="questions3.js"></script>
     <script src="questions4.js"></script>
+    <script src="questions5.js"></script>
+    <script src="questions6.js"></script>
+    <script src="questions7.js"></script>
+    <script src="questions8.js"></script>
     <!-- Asosiy skript fayli -->
     <script src="script.js"></script>
   </body>
