@@ -8,21 +8,21 @@ const questionsSet8 = [
       "REMOVE TABLE table_name",
       "INSERT INTO table_name",
     ],
-    correctAnswer: "DROP TABLE table_name",
+    answer: "DROP TABLE table_name",
   },
   {
     id: 2,
     question:
       "Agar siz 1 dan 10 gacha bo'lgan sonlarni saqlamoqchi bo'lsangiz, qanday ma'lumot turi eng optimal bo'ladi?",
     options: ["INT", "TINYINT", "SMALLINT", "CHAR"],
-    correctAnswer: "TINYINT",
+    answer: "TINYINT",
   },
   {
     id: 3,
     question:
       "Hisob kitob ma'lum bir qismida (kasr qismida) qanday ma'lumot turi ishlatilishi maqsadga muvofiq?",
     options: ["INT", "FLOAT", "DOUBLE", "B va C javoblar to'g'ri"],
-    correctAnswer: "B va C javoblar to'g'ri",
+    answer: "B va C javoblar to'g'ri",
   },
   {
     id: 4, // From Image 6 (unclear number)
@@ -34,14 +34,14 @@ const questionsSet8 = [
       "DATE, DATETIME, TIMESTAMP",
       "INT, BIGINT, SMALLINT",
     ],
-    correctAnswer: "INT, BIGINT, SMALLINT",
+    answer: "INT, BIGINT, SMALLINT",
   },
   {
     id: 5, // From Image 6 (unclear number)
     question:
       "Ma'lumotlar bilan ishlaydigan vaqtlarini (sana va vaqt) olish uchun qanday ma'lumot turidan foydalanish maqsadga muvofiq.",
     options: ["VARCHAR", "CHAR", "INT", "DATETIME"],
-    correctAnswer: "DATETIME",
+    answer: "DATETIME",
   },
   {
     id: 6, // From Image 6 (unclear number)
@@ -53,7 +53,7 @@ const questionsSet8 = [
       "INSERT jadval_nomi(ustun_nomlari,..) VALUES (qiymatlar,...) INTO (ustun_nomlar_2,..)",
       "INSERT INTO jadval_nomi(ustun_nomlari,..) VALUES (qiymatlar,...)",
     ],
-    correctAnswer:
+    answer:
       "INSERT INTO jadval_nomi(ustun_nomlari,..) VALUES (qiymatlar,...)",
   },
   {
@@ -66,7 +66,7 @@ const questionsSet8 = [
       "NOT NULL berilgan ustundagi qiymatning bo'sh (NULL) bo'lmasligini bildiradi",
       "NOT NULL berilgan ustuning qiymati faqat raqamlardan iborat bo'lishini mumkinligini bildiradi",
     ],
-    correctAnswer:
+    answer:
       "NOT NULL berilgan ustundagi qiymatning bo'sh (NULL) bo'lmasligini bildiradi",
   },
   {
@@ -78,7 +78,7 @@ const questionsSet8 = [
       "Ma'lumotlarni o'zgartirish",
       "Ma'lumotlarni o'chirish",
     ],
-    correctAnswer: "Ma'lumotlarni o'zgartirish",
+    answer: "Ma'lumotlarni o'zgartirish",
   },
   {
     id: 9, // Image 5, Savol 10
@@ -90,7 +90,7 @@ const questionsSet8 = [
       "So'rov xatolikka uchragan",
       "ochish_vaqti va joy_nomi ustunlaridagi ma'lumotlar ichidan samolyot nomli qiymatlarni chiqarish",
     ],
-    correctAnswer:
+    answer:
       "Samolyotlar jadvalidan barcha ma'lumotlarni ochish vaqti va joy_nomi ustunlarini chiqarish",
   },
   {
@@ -102,7 +102,7 @@ const questionsSet8 = [
       "Qaytgan satrlarni cheklash",
       "to'g'ri javob yo'q",
     ],
-    correctAnswer: "Qaytgan satrlarni cheklash",
+    answer: "Qaytgan satrlarni cheklash",
   },
   {
     id: 11, // Image 4, Savol 12
@@ -114,7 +114,7 @@ const questionsSet8 = [
       "testlar jadvalidan t_javob va j_javoblar ustunidagi qiymatlar teng bo'lgan qatorlarni oladi",
       "testlar jadvalidan t_javob va j_javoblar ustunidagi qiymatlar teng bo'lgan qatorlar sonini oladi",
     ],
-    correctAnswer:
+    answer:
       "testlar jadvalidan t_javob va j_javoblar ustunidagi qiymatlar teng bo'lgan qatorlarni oladi",
   },
   {
@@ -127,14 +127,14 @@ const questionsSet8 = [
       "testlar jadvalidan tenglik bajarilgan qatorlardan javoblar ustunini chiqarish",
       "testlar jadvalidan tenglik bajarilgan qatorlar sonini chiqarish",
     ],
-    correctAnswer:
+    answer:
       "testlar jadvalidan tenglik bajarilgan qatorlardan javoblar ustunini chiqarish",
   },
   {
     id: 13, // Image 4, Savol 14
     question: "FALSE AND TRUE amaldan qanday natija qaytadi",
     options: ["TRUE", "FALSE", "NOT", "0"],
-    correctAnswer: "FALSE",
+    answer: "FALSE",
   },
   {
     id: 14, // Image 4, Savol 15
@@ -145,7 +145,7 @@ const questionsSet8 = [
       "Faqat matnli qiymatlarni tanlaydi",
       "Ma'lumotni istiyoriy qismidan qiymatlarni qidirish uchun ishlatiladi",
     ],
-    correctAnswer:
+    answer:
       "Bir nechta OR shartlarining qiymatini (ya'ni bir nechta qiymatlarni) belgilash imkonini beradi",
   },
   {
@@ -158,7 +158,7 @@ const questionsSet8 = [
       'SELECT * FROM talabalar WHERE fio LIKE "Alisher%";',
       "A va C javoblar to'g'ri",
     ],
-    correctAnswer: 'SELECT * FROM talabalar WHERE fio LIKE "Alisher%";',
+    answer: 'SELECT * FROM talabalar WHERE fio LIKE "Alisher%";',
   },
   {
     id: 16, // Image 3, Savol 17
@@ -169,7 +169,7 @@ const questionsSet8 = [
       "Matnni istiyoriy qismidan kesib oladi",
       "Matnni o'ng tomonidan so'zni kesib oladi",
     ],
-    correctAnswer:
+    answer:
       "Matnni chap tomonidan berilgan uzunlikdagi belgilarni kesib oladi",
   },
   {
@@ -181,7 +181,7 @@ const questionsSet8 = [
       "Bazada jadvallar ko'p bo'lsa",
       "Jadvallarda dublikatlar ko'paysa",
     ],
-    correctAnswer: "Server to'lib qolsa", // More general cause of slowness
+    answer: "Server to'lib qolsa", // More general cause of slowness
   },
   {
     id: 18, // Image 3, Savol 19
@@ -192,7 +192,7 @@ const questionsSet8 = [
       "Tashqi kalit, boshqa jadvallarning ichki kaliti bilan bog'lash uchun",
       "To'g'ri javob yo'q",
     ],
-    correctAnswer:
+    answer:
       "Tashqi kalit, boshqa jadvallarning ichki kaliti bilan bog'lash uchun",
   },
   {
@@ -205,7 +205,7 @@ const questionsSet8 = [
       "Poyezdlar jadvalidan eng oxirgi jo'nash vaqtidagi poyezdlarni chiqarish",
       "Poyezdlar jadvalidan bugungi jo'nash vaqtidagi poyezdlarni chiqarish",
     ],
-    correctAnswer:
+    answer:
       "Poyezdlar jadvalidan eng oxirgi jo'nash vaqtidagi poyezdlarni chiqarish",
   },
   {
@@ -217,7 +217,7 @@ const questionsSet8 = [
       "Funksiya qaytaradigan qiymat turini ko'rsatadi",
       "Funksiyada ishlatilmaydi",
     ],
-    correctAnswer: "Funksiya qaytaradigan qiymat turini ko'rsatadi",
+    answer: "Funksiya qaytaradigan qiymat turini ko'rsatadi",
   },
   {
     id: 21, // Image 2, Savol 22
@@ -229,7 +229,7 @@ const questionsSet8 = [
       "O'rtacha narxdagi biletlarni virtual jadval (view) qilib saqlash",
       "Virtual jadval (VIEW) dagi barcha ma'lumotlarni chiqarish",
     ],
-    correctAnswer:
+    answer:
       "Eng katta narxdagi biletlarni virtual jadval (view) qilib saqlash",
   },
   {
@@ -241,7 +241,7 @@ const questionsSet8 = [
       "SELECT * FROM view_nomi...",
       "INSERT INTO view_name VALUES...",
     ],
-    correctAnswer: "SELECT * FROM view_nomi...",
+    answer: "SELECT * FROM view_nomi...",
   },
   {
     id: 23, // Image 1, Savol 24
@@ -252,7 +252,7 @@ const questionsSet8 = [
       "Ma'lumotlar o'qib ketmaketligi uchun kerak",
       "Ma'lumotlar to'lib ketishini oldini olish uchun kerak",
     ],
-    correctAnswer:
+    answer:
       "Ko'p foydalanadigan so'rovlarni funksiya qilib saqlab qo'yishda ishlatiladi",
   },
   {
@@ -264,7 +264,7 @@ const questionsSet8 = [
       "CALL procedure_name(value1, value2,...)",
       "DELETE PROCEDURE procedure_name;",
     ],
-    correctAnswer: "DROP PROCEDURE procedure_name;",
+    answer: "DROP PROCEDURE procedure_name;",
   },
 ];
 

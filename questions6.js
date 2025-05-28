@@ -9,19 +9,19 @@ const questionsSet6 = [
       "matn berilganda uning o'ng tomonidan oxirgi belgisigacha kesib oluvchi funksiya",
       "matnni chap va chap tomonidan bitta belgi qirqib, qisqartma yozuvi bilan chiqarish funksiyasi",
     ],
-    correctAnswer:
-      "matn berilganda uning chap tomonidan oxirgi belgisigacha kesib oluvchi funksiya", // Removes the last character
+    answer: // O'zgartirildi
+      "matn berilganda uning chap tomonidan oxirgi belgisigacha kesib oluvchi funksiya",
   },
   {
     id: 2,
     question: "Funksiya yaratishda RETURN nima vazifani bajaradi?",
     options: [
       "Funksiyada ishlatilmaydi",
-      "Funksiya qaytaradigan qiymat turini ko'rsatadi", // This is RETURNS
+      "Funksiya qaytaradigan qiymat turini ko'rsatadi",
       "Funksiyaga berilgan qiymatni qaytaradi",
       "Funksiya qaytaradigan qiymatni ko'rsatish",
     ],
-    correctAnswer: "Funksiya qaytaradigan qiymatni ko'rsatish", // Specifies the value to be returned
+    answer: "Funksiya qaytaradigan qiymatni ko'rsatish", // O'zgartirildi
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const questionsSet6 = [
       "matnni chap va o'ng tomonidan bitta belgi qirqib, qisqartma yozuvi bilan chiqarish funksiyasi",
       "matnni chap va chap tomonidan bitta belgi qirqib, qisqartma yozuvi bilan chiqarish funksiyasi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "matnni chap va o'ng tomonidan bitta belgi qirqib, qisqartma yozuvi bilan chiqarish funksiyasi",
   },
   {
@@ -45,7 +45,7 @@ const questionsSet6 = [
       "SELECT * FROM funksiya_nomi …",
       "CALL funksiya_nomi(qiymat);",
     ],
-    correctAnswer: "SELECT funksiya_nomi(qiymat) FROM …", // Or SELECT funksiya_nomi(qiymat);
+    answer: "SELECT funksiya_nomi(qiymat) FROM …", // O'zgartirildi
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const questionsSet6 = [
       "ALTER TABLE DROP FOREIGN KEY constraint_name",
       "ALTER TABLE DROP constraint_name",
     ],
-    correctAnswer: "ALTER TABLE table_name DROP FOREIGN KEY constraint_name",
+    answer: "ALTER TABLE table_name DROP FOREIGN KEY constraint_name", // O'zgartirildi
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const questionsSet6 = [
       "Jadvalga ustun qo'shish",
       "Jadvallarning ustunini o'chirish",
     ],
-    correctAnswer: "Jadvalga ustun qo'shish",
+    answer: "Jadvalga ustun qo'shish", // O'zgartirildi
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const questionsSet6 = [
       "Reyslar jadvalidan barcha qatorni, Poyezdlar jadvalidan unga mos qiymat qatorlarini olish",
       "Reyslar va Poyezdlar jadvallarining ikkalasidan barcha qatorni olish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Reyslar va Poyezdlar jadvallarida mos qiymat qatorlarini olish",
   },
   {
@@ -91,7 +91,7 @@ const questionsSet6 = [
       "DELETE FUNCTION funksiya_nomi;",
       "DROP BEGIN FUNCTION funksiya_nomi END;",
     ],
-    correctAnswer: "DROP FUNCTION funksiya_nomi;",
+    answer: "DROP FUNCTION funksiya_nomi;", // O'zgartirildi
   },
   {
     id: 9,
@@ -102,7 +102,7 @@ const questionsSet6 = [
       "Ustundagi ma'lumotlarni yagonaligini ta'minlash",
       "Boshqa jadvallar bilan bog'lash va yagonalikni ta'minlash uchun ichki kalit",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Boshqa jadvallar bilan bog'lash va yagonalikni ta'minlash uchun ichki kalit",
   },
   {
@@ -115,7 +115,7 @@ const questionsSet6 = [
       "Reyslar jadvalidagi poyezdlar ustuni nomini trains va turini 100 belgili varcharga o'tkazish",
       "Reyslar jadvalidan Poyezdlar ustunini o'chirish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Reyslar jadvalidagi poyezdlar ustuni nomini trains va turini 100 belgili varcharga o'tkazish",
   },
   {
@@ -127,18 +127,18 @@ const questionsSet6 = [
       "Funksiyaga berilgan qiymatni qaytaradi",
       "Funksiya qaytaradigan qiymatni ko'rsatish",
     ],
-    correctAnswer: "Funksiya qaytaradigan qiymat turini ko'rsatadi",
+    answer: "Funksiya qaytaradigan qiymat turini ko'rsatadi", // O'zgartirildi
   },
   {
     id: 12,
     question:
-      "Quyidagi so'rov vazifasi nima?\nALTER TABLE Kitolar DROP COLUMN kitob_nomi", // Typo in original: Kitolar -> Kitoblar
+      "Quyidagi so'rov vazifasi nima?\nALTER TABLE Kitolar DROP COLUMN kitob_nomi",
     options: [
       "Kitoblar jadvalidan kitob_nomi ustunini o'chirish",
       "Kitoblar jadvalidagi kitob_nomi ustunini 50 belgili varcharga o'tkazish",
       "Kitoblar jadvaliga kitob_nomi ustunini qo'shish",
     ],
-    correctAnswer: "Kitoblar jadvalidan kitob_nomi ustunini o'chirish",
+    answer: "Kitoblar jadvalidan kitob_nomi ustunini o'chirish", // O'zgartirildi
   },
   {
     id: 13,
@@ -149,7 +149,7 @@ const questionsSet6 = [
       "SELECT variable_name datatype;",
       "CREATE variable_name datatype;",
     ],
-    correctAnswer: "DECLARE variable_name datatype;",
+    answer: "DECLARE variable_name datatype;", // O'zgartirildi
   },
   {
     id: 14,
@@ -161,7 +161,7 @@ const questionsSet6 = [
       "Kitoblari soni 5 dan ko'p Kitobxonlarni olib beruvchi protsedura",
       "Kitoblari soni 5 dan kam Kitobxonlarni olib beruvchi protsedura",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Kitoblari soni 5 dan ko'p Kitobxonlarni olib beruvchi protsedura",
   },
   {
@@ -174,7 +174,7 @@ const questionsSet6 = [
       "Biletlar jadvalidan o'rtacha narxdagi biletdan katta narxda bo'lgan biletlarni chiqarish",
       "Biletlar jadvalidan eng katta narxdagi biletdan kichik narxda bo'lgan biletlarni chiqarish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Biletlar jadvalidan o'rtacha narxdagi biletdan katta narxda bo'lgan biletlarni chiqarish",
   },
   {
@@ -187,7 +187,7 @@ const questionsSet6 = [
       "dasturlashga oid kitoblarni o'qiydigan Kitobxonlarni chiqarish",
       "Kitoblar jadvalidan o'rtacha narxdagi kitobdan katta narxda bo'lgan kitoblarni chiqarish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "dasturlashga oid kitoblarni o'qiydigan Kitobxonlarni chiqarish",
   },
   {
@@ -199,7 +199,7 @@ const questionsSet6 = [
       "Jadvalga ustun qo'shish",
       "Jadval ustun nomini va turini o'zgartirish",
     ],
-    correctAnswer: "Jadval ustun nomini va turini o'zgartirish",
+    answer: "Jadval ustun nomini va turini o'zgartirish", // O'zgartirildi
   },
   {
     id: 18,
@@ -211,7 +211,7 @@ const questionsSet6 = [
       "Reyslar jadvalidan barcha qatorni, Poyezdlar jadvalidan unga mos qiymat qatorlarini olish",
       "Reyslar va Poyezdlar jadvallarida mos qiymat qatorlarini olish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Poyezdlar jadvalidan barcha qatorni, Reyslar jadvalidan unga mos qiymat qatorlarini olish",
   },
   {
@@ -223,7 +223,7 @@ const questionsSet6 = [
       "JOIN lar bilan bajariladigan so'rovlarni jadval sifatida saqlaganda",
       "Ko‘p foydalanadigan so‘rovlarni virtual jadval sifatida saqlab qo‘yish uchun",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Ko‘p foydalanadigan so‘rovlarni virtual jadval sifatida saqlab qo‘yish uchun",
   },
   {
@@ -235,7 +235,7 @@ const questionsSet6 = [
       "Ustundagi ma'lumotlarni yagonaligini ta'minlash",
       "Ichki kalit",
     ],
-    correctAnswer: "Ustundagi ma'lumotlarni yagonaligini ta'minlash",
+    answer: "Ustundagi ma'lumotlarni yagonaligini ta'minlash", // O'zgartirildi
   },
   {
     id: 21,
@@ -246,7 +246,7 @@ const questionsSet6 = [
       "CREATE TRIGGER AFTER INSERT table FOR EACH ROW BEGIN .. END",
       "CREATE TRIGGER nomi BEFORE INSERT ON table FOR EACH ROW BEGIN .. END",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "CREATE TRIGGER nomi BEFORE INSERT ON table FOR EACH ROW BEGIN .. END",
   },
   {
@@ -259,7 +259,7 @@ const questionsSet6 = [
       "Kitobxonlar jadvali bilan Kitoblar jadvalini bog'lash",
       "Kitobxonlar jadvaliga random tarzda avtomatik qiymatlar berish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Kitobxonlar jadvalidagi nomer ustunini id nomli ichki kalitli avto qiymatga o'tkazish",
   },
   {
@@ -272,7 +272,7 @@ const questionsSet6 = [
       "Kitoblar jadvalidan o'rtacha narxdagi kitobdan katta narxda bo'lgan kitoblarni chiqarish",
       "Kitoblar jadvalidagi barcha kitobga tegishli Kitobxonlarni chiqarish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Kitoblar jadvalidagi barcha kitobga tegishli Kitobxonlarni chiqarish",
   },
   {
@@ -284,7 +284,7 @@ const questionsSet6 = [
       "INSERT amalining avtomatik bajarish operatori",
       "Ustunga qiymat kiritilmasa, avtomatik tarzda oxirgi sonni bittaga oshirilgan qiymatini kiritadi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Ustunga qiymat kiritilmasa, avtomatik tarzda oxirgi sonni bittaga oshirilgan qiymatini kiritadi",
   },
   {
@@ -296,7 +296,7 @@ const questionsSet6 = [
       "Jadvalga ustun qo'shish",
       "Jadvallarning ustunini o'chirish",
     ],
-    correctAnswer: "Jadvallarning ustunini o'chirish",
+    answer: "Jadvallarning ustunini o'chirish", // O'zgartirildi
   },
   {
     id: 26,
@@ -308,7 +308,7 @@ const questionsSet6 = [
       "Biletlar jadvalidan eng kam narxdagi biletlarnining o'rtacha narxdagilarini chiqarish",
       "Biletlar jadvalidan eng ko'p narxdagi biletlarni chiqarish",
     ],
-    correctAnswer: "Biletlar jadvalidan eng kam narxdagi biletlarni chiqarish",
+    answer: "Biletlar jadvalidan eng kam narxdagi biletlarni chiqarish", // O'zgartirildi
   },
   {
     id: 27,
@@ -319,7 +319,7 @@ const questionsSet6 = [
       "Ma'lumotlarni kiritishdagi xatolikni oldini olishdir",
       "Ustun qiymatlari yagona bo'lishini ta'minlash va ma'lumot kiritishdagi xatolikni oldini olish",
     ],
-    correctAnswer: "Ikkita jadval o'rtasidagi munosabat o'rnatish", // Key part of FOREIGN KEY constraint
+    answer: "Ikkita jadval o'rtasidagi munosabat o'rnatish", // O'zgartirildi
   },
   {
     id: 28,
@@ -330,7 +330,7 @@ const questionsSet6 = [
       "barcha qatorlarni o'ng jadvaldan va mos qatorlarni chap jadvaldan qaytaradi.",
       "chap jadvaldagi barcha qatorlarni va o'ng jadvaldagi mos qatorlarni qaytaradi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "barcha qatorlarni o'ng jadvaldan va mos qatorlarni chap jadvaldan qaytaradi.",
   },
   {
@@ -342,7 +342,7 @@ const questionsSet6 = [
       "A va B javoblar to'g'ri",
       "2 ta 1:n bog’lanishdan n:n bog’lanish kelib chiqadi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Qo‘shimcha jadval yaratib ikkala jadvalni ham u bilan 1:n qilish lozim",
   },
   {
@@ -354,7 +354,7 @@ const questionsSet6 = [
       "CALL procedure_name(value1, value2,...)",
       "INSERT INTO procedure_name VALUES …",
     ],
-    correctAnswer: "CALL procedure_name(value1, value2,...)",
+    answer: "CALL procedure_name(value1, value2,...)", // O'zgartirildi
   },
   {
     id: 31,
@@ -365,7 +365,7 @@ const questionsSet6 = [
       "Server to'lib qolsa",
       "Kompyuter qotib qolsa",
     ],
-    correctAnswer: "Server to'lib qolsa", // General resource exhaustion
+    answer: "Server to'lib qolsa", // O'zgartirildi
   },
   {
     id: 32,
@@ -376,7 +376,7 @@ const questionsSet6 = [
       "Bir jadvaldagi ko‘p qatorlar ikkinchi jadvaldagi ko‘p qatorlarga mos kelishi",
       "Bir jadvaldagi bitta qator ikkinchi jadvaldagi ko’p qatorlarga mos kelishi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Bir jadvaldagi bitta qator ikkinchi jadvaldagi bitta qatorga mos kelishi",
   },
   {
@@ -388,7 +388,7 @@ const questionsSet6 = [
       "Bazadan jadvallar o'chib ketadi",
       "Boshqa jadvallar bilan bog'lash imkonsiz bo'lib qladi",
     ],
-    correctAnswer: "Ko'p pul ketadi va so'rovlar ishlashi sekinlashadi",
+    answer: "Ko'p pul ketadi va so'rovlar ishlashi sekinlashadi", // O'zgartirildi
   },
   {
     id: 34,
@@ -399,7 +399,7 @@ const questionsSet6 = [
       "U tashqi so'rovning WHERE qismida qiymat qaytaruvchi vazifasida keladi",
       "Yuqori va pastki so'rovlardan",
     ],
-    correctAnswer: "Ichki va tashqi so'rovlardan",
+    answer: "Ichki va tashqi so'rovlardan", // O'zgartirildi
   },
   {
     id: 35,
@@ -410,7 +410,7 @@ const questionsSet6 = [
       "CREATE VIEW view_name AS …",
       "INSERT VIEW view_name AS …",
     ],
-    correctAnswer: "DROP VIEW view_name;",
+    answer: "DROP VIEW view_name;", // O'zgartirildi
   },
   {
     id: 36,
@@ -421,7 +421,7 @@ const questionsSet6 = [
       "CALL procedure_name(value1, value2,...)",
       "DROP PROCEDURE procedure_name;",
     ],
-    correctAnswer: "DROP PROCEDURE procedure_name;",
+    answer: "DROP PROCEDURE procedure_name;", // O'zgartirildi
   },
   {
     id: 37,
@@ -432,7 +432,7 @@ const questionsSet6 = [
       "SQL so'rovlar yozish bo'limini boshlanishini bildiradi",
       "SQL so'rovlar yozish bo'limini tugallanishini bildiradi",
     ],
-    correctAnswer: "SQL so'rovlar yozish bo'limini boshlanishini bildiradi",
+    answer: "SQL so'rovlar yozish bo'limini boshlanishini bildiradi", // O'zgartirildi
   },
   {
     id: 38,
@@ -443,7 +443,7 @@ const questionsSet6 = [
       "Murakkab shartlar yoziladigan qism",
       "Ko'p so'rovlar takroran qayta yozilsa murakkab so'rov deyiladi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Bu so‘rov ichida yana so‘rov yaratishdir. U tashqi va ichki so’rovlardan tashkil topadi",
   },
   {
@@ -455,7 +455,7 @@ const questionsSet6 = [
       "U ichki so'rovda tanlangan ma'lumotlarni chiqarish uchun birinchi yoziladi",
       "JOIN lar bilan ishlaganda",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "U ichki so'rovda tanlangan ma'lumotlarni chiqarish uchun birinchi yoziladi",
   },
   {
@@ -467,10 +467,10 @@ const questionsSet6 = [
       "chap jadvaldagi barcha qatorlarni va o'ng jadvaldagi mos qatorlarni qaytaradi",
       "O'ng va chap jadvaldan barcha qatorlarni qaytaradi.",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "chap jadvaldagi barcha qatorlarni va o'ng jadvaldagi mos qatorlarni qaytaradi",
   },
 ];
 
-// Tekshirish uchun birinchi savolni chiqarib ko'ramiz:
-// console.log(JSON.stringify(quizDataNew, null, 2));
+// Tekshirish uchun birinchi savolni chiqarib ko'ramiz (ixtiyoriy):
+// console.log(JSON.stringify(questionsSet6[0], null, 2));

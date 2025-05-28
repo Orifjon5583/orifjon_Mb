@@ -5,10 +5,10 @@ const questionsSet7 = [
     options: [
       "Amal bajarilishidan oldin trigger ishlashini bildiruvchi operator",
       "Amal bajarilgandan keyin trigger ishlashini bildiruvchi operator",
-      "Amal bajarilganda har bir qator uchun trigger ishlashini bildiruvchi operato", // Typo in original, kept for accuracy if needed
+      "Amal bajarilganda har bir qator uchun trigger ishlashini bildiruvchi operato",
     ],
-    correctAnswer:
-      "Amal bajarilgandan keyin trigger ishlashini bildiruvchi operator", // The option with (1) was identical to the one before it. Assuming the content is the answer.
+    answer: // O'zgartirildi
+      "Amal bajarilgandan keyin trigger ishlashini bildiruvchi operator",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const questionsSet7 = [
       "CALL view_name();",
       "SELECT * FROM view_nomi …",
     ],
-    correctAnswer: "SELECT * FROM view_nomi …",
+    answer: "SELECT * FROM view_nomi …", // O'zgartirildi
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const questionsSet7 = [
       "Jadvalga ustun qo'shish",
       "Barcha javob to'g'ri",
     ],
-    correctAnswer: "Barcha javob to'g'ri",
+    answer: "Barcha javob to'g'ri", // O'zgartirildi
   },
   {
     id: 4,
@@ -41,23 +41,17 @@ const questionsSet7 = [
       "Ko'p pul ketadi va so'rovlar ishlashi sekinlashadi",
       "Bazadan jadvallar o'chib ketadi",
     ],
-    correctAnswer: "Ko'p pul ketadi va so'rovlar ishlashi sekinlashadi",
+    answer: "Ko'p pul ketadi va so'rovlar ishlashi sekinlashadi", // O'zgartirildi
   },
   {
     id: 5,
     question: "Jadvallarni bog'lashdan maqsad nima?",
     options: [
       "Jadvalning ustun turini o'zgartirish",
-      "Jadvallarni tuzilishini o'zgartirish", // This one had (1)
-      "Ma'lumotlarni kiritishdagi xatolikni oldini olishdir", // This is a better answer conceptually for "bog'lash" (linking)
+      "Jadvallarni tuzilishini o'zgartirish",
+      "Ma'lumotlarni kiritishdagi xatolikni oldini olishdir",
     ],
-    // The (1) was on "Jadvallarni tuzilishini o'zgartirish".
-    // While linking tables (bog'lash) is more about data integrity and relationships
-    // which helps in "Ma'lumotlarni kiritishdagi xatolikni oldini olishdir",
-    // I will respect the (1) marker from the input if strictly following.
-    // However, if interpreting "o'zing topip", the other is better.
-    // For this case, I'll assume the (1) from original input takes precedence.
-    correctAnswer: "Jadvallarni tuzilishini o'zgartirish",
+    answer: "Jadvallarni tuzilishini o'zgartirish", // O'zgartirildi
   },
   {
     id: 6,
@@ -68,7 +62,7 @@ const questionsSet7 = [
       "SQL so'rovlar yozish bo'limini boshlanishini bildiradi",
       "SQL so'rovlar yozish bo'limini tugallanishini bildiradi",
     ],
-    correctAnswer: "o'zgaruvchi yaratish",
+    answer: "o'zgaruvchi yaratish", // O'zgartirildi
   },
   {
     id: 7,
@@ -80,7 +74,7 @@ const questionsSet7 = [
       "Virtual jadval (VIEW) dagi barcha ma'lumotlarni chiqarish",
       "Eng katta narxdagi biletlarni virtual jadval (view) qilib saqlash",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Eng katta narxdagi biletlarni virtual jadval (view) qilib saqlash",
   },
   {
@@ -92,7 +86,8 @@ const questionsSet7 = [
       "2 ta 1:n bog’lanishdan n:n bog’lanish kelib chiqadi",
       "To'g'ri javob yo'q",
     ],
-    correctAnswer:"Qo‘shimcha jadval yaratib ikkala jadvalni ham u bilan 1:n qilish lozim", },
+    answer: "Qo‘shimcha jadval yaratib ikkala jadvalni ham u bilan 1:n qilish lozim", // O'zgartirildi
+  },
   {
     id: 9,
     question: "Ichki so'rov qayerda ishlatiladi?",
@@ -102,8 +97,8 @@ const questionsSet7 = [
       "U ichki so'rovda tanlangan ma'lumotlarni chiqarish uchun birinchi yoziladi",
       "JOIN lar bilan ishlaganda",
     ],
-    correctAnswer:
-      "U tashqi so'rovning WHERE qismida qiymat qaytaruvchi vazifasida keladi", // This is a very common use case.
+    answer: // O'zgartirildi
+      "U tashqi so'rovning WHERE qismida qiymat qaytaruvchi vazifasida keladi",
   },
   {
     id: 10,
@@ -114,7 +109,7 @@ const questionsSet7 = [
       "LEFT JOIN UNION RIGHT JOIN",
       "CROSS JOIN",
     ],
-    correctAnswer: "LEFT JOIN UNION RIGHT JOIN",
+    answer: "LEFT JOIN UNION RIGHT JOIN", // O'zgartirildi
   },
   {
     id: 11,
@@ -125,7 +120,7 @@ const questionsSet7 = [
       "Ikkita jadval o'rtasidagi munosabat o'rnatish",
       "Bir jadvaldagi bitta qator ikkinchi jadvaldagi ko’p qatorlarga mos kelishi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Bir jadvaldagi bitta qator ikkinchi jadvaldagi ko’p qatorlarga mos kelishi",
   },
   {
@@ -138,7 +133,7 @@ const questionsSet7 = [
       "Poyezdlar jadvalidan eng oxirgi jo'nash vaqtdagi poyezdlarni chiqarish",
       "Poyezdlar jadvalidan o'rtacha jo'nash vaqtdagi poyezdlarni chiqarish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Poyezdlar jadvalidan eng oxirgi jo'nash vaqtdagi poyezdlarni chiqarish",
   },
   {
@@ -150,7 +145,7 @@ const questionsSet7 = [
       "DELETE PROCEDURE procedure_name;",
       "DROP PROCEDURE procedure_name;",
     ],
-    correctAnswer: "DROP PROCEDURE procedure_name;",
+    answer: "DROP PROCEDURE procedure_name;", // O'zgartirildi
   },
   {
     id: 14,
@@ -161,7 +156,7 @@ const questionsSet7 = [
       "1:1 bilan n:n bog'lanishdan n:n bog'lanish kelib chiqadi",
       "2 ta 1:n bog’lanishdan n:n bog’lanish kelib chiqadi",
     ],
-    correctAnswer: "2 ta 1:n bog’lanishdan n:n bog’lanish kelib chiqadi", // via a junction/linking table
+    answer: "2 ta 1:n bog’lanishdan n:n bog’lanish kelib chiqadi", // O'zgartirildi
   },
   {
     id: 15,
@@ -172,7 +167,7 @@ const questionsSet7 = [
       "Jadvalga ustun qo'shish",
       "Jadvallarning ustunini o'chirish",
     ],
-    correctAnswer: "Jadvalning ustun turini o'zgartirish", // Can also modify other attributes, but type is primary.
+    answer: "Jadvalning ustun turini o'zgartirish", // O'zgartirildi
   },
   {
     id: 16,
@@ -183,7 +178,7 @@ const questionsSet7 = [
       "O'ng va chap jadvaldan barcha qatorlarni qaytaradi.",
       "chap jadvaldagi barcha qatorlarni va o'ng jadvaldagi mos qatorlarni qaytaradi",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "chap jadvaldagi barcha qatorlarni va o'ng jadvaldagi mos qatorlarni qaytaradi",
   },
   {
@@ -191,11 +186,11 @@ const questionsSet7 = [
     question: "Funksiya yaratishda RETURNS nima?",
     options: [
       "Funksiyada ishlatilmaydi",
-      "Funksiyaga berilgan qiymatni qaytarad", // "qaytaradi"
+      "Funksiyaga berilgan qiymatni qaytarad",
       "Funksiya qaytaradigan qiymat turini ko'rsatadi",
       "Funksiya qaytaradigan qiymatni ko'rsatish",
     ],
-    correctAnswer: "Funksiya qaytaradigan qiymat turini ko'rsatadi",
+    answer: "Funksiya qaytaradigan qiymat turini ko'rsatadi", // O'zgartirildi
   },
   {
     id: 18,
@@ -206,7 +201,7 @@ const questionsSet7 = [
       "Funksiyada ishlatilmaydi",
       "Funksiyaga berilgan qiymatni qaytaradi",
     ],
-    correctAnswer: "Funksiya qaytaradigan qiymatni ko'rsatish", // This is the statement that actually returns the value.
+    answer: "Funksiya qaytaradigan qiymatni ko'rsatish", // O'zgartirildi
   },
   {
     id: 19,
@@ -217,7 +212,7 @@ const questionsSet7 = [
       "chap jadvaldagi barcha qatorlarni va o'ng jadvaldagi mos qatorlarni qaytaradi",
       "O'ng va chap jadvaldan barcha qatorlarni qaytaradi.",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "ikkala jadvaldagi qiymatlarga mos keladigan qatorlarni tanlaydi.",
   },
   {
@@ -229,8 +224,8 @@ const questionsSet7 = [
       "Ma'lumotlar bazasida view lardagi ma'lumotlarni olish uchun obyekt",
       "Ma'lumotlar bazasida SELECT so'rovining optimal varianti",
     ],
-    correctAnswer:
-      "Ma'lumotlar bazasida amallar bajaradigan skriptlar hisoblanadi.", // More precisely, a named block that performs a task and returns a value. This is closest.
+    answer: // O'zgartirildi
+      "Ma'lumotlar bazasida amallar bajaradigan skriptlar hisoblanadi.",
   },
   {
     id: 21,
@@ -241,7 +236,7 @@ const questionsSet7 = [
       "Avtomatik ma'lumot kiritish",
       "INSERT amalining avtomatik bajarish operatori",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Ustunga qiymat kiritilmasa, avtomatik tarzda oxirgi sonni bittaga oshirilgan qiymatini kiritadi",
   },
   {
@@ -253,7 +248,7 @@ const questionsSet7 = [
       "Ichki va tashqi so'rovlardan",
       "U tashqi so'rovning WHERE qismida qiymat qaytaruvchi vazifasida keladi",
     ],
-    correctAnswer: "Ichki va tashqi so'rovlardan", // (Subqueries)
+    answer: "Ichki va tashqi so'rovlardan", // O'zgartirildi
   },
   {
     id: 23,
@@ -264,7 +259,7 @@ const questionsSet7 = [
       "Ma'lum bir amalni avtomatik ravishda ishga tushiradigan database obyekti hisoblanadi.",
       "Ma'lumotlar bazasini yaratganda yaratiladigan obyektlar",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Ma'lum bir amalni avtomatik ravishda ishga tushiradigan database obyekti hisoblanadi.",
   },
   {
@@ -276,7 +271,7 @@ const questionsSet7 = [
       "ortiqcha ustun",
       "Identification (Jadvaldagi takrorlanmas ustun)",
     ],
-    correctAnswer: "Identification (Jadvaldagi takrorlanmas ustun)",
+    answer: "Identification (Jadvaldagi takrorlanmas ustun)", // O'zgartirildi
   },
   {
     id: 25,
@@ -287,7 +282,7 @@ const questionsSet7 = [
       "Jadvalga ustun qo'shish",
       "Ustun qiymatlari yagona bo'lishini ta'minlash va ma'lumot kiritishdagi xatolikni oldini olish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Ustun qiymatlari yagona bo'lishini ta'minlash va ma'lumot kiritishdagi xatolikni oldini olish",
   },
   {
@@ -299,18 +294,18 @@ const questionsSet7 = [
       "DROP PROCEDURE procedure_name;",
       "CREATE PROCEDURE procedure_name(IN parameter datatype, …)",
     ],
-    correctAnswer: "CREATE PROCEDURE procedure_name(IN parameter datatype, …)",
+    answer: "CREATE PROCEDURE procedure_name(IN parameter datatype, …)", // O'zgartirildi
   },
   {
     id: 27,
     question: "Trigger yaratilishi to'g'ri yozilgan qatorni toping",
     options: [
-      "CREATE TRIGGER AFTER INSERT table FOR EACH ROW BEGIN .. END", // Missing trigger name and ON keyword
-      "CREATE TRIGGER nomi BEFORE FOR EACH ROW INSERT ON table BEGIN .. END", // INSERT ON table AFTER FOR EACH ROW
-      "CREATE TRIGGER nomi BEFORE INSERT table BEGIN .. END", // Missing ON keyword and FOR EACH ROW
+      "CREATE TRIGGER AFTER INSERT table FOR EACH ROW BEGIN .. END",
+      "CREATE TRIGGER nomi BEFORE FOR EACH ROW INSERT ON table BEGIN .. END",
+      "CREATE TRIGGER nomi BEFORE INSERT table BEGIN .. END",
       "CREATE TRIGGER nomi BEFORE INSERT ON table FOR EACH ROW BEGIN .. END",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "CREATE TRIGGER nomi BEFORE INSERT ON table FOR EACH ROW BEGIN .. END",
   },
   {
@@ -322,7 +317,7 @@ const questionsSet7 = [
       "Boshqa jadvallar bilan bog'lash va yagonalikni ta'minlash uchun ichki kalit",
       "To'g'ri javob yo'q",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Boshqa jadvallar bilan bog'lash va yagonalikni ta'minlash uchun ichki kalit",
   },
   {
@@ -334,7 +329,7 @@ const questionsSet7 = [
       "Tashqi kalit, boshqa jadvallarning ichki kaliti bilan bog'lash uchun",
       "To'g'ri javob yo'q",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Tashqi kalit, boshqa jadvallarning ichki kaliti bilan bog'lash uchun",
   },
   {
@@ -346,7 +341,7 @@ const questionsSet7 = [
       "Bir jadvaldagi ko‘p qatorlar ikkinchi jadvaldagi ko‘p qatorlarga mos kelishi",
       "Ikkita jadval o'rtasidagi munosabat o'rnatish",
     ],
-    correctAnswer:
+    answer: // O'zgartirildi
       "Bir jadvaldagi ko‘p qatorlar ikkinchi jadvaldagi ko‘p qatorlarga mos kelishi",
   },
   {
@@ -354,12 +349,12 @@ const questionsSet7 = [
     question: "DELIMITER // nima?",
     options: [
       "Bu bir nechta SQL so'rovlarida protceduralarni o'chirishda ishlatiladi",
-      "Bu bir nechta SQL so'rovlarini birlashtirib ishlatish vazifasini bajaradi", // More accurately, it changes the statement terminator for defining blocks of code.
+      "Bu bir nechta SQL so'rovlarini birlashtirib ishlatish vazifasini bajaradi",
       "Bu bir nechta SQL so'rovlarida funksiyalarni o'chirishda ishlatiladi",
       "Bu bir nechta SQL so'rovlarini xatoliklarini oldini olish vazifasini bajaradi",
     ],
-    correctAnswer:
-      "Bu bir nechta SQL so'rovlarini birlashtirib ishlatish vazifasini bajaradi", // Closest meaning: allows '; ' within procedures/functions to not terminate the whole definition.
+    answer: // O'zgartirildi
+      "Bu bir nechta SQL so'rovlarini birlashtirib ishlatish vazifasini bajaradi",
   },
   {
     id: 32,
@@ -370,7 +365,7 @@ const questionsSet7 = [
       "Jadvalning ustun turini o'zgartirish",
       "Jadvalga ustun qo'shish",
     ],
-    correctAnswer: "Jadvalga ustun qo'shish",
+    answer: "Jadvalga ustun qo'shish", // O'zgartirildi
   },
   {
     id: 33,
@@ -382,7 +377,7 @@ const questionsSet7 = [
       "Biletlar jadvalidan eng katta narxdagi biletdan kichik narxda bo'lgan biletlarni chiqarish",
       "Biletlar jadvalidan o'rtacha narxdagi biletdan kichik narxda bo'lgan biletlarni chiqarish",
     ],
-    correctAnswer:
+    answer:
       "Biletlar jadvalidan o'rtacha narxdagi biletdan katta narxda bo'lgan biletlarni chiqarish",
   },
   {
@@ -394,7 +389,7 @@ const questionsSet7 = [
       "Amal bajarilganda har bir qator uchun trigger ishlashini bildiruvchi operator",
       "Amal bajarilishidan oldin trigger ishlashini bildiruvchi operator",
     ],
-    correctAnswer:
+    answer:
       "Amal bajarilganda har bir qator uchun trigger ishlashini bildiruvchi operator",
   },
   {
@@ -406,7 +401,7 @@ const questionsSet7 = [
       "INSERT variable_name datatype;",
       "CREATE variable_name datatype;",
     ],
-    correctAnswer: "DECLARE variable_name datatype;", // (Inside stored procedures/functions/triggers)
+    answer: "DECLARE variable_name datatype;",
   },
   {
     id: 36,
@@ -417,9 +412,10 @@ const questionsSet7 = [
       "INSERT INTO procedure_name VALUES …",
       "SELECT procedure_name(value1,value2,..)",
     ],
-    correctAnswer: "CALL procedure_name(value1, value2,...)",
+    answer: "CALL procedure_name(value1, value2,...)",
   },
 ];
 
-// Tekshirish uchun birinchi savolni chiqarib ko'ramiz:
-// console.log(JSON.stringify(quizData, null, 2));
+// Tekshirish uchun birinchi savolni chiqarib ko'ramiz (ixtiyoriy):
+// console.log(JSON.stringify(questionsSet7[0], null, 2));
+// console.log(JSON.stringify(questionsSet7[32], null, 2)); // oxirgi o'zgartirilganlardan biri
